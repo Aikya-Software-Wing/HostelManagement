@@ -1,0 +1,168 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.StudentViewModel
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+<h2>AddStudent <small>Please fill in the form below to add a student</small></h2>
+<div class="container">
+    <div class="col-sm-6">
+        @using (Html.BeginForm("AddStudent", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.name)
+                @Html.TextBoxFor(m => m.name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.usn)
+                @Html.TextBoxFor(m => m.usn, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.usn)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.gender)
+                @Html.DropDownListFor(m => m.gender, new SelectList(ViewBag.genderList, "Value", "Text"), "Select", new { @class = "form-control", id = "genderDropDownID" })
+                @Html.ValidationMessageFor(m => m.gender)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.course)
+                @Html.DropDownListFor(m => m.course, new SelectList(ViewBag.courseList, "Value", "Text"), "Select", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.course)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.semester)
+                @Html.TextBoxFor(m => m.semester, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.semester)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.branch)
+                @Html.DropDownListFor(m => m.branch, new SelectList(ViewBag.departmentList, "Value", "Text"), "Select", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.branch)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.year)
+                @Html.TextBoxFor(m => m.year, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.year)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.dob)
+                @Html.TextBoxFor(m => m.dob, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.dob)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.blockNumber)
+                @Html.DropDownListFor(m => m.blockNumber, new SelectList(ViewBag.departmentList, "Value", "Text"), "Select", new { @class = "form-control", id = "blockNumberDropDownID" })
+                @Html.ValidationMessageFor(m => m.blockNumber)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.roomNumber)
+                @Html.DropDownListFor(m => m.roomNumber, new SelectList(ViewBag.departmentList, "Value", "Text"), "Select", new { @class = "form-control", id = "roomNumberDropDownID" })
+                @Html.ValidationMessageFor(m => m.roomNumber)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.floorNumber)
+                @Html.TextBoxFor(m => m.floorNumber, new { @class = "form-control", id = "floorNumberTextID" })
+                @Html.ValidationMessageFor(m => m.floorNumber)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.roomType)
+                @Html.TextBoxFor(m => m.roomType, new { @class = "form-control", id = "roomTypeTextID" })
+                @Html.ValidationMessageFor(m => m.roomType)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.doj)
+                @Html.TextBoxFor(m => m.doj, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.doj)
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+    <div class="col-sm-6">
+        <div id="chargesTable">
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#blockNumberDropDownID").attr("disabled", "disabled");
+        $("#roomNumberDropDownID").attr("disabled", "disabled");
+        $("#floorNumberTextID").attr("disabled", "disabled");
+        $("#roomTypeTextID").attr("disabled", "disabled");
+    });
+    $("#genderDropDownID").change(function () {
+        $("#blockNumberDropDownID").attr("disabled", "disabled");
+        var gen = $("#genderDropDownID :selected").text();
+        var url = "GetBlocks";
+        var data = { "gender": gen };
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "gender": gen },
+            success: function (blocks) {
+                $("#blockNumberDropDownID").html("");
+                $.each(blocks, function (i, block) {
+                    $("#blockNumberDropDownID").append($('<option></option>').val(block.Text).html(block.Value));
+                });
+                $("#blockNumberDropDownID").removeAttr("disabled");
+                $("#blockNumberDropDownID").trigger("change");
+            }
+        });
+    });
+    $("#blockNumberDropDownID").change(function () {
+        $("#roomNumberDropDownID").attr("disabled", "disabled");
+        var block = $("#blockNumberDropDownID :selected").text();
+        var url = "GetRooms";
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "block": block },
+            success: function (rooms) {
+                $("#roomNumberDropDownID").html("");
+                $.each(rooms, function (i, room) {
+                    $("#roomNumberDropDownID").append($('<option></option>').val(room.Text).html(room.Value));
+                });
+                $("#roomNumberDropDownID").removeAttr("disabled");
+                $("#roomNumberDropDownID").trigger("change");
+            }
+        });
+    });
+    $("#roomNumberDropDownID").change(function () {
+        var room = $("#roomNumberDropDownID :selected").text();
+        $("#floorNumberTextID").val(room.substring(0, 1));
+        var url = "GetType";
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "room": room },
+            success: function (type) {
+                $("#roomTypeTextID").val(type);
+                $("#roomTypeTextID").trigger("change");
+            }
+        });
+    });
+    $("#roomTypeTextID").change(function () {
+        var gender = $("#genderDropDownID :selected").text();
+        var roomType = $("#roomTypeTextID").val();
+        var url = "GetFeeBreakUp";
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "gender": gender, "roomType": roomType },
+            success: function (val) {
+                $("#chargesTable").html("");
+                var content = "<table class=\'table table-striped\'>"
+                content += "<tr><td>Daily Mess</td><td>" + val[0] + "</td></tr>";
+                content += "<tr><td>Rent</td><td>" + val[1] + "</td></tr>";
+                content += "<tr><td>Fixed</td><td>" + val[2] + "</td></tr>";
+                content += "<tr><td>Deposit</td><td>" + val[3] + "</td></tr>";
+                $("#chargesTable").append(content);
+            }
+        });
+    });
+</script>

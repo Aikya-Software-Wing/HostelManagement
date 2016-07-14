@@ -72,7 +72,7 @@ namespace HostelManagement.Controllers
                 }
                 else if(userManager.IsInRole(user.Id, "Manager"))
                 {
-                    return RedirectToAction("Index", "Manager", new { area = "HostelMessManagement" });
+                    return RedirectToAction("Index", "User", new { area = "HostelMessManagement" });
                 }
                 return RedirectToAction("Index", "User", new { area = "HostelMessManagement" });
             }

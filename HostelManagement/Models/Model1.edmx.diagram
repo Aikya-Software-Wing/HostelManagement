@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a91a81b95a7642609b3c67acb0e22297" Name="Diagram1" ZoomLevel="109">
+        <EntityTypeShape EntityType="HostelManagementModel.Allotment" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.Course" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.Department" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.Gender" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.Hostel" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.HostelTransaction" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.MessBill" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.MessTransaction" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.PaymentType" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.Room" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelManagementModel.Student" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="HostelManagementModel.fk_StudentAllotment" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_StudentBlock" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_CourseStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_BranchStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_GenderStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_HostelRooms" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_PaymentHostel" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_StudentHostel" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_BillPayment" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_PaymentMess" ManuallyRouted="false" />
+        <AssociationConnector Association="HostelManagementModel.fk_StudentMess" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HostelManagementModel.HostelCharge" Width="1.5" PointX="7.375" PointY="0.875" />
+        <AssociationConnector Association="HostelManagementModel.fk_FixedHostel" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
