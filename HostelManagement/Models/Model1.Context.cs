@@ -29,13 +29,14 @@ namespace HostelManagement.Models
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Gender> Genders { get; set; }
+        public virtual DbSet<HostelCharge> HostelCharges { get; set; }
         public virtual DbSet<Hostel> Hostels { get; set; }
         public virtual DbSet<HostelTransaction> HostelTransactions { get; set; }
         public virtual DbSet<MessBill> MessBills { get; set; }
         public virtual DbSet<MessTransaction> MessTransactions { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<RoomType> RoomTypes { get; set; }
         public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<HostelCharge> HostelCharges { get; set; }
     }
 }

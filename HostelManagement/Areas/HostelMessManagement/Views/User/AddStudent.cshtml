@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.dob)
-                @Html.TextBoxFor(m => m.dob, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.dob, new { @class = "form-control", type="date", id="dobID" })
                 @Html.ValidationMessageFor(m => m.dob)
             </div>
             <div class="form-group">
@@ -70,7 +70,7 @@
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.doj)
-                @Html.TextBoxFor(m => m.doj, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.doj, new { @class = "form-control", id="dojID", type="date"  })
                 @Html.ValidationMessageFor(m => m.doj)
             </div>
             <div class="form-group">
@@ -78,18 +78,20 @@
             </div>
         }
     </div>
-    <div class="col-sm-6">
-        <div id="chargesTable">
-
-        </div>
+    <div class="col-sm-6" id="feeDisplayDiv">
     </div>
 </div>
 <script>
     $(document).ready(function () {
+        if (!Modernizr.inputtypes.date) {
+            $("#dojID").datepicker();
+            $("#dobID").datepicker();
+        }
         $("#blockNumberDropDownID").attr("disabled", "disabled");
         $("#roomNumberDropDownID").attr("disabled", "disabled");
         $("#floorNumberTextID").attr("disabled", "disabled");
         $("#roomTypeTextID").attr("disabled", "disabled");
+        $("#genderDropDownID").trigger("change");
     });
     $("#genderDropDownID").change(function () {
         $("#blockNumberDropDownID").attr("disabled", "disabled");
@@ -103,11 +105,15 @@
             data: { "gender": gen },
             success: function (blocks) {
                 $("#blockNumberDropDownID").html("");
+                var ch = 0;
                 $.each(blocks, function (i, block) {
+                    ch = 1;
                     $("#blockNumberDropDownID").append($('<option></option>').val(block.Text).html(block.Value));
                 });
-                $("#blockNumberDropDownID").removeAttr("disabled");
-                $("#blockNumberDropDownID").trigger("change");
+                if (ch == 1) {
+                    $("#blockNumberDropDownID").removeAttr("disabled");
+                    $("#blockNumberDropDownID").trigger("change");
+                }
             }
         });
     });
@@ -132,13 +138,14 @@
     });
     $("#roomNumberDropDownID").change(function () {
         var room = $("#roomNumberDropDownID :selected").text();
+        var block = $("#blockNumberDropDownID :selected").text();
         $("#floorNumberTextID").val(room.substring(0, 1));
         var url = "GetType";
         $.ajax({
             url: url,
             type: 'GET',
             dataType: 'JSON',
-            data: { "room": room },
+            data: { "room": room, "blockNumber": block },
             success: function (type) {
                 $("#roomTypeTextID").val(type);
                 $("#roomTypeTextID").trigger("change");
@@ -155,13 +162,16 @@
             dataType: 'JSON',
             data: { "gender": gender, "roomType": roomType },
             success: function (val) {
-                $("#chargesTable").html("");
+                $("#feeDisplayDiv").html("");
                 var content = "<table class=\'table table-striped\'>"
-                content += "<tr><td>Daily Mess</td><td>" + val[0] + "</td></tr>";
+                content += "<thead><tr><th>Fee Type</th><th>Amount (in INR)</th></tr></thead>"
+                content += "<tbody><tr><td>Daily Mess</td><td>" + val[0] + "</td></tr>";
                 content += "<tr><td>Rent</td><td>" + val[1] + "</td></tr>";
                 content += "<tr><td>Fixed</td><td>" + val[2] + "</td></tr>";
                 content += "<tr><td>Deposit</td><td>" + val[3] + "</td></tr>";
-                $("#chargesTable").append(content);
+                content += "</tbody></table>"
+                content += "<a class=\"btn btn-primary\" href=\"/HostelMessManagement/Manager/ChangeFees?gender=" + gender + "&amp;roomType1=" + roomType + "\">Update Fees</a>";
+                $("#feeDisplayDiv").append(content);
             }
         });
     });

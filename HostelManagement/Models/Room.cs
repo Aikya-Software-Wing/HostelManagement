@@ -22,13 +22,13 @@ namespace HostelManagement.Models
     
         public int hostelBlockNumber { get; set; }
         public int roomNumber { get; set; }
-        public string roomType { get; set; }
-        public decimal rent { get; set; }
+        public Nullable<int> roomType { get; set; }
         public int maxOccupancy { get; set; }
         public int currentOccupancy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Allotment> Allotments { get; set; }
         public virtual Hostel Hostel { get; set; }
+        public virtual RoomType RoomType1 { get; set; }
     }
 }

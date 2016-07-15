@@ -1,16 +1,32 @@
-﻿@model HostelManagement.Models.LoginModel
+﻿@model HostelManagement.Models.LoginViewModel
 @{
     ViewBag.Title = "Login";
 }
 
-<h2>Login</h2>
+<div class="container">
+    @if (string.IsNullOrEmpty(Model.ReturnUrl))
+    {
+        <h2>Login</h2>
+    }
+    else
+    {
+        <h2>Further Authrization is Required to Access this Page</h2>
+    }
+    <br />
 
-@Html.ValidationSummary(true)
+    @Html.ValidationSummary(true)
 
-@using (Html.BeginForm())
-{
-    @Html.EditorForModel()
-    <p>
-        <button type="submit">Log In</button>
-    </p>
-}
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserId)
+            @Html.TextBoxFor(m => m.UserId, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+        @Html.HiddenFor(m => m.ReturnUrl)
+        <input type="submit" class="btn btn-primary" value="Login" />
+    }
+</div>

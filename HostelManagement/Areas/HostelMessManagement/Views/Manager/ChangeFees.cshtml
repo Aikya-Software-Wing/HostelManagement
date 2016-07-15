@@ -1,0 +1,52 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.SearchViewModel
+@using HostelManagement.Areas.HostelMessManagement.Models
+@{
+    ViewBag.Title = "ChangeFees";
+}
+<div class="container">
+    <div class="col-sm-6">
+        <h2>Change Hostel Fees</h2>
+
+        @using (Ajax.BeginForm("ChangeFees", null, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "feeChangeDiv" }, new { @class = "form-horizontal" }))
+            {
+            <div class="form-group">
+                @Html.LabelFor(m => m.hostelType)
+                @Html.DropDownListFor(m => m.hostelType, (SelectList)ViewBag.hostelTypeList, "Select", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.hostelType)
+            </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.roomType)
+                    @Html.DropDownListFor(m => m.roomType, (SelectList)ViewBag.roomTypeList, "Select", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.roomType)
+                </div>
+                <input type="submit" class="btn btn-primary" id="searchButtonId" />
+        }
+
+
+        <div id="feeChangeDiv">
+
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h2>Change Mess Fees</h2>
+        @Html.Partial("_MessFeeChange", (MessChargesViewModel)ViewBag.messChargesModel)
+    </div>
+
+</div>
+
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    $(document).ready(function () {
+        if (getParameterByName('gender') && getParameterByName('roomType1')) {
+            $("#searchButtonId").trigger("click");
+        }
+    });
+</script>

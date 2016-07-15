@@ -1,0 +1,13 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.MessChargesViewModel
+
+<div id="messFeeChangeDiv">
+    @using (Ajax.BeginForm("ChangeMessFees", null, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "messFeeChangeDiv" }, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.dailymess)
+            @Html.TextBoxFor(m => m.dailymess, new { @class = "form-control"})
+            @Html.ValidationMessageFor(m => m.dailymess)
+        </div>
+        <input type="submit" class="btn btn-primary" />
+    }
+</div>

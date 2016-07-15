@@ -22,8 +22,8 @@ namespace HostelManagement.Models
         public string receipt { get; set; }
         public string bankName { get; set; }
     
+        public virtual HostelCharge HostelCharge { get; set; }
         public virtual PaymentType PaymentType { get; set; }
         public virtual Student Student { get; set; }
-        public virtual HostelCharge HostelCharge { get; set; }
     }
 }

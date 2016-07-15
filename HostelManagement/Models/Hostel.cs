@@ -22,7 +22,9 @@ namespace HostelManagement.Models
     
         public int blockNumber { get; set; }
         public string type { get; set; }
+        public Nullable<int> occupantType { get; set; }
     
+        public virtual Gender Gender { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Rooms { get; set; }
     }

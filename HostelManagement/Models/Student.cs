@@ -29,7 +29,6 @@ namespace HostelManagement.Models
         public int gender { get; set; }
         public int course { get; set; }
         public int branch { get; set; }
-        public int year { get; set; }
         public System.DateTime dob { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
