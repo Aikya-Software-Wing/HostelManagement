@@ -3,19 +3,46 @@
 @using (Ajax.BeginForm("UpdateFees", null, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "feeChangeDiv" }, new { @class = "form-horizontal" }))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.rent)
-        @Html.TextBoxFor(m => m.rent, new { @class = "form-control"})
-        @Html.ValidationMessageFor(m => m.rent)
+        @if (((bool)TempData.Peek("canRentChange")))
+        {
+            @Html.LabelFor(m => m.rent)
+            @Html.TextBoxFor(m => m.rent, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.rent)
+        }
+        else
+        {
+            @Html.HiddenFor(m => m.rent)
+            <p>Can not change rent</p>
+        }
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.fix)
-        @Html.TextBoxFor(m => m.fix, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.fix)
+        @if (((bool)TempData.Peek("canFixChange")))
+        {
+            @Html.LabelFor(m => m.fix)
+            @Html.TextBoxFor(m => m.fix, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.fix)
+        }
+        else
+        {
+            @Html.HiddenFor(m => m.fix)
+            <p>Can not change fixed charges</p>
+        }
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.deposit)
-        @Html.TextBoxFor(m => m.deposit, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.deposit)
+        @if (((bool)TempData.Peek("canDepositChange")))
+        {
+            @Html.LabelFor(m => m.deposit)
+            @Html.TextBoxFor(m => m.deposit, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.deposit)
+        }
+        else
+        {
+            @Html.HiddenFor(m => m.deposit)
+            <p>Can not change deposit</p>
+        }
     </div>
-    <input type="submit" class="btn btn-primary" />
+    if (((bool)TempData.Peek("canDepositChange")) || ((bool)TempData.Peek("canFixChange")) || ((bool)TempData.Peek("canRentChange")))
+    {
+        <input type="submit" class="btn btn-primary" />
+    }
 }

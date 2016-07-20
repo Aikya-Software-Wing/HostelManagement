@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "GenerateMessBill";
+}
+
+<h2>GenerateMessBill</h2>
+
+@if ((bool)ViewBag.canGenerateMessBill)
+{
+    using (Ajax.BeginForm("GenerateMessBill", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "MessBillUpdateID", InsertionMode = InsertionMode.Replace }))
+    {
+        <input type="submit" class="btn btn-primary" value="Generate Mess Bills" />
+    }
+
+    <div id="MessBillUpdateID">
+
+    </div>
+}
+else
+{
+    <h4>Bill already generated</h4>
+}

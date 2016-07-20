@@ -1,0 +1,57 @@
+﻿@model List<HostelManagement.Areas.HostelMessManagement.Models.StudentDueSummaryViewModel>
+@{
+    ViewBag.Title = "ShowAllDues";
+}
+
+<h2>ShowAllDues</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Bid</th>
+            <th>Rent Due</th>
+            <th>Fixed Due</th>
+            <th>Deposit Due</th>
+            <th>Misc. Due</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Ajax.ActionLink(item.bid, "ShowDueByStudent", new { bid = item.bid, allTransactions = (bool) ViewBag.allTransactions}, new AjaxOptions { UpdateTargetId = "ShowStudentDueModal", HttpMethod = "POST", OnSuccess= "openModalOnSuccess"}, new { @class="btn btn-link"})</td>
+                <td>@item.rent</td>
+                <td>@item.fix</td>
+                <td>@item.deposit</td>
+                <td>@item.other</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="showStudentDueModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Dues</h4>
+            </div>
+            <div class="modal-body">
+                <div id="ShowStudentDueModal">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    function openModalOnSuccess(){
+        $('#showStudentDueModal').modal('show');
+    }
+</script>

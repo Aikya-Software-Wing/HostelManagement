@@ -20,6 +20,9 @@ namespace HostelManagement.Models
         public string bankName { get; set; }
         public System.DateTime dateOfPay { get; set; }
         public int paymentTypeId { get; set; }
+        public int year { get; set; }
+        public decimal id { get; set; }
+        public Nullable<decimal> amount { get; set; }
     
         public virtual MessBill MessBill { get; set; }
         public virtual PaymentType PaymentType { get; set; }

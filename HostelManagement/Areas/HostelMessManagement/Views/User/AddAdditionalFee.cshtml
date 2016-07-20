@@ -1,0 +1,39 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.AddAdditionalFeeViewModel
+@{
+    ViewBag.Title = "AddAdditionalFee";
+}
+
+<h2>AddAdditionalFee</h2>
+
+@using (Ajax.BeginForm("AddAdditionalFee", "User", null, new AjaxOptions { HttpMethod = "POST", OnSuccess = "DisplaySuccess" }, new { @class = "form-horizonatal", id="AddAddtionalFeeForm" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.bid)
+        @Html.TextBoxFor(m => m.bid, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.bid)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.amount)
+        @Html.TextBoxFor(m => m.amount, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.amount)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.description)
+        @Html.TextBoxFor(m => m.description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.description)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.year)
+        @Html.TextBoxFor(m => m.year, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.year)
+    </div>
+    <input type="submit" class="btn btn-primary" />
+}
+
+<script type="text/javascript">
+    function DisplaySuccess()
+    {
+        alert("Additional Fee Added Successfully!");
+        document.getElementById("AddAddtionalFeeForm").reset();
+    }
+</script>

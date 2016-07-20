@@ -14,16 +14,8 @@ namespace HostelManagement.Models
     
     public partial class HostelCharge
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HostelCharge()
-        {
-            this.HostelTransactions = new HashSet<HostelTransaction>();
-        }
-    
         public int id { get; set; }
         public Nullable<decimal> val { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HostelTransaction> HostelTransactions { get; set; }
+        public int year { get; set; }
     }
 }

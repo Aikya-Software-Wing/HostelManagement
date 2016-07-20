@@ -1,0 +1,105 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.ChangeRoomViewModel
+
+@using (Ajax.BeginForm("ChangeRoomAllotment", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "AllotmentUpdateId" }, new { @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.hostelBlock)
+        @Html.DropDownListFor(m => m.hostelBlock, (SelectList)ViewBag.hostelBlockList, "Select", new { @class = "form-control", id = "blockNumberDropDownID" })
+        @Html.ValidationMessageFor(m => m.hostelBlock)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.roomNumber)
+        @Html.DropDownListFor(m => m.roomNumber, (SelectList)ViewBag.roomNumberList, "Select", new { @class = "form-control", id = "roomNumberDropDownID" })
+        @Html.ValidationMessageFor(m => m.roomNumber)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.floor)
+        @Html.TextBoxFor(m => m.floor, new { @class = "form-control", id = "floorNumberTextID" })
+        @Html.ValidationMessageFor(m => m.floor)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.roomType)
+        @Html.TextBoxFor(m => m.roomType, new { @class = "form-control", id = "roomTypeTextID" })
+        @Html.ValidationMessageFor(m => m.roomType)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.year)
+        @Html.TextBoxFor(m => m.year, new { @class = "form-control", id = "roomTypeTextID" })
+        @Html.ValidationMessageFor(m => m.year)
+    </div>
+    <input type="submit" class="btn btn-primary" />
+}
+
+<div id="AllotmentUpdateId">
+
+</div>
+
+<div id="feeDisplayDiv">
+</div>
+
+<script type="text/javascript">
+    $.validator.unobtrusive.parse(document);
+    $("#blockNumberDropDownID").change(function () {
+        $("#roomNumberDropDownID").attr("disabled", "disabled");
+        var block = $("#blockNumberDropDownID :selected").text();
+        var url = "GetRooms";
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "block": block },
+            success: function (rooms) {
+                $("#roomNumberDropDownID").html("");
+                $.each(rooms, function (i, room) {
+                    $("#roomNumberDropDownID").append($('<option></option>').val(room.Text).html(room.Value));
+                });
+                $("#roomNumberDropDownID").removeAttr("disabled");
+                $("#roomNumberDropDownID").trigger("change");
+            }
+        });
+    });
+    $("#roomNumberDropDownID").change(function () {
+        var room = $("#roomNumberDropDownID :selected").text();
+        var block = $("#blockNumberDropDownID :selected").text();
+        $("#floorNumberTextID").val(room.substring(0, 1));
+        var url = "GetType";
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "room": room, "blockNumber": block },
+            success: function (type) {
+                $("#roomTypeTextID").val(type);
+                $("#roomTypeTextID").trigger("change");
+            }
+        });
+    });
+    $("#roomTypeTextID").change(function () {
+        var gender = '@ViewBag.gender';
+        var roomType = $("#roomTypeTextID").val();
+        var url = "GetFeeBreakUp";
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            data: { "gender": gender, "roomType": roomType },
+            success: function (val) {
+                $("#feeDisplayDiv").html("");
+                var content = "<table class=\'table table-striped\'>"
+                content += "<thead><tr><th>Fee Type</th><th>Amount (in INR)</th></tr></thead>"
+                content += "<tbody><tr><td>Daily Mess</td><td>" + val[0] + "</td></tr>";
+                content += "<tr><td>Rent</td><td>" + val[1] + "</td></tr>";
+                content += "<tr><td>Fixed</td><td>" + val[2] + "</td></tr>";
+                content += "<tr><td>Deposit</td><td>" + val[3] + "</td></tr>";
+                content += "</tbody></table>"
+                content += "<a class=\"btn btn-primary\" href=\"/HostelMessManagement/Manager/ChangeFees?gender=" + gender + "&amp;roomType1=" + roomType + "\">Update Fees</a>";
+                $("#feeDisplayDiv").append(content);
+            }
+        });
+    });
+    $(document).ready(function () {
+        $("#floorNumberTextID").attr("disabled", "disabled");
+        $("#roomTypeTextID").attr("disabled", "disabled");
+        $("#roomNumberDropDownID").trigger("change");
+    });
+</script>

@@ -9,7 +9,7 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
-    <script src="~/scripts/jquery.validate-vsdoc.js"></script>    
+    <script src="~/scripts/jquery.validate-vsdoc.js"></script>
     <script src="~/scripts/jquery.validate.min.js"></script>
     <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
@@ -31,11 +31,68 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Add Student", "AddStudent", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
-                    @if (User.IsInRole("Manager"))
-                    {
-                        <li>@Html.ActionLink("Update Hostel Fees", "ChangeFees", "Manager", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
-                    }
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Student
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Add Student", "AddStudent", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("View Student", "ViewStudent", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Update Student Allotment", "ChangeRoom", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Transactions
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Hostel Transaction", "HostelTransaction", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Mess Transaction", "MessTransaction", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Dues
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("List of hostel fee defaulters", "ShowAllDues", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("List of all students", "ShowAllStudentHostelTransactions", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Mess Bill
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Generate Mess Bill", "GenerateMessBill", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Report Absence for Mess", "ReportAbsenceForMess", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Fees
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Add Additional Fee", "AddAdditionalFee", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Discount Fee", "DiscountFees", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            @if (User.IsInRole("Manager"))
+                            {
+                                <li>@Html.ActionLink("Update Hostel Fees", "ChangeFees", "Manager", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            }
+                        </ul>
+                    </li>
+
                 </ul>
                 <ul class="nav navbar-nav pull-right">
                     <li>@Html.ActionLink("Logout", "Logout", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>

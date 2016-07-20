@@ -1,0 +1,25 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.MessAbsenceViewModel
+@{
+    ViewBag.Title = "ReportAbsenceForMess";
+}
+
+<h2>ReportAbsenceForMess</h2>
+
+@using (Ajax.BeginForm("ReportAbsenceForMess", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "reportAbsenceDivId" }, new { @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.bid)
+        @Html.TextBoxFor(m => m.bid, new { @class="form-control"})
+        @Html.ValidationMessageFor(m => m.bid)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.numDaysAbsent)
+        @Html.TextBoxFor(m => m.numDaysAbsent, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.numDaysAbsent)
+    </div>
+    <input type="submit" class="btn btn-primary" />
+}
+
+<div id="reportAbsenceDivId">
+
+</div>

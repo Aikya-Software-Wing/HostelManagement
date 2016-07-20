@@ -1,0 +1,27 @@
+﻿@model List<HostelManagement.Areas.HostelMessManagement.Models.MessFeeDueViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Month</th>
+            <th>Number of Days</th>
+            <th>Amount</th>
+            <th>Amount Paid</th>
+            <th>Amount Due</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.academicYear</td>
+                <td>@item.month</td>
+                <td>@item.numberOfDays</td>
+                <td>@item.amount</td>
+                <td>@item.amountPaid</td>
+                <td>@item.amountDue</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -70,7 +70,8 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             }
 
             // add the mess charges to the model
-            ViewBag.messChargesModel = new MessChargesViewModel() { dailymess = db.HostelCharges.Where(x => x.id == 0).First().val.Value};
+            ViewBag.messChargesModel = new MessChargesViewModel() { dailymess = db.HostelCharges.Where(x => x.id == 0).OrderByDescending(x => x.year).First().val.Value};
+            TempData["canChangeMess"] = db.HostelCharges.Where(x => x.id == 0).OrderByDescending(x => x.year).First().year != DateTime.Now.Year;
 
             return View();
         }
@@ -106,10 +107,12 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         /// </summary>
         /// <param name="userInput"> the serach query as input by the user</param>
         /// <returns>Partial View</returns>
-        public PartialViewResult ChangeFees(SearchViewModel userInput)
+        public ActionResult ChangeFees(SearchViewModel userInput)
         {
             HostelChargesViewModel model = new HostelChargesViewModel();
 
+            int currentYear = DateTime.Now.Year;
+            
             // get the ID of the various fees
             int rentId = int.Parse(userInput.hostelType + "" + userInput.roomType + "1");
             int fixId = int.Parse(userInput.hostelType + "" + userInput.roomType + "2");
@@ -118,10 +121,14 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             // get the original values of the fees in the database, if not present, zero fill
             try
             {
-                model.rent = db.HostelCharges.Where(x => x.id == rentId).First().val.Value;
-                model.fix = db.HostelCharges.Where(x => x.id == fixId).First().val.Value;
-                model.deposit = db.HostelCharges.Where(x => x.id == depId).First().val.Value;
-            }catch(InvalidOperationException)
+                model.rent = db.HostelCharges.Where(x => x.id == rentId).OrderByDescending(x => x.year).First().val.Value;
+                model.fix = db.HostelCharges.Where(x => x.id == fixId).OrderByDescending(x => x.year).First().val.Value;
+                model.deposit = db.HostelCharges.Where(x => x.id == depId).OrderByDescending(x => x.year).First().val.Value;
+                TempData["canRentChange"] = db.HostelCharges.Where(x => x.id == rentId).OrderByDescending(x => x.year).First().year != currentYear;
+                TempData["canFixChange"] = db.HostelCharges.Where(x => x.id == fixId).OrderByDescending(x => x.year).First().year != currentYear;
+                TempData["canDepositChange"] = db.HostelCharges.Where(x => x.id == depId).OrderByDescending(x => x.year).First().year != currentYear;
+            }
+            catch(InvalidOperationException)
             {
                 model.rent = model.fix = model.deposit = 0;
             }
@@ -197,10 +204,12 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         [NonAction]
         public void UpdateDatabaseValue(int id, decimal changedValue)
         {
-            HostelCharge value = db.HostelCharges.Where(x => x.id == id).First();
-            value.val = changedValue;
-            db.HostelCharges.Attach(value);
-            db.Entry(value).State = EntityState.Modified;
+            db.HostelCharges.Add(new HostelCharge()
+            {
+                id = id,
+                val = changedValue,
+                year = DateTime.Now.Year
+            });
             db.SaveChanges();
         }
     }

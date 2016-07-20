@@ -1,0 +1,19 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.StudentSearchViewModel
+@{
+    ViewBag.Title = "ChangeRoom";
+}
+
+<h2>ChangeRoom</h2>
+
+@using (Ajax.BeginForm("ChangeRoom", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "changeStudentRoomId", InsertionMode = InsertionMode.Replace }, new { @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.bid)
+        @Html.TextBoxFor(m => m.bid, new { @class = "form-control" })
+    </div>
+    <input type="submit" class="btn btn-primary" />
+}
+
+<div id="changeStudentRoomId">
+
+</div>

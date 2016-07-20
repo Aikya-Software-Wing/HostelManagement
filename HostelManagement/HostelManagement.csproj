@@ -242,6 +242,22 @@
     <Content Include="Areas\HostelMessManagement\Views\Manager\_FeeChange.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\Manager\_MessFeeChange.cshtml" />
     <Content Include="Areas\Administration\Views\Home\RemoveUser.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\HostelTransaction.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_AddHostelTransation.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_FeeDueDisplay.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\ShowAllDues.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\AddAdditionalFee.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\ViewStudent.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_ViewStudent.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\ChangeRoom.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_ChangeRoom.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\DiscountFees.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_AddDiscount.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\GenerateMessBill.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\ReportAbsenceForMess.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\MessTransaction.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_AddMessTransaction.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_MessFeeDueDisplay.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -267,14 +283,27 @@
     <Compile Include="Areas\HostelMessManagement\Controllers\ManagerController.cs" />
     <Compile Include="Areas\HostelMessManagement\Controllers\UserController.cs" />
     <Compile Include="Areas\HostelMessManagement\HostelMessManagementAreaRegistration.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\AddAdditionalFeeViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\ChangeRoomViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\DisplayStudentViewModel.cs" />
     <Compile Include="Areas\HostelMessManagement\Models\HostelChargesViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\HostelFeeDueViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\HostelTransactionViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\MessAbsenceViewModel.cs" />
     <Compile Include="Areas\HostelMessManagement\Models\MessChargesViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\MessFeeDueViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\MessTransactionViewModel.cs" />
     <Compile Include="Areas\HostelMessManagement\Models\SearchViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\StudentDueSummaryViewModel.cs" />
+    <Compile Include="Areas\HostelMessManagement\Models\StudentSearchViewModel.cs" />
     <Compile Include="Areas\HostelMessManagement\Models\StudentViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="FilterConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AcHead.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Allotment.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -289,6 +318,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Hostel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HostelBill.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HostelCharge.cs">

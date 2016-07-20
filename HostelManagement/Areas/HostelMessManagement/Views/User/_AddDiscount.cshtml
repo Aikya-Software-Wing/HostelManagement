@@ -1,0 +1,154 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.HostelTransactionViewModel
+
+<div class="container">
+    <div class="col-sm-6">
+        <div>
+            @Html.LabelFor(m => m.name)
+            @Html.DisplayFor(m => m.name)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.bid)
+            @Html.DisplayTextFor(m => m.bid)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.usn)
+            @Html.DisplayTextFor(m => m.usn)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.gender)
+            @Html.DisplayTextFor(m => m.gender)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.course)
+            @Html.DisplayTextFor(m => m.course)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.semester)
+            @Html.DisplayTextFor(m => m.semester)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.branch)
+            @Html.DisplayTextFor(m => m.branch)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.year)
+            @Html.DisplayTextFor(m => m.year)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.dob)
+            @Html.DisplayTextFor(m => m.dob)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.blockNumber)
+            @Html.DisplayTextFor(m => m.blockNumber)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.roomNumber)
+            @Html.DisplayTextFor(m => m.roomNumber)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.floorNumber)
+            @Html.DisplayTextFor(m => m.floorNumber)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.roomType)
+            @Html.DisplayTextFor(m => m.roomType)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.doj)
+            @Html.DisplayTextFor(m => m.doj)
+        </div>
+
+
+
+        @using (Ajax.BeginForm("PerformHostelFeeDiscount", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "transactionOutputDivId", OnSuccess = "LoadDues" }, new { @class = "form-horizontal" }))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.acHead)
+                @Html.DropDownListFor(m => m.acHead, new SelectList(ViewBag.acHeadList, "Value", "Text"), "Select", new { @class = "form-control", id = "acHeadDropDownId" })
+                @Html.ValidationMessageFor(m => m.acHead)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.paymentType)
+                @Html.DropDownListFor(m => m.paymentType, (SelectList)ViewBag.paymentTypeList, "Select", new { @class = "form-control", disabled="disabled" })
+                @Html.ValidationMessageFor(m => m.paymentType)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.academicYear)
+                @Html.DropDownListFor(m => m.academicYear, (SelectList)ViewBag.academicYearList, "Select", new { @class = "form-control", id = "academicYearId" })
+                @Html.ValidationMessageFor(m => m.academicYear)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.amount)
+                @Html.TextBoxFor(m => m.amount, new { @class = "form-control", id = "amountTextBoxId" })
+                @Html.ValidationMessageFor(m => m.amount)
+            </div>
+            <input type="submit" class="btn btn-primary" id="submitButtonId" />
+            @Html.HiddenFor(m => m.name)
+            @Html.HiddenFor(m => m.bid)
+            @Html.HiddenFor(m => m.usn)
+            @Html.HiddenFor(m => m.gender)
+            @Html.HiddenFor(m => m.course)
+            @Html.HiddenFor(m => m.semester)
+            @Html.HiddenFor(m => m.branch)
+            @Html.HiddenFor(m => m.year)
+            @Html.HiddenFor(m => m.dob)
+            @Html.HiddenFor(m => m.blockNumber)
+            @Html.HiddenFor(m => m.roomNumber)
+            @Html.HiddenFor(m => m.floorNumber)
+            @Html.HiddenFor(m => m.roomType)
+            @Html.HiddenFor(m => m.doj)
+            @Html.HiddenFor(m => m.referenceNumber)
+            @Html.HiddenFor(m => m.dateOfPayment)
+            @Html.HiddenFor(m => m.bankName)
+            @Html.ValidationSummary()
+        }
+
+        <div id="transactionOutputDivId">
+
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div id="dueTableDivId">
+            @Html.Action("ShowDues", new { bid = Model.bid })
+        </div>
+    </div>
+</div>
+<script type="text/javascript" language=javascript>
+    $.validator.unobtrusive.parse(document);
+    function LoadDues() {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ShowDues", "User")',
+            data: { bid: '@Model.bid' },
+            success: function (res) {
+                $("#dueTableDivId").html(res);
+            }
+        });
+
+    }
+
+    function GetAmount() {
+        var head = $("#acHeadDropDownId :selected").text();
+        var academicYear = $("#academicYearId :selected").text();
+        var bid = '@Model.bid'
+        if (head != "Select" && academicYear != "Select") {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetAmount", "User")',
+                data: { bid: bid, head: head, year: academicYear },
+                success: function (res) {
+                    $("#amountTextBoxId").val(res);
+                }
+            });
+        }
+    }
+
+    $("#acHeadDropDownId").change(function () {
+        GetAmount();
+    });
+
+    $("#academicYearId").change(function () {
+        GetAmount();
+    });
+</script>
