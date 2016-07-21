@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
@@ -18,9 +18,9 @@ namespace HostelManagement.Models
         public Student()
         {
             this.Allotments = new HashSet<Allotment>();
+            this.HostelBills = new HashSet<HostelBill>();
             this.HostelTransactions = new HashSet<HostelTransaction>();
             this.MessBills = new HashSet<MessBill>();
-            this.HostelBills = new HashSet<HostelBill>();
             this.MessTransactions = new HashSet<MessTransaction>();
         }
     
@@ -39,11 +39,11 @@ namespace HostelManagement.Models
         public virtual Department Department { get; set; }
         public virtual Gender Gender1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HostelBill> HostelBills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HostelTransaction> HostelTransactions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MessBill> MessBills { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HostelBill> HostelBills { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MessTransaction> MessTransactions { get; set; }
     }

@@ -1,0 +1,33 @@
+﻿@model List<HostelManagement.Areas.HostelMessManagement.Models.StudentMessDueSummaryViewModel>
+@{
+    ViewBag.Title = "ShowAllMessDues";
+}
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h2 class="text-center">Show All Mess Dues</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Border ID</th>
+                    <th>Deatils</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.bid</td>
+                        <td>@Html.Partial("_MessFeeDueDisplay", item.dues)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

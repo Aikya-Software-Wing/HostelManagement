@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Gender
+    public partial class RoomType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Gender()
+        public RoomType()
         {
-            this.Students = new HashSet<Student>();
-            this.Hostels = new HashSet<Hostel>();
+            this.Rooms = new HashSet<Room>();
         }
     
         public int id { get; set; }
         public string val { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student> Students { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hostel> Hostels { get; set; }
+        public virtual ICollection<Room> Rooms { get; set; }
     }
 }

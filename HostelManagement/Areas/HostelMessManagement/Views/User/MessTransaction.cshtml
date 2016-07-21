@@ -3,17 +3,35 @@
     ViewBag.Title = "MessTransaction";
 }
 
-<h2>MessTransaction</h2>
-
-@using (Ajax.BeginForm("MessTransaction", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "messTransactionId", InsertionMode = InsertionMode.Replace }, new { @class = "form-horizontal" }))
-{
-    <div class="form-group">
-        @Html.LabelFor(m => m.bid)
-        @Html.TextBoxFor(m => m.bid, new { @class = "form-control" })
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h2 class="text-center">Mess Transaction</h2>
     </div>
-    <input type="submit" class="btn btn-primary" />
-}
+</div>
+<hr />
 
-<div id="messTransactionId">
 
+<div class="row">
+    <div class="col-md-8 col-md-offset-3">
+        @using (Ajax.BeginForm("MessTransaction", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "messTransactionId", InsertionMode = InsertionMode.Replace }, new { @class = "form-inline" }))
+        {
+            <div class="row">
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.bid)
+                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-2 pull-left">
+                    <input type="submit" class="btn btn-primary form-control" value="View" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div id="messTransactionId">
+            Please enter the BID above.
+        </div>
+    </div>
 </div>

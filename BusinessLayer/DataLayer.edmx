@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HostelManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AcHead">
           <Key>
             <PropertyRef Name="id" />
@@ -346,7 +346,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="HostelManagementModelStoreContainer">
+        <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="AcHead" EntityType="Self.AcHead" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Allotment" EntityType="Self.Allotment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
@@ -427,115 +427,35 @@
             <End Role="HostelTransactions" EntitySet="HostelTransactions" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="HostelManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="HostelManagementEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AcHeads" EntityType="HostelManagementModel.AcHead" />
-          <EntitySet Name="Allotments" EntityType="HostelManagementModel.Allotment" />
-          <EntitySet Name="Courses" EntityType="HostelManagementModel.Course" />
-          <EntitySet Name="Departments" EntityType="HostelManagementModel.Department" />
-          <EntitySet Name="Genders" EntityType="HostelManagementModel.Gender" />
-          <EntitySet Name="Hostels" EntityType="HostelManagementModel.Hostel" />
-          <EntitySet Name="HostelTransactions" EntityType="HostelManagementModel.HostelTransaction" />
-          <EntitySet Name="MessBills" EntityType="HostelManagementModel.MessBill" />
-          <EntitySet Name="PaymentTypes" EntityType="HostelManagementModel.PaymentType" />
-          <EntitySet Name="Rooms" EntityType="HostelManagementModel.Room" />
-          <EntitySet Name="RoomTypes" EntityType="HostelManagementModel.RoomType" />
-          <EntitySet Name="Students" EntityType="HostelManagementModel.Student" />
-          <AssociationSet Name="hk_HeadTransaction" Association="HostelManagementModel.hk_HeadTransaction">
-            <End Role="AcHead" EntitySet="AcHeads" />
-            <End Role="HostelTransaction" EntitySet="HostelTransactions" />
-          </AssociationSet>
-          <AssociationSet Name="fk_StudentAllotment" Association="HostelManagementModel.fk_StudentAllotment">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="Allotment" EntitySet="Allotments" />
-          </AssociationSet>
-          <AssociationSet Name="fk_StudentBlock" Association="HostelManagementModel.fk_StudentBlock">
-            <End Role="Room" EntitySet="Rooms" />
-            <End Role="Allotment" EntitySet="Allotments" />
-          </AssociationSet>
-          <AssociationSet Name="fk_CourseStudent" Association="HostelManagementModel.fk_CourseStudent">
-            <End Role="Course" EntitySet="Courses" />
-            <End Role="Student" EntitySet="Students" />
-          </AssociationSet>
-          <AssociationSet Name="fk_BranchStudent" Association="HostelManagementModel.fk_BranchStudent">
-            <End Role="Department" EntitySet="Departments" />
-            <End Role="Student" EntitySet="Students" />
-          </AssociationSet>
-          <AssociationSet Name="fk_GenderStudent" Association="HostelManagementModel.fk_GenderStudent">
-            <End Role="Gender" EntitySet="Genders" />
-            <End Role="Student" EntitySet="Students" />
-          </AssociationSet>
-          <AssociationSet Name="fk_Hostels_Gender" Association="HostelManagementModel.fk_Hostels_Gender">
-            <End Role="Gender" EntitySet="Genders" />
-            <End Role="Hostel" EntitySet="Hostels" />
-          </AssociationSet>
-          <AssociationSet Name="fk_HostelRooms" Association="HostelManagementModel.fk_HostelRooms">
-            <End Role="Hostel" EntitySet="Hostels" />
-            <End Role="Room" EntitySet="Rooms" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PaymentHostel" Association="HostelManagementModel.fk_PaymentHostel">
-            <End Role="PaymentType" EntitySet="PaymentTypes" />
-            <End Role="HostelTransaction" EntitySet="HostelTransactions" />
-          </AssociationSet>
-          <AssociationSet Name="fk_StudentHostel" Association="HostelManagementModel.fk_StudentHostel">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="HostelTransaction" EntitySet="HostelTransactions" />
-          </AssociationSet>
-          <AssociationSet Name="fk_RoomType_Room" Association="HostelManagementModel.fk_RoomType_Room">
-            <End Role="RoomType" EntitySet="RoomTypes" />
-            <End Role="Room" EntitySet="Rooms" />
-          </AssociationSet>
-          <EntitySet Name="HostelCharges" EntityType="HostelManagementModel.HostelCharge" />
-          <AssociationSet Name="fk_StudentMessBill" Association="HostelManagementModel.fk_StudentMessBill">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="MessBill" EntitySet="MessBills" />
-          </AssociationSet>
-          <EntitySet Name="HostelBills" EntityType="HostelManagementModel.HostelBill" />
-          <AssociationSet Name="fk_StudentBill" Association="HostelManagementModel.fk_StudentBill">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="HostelBill" EntitySet="HostelBills" />
-          </AssociationSet>
-          <EntitySet Name="MessTransactions" EntityType="HostelManagementModel.MessTransaction" />
-          <AssociationSet Name="fk_BillPayment" Association="HostelManagementModel.fk_BillPayment">
-            <End Role="MessBill" EntitySet="MessBills" />
-            <End Role="MessTransaction" EntitySet="MessTransactions" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PaymentMess" Association="HostelManagementModel.fk_PaymentMess">
-            <End Role="PaymentType" EntitySet="PaymentTypes" />
-            <End Role="MessTransaction" EntitySet="MessTransactions" />
-          </AssociationSet>
-          <AssociationSet Name="fk_StudentMess" Association="HostelManagementModel.fk_StudentMess">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="MessTransaction" EntitySet="MessTransactions" />
-          </AssociationSet>
-        </EntityContainer>
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="AcHead">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="val" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HostelTransactions" Relationship="HostelManagementModel.hk_HeadTransaction" FromRole="AcHead" ToRole="HostelTransaction" />
           <Property Name="recurr" Type="Int32" />
           <Property Name="custom" Type="Int32" />
+          <NavigationProperty Name="HostelTransactions" Relationship="Self.hk_HeadTransaction" FromRole="AcHead" ToRole="HostelTransactions" />
         </EntityType>
         <EntityType Name="Allotment">
           <Key>
             <PropertyRef Name="bid" />
             <PropertyRef Name="year" />
           </Key>
-          <Property Name="bid" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="dateOfJoin" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="dateOfLeave" Type="DateTime" Precision="0" />
           <Property Name="hostelBlock" Type="Int32" Nullable="false" />
           <Property Name="roomNum" Type="Int32" Nullable="false" />
           <Property Name="slNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Student" Relationship="HostelManagementModel.fk_StudentAllotment" FromRole="Allotment" ToRole="Student" />
-          <NavigationProperty Name="Room" Relationship="HostelManagementModel.fk_StudentBlock" FromRole="Allotment" ToRole="Room" />
+          <NavigationProperty Name="Student" Relationship="Self.fk_StudentAllotment" FromRole="Allotment" ToRole="Student" />
+          <NavigationProperty Name="Room" Relationship="Self.fk_StudentBlock" FromRole="Allotment" ToRole="Rooms" />
         </EntityType>
         <EntityType Name="Course">
           <Key>
@@ -543,7 +463,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="val" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Students" Relationship="HostelManagementModel.fk_CourseStudent" FromRole="Course" ToRole="Student" />
+          <NavigationProperty Name="Students" Relationship="Self.fk_CourseStudent" FromRole="Course" ToRole="Student" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -552,16 +472,36 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="val" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="code" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Students" Relationship="HostelManagementModel.fk_BranchStudent" FromRole="Department" ToRole="Student" />
+          <NavigationProperty Name="Students" Relationship="Self.fk_BranchStudent" FromRole="Department" ToRole="Student" />
         </EntityType>
         <EntityType Name="Gender">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="val" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Students" Relationship="HostelManagementModel.fk_GenderStudent" FromRole="Gender" ToRole="Student" />
-          <NavigationProperty Name="Hostels" Relationship="HostelManagementModel.fk_Hostels_Gender" FromRole="Gender" ToRole="Hostel" />
+          <Property Name="val" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Students" Relationship="Self.fk_GenderStudent" FromRole="Gender" ToRole="Student" />
+          <NavigationProperty Name="Hostels" Relationship="Self.fk_Hostels_Gender" FromRole="Gender" ToRole="Hostels" />
+        </EntityType>
+        <EntityType Name="HostelBill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="year" Type="Int32" />
+          <Property Name="descr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Student" Relationship="Self.fk_StudentBill" FromRole="HostelBill" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="HostelCharge">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="year" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="val" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="year" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Hostel">
           <Key>
@@ -570,25 +510,25 @@
           <Property Name="blockNumber" Type="Int32" Nullable="false" />
           <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="occupantType" Type="Int32" />
-          <NavigationProperty Name="Gender" Relationship="HostelManagementModel.fk_Hostels_Gender" FromRole="Hostel" ToRole="Gender" />
-          <NavigationProperty Name="Rooms" Relationship="HostelManagementModel.fk_HostelRooms" FromRole="Hostel" ToRole="Room" />
+          <NavigationProperty Name="Gender" Relationship="Self.fk_Hostels_Gender" FromRole="Hostels" ToRole="Gender" />
+          <NavigationProperty Name="Rooms" Relationship="Self.fk_HostelRooms" FromRole="Hostels" ToRole="Rooms" />
         </EntityType>
         <EntityType Name="HostelTransaction">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="bid" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dateOfPay" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="paymentTypeId" Type="Int32" Nullable="false" />
           <Property Name="head" Type="Int32" Nullable="false" />
-          <Property Name="receipt" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="bankName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="receipt" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bankName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="year" Type="Int32" />
           <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="AcHead" Relationship="HostelManagementModel.hk_HeadTransaction" FromRole="HostelTransaction" ToRole="AcHead" />
-          <NavigationProperty Name="PaymentType" Relationship="HostelManagementModel.fk_PaymentHostel" FromRole="HostelTransaction" ToRole="PaymentType" />
-          <NavigationProperty Name="Student" Relationship="HostelManagementModel.fk_StudentHostel" FromRole="HostelTransaction" ToRole="Student" />
+          <NavigationProperty Name="AcHead" Relationship="Self.hk_HeadTransaction" FromRole="HostelTransactions" ToRole="AcHead" />
+          <NavigationProperty Name="PaymentType" Relationship="Self.fk_PaymentHostel" FromRole="HostelTransactions" ToRole="PaymentType" />
+          <NavigationProperty Name="Student" Relationship="Self.fk_StudentHostel" FromRole="HostelTransactions" ToRole="Student" />
         </EntityType>
         <EntityType Name="MessBill">
           <Key>
@@ -599,17 +539,34 @@
           <Property Name="numDays" Type="Int32" Nullable="false" />
           <Property Name="month" Type="Int32" Nullable="false" />
           <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Student" Relationship="HostelManagementModel.fk_StudentMessBill" FromRole="MessBill" ToRole="Student" />
-          <NavigationProperty Name="MessTransactions" Relationship="HostelManagementModel.fk_BillPayment" FromRole="MessBill" ToRole="MessTransaction" />
+          <NavigationProperty Name="MessTransactions" Relationship="Self.fk_BillPayment" FromRole="MessBill" ToRole="MessTransactions" />
+          <NavigationProperty Name="Student" Relationship="Self.fk_StudentMessBill" FromRole="MessBill" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="MessTransaction">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="billNum" Type="Int64" Nullable="false" />
+          <Property Name="receipt" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bankName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dateOfPay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="paymentTypeId" Type="Int32" Nullable="false" />
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Decimal" Precision="10" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="MessBill" Relationship="Self.fk_BillPayment" FromRole="MessTransactions" ToRole="MessBill" />
+          <NavigationProperty Name="PaymentType" Relationship="Self.fk_PaymentMess" FromRole="MessTransactions" ToRole="PaymentType" />
+          <NavigationProperty Name="Student" Relationship="Self.fk_StudentMess" FromRole="MessTransactions" ToRole="Student" />
         </EntityType>
         <EntityType Name="PaymentType">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="val" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HostelTransactions" Relationship="HostelManagementModel.fk_PaymentHostel" FromRole="PaymentType" ToRole="HostelTransaction" />
-          <NavigationProperty Name="MessTransactions" Relationship="HostelManagementModel.fk_PaymentMess" FromRole="PaymentType" ToRole="MessTransaction" />
+          <Property Name="val" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HostelTransactions" Relationship="Self.fk_PaymentHostel" FromRole="PaymentType" ToRole="HostelTransactions" />
+          <NavigationProperty Name="MessTransactions" Relationship="Self.fk_PaymentMess" FromRole="PaymentType" ToRole="MessTransactions" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -621,9 +578,9 @@
           <Property Name="roomType" Type="Int32" />
           <Property Name="maxOccupancy" Type="Int32" Nullable="false" />
           <Property Name="currentOccupancy" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Allotments" Relationship="HostelManagementModel.fk_StudentBlock" FromRole="Room" ToRole="Allotment" />
-          <NavigationProperty Name="Hostel" Relationship="HostelManagementModel.fk_HostelRooms" FromRole="Room" ToRole="Hostel" />
-          <NavigationProperty Name="RoomType1" Relationship="HostelManagementModel.fk_RoomType_Room" FromRole="Room" ToRole="RoomType" />
+          <NavigationProperty Name="Allotments" Relationship="Self.fk_StudentBlock" FromRole="Rooms" ToRole="Allotment" />
+          <NavigationProperty Name="Hostel" Relationship="Self.fk_HostelRooms" FromRole="Rooms" ToRole="Hostels" />
+          <NavigationProperty Name="RoomType1" Relationship="Self.fk_RoomType_Room" FromRole="Rooms" ToRole="RoomTypes" />
         </EntityType>
         <EntityType Name="RoomType">
           <Key>
@@ -631,44 +588,44 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="val" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Rooms" Relationship="HostelManagementModel.fk_RoomType_Room" FromRole="RoomType" ToRole="Room" />
+          <NavigationProperty Name="Rooms" Relationship="Self.fk_RoomType_Room" FromRole="RoomTypes" ToRole="Rooms" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="bid" />
           </Key>
-          <Property Name="bid" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="usn" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="semester" Type="Int32" Nullable="false" />
           <Property Name="gender" Type="Int32" Nullable="false" />
           <Property Name="course" Type="Int32" Nullable="false" />
           <Property Name="branch" Type="Int32" Nullable="false" />
           <Property Name="dob" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Allotments" Relationship="HostelManagementModel.fk_StudentAllotment" FromRole="Student" ToRole="Allotment" />
-          <NavigationProperty Name="Course1" Relationship="HostelManagementModel.fk_CourseStudent" FromRole="Student" ToRole="Course" />
-          <NavigationProperty Name="Department" Relationship="HostelManagementModel.fk_BranchStudent" FromRole="Student" ToRole="Department" />
-          <NavigationProperty Name="Gender1" Relationship="HostelManagementModel.fk_GenderStudent" FromRole="Student" ToRole="Gender" />
-          <NavigationProperty Name="HostelTransactions" Relationship="HostelManagementModel.fk_StudentHostel" FromRole="Student" ToRole="HostelTransaction" />
-          <NavigationProperty Name="MessBills" Relationship="HostelManagementModel.fk_StudentMessBill" FromRole="Student" ToRole="MessBill" />
-          <NavigationProperty Name="HostelBills" Relationship="HostelManagementModel.fk_StudentBill" FromRole="Student" ToRole="HostelBill" />
-          <NavigationProperty Name="MessTransactions" Relationship="HostelManagementModel.fk_StudentMess" FromRole="Student" ToRole="MessTransaction" />
+          <NavigationProperty Name="Allotments" Relationship="Self.fk_StudentAllotment" FromRole="Student" ToRole="Allotment" />
+          <NavigationProperty Name="Course1" Relationship="Self.fk_CourseStudent" FromRole="Student" ToRole="Course" />
+          <NavigationProperty Name="Department" Relationship="Self.fk_BranchStudent" FromRole="Student" ToRole="Department" />
+          <NavigationProperty Name="Gender1" Relationship="Self.fk_GenderStudent" FromRole="Student" ToRole="Gender" />
+          <NavigationProperty Name="HostelBills" Relationship="Self.fk_StudentBill" FromRole="Student" ToRole="HostelBill" />
+          <NavigationProperty Name="HostelTransactions" Relationship="Self.fk_StudentHostel" FromRole="Student" ToRole="HostelTransactions" />
+          <NavigationProperty Name="MessBills" Relationship="Self.fk_StudentMessBill" FromRole="Student" ToRole="MessBill" />
+          <NavigationProperty Name="MessTransactions" Relationship="Self.fk_StudentMess" FromRole="Student" ToRole="MessTransactions" />
         </EntityType>
         <Association Name="hk_HeadTransaction">
-          <End Type="HostelManagementModel.AcHead" Role="AcHead" Multiplicity="1" />
-          <End Type="HostelManagementModel.HostelTransaction" Role="HostelTransaction" Multiplicity="*" />
+          <End Role="AcHead" Type="Self.AcHead" Multiplicity="1" />
+          <End Role="HostelTransactions" Type="Self.HostelTransaction" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AcHead">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="HostelTransaction">
+            <Dependent Role="HostelTransactions">
               <PropertyRef Name="head" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_StudentAllotment">
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="1" />
-          <End Type="HostelManagementModel.Allotment" Role="Allotment" Multiplicity="*" />
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="Allotment" Type="Self.Allotment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
               <PropertyRef Name="bid" />
@@ -679,10 +636,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_StudentBlock">
-          <End Type="HostelManagementModel.Room" Role="Room" Multiplicity="1" />
-          <End Type="HostelManagementModel.Allotment" Role="Allotment" Multiplicity="*" />
+          <End Role="Rooms" Type="Self.Room" Multiplicity="1" />
+          <End Role="Allotment" Type="Self.Allotment" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Room">
+            <Principal Role="Rooms">
               <PropertyRef Name="hostelBlockNumber" />
               <PropertyRef Name="roomNumber" />
             </Principal>
@@ -693,8 +650,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_CourseStudent">
-          <End Type="HostelManagementModel.Course" Role="Course" Multiplicity="1" />
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="*" />
+          <End Role="Course" Type="Self.Course" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Course">
               <PropertyRef Name="id" />
@@ -705,8 +662,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_BranchStudent">
-          <End Type="HostelManagementModel.Department" Role="Department" Multiplicity="1" />
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="*" />
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="id" />
@@ -717,8 +674,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_GenderStudent">
-          <End Type="HostelManagementModel.Gender" Role="Gender" Multiplicity="1" />
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="*" />
+          <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Gender">
               <PropertyRef Name="id" />
@@ -729,100 +686,20 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Hostels_Gender">
-          <End Type="HostelManagementModel.Gender" Role="Gender" Multiplicity="0..1" />
-          <End Type="HostelManagementModel.Hostel" Role="Hostel" Multiplicity="*" />
+          <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+          <End Role="Hostels" Type="Self.Hostel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Gender">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Hostel">
+            <Dependent Role="Hostels">
               <PropertyRef Name="occupantType" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_HostelRooms">
-          <End Type="HostelManagementModel.Hostel" Role="Hostel" Multiplicity="1" />
-          <End Type="HostelManagementModel.Room" Role="Room" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Hostel">
-              <PropertyRef Name="blockNumber" />
-            </Principal>
-            <Dependent Role="Room">
-              <PropertyRef Name="hostelBlockNumber" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_PaymentHostel">
-          <End Type="HostelManagementModel.PaymentType" Role="PaymentType" Multiplicity="1" />
-          <End Type="HostelManagementModel.HostelTransaction" Role="HostelTransaction" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PaymentType">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="HostelTransaction">
-              <PropertyRef Name="paymentTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_StudentHostel">
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="1" />
-          <End Type="HostelManagementModel.HostelTransaction" Role="HostelTransaction" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Student">
-              <PropertyRef Name="bid" />
-            </Principal>
-            <Dependent Role="HostelTransaction">
-              <PropertyRef Name="bid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_RoomType_Room">
-          <End Type="HostelManagementModel.RoomType" Role="RoomType" Multiplicity="0..1" />
-          <End Type="HostelManagementModel.Room" Role="Room" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="RoomType">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Room">
-              <PropertyRef Name="roomType" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="HostelCharge">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="year" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="val" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="year" Type="Int32" Nullable="false" />
-        </EntityType>
-        <Association Name="fk_StudentMessBill">
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="0..1" />
-          <End Type="HostelManagementModel.MessBill" Role="MessBill" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Student">
-              <PropertyRef Name="bid" />
-            </Principal>
-            <Dependent Role="MessBill">
-              <PropertyRef Name="bid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="HostelBill">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="year" Type="Int32" />
-          <Property Name="descr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Student" Relationship="HostelManagementModel.fk_StudentBill" FromRole="HostelBill" ToRole="Student" />
-        </EntityType>
         <Association Name="fk_StudentBill">
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="0..1" />
-          <End Type="HostelManagementModel.HostelBill" Role="HostelBill" Multiplicity="*" />
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="HostelBill" Type="Self.HostelBill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
               <PropertyRef Name="bid" />
@@ -832,221 +709,345 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="MessTransaction">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="bid" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="billNum" Type="Int64" Nullable="false" />
-          <Property Name="receipt" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="bankName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="dateOfPay" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="paymentTypeId" Type="Int32" Nullable="false" />
-          <Property Name="year" Type="Int32" Nullable="false" />
-          <Property Name="id" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="MessBill" Relationship="HostelManagementModel.fk_BillPayment" FromRole="MessTransaction" ToRole="MessBill" />
-          <NavigationProperty Name="PaymentType" Relationship="HostelManagementModel.fk_PaymentMess" FromRole="MessTransaction" ToRole="PaymentType" />
-          <NavigationProperty Name="Student" Relationship="HostelManagementModel.fk_StudentMess" FromRole="MessTransaction" ToRole="Student" />
-        </EntityType>
-        <Association Name="fk_BillPayment">
-          <End Type="HostelManagementModel.MessBill" Role="MessBill" Multiplicity="1" />
-          <End Type="HostelManagementModel.MessTransaction" Role="MessTransaction" Multiplicity="*" />
+        <Association Name="fk_HostelRooms">
+          <End Role="Hostels" Type="Self.Hostel" Multiplicity="1" />
+          <End Role="Rooms" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="MessBill">
-              <PropertyRef Name="billNum" />
+            <Principal Role="Hostels">
+              <PropertyRef Name="blockNumber" />
             </Principal>
-            <Dependent Role="MessTransaction">
-              <PropertyRef Name="billNum" />
+            <Dependent Role="Rooms">
+              <PropertyRef Name="hostelBlockNumber" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_PaymentMess">
-          <End Type="HostelManagementModel.PaymentType" Role="PaymentType" Multiplicity="1" />
-          <End Type="HostelManagementModel.MessTransaction" Role="MessTransaction" Multiplicity="*" />
+        <Association Name="fk_PaymentHostel">
+          <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
+          <End Role="HostelTransactions" Type="Self.HostelTransaction" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PaymentType">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="MessTransaction">
+            <Dependent Role="HostelTransactions">
+              <PropertyRef Name="paymentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StudentHostel">
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="HostelTransactions" Type="Self.HostelTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="bid" />
+            </Principal>
+            <Dependent Role="HostelTransactions">
+              <PropertyRef Name="bid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_BillPayment">
+          <End Role="MessBill" Type="Self.MessBill" Multiplicity="1" />
+          <End Role="MessTransactions" Type="Self.MessTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessBill">
+              <PropertyRef Name="billNum" />
+            </Principal>
+            <Dependent Role="MessTransactions">
+              <PropertyRef Name="billNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StudentMessBill">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="MessBill" Type="Self.MessBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="bid" />
+            </Principal>
+            <Dependent Role="MessBill">
+              <PropertyRef Name="bid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PaymentMess">
+          <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
+          <End Role="MessTransactions" Type="Self.MessTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentType">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MessTransactions">
               <PropertyRef Name="paymentTypeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_StudentMess">
-          <End Type="HostelManagementModel.Student" Role="Student" Multiplicity="1" />
-          <End Type="HostelManagementModel.MessTransaction" Role="MessTransaction" Multiplicity="*" />
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="MessTransactions" Type="Self.MessTransaction" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
               <PropertyRef Name="bid" />
             </Principal>
-            <Dependent Role="MessTransaction">
+            <Dependent Role="MessTransactions">
               <PropertyRef Name="bid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <Association Name="fk_RoomType_Room">
+          <End Role="RoomTypes" Type="Self.RoomType" Multiplicity="0..1" />
+          <End Role="Rooms" Type="Self.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoomTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rooms">
+              <PropertyRef Name="roomType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HostelManagementEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AcHeads" EntityType="Self.AcHead" />
+          <EntitySet Name="Allotments" EntityType="Self.Allotment" />
+          <EntitySet Name="Courses" EntityType="Self.Course" />
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="Genders" EntityType="Self.Gender" />
+          <EntitySet Name="HostelBills" EntityType="Self.HostelBill" />
+          <EntitySet Name="HostelCharges" EntityType="Self.HostelCharge" />
+          <EntitySet Name="Hostels" EntityType="Self.Hostel" />
+          <EntitySet Name="HostelTransactions" EntityType="Self.HostelTransaction" />
+          <EntitySet Name="MessBills" EntityType="Self.MessBill" />
+          <EntitySet Name="MessTransactions" EntityType="Self.MessTransaction" />
+          <EntitySet Name="PaymentTypes" EntityType="Self.PaymentType" />
+          <EntitySet Name="Rooms" EntityType="Self.Room" />
+          <EntitySet Name="RoomTypes" EntityType="Self.RoomType" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <AssociationSet Name="hk_HeadTransaction" Association="Self.hk_HeadTransaction">
+            <End Role="AcHead" EntitySet="AcHeads" />
+            <End Role="HostelTransactions" EntitySet="HostelTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StudentAllotment" Association="Self.fk_StudentAllotment">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Allotment" EntitySet="Allotments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StudentBlock" Association="Self.fk_StudentBlock">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Allotment" EntitySet="Allotments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_CourseStudent" Association="Self.fk_CourseStudent">
+            <End Role="Course" EntitySet="Courses" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="fk_BranchStudent" Association="Self.fk_BranchStudent">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GenderStudent" Association="Self.fk_GenderStudent">
+            <End Role="Gender" EntitySet="Genders" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Hostels_Gender" Association="Self.fk_Hostels_Gender">
+            <End Role="Gender" EntitySet="Genders" />
+            <End Role="Hostels" EntitySet="Hostels" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StudentBill" Association="Self.fk_StudentBill">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="HostelBill" EntitySet="HostelBills" />
+          </AssociationSet>
+          <AssociationSet Name="fk_HostelRooms" Association="Self.fk_HostelRooms">
+            <End Role="Hostels" EntitySet="Hostels" />
+            <End Role="Rooms" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PaymentHostel" Association="Self.fk_PaymentHostel">
+            <End Role="PaymentType" EntitySet="PaymentTypes" />
+            <End Role="HostelTransactions" EntitySet="HostelTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StudentHostel" Association="Self.fk_StudentHostel">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="HostelTransactions" EntitySet="HostelTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_BillPayment" Association="Self.fk_BillPayment">
+            <End Role="MessBill" EntitySet="MessBills" />
+            <End Role="MessTransactions" EntitySet="MessTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StudentMessBill" Association="Self.fk_StudentMessBill">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="MessBill" EntitySet="MessBills" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PaymentMess" Association="Self.fk_PaymentMess">
+            <End Role="PaymentType" EntitySet="PaymentTypes" />
+            <End Role="MessTransactions" EntitySet="MessTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StudentMess" Association="Self.fk_StudentMess">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="MessTransactions" EntitySet="MessTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_RoomType_Room" Association="Self.fk_RoomType_Room">
+            <End Role="RoomTypes" EntitySet="RoomTypes" />
+            <End Role="Rooms" EntitySet="Rooms" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HostelManagementModelStoreContainer" CdmEntityContainer="HostelManagementEntities">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="HostelManagementEntities1">
           <EntitySetMapping Name="AcHeads">
-            <EntityTypeMapping TypeName="HostelManagementModel.AcHead">
+            <EntityTypeMapping TypeName="DatabaseModel.AcHead">
               <MappingFragment StoreEntitySet="AcHead">
-                <ScalarProperty Name="custom" ColumnName="custom" />
-                <ScalarProperty Name="recurr" ColumnName="recurr" />
-                <ScalarProperty Name="val" ColumnName="val" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
+                <ScalarProperty Name="recurr" ColumnName="recurr" />
+                <ScalarProperty Name="custom" ColumnName="custom" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Allotments">
-            <EntityTypeMapping TypeName="HostelManagementModel.Allotment">
+            <EntityTypeMapping TypeName="DatabaseModel.Allotment">
               <MappingFragment StoreEntitySet="Allotment">
-                <ScalarProperty Name="slNum" ColumnName="slNum" />
-                <ScalarProperty Name="roomNum" ColumnName="roomNum" />
-                <ScalarProperty Name="hostelBlock" ColumnName="hostelBlock" />
-                <ScalarProperty Name="dateOfLeave" ColumnName="dateOfLeave" />
-                <ScalarProperty Name="dateOfJoin" ColumnName="dateOfJoin" />
-                <ScalarProperty Name="year" ColumnName="year" />
                 <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="dateOfJoin" ColumnName="dateOfJoin" />
+                <ScalarProperty Name="dateOfLeave" ColumnName="dateOfLeave" />
+                <ScalarProperty Name="hostelBlock" ColumnName="hostelBlock" />
+                <ScalarProperty Name="roomNum" ColumnName="roomNum" />
+                <ScalarProperty Name="slNum" ColumnName="slNum" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Courses">
-            <EntityTypeMapping TypeName="HostelManagementModel.Course">
+            <EntityTypeMapping TypeName="DatabaseModel.Course">
               <MappingFragment StoreEntitySet="Course">
-                <ScalarProperty Name="val" ColumnName="val" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Departments">
-            <EntityTypeMapping TypeName="HostelManagementModel.Department">
+            <EntityTypeMapping TypeName="DatabaseModel.Department">
               <MappingFragment StoreEntitySet="Department">
-                <ScalarProperty Name="code" ColumnName="code" />
-                <ScalarProperty Name="val" ColumnName="val" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
+                <ScalarProperty Name="code" ColumnName="code" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Genders">
-            <EntityTypeMapping TypeName="HostelManagementModel.Gender">
+            <EntityTypeMapping TypeName="DatabaseModel.Gender">
               <MappingFragment StoreEntitySet="Gender">
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="val" ColumnName="val" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Hostels">
-            <EntityTypeMapping TypeName="HostelManagementModel.Hostel">
-              <MappingFragment StoreEntitySet="Hostels">
-                <ScalarProperty Name="occupantType" ColumnName="occupantType" />
-                <ScalarProperty Name="type" ColumnName="type" />
-                <ScalarProperty Name="blockNumber" ColumnName="blockNumber" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HostelTransactions">
-            <EntityTypeMapping TypeName="HostelManagementModel.HostelTransaction">
-              <MappingFragment StoreEntitySet="HostelTransactions">
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="bankName" ColumnName="bankName" />
-                <ScalarProperty Name="receipt" ColumnName="receipt" />
-                <ScalarProperty Name="head" ColumnName="head" />
-                <ScalarProperty Name="paymentTypeId" ColumnName="paymentTypeId" />
-                <ScalarProperty Name="dateOfPay" ColumnName="dateOfPay" />
-                <ScalarProperty Name="bid" ColumnName="bid" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MessBills">
-            <EntityTypeMapping TypeName="HostelManagementModel.MessBill">
-              <MappingFragment StoreEntitySet="MessBill">
-                <ScalarProperty Name="bid" ColumnName="bid" />
-                <ScalarProperty Name="month" ColumnName="month" />
-                <ScalarProperty Name="numDays" ColumnName="numDays" />
-                <ScalarProperty Name="dateOfDeclaration" ColumnName="dateOfDeclaration" />
-                <ScalarProperty Name="billNum" ColumnName="billNum" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PaymentTypes">
-            <EntityTypeMapping TypeName="HostelManagementModel.PaymentType">
-              <MappingFragment StoreEntitySet="PaymentType">
-                <ScalarProperty Name="val" ColumnName="val" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Rooms">
-            <EntityTypeMapping TypeName="HostelManagementModel.Room">
-              <MappingFragment StoreEntitySet="Rooms">
-                <ScalarProperty Name="currentOccupancy" ColumnName="currentOccupancy" />
-                <ScalarProperty Name="maxOccupancy" ColumnName="maxOccupancy" />
-                <ScalarProperty Name="roomType" ColumnName="roomType" />
-                <ScalarProperty Name="roomNumber" ColumnName="roomNumber" />
-                <ScalarProperty Name="hostelBlockNumber" ColumnName="hostelBlockNumber" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RoomTypes">
-            <EntityTypeMapping TypeName="HostelManagementModel.RoomType">
-              <MappingFragment StoreEntitySet="RoomTypes">
-                <ScalarProperty Name="val" ColumnName="val" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Students">
-            <EntityTypeMapping TypeName="HostelManagementModel.Student">
-              <MappingFragment StoreEntitySet="Student">
-                <ScalarProperty Name="dob" ColumnName="dob" />
-                <ScalarProperty Name="branch" ColumnName="branch" />
-                <ScalarProperty Name="course" ColumnName="course" />
-                <ScalarProperty Name="gender" ColumnName="gender" />
-                <ScalarProperty Name="semester" ColumnName="semester" />
-                <ScalarProperty Name="usn" ColumnName="usn" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="bid" ColumnName="bid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HostelCharges">
-            <EntityTypeMapping TypeName="HostelManagementModel.HostelCharge">
-              <MappingFragment StoreEntitySet="HostelCharges">
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="val" ColumnName="val" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HostelBills">
-            <EntityTypeMapping TypeName="HostelManagementModel.HostelBill">
+            <EntityTypeMapping TypeName="DatabaseModel.HostelBill">
               <MappingFragment StoreEntitySet="HostelBill">
-                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="year" ColumnName="year" />
                 <ScalarProperty Name="descr" ColumnName="descr" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HostelCharges">
+            <EntityTypeMapping TypeName="DatabaseModel.HostelCharge">
+              <MappingFragment StoreEntitySet="HostelCharges">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
+                <ScalarProperty Name="year" ColumnName="year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hostels">
+            <EntityTypeMapping TypeName="DatabaseModel.Hostel">
+              <MappingFragment StoreEntitySet="Hostels">
+                <ScalarProperty Name="blockNumber" ColumnName="blockNumber" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="occupantType" ColumnName="occupantType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HostelTransactions">
+            <EntityTypeMapping TypeName="DatabaseModel.HostelTransaction">
+              <MappingFragment StoreEntitySet="HostelTransactions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="dateOfPay" ColumnName="dateOfPay" />
+                <ScalarProperty Name="paymentTypeId" ColumnName="paymentTypeId" />
+                <ScalarProperty Name="head" ColumnName="head" />
+                <ScalarProperty Name="receipt" ColumnName="receipt" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
                 <ScalarProperty Name="year" ColumnName="year" />
                 <ScalarProperty Name="amount" ColumnName="amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MessBills">
+            <EntityTypeMapping TypeName="DatabaseModel.MessBill">
+              <MappingFragment StoreEntitySet="MessBill">
+                <ScalarProperty Name="billNum" ColumnName="billNum" />
+                <ScalarProperty Name="dateOfDeclaration" ColumnName="dateOfDeclaration" />
+                <ScalarProperty Name="numDays" ColumnName="numDays" />
+                <ScalarProperty Name="month" ColumnName="month" />
                 <ScalarProperty Name="bid" ColumnName="bid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MessTransactions">
-            <EntityTypeMapping TypeName="HostelManagementModel.MessTransaction">
+            <EntityTypeMapping TypeName="DatabaseModel.MessTransaction">
               <MappingFragment StoreEntitySet="MessTransactions">
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="paymentTypeId" ColumnName="paymentTypeId" />
-                <ScalarProperty Name="dateOfPay" ColumnName="dateOfPay" />
-                <ScalarProperty Name="bankName" ColumnName="bankName" />
-                <ScalarProperty Name="receipt" ColumnName="receipt" />
-                <ScalarProperty Name="billNum" ColumnName="billNum" />
                 <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="billNum" ColumnName="billNum" />
+                <ScalarProperty Name="receipt" ColumnName="receipt" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
+                <ScalarProperty Name="dateOfPay" ColumnName="dateOfPay" />
+                <ScalarProperty Name="paymentTypeId" ColumnName="paymentTypeId" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentTypes">
+            <EntityTypeMapping TypeName="DatabaseModel.PaymentType">
+              <MappingFragment StoreEntitySet="PaymentType">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="DatabaseModel.Room">
+              <MappingFragment StoreEntitySet="Rooms">
+                <ScalarProperty Name="hostelBlockNumber" ColumnName="hostelBlockNumber" />
+                <ScalarProperty Name="roomNumber" ColumnName="roomNumber" />
+                <ScalarProperty Name="roomType" ColumnName="roomType" />
+                <ScalarProperty Name="maxOccupancy" ColumnName="maxOccupancy" />
+                <ScalarProperty Name="currentOccupancy" ColumnName="currentOccupancy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoomTypes">
+            <EntityTypeMapping TypeName="DatabaseModel.RoomType">
+              <MappingFragment StoreEntitySet="RoomTypes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="DatabaseModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="usn" ColumnName="usn" />
+                <ScalarProperty Name="semester" ColumnName="semester" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="course" ColumnName="course" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

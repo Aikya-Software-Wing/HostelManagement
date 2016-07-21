@@ -7,23 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Course
+    public partial class AcHead
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Course()
+        public AcHead()
         {
-            this.Students = new HashSet<Student>();
+            this.HostelTransactions = new HashSet<HostelTransaction>();
         }
     
         public int id { get; set; }
         public string val { get; set; }
+        public Nullable<int> recurr { get; set; }
+        public Nullable<int> custom { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<HostelTransaction> HostelTransactions { get; set; }
     }
 }

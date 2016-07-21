@@ -7,24 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class MessTransaction
+    public partial class HostelTransaction
     {
+        public int id { get; set; }
         public string bid { get; set; }
-        public long billNum { get; set; }
-        public string receipt { get; set; }
-        public string bankName { get; set; }
         public System.DateTime dateOfPay { get; set; }
         public int paymentTypeId { get; set; }
-        public int year { get; set; }
-        public decimal id { get; set; }
+        public int head { get; set; }
+        public string receipt { get; set; }
+        public string bankName { get; set; }
+        public Nullable<int> year { get; set; }
         public Nullable<decimal> amount { get; set; }
     
-        public virtual MessBill MessBill { get; set; }
+        public virtual AcHead AcHead { get; set; }
         public virtual PaymentType PaymentType { get; set; }
         public virtual Student Student { get; set; }
     }

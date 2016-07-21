@@ -7,28 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Room
+    public partial class Department
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Room()
+        public Department()
         {
-            this.Allotments = new HashSet<Allotment>();
+            this.Students = new HashSet<Student>();
         }
     
-        public int hostelBlockNumber { get; set; }
-        public int roomNumber { get; set; }
-        public Nullable<int> roomType { get; set; }
-        public int maxOccupancy { get; set; }
-        public int currentOccupancy { get; set; }
+        public int id { get; set; }
+        public string val { get; set; }
+        public string code { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Allotment> Allotments { get; set; }
-        public virtual Hostel Hostel { get; set; }
-        public virtual RoomType RoomType1 { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

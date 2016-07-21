@@ -3,30 +3,38 @@
     ViewBag.Title = "Login";
 }
 
-<div class="container">
-    @if (string.IsNullOrEmpty(Model.ReturnUrl))
-    {
-        <h2>Login</h2>
-    }
-    else
-    {
-        <h2>Further Authrization is Required to Access this Page</h2>
-    }
-    <br />
 
-    @Html.ValidationSummary(true)
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        @if (string.IsNullOrEmpty(Model.ReturnUrl))
+        {
+            <h2 id="page_title" class="text-center">Login</h2>
+        }
+        else
+        {
+            <h2 id="page_title" class="text-center">Further Authrization is Required to Access this Page</h2>
+        }
+    </div>
+</div>
+<hr>
 
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
-    {
-        <div class="form-group">
-            @Html.LabelFor(m => m.UserId)
-            @Html.TextBoxFor(m => m.UserId, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Password)
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-        @Html.HiddenFor(m => m.ReturnUrl)
-        <input type="submit" class="btn btn-primary" value="Login" />
-    }
+<div class="row">
+    <div class="col-md-4 col-md-offset-5">
+        @Html.ValidationSummary(true)
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserId)
+                @Html.TextBoxFor(m => m.UserId, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+            @Html.HiddenFor(m => m.ReturnUrl)
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="Login" />
+            </div>
+        }
+    </div>
 </div>

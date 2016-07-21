@@ -1,4 +1,5 @@
-﻿using HostelManagement.Areas.HostelMessManagement.Models;
+﻿using BusinessLayer;
+using HostelManagement.Areas.HostelMessManagement.Models;
 using HostelManagement.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
     [Authorize(Roles = "Manager")]
     public class ManagerController : Controller
     {
-        private HostelManagementEntities db = new HostelManagementEntities();
+        private HostelManagementEntities1 db = new HostelManagementEntities1();
 
         /// <summary>
         /// Action Method to display Index
@@ -47,10 +48,13 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         [HttpGet]
         public ActionResult ChangeFees(string gender, string roomType1)
         {
+            StudentHelper helper = new StudentHelper();
+            TransactionHelper tHelper = new TransactionHelper();
+
             // populate the room type list such that the appropriate option is selected
             try
             {
-                int roomTypeID = db.RoomTypes.Where(y => y.val.Equals(roomType1)).First().id;
+                int roomTypeID = helper.GetRoomTypes().Where(y => y.val.Equals(roomType1)).First().id;
                 ViewBag.roomTypeList = new SelectList(db.RoomTypes.ToList(), "id", "val", roomTypeID);
             }
             catch (InvalidOperationException)
@@ -61,7 +65,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             // populate the gender list such that the appropriate option is selected
             try
             {
-                int genId = db.Genders.Where(x => x.val.Equals(gender)).First().id;
+                int genId = helper.GetGenders().Where(x => x.val.Equals(gender)).First().id;
                 ViewBag.hostelTypeList = new SelectList(db.Genders.ToList(), "id", "val", genId);
             }
             catch (InvalidOperationException)
@@ -70,8 +74,8 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             }
 
             // add the mess charges to the model
-            ViewBag.messChargesModel = new MessChargesViewModel() { dailymess = db.HostelCharges.Where(x => x.id == 0).OrderByDescending(x => x.year).First().val.Value};
-            TempData["canChangeMess"] = db.HostelCharges.Where(x => x.id == 0).OrderByDescending(x => x.year).First().year != DateTime.Now.Year;
+            ViewBag.messChargesModel = tHelper.ConstructViewModelForMessFeeChange();
+            TempData["canChangeMess"] = tHelper.CanChangeMessFees();
 
             return View();
         }
@@ -83,23 +87,14 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         /// <returns>Partial View or Success Message</returns>
         public ActionResult ChangeMessFees(MessChargesViewModel userInput)
         {
+            TransactionHelper helper = new TransactionHelper();
             // if model is not valid, do not process furthur
             if (!ModelState.IsValid)
             {
                 return PartialView("_MessFeeChange", userInput);
             }
-            
-            // find the value of the daily mess fees in the database
-            decimal originalValue = db.HostelCharges.Where(x => x.id == 0).First().val.Value;
 
-            // if the user has changed the value, update the same in the database
-            if(originalValue != userInput.dailymess)
-            {
-                UpdateDatabaseValue(0, userInput.dailymess);
-                return Content("Update Success!!");
-            }
-
-            return PartialView("_MessFeeChange", userInput);
+            return Content(helper.ChangeMessFees(userInput));
         }
 
         /// <summary>
@@ -109,36 +104,18 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         /// <returns>Partial View</returns>
         public ActionResult ChangeFees(SearchViewModel userInput)
         {
-            HostelChargesViewModel model = new HostelChargesViewModel();
+            TransactionHelper helper = new TransactionHelper();
 
-            int currentYear = DateTime.Now.Year;
-            
-            // get the ID of the various fees
-            int rentId = int.Parse(userInput.hostelType + "" + userInput.roomType + "1");
-            int fixId = int.Parse(userInput.hostelType + "" + userInput.roomType + "2");
-            int depId = int.Parse(userInput.hostelType + "" + userInput.roomType + "3");
+            HostelChargesViewModel model = helper.ConstructViewModelForHostelFeeChange(userInput);
 
-            // get the original values of the fees in the database, if not present, zero fill
-            try
-            {
-                model.rent = db.HostelCharges.Where(x => x.id == rentId).OrderByDescending(x => x.year).First().val.Value;
-                model.fix = db.HostelCharges.Where(x => x.id == fixId).OrderByDescending(x => x.year).First().val.Value;
-                model.deposit = db.HostelCharges.Where(x => x.id == depId).OrderByDescending(x => x.year).First().val.Value;
-                TempData["canRentChange"] = db.HostelCharges.Where(x => x.id == rentId).OrderByDescending(x => x.year).First().year != currentYear;
-                TempData["canFixChange"] = db.HostelCharges.Where(x => x.id == fixId).OrderByDescending(x => x.year).First().year != currentYear;
-                TempData["canDepositChange"] = db.HostelCharges.Where(x => x.id == depId).OrderByDescending(x => x.year).First().year != currentYear;
-            }
-            catch(InvalidOperationException)
-            {
-                model.rent = model.fix = model.deposit = 0;
-            }
+            TempData["canRentChange"] = helper.CanChangeRent(userInput.hostelType, userInput.roomType);
+            TempData["canFixChange"] = helper.CanChangeFix(userInput.hostelType, userInput.roomType);
+            TempData["canDepositChange"] = helper.CanChangeDep(userInput.hostelType, userInput.roomType);
 
-            // save the ids for future use
             TempData["originalValues"] = model;
-            TempData["rentId"] = rentId;
-            TempData["fixId"] = fixId;
-            TempData["depId"] = depId;
-
+            TempData["rentId"] = helper.GetRentFeeId(userInput.hostelType, userInput.roomType); ;
+            TempData["fixId"] = helper.GetFixFeeId(userInput.hostelType, userInput.roomType); ;
+            TempData["depId"] = helper.GetDepFeeId(userInput.hostelType, userInput.roomType); ;
             return PartialView("_FeeChange", model);
         }
 
@@ -158,59 +135,15 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             // get previously saved value
             HostelChargesViewModel originalValues = TempData.Peek("originalValues") as HostelChargesViewModel;
 
-            // find out the items that the user has changed
-            bool rentChanged = originalValues.rent != userInput.rent;
-            bool fixChanged = originalValues.fix != userInput.fix;
-            bool depChanged = originalValues.deposit != userInput.deposit;
+            // get the previously saved IDs
+            int rentId = (int)TempData.Peek("rentId");
+            int fixId = (int)TempData.Peek("fixId");
+            int depId = (int)TempData.Peek("depId");
 
-            // if user has changed anything
-            if(rentChanged || fixChanged || depChanged)
-            {
-                // get the previously saved IDs
-                int rentId = (int) TempData.Peek("rentId");
-                int fixId = (int)TempData.Peek("fixId");
-                int depId = (int)TempData.Peek("depId");
+            TransactionHelper helper = new TransactionHelper();
 
-                // update rent in the database, if changed
-                if (rentChanged)
-                {
-                    UpdateDatabaseValue(rentId, userInput.rent);
-                }
-
-                // update fixed changes in the database, if changed
-                if(fixChanged)
-                {
-                    UpdateDatabaseValue(fixId, userInput.fix);
-                }
-
-                // update deposit in the database, if changed
-                if(depChanged)
-                {
-                    UpdateDatabaseValue(depId, userInput.deposit);
-                }
-
-                // return success message
-                return Content("Update Success!!");
-            }
-
-            return PartialView("_FeeChange", userInput);
+            return Content(helper.ChangeHostelFees(userInput, originalValues, rentId, fixId, depId));
         }
 
-        /// <summary>
-        /// Helper method to update values in the database
-        /// </summary>
-        /// <param name="id"> the ID of the value to the change</param>
-        /// <param name="changedValue"> the updated value</param>
-        [NonAction]
-        public void UpdateDatabaseValue(int id, decimal changedValue)
-        {
-            db.HostelCharges.Add(new HostelCharge()
-            {
-                id = id,
-                val = changedValue,
-                year = DateTime.Now.Year
-            });
-            db.SaveChanges();
-        }
     }
 }

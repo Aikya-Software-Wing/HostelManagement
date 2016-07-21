@@ -7,26 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PaymentType
+    public partial class MessBill
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PaymentType()
+        public MessBill()
         {
-            this.HostelTransactions = new HashSet<HostelTransaction>();
             this.MessTransactions = new HashSet<MessTransaction>();
         }
     
-        public int id { get; set; }
-        public string val { get; set; }
+        public long billNum { get; set; }
+        public System.DateTime dateOfDeclaration { get; set; }
+        public int numDays { get; set; }
+        public int month { get; set; }
+        public string bid { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HostelTransaction> HostelTransactions { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MessTransaction> MessTransactions { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

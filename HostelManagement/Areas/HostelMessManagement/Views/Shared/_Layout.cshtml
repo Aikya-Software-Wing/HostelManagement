@@ -31,7 +31,6 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Student
@@ -62,7 +61,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("List of hostel fee defaulters", "ShowAllDues", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("List of all students", "ShowAllStudentHostelTransactions", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("List of mess fee defaulters", "ShowAllMessDues", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
                         </ul>
                     </li>
 
@@ -101,7 +100,7 @@
         </div>
     </div>
 
-    <div class="container body-content">
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>

@@ -16,3 +16,17 @@ textarea {
     max-width: 280px;
 }
 
+h2,h3,h4,h5,h6{
+	font-family: montserrat;
+}
+
+/*#page_title{
+	background-color: white;
+	margin: 0;
+	padding: 1%
+}*/
+
+/*#content_box{
+	background-color: white;
+	padding: 3%;
+}*/

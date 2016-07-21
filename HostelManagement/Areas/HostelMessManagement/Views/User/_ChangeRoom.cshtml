@@ -1,44 +1,81 @@
 ﻿@model HostelManagement.Areas.HostelMessManagement.Models.ChangeRoomViewModel
 
-@using (Ajax.BeginForm("ChangeRoomAllotment", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "AllotmentUpdateId" }, new { @class = "form-horizontal" }))
+@using (Ajax.BeginForm("ChangeRoomAllotment", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "AllotmentUpdateId", OnSuccess="showModal" }, new { }))
 {
-    <div class="form-group">
-        @Html.LabelFor(m => m.hostelBlock)
-        @Html.DropDownListFor(m => m.hostelBlock, (SelectList)ViewBag.hostelBlockList, "Select", new { @class = "form-control", id = "blockNumberDropDownID" })
-        @Html.ValidationMessageFor(m => m.hostelBlock)
+    <div class="row">
+        <fieldset class="form-group">
+            <h4>Hostel Information</h4>
+            <div class="form-group col-xs-2">
+                @Html.LabelFor(m => m.hostelBlock)
+                @Html.DropDownListFor(m => m.hostelBlock, (SelectList)ViewBag.hostelBlockList, "Select", new { @class = "form-control", id = "blockNumberDropDownID" })
+                @Html.ValidationMessageFor(m => m.hostelBlock)
+            </div>
+            <div class="form-group col-xs-2">
+                @Html.LabelFor(m => m.roomNumber)
+                @Html.DropDownListFor(m => m.roomNumber, (SelectList)ViewBag.roomNumberList, "Select", new { @class = "form-control", id = "roomNumberDropDownID" })
+                @Html.ValidationMessageFor(m => m.roomNumber)
+            </div>
+            <div class="form-group col-xs-2">
+                @Html.LabelFor(m => m.floor)
+                @Html.TextBoxFor(m => m.floor, new { @class = "form-control", id = "floorNumberTextID" })
+                @Html.ValidationMessageFor(m => m.floor)
+            </div>
+            <div class="form-group col-xs-2">
+                @Html.LabelFor(m => m.roomType)
+                @Html.TextBoxFor(m => m.roomType, new { @class = "form-control", id = "roomTypeTextID" })
+                @Html.ValidationMessageFor(m => m.roomType)
+            </div>
+            <div class="form-group col-xs-2">
+                @Html.LabelFor(m => m.year)
+                @Html.TextBoxFor(m => m.year, new { @class = "form-control", id = "roomTypeTextID" })
+                @Html.ValidationMessageFor(m => m.year)
+            </div>
+        </fieldset>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.roomNumber)
-        @Html.DropDownListFor(m => m.roomNumber, (SelectList)ViewBag.roomNumberList, "Select", new { @class = "form-control", id = "roomNumberDropDownID" })
-        @Html.ValidationMessageFor(m => m.roomNumber)
+    <div class="row">
+        <fieldset class="form-group">
+            <h4>Fee Information</h4>
+            <div class="col-md-10 col-md-offset-1">
+                <div id="feeDisplayDiv">
+                    Please fill the form above to view the fee structure
+                </div>
+            </div>
+        </fieldset>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.floor)
-        @Html.TextBoxFor(m => m.floor, new { @class = "form-control", id = "floorNumberTextID" })
-        @Html.ValidationMessageFor(m => m.floor)
+    <div class="row">
+        <div class="form-group col-md-4 col-md-offset-2">
+            <input type="submit" class="btn btn-primary btn-block" />
+        </div>
+        <div class="form-group col-md-4">
+            <input type="reset" class="btn btn-block btn-default" />
+        </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.roomType)
-        @Html.TextBoxFor(m => m.roomType, new { @class = "form-control", id = "roomTypeTextID" })
-        @Html.ValidationMessageFor(m => m.roomType)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.year)
-        @Html.TextBoxFor(m => m.year, new { @class = "form-control", id = "roomTypeTextID" })
-        @Html.ValidationMessageFor(m => m.year)
-    </div>
-    <input type="submit" class="btn btn-primary" />
 }
 
-<div id="AllotmentUpdateId">
+<div id="resultModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Message</h4>
+            </div>
+            <div class="modal-body">
+                <div id="AllotmentUpdateId">
 
-</div>
-
-<div id="feeDisplayDiv">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
     $.validator.unobtrusive.parse(document);
+    function showModal() {
+        $('#resultModal').modal('show');
+    }
     $("#blockNumberDropDownID").change(function () {
         $("#roomNumberDropDownID").attr("disabled", "disabled");
         var block = $("#blockNumberDropDownID :selected").text();
@@ -85,14 +122,15 @@
             data: { "gender": gender, "roomType": roomType },
             success: function (val) {
                 $("#feeDisplayDiv").html("");
-                var content = "<table class=\'table table-striped\'>"
+                var content = "<table class=\'table table-striped\' style=\"margin-bottom:0\">"
                 content += "<thead><tr><th>Fee Type</th><th>Amount (in INR)</th></tr></thead>"
                 content += "<tbody><tr><td>Daily Mess</td><td>" + val[0] + "</td></tr>";
                 content += "<tr><td>Rent</td><td>" + val[1] + "</td></tr>";
                 content += "<tr><td>Fixed</td><td>" + val[2] + "</td></tr>";
                 content += "<tr><td>Deposit</td><td>" + val[3] + "</td></tr>";
                 content += "</tbody></table>"
-                content += "<a class=\"btn btn-primary\" href=\"/HostelMessManagement/Manager/ChangeFees?gender=" + gender + "&amp;roomType1=" + roomType + "\">Update Fees</a>";
+                content += "<div class='row'><div class='col-md-2 pull-right'>"
+                content += "<a class=\"btn btn-link\" href=\"/HostelMessManagement/Manager/ChangeFees?gender=" + gender + "&amp;roomType1=" + roomType + "\">Update Fees</a></div></div>";
                 $("#feeDisplayDiv").append(content);
             }
         });

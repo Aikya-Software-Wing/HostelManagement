@@ -7,19 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HostelManagement.Models
+namespace BusinessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class HostelBill
+    public partial class Allotment
     {
         public string bid { get; set; }
-        public Nullable<decimal> amount { get; set; }
-        public Nullable<int> year { get; set; }
-        public string descr { get; set; }
-        public int id { get; set; }
+        public int year { get; set; }
+        public System.DateTime dateOfJoin { get; set; }
+        public Nullable<System.DateTime> dateOfLeave { get; set; }
+        public int hostelBlock { get; set; }
+        public int roomNum { get; set; }
+        public int slNum { get; set; }
     
         public virtual Student Student { get; set; }
+        public virtual Room Room { get; set; }
     }
 }

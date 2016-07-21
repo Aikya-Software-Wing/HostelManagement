@@ -1,89 +1,113 @@
 ﻿@model HostelManagement.Areas.HostelMessManagement.Models.HostelTransactionViewModel
 
-<div class="container">
+<div class="row">
+    <h4>Personal Information</h4>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.name)
+        <br />
+        @Html.DisplayFor(m => m.name)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.usn)
+        <br />
+        @Html.DisplayTextFor(m => m.usn)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.gender)
+        <br />
+        @Html.DisplayTextFor(m => m.gender)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.dob)
+        <br />
+        @Html.DisplayTextFor(m => m.dob)
+    </div>
+</div>
+<hr />
+<div class="row">
+    <h4>Education Information</h4>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.course)
+        <br />
+        @Html.DisplayTextFor(m => m.course)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.semester)
+        <br />
+        @Html.DisplayTextFor(m => m.semester)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.branch)
+        <br />
+        @Html.DisplayTextFor(m => m.branch)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.year)
+        <br />
+        @Html.DisplayTextFor(m => m.year)
+    </div>
+</div>
+<hr />
+<div class="row">
+    <h4>Hostel Information</h4>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.blockNumber)
+        <br />
+        @Html.DisplayTextFor(m => m.blockNumber)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.roomNumber)
+        <br />
+        @Html.DisplayTextFor(m => m.roomNumber)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.floorNumber)
+        <br />
+        @Html.DisplayTextFor(m => m.floorNumber)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.roomType)
+        <br />
+        @Html.DisplayTextFor(m => m.roomType)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.doj)
+        <br />
+        @Html.DisplayTextFor(m => m.doj)
+    </div>
+</div>
+<hr />
+<div class="row">
     <div class="col-sm-6">
-        <div>
-            @Html.LabelFor(m => m.name)
-            @Html.DisplayFor(m => m.name)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.bid)
-            @Html.DisplayTextFor(m => m.bid)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.usn)
-            @Html.DisplayTextFor(m => m.usn)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.gender)
-            @Html.DisplayTextFor(m => m.gender)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.course)
-            @Html.DisplayTextFor(m => m.course)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.semester)
-            @Html.DisplayTextFor(m => m.semester)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.branch)
-            @Html.DisplayTextFor(m => m.branch)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.year)
-            @Html.DisplayTextFor(m => m.year)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.dob)
-            @Html.DisplayTextFor(m => m.dob)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.blockNumber)
-            @Html.DisplayTextFor(m => m.blockNumber)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.roomNumber)
-            @Html.DisplayTextFor(m => m.roomNumber)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.floorNumber)
-            @Html.DisplayTextFor(m => m.floorNumber)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.roomType)
-            @Html.DisplayTextFor(m => m.roomType)
-        </div>
-        <div>
-            @Html.LabelFor(m => m.doj)
-            @Html.DisplayTextFor(m => m.doj)
-        </div>
-
-
-
-        @using (Ajax.BeginForm("PerformHostelFeeDiscount", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "transactionOutputDivId", OnSuccess = "LoadDues" }, new { @class = "form-horizontal" }))
+        @using (Ajax.BeginForm("PerformHostelFeeDiscount", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "transactionOutputDivId", OnSuccess = "LoadDues" }, new { }))
         {
-            <div class="form-group">
-                @Html.LabelFor(m => m.acHead)
-                @Html.DropDownListFor(m => m.acHead, new SelectList(ViewBag.acHeadList, "Value", "Text"), "Select", new { @class = "form-control", id = "acHeadDropDownId" })
-                @Html.ValidationMessageFor(m => m.acHead)
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.acHead)
+                    @Html.DropDownListFor(m => m.acHead, new SelectList(ViewBag.acHeadList, "Value", "Text"), "Select", new { @class = "form-control", id = "acHeadDropDownId" })
+                    @Html.ValidationMessageFor(m => m.acHead)
+                </div>
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.paymentType)
+                    @Html.DropDownListFor(m => m.paymentType, (SelectList)ViewBag.paymentTypeList, "Select", new { @class = "form-control", disabled = "disabled" })
+                    @Html.ValidationMessageFor(m => m.paymentType)
+                </div>
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.academicYear)
+                    @Html.DropDownListFor(m => m.academicYear, (SelectList)ViewBag.academicYearList, "Select", new { @class = "form-control", id = "academicYearId" })
+                    @Html.ValidationMessageFor(m => m.academicYear)
+                </div>
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.amount)
+                    @Html.TextBoxFor(m => m.amount, new { @class = "form-control", id = "amountTextBoxId" })
+                    @Html.ValidationMessageFor(m => m.amount)
+                </div>
             </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.paymentType)
-                @Html.DropDownListFor(m => m.paymentType, (SelectList)ViewBag.paymentTypeList, "Select", new { @class = "form-control", disabled="disabled" })
-                @Html.ValidationMessageFor(m => m.paymentType)
+            <div class="row">
+                <div class="form-group col-sm-6 col-sm-offset-3">
+                    <input type="submit" class="btn btn-primary btn-block" id="submitButtonId" />
+                </div>
             </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.academicYear)
-                @Html.DropDownListFor(m => m.academicYear, (SelectList)ViewBag.academicYearList, "Select", new { @class = "form-control", id = "academicYearId" })
-                @Html.ValidationMessageFor(m => m.academicYear)
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.amount)
-                @Html.TextBoxFor(m => m.amount, new { @class = "form-control", id = "amountTextBoxId" })
-                @Html.ValidationMessageFor(m => m.amount)
-            </div>
-            <input type="submit" class="btn btn-primary" id="submitButtonId" />
             @Html.HiddenFor(m => m.name)
             @Html.HiddenFor(m => m.bid)
             @Html.HiddenFor(m => m.usn)
@@ -104,9 +128,7 @@
             @Html.ValidationSummary()
         }
 
-        <div id="transactionOutputDivId">
 
-        </div>
     </div>
     <div class="col-sm-6">
         <div id="dueTableDivId">
@@ -114,6 +136,27 @@
         </div>
     </div>
 </div>
+
+<div id="resultModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Message</h4>
+            </div>
+            <div class="modal-body">
+                <div id="transactionOutputDivId">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <script type="text/javascript" language=javascript>
     $.validator.unobtrusive.parse(document);
     function LoadDues() {
@@ -125,7 +168,7 @@
                 $("#dueTableDivId").html(res);
             }
         });
-
+        $('#resultModal').modal('show');
     }
 
     function GetAmount() {
