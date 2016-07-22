@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     @Html.LabelFor(m => m.bid)
-                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control" })
+                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control", id="bidID" })
                 </div>
                 <div class="form-group col-md-2 pull-left">
                     <input type="submit" class="btn btn-primary form-control" value="View" />
@@ -33,3 +33,14 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#bidID').autocomplete({
+            source: '@Url.Action("GetStudentList", "User")'
+        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+            return $("<li>")
+            .append("<a>" + item.label + " (" + item.gender + ")" + "<br>Dept:" + item.dept + ",Sem:" + item.sem + "</a>")
+            .appendTo(ul);
+        };;
+    })
+</script>

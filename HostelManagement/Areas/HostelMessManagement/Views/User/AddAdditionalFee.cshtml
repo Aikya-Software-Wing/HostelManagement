@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="form-group">
                     @Html.LabelFor(m => m.bid)
-                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control" })
+                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control", id="bidID" })
                     @Html.ValidationMessageFor(m => m.bid)
                 </div>
                 <div class="form-group">
@@ -54,4 +54,13 @@
         alert("Additional Fee Added Successfully!");
         document.getElementById("AddAddtionalFeeForm").reset();
     }
+    $(document).ready(function () {
+        $('#bidID').autocomplete({
+            source: '@Url.Action("GetStudentList", "User")'
+        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+            return $("<li>")
+            .append("<a>" + item.label + " (" + item.gender + ")" + "<br>Dept:" + item.dept + ",Sem:" + item.sem + "</a>")
+            .appendTo(ul);
+        };;
+    })
 </script>

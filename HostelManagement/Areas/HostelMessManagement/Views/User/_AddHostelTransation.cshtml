@@ -1,5 +1,6 @@
 ﻿@model HostelManagement.Areas.HostelMessManagement.Models.HostelTransactionViewModel
 
+
 <div class="row">
     <h4>Personal Information</h4>
     <div class="col-md-3">
@@ -77,10 +78,10 @@
     </div>
 </div>
 <hr />
-<div class="row">
+<div class="row" style="margin-bottom:200px;" id="myDiv">
     <div class="col-sm-6">
         @using (Ajax.BeginForm("PerformHostelTransaction", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "transactionOutputDivId", OnSuccess = "LoadDues" }, new { }))
-        {
+            {
             <div class="row">
                 <div class="form-group col-sm-4">
                     @Html.LabelFor(m => m.referenceNumber)
@@ -147,6 +148,24 @@
     </div>
 </div>
 
+<div class="footer" id="footerID">
+    @Html.Action("ShowAllTransactions", new { bid = Model.bid })
+</div>
+
+
+
+<style>
+    .footer {
+        background-color:white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        overflow-y: scroll;
+    }
+</style>
+
 <div id="resultModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -168,8 +187,6 @@
 </div>
 <script type="text/javascript" language=javascript>
     $.validator.unobtrusive.parse(document);
-
-
     function LoadDues() {
         $.ajax({
             type: 'POST',
@@ -179,6 +196,16 @@
                 $("#dueTableDivId").html(res);
             }
         });
+
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ShowAllTransactions", "User")',
+            data: { bid: '@Model.bid' },
+            success: function (res) {
+                $("#footerID").html(res);
+            }
+        });
+
         $('#resultModal').modal('show');
     }
 

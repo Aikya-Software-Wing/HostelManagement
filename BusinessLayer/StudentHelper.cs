@@ -1,4 +1,5 @@
 ﻿using HostelManagement.Areas.HostelMessManagement.Models;
+using Shared;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -131,7 +132,7 @@ namespace BusinessLayer
         public List<decimal> GetFeeBreakup(string gender, string roomType)
         {
             // get the Database ID for gender and room type
-            int gen = db.Genders.Where(x => x.val.Equals(gender)).First().id;
+            int gen = int.Parse(gender);
             int typ = db.RoomTypes.Where(x => x.val.Equals(roomType)).First().id;
 
             // get the daily mess charges from the database
@@ -159,7 +160,7 @@ namespace BusinessLayer
 
         public List<Hostel> GetHostelsForStudent(string gender)
         {
-            int genderId = db.Genders.Where(x => x.val.Equals(gender)).First().id;
+            int genderId = int.Parse(gender);
             List<Hostel> hostels = db.Hostels.Where(x => x.occupantType == genderId).ToList();
             return hostels;
         }
@@ -372,6 +373,22 @@ namespace BusinessLayer
             return false;
         }
 
-
+        public List<AutoCompleteViewModel> GetStudentListForAutoComplete(string incompleteName)
+        {
+            List<Student> studentList = db.Students.Where(x => x.name.Contains(incompleteName)).ToList();
+            List<AutoCompleteViewModel> list = new List<AutoCompleteViewModel>();
+            foreach (Student s in studentList)
+            {
+                list.Add(new AutoCompleteViewModel
+                {
+                    label = s.name,
+                    value = s.bid,
+                    dept = s.Department.code,
+                    sem = s.semester + "",
+                    gender = s.Gender1.val.ToCharArray()[0] + ""
+                });
+            }
+            return list;
+        }
     }
 }

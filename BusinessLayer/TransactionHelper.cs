@@ -159,20 +159,21 @@ namespace BusinessLayer
 
             // get the previous month and number of days in that month
             int month = DateTime.Now.AddMonths(-1).Month;
-            int numberOfDays = DateTime.DaysInMonth(DateTime.Now.Year, month);
+            int numberOfDays = DateTime.DaysInMonth(DateTime.Now.AddMonths(-1).Year, month);
 
             // for each student, generate the buill
             foreach (Student student in studentList)
             {
-                Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
-                if (allotment.dateOfJoin < DateTime.Now)
+                Allotment allotment = student.Allotments.Where(x => x.dateOfLeave == null).First();
+                if (allotment.dateOfJoin < DateTime.Now.AddMonths(-1))
                 {
                     db.MessBills.Add(new MessBill
                     {
                         bid = student.bid,
                         dateOfDeclaration = DateTime.Now,
                         month = month,
-                        numDays = numberOfDays
+                        numDays = numberOfDays,
+                        year = GetAcademicYear(DateTime.Now.AddMonths(-1))
                     });
                     db.SaveChanges();
                 }
@@ -191,7 +192,7 @@ namespace BusinessLayer
             {
                 // find the amount payable and the bill number
                 decimal amountPayable = messFeeDues.First().amountDue;
-                long billNum = student.MessBills.Where(x => x.month == userInput.month && x.dateOfDeclaration.Year == userInput.year).First().billNum;
+                long billNum = student.MessBills.Where(x => x.month == userInput.month && x.year == userInput.academicYear).First().billNum;
 
                 // the user can not pay more than the bill amount
                 if (userInput.amount > amountPayable)
@@ -351,10 +352,10 @@ namespace BusinessLayer
 
             // retrieve the student from the database and find the most recent year of joining
             Student student = db.Students.Where(x => x.bid == bid).First();
-            int yearOfJoining = student.Allotments.OrderBy(x => x.year).First().year;
+            int yearOfJoining = student.Allotments.OrderBy(x => x.dateOfJoin != null).First().year;
 
             // for each year since the year of joining until the current year
-            for (int i = yearOfJoining; i <= DateTime.Now.Year; i++)
+            for (int i = yearOfJoining; i <= GetAcademicYear(DateTime.Now); i++)
             {
                 // find which room the student was in and the type of the room
                 Allotment allot = student.Allotments.Where(x => x.year <= i).OrderByDescending(x => x.year).First();
@@ -487,15 +488,17 @@ namespace BusinessLayer
             // for each month since the date of joining till now,
             for (DateTime date = dateOfJoin; date <= DateTime.Now; date = date.AddMonths(1))
             {
+                int academicYear = GetAcademicYear(date);
+
                 // retrieve all the mess bills
-                List<MessBill> bills = db.MessBills.Where(x => x.bid == bid && x.month == date.Month && x.dateOfDeclaration.Year == date.Year).ToList();
+                List<MessBill> bills = db.MessBills.Where(x => x.bid == bid && x.month == date.Month && x.year == academicYear).ToList();
 
                 // if bills exsist for the month under consideration
                 if (bills.Count > 0)
                 {
                     // retireve the bill, charges per day and amount payed towards this bill
                     MessBill bill = bills.First();
-                    decimal messChargesPerDay = db.HostelCharges.Where(x => x.id == 0 && x.year <= date.Year).OrderByDescending(x => x.year).First().val.Value;
+                    decimal messChargesPerDay = db.HostelCharges.Where(x => x.id == 0 && x.year <= academicYear).OrderByDescending(x => x.year).First().val.Value;
                     decimal amountPaid = bill.MessTransactions.Sum(x => x.amount).HasValue ? bill.MessTransactions.Sum(x => x.amount).Value : 0;
 
                     // if all transactions are needed, then add the values computed above directly,
@@ -504,7 +507,7 @@ namespace BusinessLayer
                     {
                         dues.Add(new MessFeeDueViewModel
                         {
-                            academicYear = date.Year,
+                            academicYear = academicYear,
                             amount = messChargesPerDay * bill.numDays,
                             amountPaid = amountPaid,
                             amountDue = (messChargesPerDay * bill.numDays) - (amountPaid),
@@ -518,7 +521,7 @@ namespace BusinessLayer
                         {
                             dues.Add(new MessFeeDueViewModel
                             {
-                                academicYear = date.Year,
+                                academicYear = academicYear,
                                 amount = messChargesPerDay * bill.numDays,
                                 amountPaid = amountPaid,
                                 amountDue = (messChargesPerDay * bill.numDays) - (amountPaid),
@@ -533,15 +536,19 @@ namespace BusinessLayer
             return dues;
         }
 
-        public decimal GetHostelFeePayable(string head, string bid, int year)
+        public decimal GetHostelFeePayable(string head, string bid, int year, bool notDue = true)
         {
             // retrieve the student dues
-            Tuple<List<HostelFeeDueViewModel>, Hashtable> result = GetStudentDues(bid);
+            Tuple<List<HostelFeeDueViewModel>, Hashtable> result = GetStudentDues(bid, true);
             Hashtable totalDues = result.Item2;
 
             // extract the hostel fee due from above
             List<HostelFeeDueViewModel> dues = result.Item1;
-            return dues.Where(x => x.accountHead.StartsWith(head) && x.academicYear == year).Sum(x => x.amountDue);
+            if (notDue)
+            {
+                return dues.Where(x => x.accountHead.StartsWith(head) && x.academicYear == year).Sum(x => x.amountDue);
+            }
+            return dues.Where(x => x.accountHead.StartsWith(head) && x.academicYear == year).Sum(x => x.amount);
         }
 
         public decimal GetMessFeePayable(string bid, int month, int year)
@@ -771,6 +778,121 @@ namespace BusinessLayer
             }
 
             return "Update Failed!!";
+        }
+
+        public List<TransactionsViewModel> GetAllTransactionsForStudent(string bid)
+        {
+            StudentHelper helper = new StudentHelper();
+
+            Student student = helper.GetStudent(bid);
+            List<HostelTransaction> transactions = db.HostelTransactions.Where(x => x.bid == student.bid).ToList();
+            List<TransactionsViewModel> viewModel = new List<TransactionsViewModel>();
+
+            foreach (HostelTransaction transcation in transactions)
+            {
+                viewModel.Add(new TransactionsViewModel
+                {
+                    id = transcation.id + "",
+                    academicYear = transcation.year + " - " + (transcation.year + 1),
+                    accountHead = transcation.AcHead.val,
+                    amount = transcation.amount.Value,
+                    bankName = transcation.bankName,
+                    dateOfPay = transcation.dateOfPay.Date,
+                    paymentType = transcation.PaymentType.val,
+                    transaction = "Debit"
+                });
+            }
+
+            DateTime dateOfFee = new DateTime(2016, 7, 1);
+            Tuple<List<HostelFeeDueViewModel>, Hashtable> result = GetStudentDues(bid, true);
+            Hashtable totalDues = result.Item2;
+            List<HostelFeeDueViewModel> hostelfees = result.Item1;
+            List<Allotment> studentAllotments = student.Allotments.ToList();
+
+            foreach (HostelFeeDueViewModel hostelfee in hostelfees)
+            {
+                DateTime dateOfBill = new DateTime(hostelfee.academicYear, 7, 1);
+                List<Allotment> filtertedStudentAllotments = studentAllotments.Where(x => x.year == hostelfee.academicYear).ToList();
+                if (filtertedStudentAllotments.Count > 0)
+                {
+                    dateOfBill = filtertedStudentAllotments.First().dateOfJoin;
+                }
+                viewModel.Add(new TransactionsViewModel
+                {
+                    id = "1",
+                    academicYear = hostelfee.academicYear + " - " + (hostelfee.academicYear + 1),
+                    accountHead = hostelfee.accountHead,
+                    amount = hostelfee.amount,
+                    bankName = "Canara Bank",
+                    dateOfPay = dateOfBill,
+                    paymentType = "",
+                    transaction = "Credit"
+                });
+            }
+
+
+            List<MessFeeDueViewModel> messFees = GetMessDue(bid, true);
+            List<MessBill> messBills = db.MessBills.Where(x => x.bid == bid).ToList();
+
+            foreach (MessFeeDueViewModel messFee in messFees)
+            {
+                MessBill bill = messBills.Where(x => x.year == messFee.academicYear && x.month == messFee.month).First();
+                viewModel.Add(new TransactionsViewModel
+                {
+                    id = bill.billNum + "",
+                    academicYear = messFee.academicYear + " - " + (messFee.academicYear + 1),
+                    accountHead = "Mess Bill",
+                    amount = messFee.amount,
+                    bankName = "Canara Bank",
+                    dateOfPay = bill.dateOfDeclaration,
+                    paymentType = "...",
+                    transaction = "Credit"
+                });
+            }
+
+            List<MessTransaction> messTransactions = db.MessTransactions.Where(x => x.bid == bid).ToList();
+            foreach (MessTransaction transaction in messTransactions)
+            {
+                viewModel.Add(new TransactionsViewModel
+                {
+                    academicYear = transaction.year + " - " + (transaction.year + 1),
+                    accountHead = "Mess Bill",
+                    amount = transaction.amount.Value,
+                    bankName = transaction.bankName,
+                    paymentType = transaction.PaymentType.val,
+                    dateOfPay = transaction.dateOfPay.Date,
+                    transaction = "Debit",
+                    id = transaction.id + ""
+                });
+            }
+
+            return viewModel.OrderBy(x => x.dateOfPay).ToList();
+        }
+
+
+        private int GetAcademicYear(DateTime date)
+        {
+            if (date.Month < 7)
+            {
+                return date.Year - 1;
+            }
+            return date.Year;
+        }
+
+        private TransactionsViewModel GetTransactionViewModel(Student student, int feeId, bool differentFirstBill, DateTime i, string accountHead)
+        {
+            int academicYear = GetAcademicYear(i);
+            return new TransactionsViewModel
+            {
+                id = "1",
+                academicYear = academicYear + " - " + (academicYear + 1),
+                accountHead = accountHead,
+                amount = GetHostelFeePayable(accountHead, student.bid, academicYear, false),
+                bankName = "RNSIT",
+                dateOfPay = differentFirstBill ? i.Date : new DateTime(i.Year, 7, 1).Date,
+                paymentType = "...",
+                transaction = "Credit"
+            };
         }
     }
 }

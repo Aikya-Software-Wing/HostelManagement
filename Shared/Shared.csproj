@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddAdditionalFeeViewModel.cs" />
+    <Compile Include="AutoCompleteViewModel.cs" />
     <Compile Include="ChangeRoomViewModel.cs" />
     <Compile Include="DisplayStudentViewModel.cs" />
     <Compile Include="HostelChargesViewModel.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="StudentMessDueSummaryViewModel.cs" />
     <Compile Include="StudentSearchViewModel.cs" />
     <Compile Include="StudentViewModel.cs" />
+    <Compile Include="TransactionsViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

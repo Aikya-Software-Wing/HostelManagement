@@ -25,6 +25,7 @@ namespace BusinessLayer
         public int numDays { get; set; }
         public int month { get; set; }
         public string bid { get; set; }
+        public Nullable<int> year { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MessTransaction> MessTransactions { get; set; }

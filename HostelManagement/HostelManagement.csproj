@@ -220,7 +220,6 @@
     <Content Include="Areas\HostelMessManagement\Views\User\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Home\AddUser.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\AddStudent.cshtml" />
-    <Content Include="Areas\HostelMessManagement\Views\User\AddStudentSuccess.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\Manager\ChangeFees.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\Manager\_FeeChange.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\Manager\_MessFeeChange.cshtml" />
@@ -242,6 +241,7 @@
     <Content Include="Areas\HostelMessManagement\Views\User\_AddMessTransaction.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\_MessFeeDueDisplay.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\ShowAllMessDues.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_AllTransactions.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />

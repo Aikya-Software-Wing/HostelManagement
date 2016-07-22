@@ -36,7 +36,11 @@
                     </div>
                     <div class="form-group col-xs-3">
                         @Html.LabelFor(m => m.gender)
-                        @Html.DropDownListFor(m => m.gender, new SelectList(ViewBag.genderList, "Value", "Text"), "Select", new { @class = "form-control", id = "genderDropDownID" })
+                        <div>
+                            <label class="radio-inline">@Html.RadioButtonFor(m => m.gender, 1, new { @class = "", id = "genderDropDownID" }) Male</label>
+                            <label class="radio-inline">@Html.RadioButtonFor(m => m.gender, 2, new { @class = "", id = "genderDropDownID" }) Female</label>
+                        </div>
+                        @*@Html.DropDownListFor(m => m.gender, new SelectList(ViewBag.genderList, "Value", "Text"), "Select", new { @class = "form-control", id = "genderDropDownID" })*@
                         <div class="text-danger">
                             @Html.ValidationMessageFor(m => m.gender)
                         </div>
@@ -181,9 +185,9 @@
         $("#roomTypeTextID").attr("disabled", "disabled");
 
     });
-    $("#genderDropDownID").change(function () {
+    $(":radio").change(function () {
         $("#blockNumberDropDownID").attr("disabled", "disabled");
-        var gen = $("#genderDropDownID :selected").text();
+        var gen = $("#genderDropDownID:checked").val();
         var url = "GetBlocks";
         var data = { "gender": gen };
         $.ajax({
@@ -241,7 +245,7 @@
         });
     });
     $("#roomTypeTextID").change(function () {
-        var gender = $("#genderDropDownID :selected").text();
+        var gender = $("#genderDropDownID:checked").val();
         var roomType = $("#roomTypeTextID").val();
         var url = "GetFeeBreakUp";
         $.ajax({

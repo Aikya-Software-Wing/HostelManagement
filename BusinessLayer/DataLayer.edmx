@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AcHead">
           <Key>
             <PropertyRef Name="id" />
@@ -99,6 +99,7 @@
           <Property Name="numDays" Type="int" Nullable="false" />
           <Property Name="month" Type="int" Nullable="false" />
           <Property Name="bid" Type="nvarchar" MaxLength="25" />
+          <Property Name="year" Type="int" />
         </EntityType>
         <EntityType Name="MessTransactions">
           <Key>
@@ -427,8 +428,7 @@
             <End Role="HostelTransactions" EntitySet="HostelTransactions" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -541,6 +541,7 @@
           <Property Name="bid" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="MessTransactions" Relationship="Self.fk_BillPayment" FromRole="MessBill" ToRole="MessTransactions" />
           <NavigationProperty Name="Student" Relationship="Self.fk_StudentMessBill" FromRole="MessBill" ToRole="Student" />
+          <Property Name="year" Type="Int32" />
         </EntityType>
         <EntityType Name="MessTransaction">
           <Key>
@@ -987,6 +988,7 @@
           <EntitySetMapping Name="MessBills">
             <EntityTypeMapping TypeName="DatabaseModel.MessBill">
               <MappingFragment StoreEntitySet="MessBill">
+                <ScalarProperty Name="year" ColumnName="year" />
                 <ScalarProperty Name="billNum" ColumnName="billNum" />
                 <ScalarProperty Name="dateOfDeclaration" ColumnName="dateOfDeclaration" />
                 <ScalarProperty Name="numDays" ColumnName="numDays" />

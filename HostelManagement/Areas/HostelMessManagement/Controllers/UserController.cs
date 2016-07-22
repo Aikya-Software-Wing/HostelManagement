@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using HostelManagement.Areas.HostelMessManagement.Models;
 using HostelManagement.Models;
+using Shared;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -502,7 +503,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                 Student student = helper.GetStudent(userInput.bid);
 
                 // construct the lists required for the dropdown and add them to the view bag
-                ViewBag.hostelBlockList = new SelectList(helper.GetHostelsForStudent(student.Gender1.val), "blockNumber", "blockNumber", student.Allotments.OrderByDescending(x => x.year).First().hostelBlock);
+                ViewBag.hostelBlockList = new SelectList(helper.GetHostelsForStudent(student.Gender1.id+""), "blockNumber", "blockNumber", student.Allotments.OrderByDescending(x => x.year).First().hostelBlock);
 
                 ViewBag.roomNumberList = new SelectList(helper.GetRoomsIncludingCurrent(userInput.bid), "roomNumber", "roomNumber", student.Allotments.OrderByDescending(x => x.year).First().roomNum);
                 ViewBag.gender = student.Gender1.val;
@@ -559,6 +560,18 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
 
             // set up list of departments
             ViewBag.departmentList = new SelectList(helper.GetDepartments(), "id", "val"); ;
+        }
+
+        public ActionResult GetStudentList(string term)
+        {
+            StudentHelper helper = new StudentHelper();
+            return Json(helper.GetStudentListForAutoComplete(term), JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ShowAllTransactions(string bid)
+        {
+            TransactionHelper helper = new TransactionHelper();
+            return PartialView("_AllTransactions", helper.GetAllTransactionsForStudent(bid));
         }
     }
 }
