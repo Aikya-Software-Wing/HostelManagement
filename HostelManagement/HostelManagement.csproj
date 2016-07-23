@@ -244,6 +244,12 @@
     <Content Include="Areas\HostelMessManagement\Views\User\_AllTransactions.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\RemoveStudent.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\_RemoveStudent.cshtml" />
+    <Content Include="Areas\Archive\Views\web.config" />
+    <Content Include="Areas\Archive\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Archive\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Archive\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Archive\Views\Home\ViewStudent.cshtml" />
+    <Content Include="Areas\Archive\Views\Home\_ViewStudent.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -266,6 +272,8 @@
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\HomeController.cs" />
     <Compile Include="Areas\Administration\Models\AddUserViewModel.cs" />
+    <Compile Include="Areas\Archive\ArchiveAreaRegistration.cs" />
+    <Compile Include="Areas\Archive\Controllers\HomeController.cs" />
     <Compile Include="Areas\HostelMessManagement\Controllers\ManagerController.cs" />
     <Compile Include="Areas\HostelMessManagement\Controllers\UserController.cs" />
     <Compile Include="Areas\HostelMessManagement\HostelMessManagementAreaRegistration.cs" />
@@ -301,6 +309,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Archive\Models\" />
     <Folder Include="Areas\HostelMessManagement\Models\" />
   </ItemGroup>
   <ItemGroup>

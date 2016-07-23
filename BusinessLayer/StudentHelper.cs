@@ -176,12 +176,16 @@ namespace BusinessLayer
             return db.Rooms.Where(x => x.roomNumber == roomNumber && x.hostelBlockNumber == hostel).First().RoomType1.val;
         }
 
-        public Student GetStudent(string bid)
+        public Student GetStudent(string bid, bool archive = false)
         {
             List<Student> studentList = db.Students.Where(x => x.bid == bid).ToList();
             if (studentList.Count > 0)
             {
-                if (studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0)
+                if (archive && !(studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0))
+                {
+                    return studentList.First();
+                }
+                if (!(archive) && studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0)
                 {
                     return studentList.First();
                 }
@@ -277,34 +281,60 @@ namespace BusinessLayer
             return "Success!";
         }
 
-        public DisplayStudentViewModel GetStudentDetails(string bid, out string error)
+        public DisplayStudentViewModel GetStudentDetails(string bid, out string error, bool archive = false)
         {
             error = "";
             // get the student from the database
-            Student student = GetStudent(bid);
+            Student student = GetStudent(bid, archive);
 
             // if the student exists
             if (student != null)
             {
+                List<AllotmentDisplayViewModel> allotmentViewModel = new List<AllotmentDisplayViewModel>();
+
                 // get the student and the allotment
-                Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
+                foreach (var allotment in student.Allotments)
+                {
+                    allotmentViewModel.Add(new AllotmentDisplayViewModel
+                    {
+                        blockNumber = allotment.hostelBlock,
+                        doj = allotment.dateOfJoin,
+                        dol = allotment.dateOfLeave.HasValue ? allotment.dateOfLeave.Value.Date + "" : "",
+                        roomNumber = allotment.roomNum,
+                        roomType = allotment.Room.RoomType1.val,
+                        floorNumber = allotment.roomNum.ToString().ToCharArray()[0],
+                        year = allotment.year + " - " + (allotment.year + 1)
+                    });
+                }
 
                 // construct the view model
+                if (archive)
+                {
+                    DisplayStudentViewModel viewmodel1 = new DisplayStudentViewModel()
+                    {
+                        name = student.name,
+                        gender = student.Gender1.val,
+                        branch = student.Department.val,
+                        course = student.Course1.val,
+                        dob = student.dob,
+                        semester = student.semester,
+                        usn = student.usn,
+                        allotments = allotmentViewModel
+                    };
+
+                    return viewmodel1;
+                }
                 DisplayStudentViewModel viewmodel = new DisplayStudentViewModel()
                 {
                     name = student.name,
                     gender = student.Gender1.val,
                     branch = student.Department.val,
-                    blockNumber = allotment.hostelBlock,
                     course = student.Course1.val,
                     dob = student.dob,
-                    doj = allotment.dateOfJoin,
-                    floorNumber = int.Parse(allotment.roomNum.ToString().ElementAt(0) + ""),
-                    roomNumber = allotment.roomNum,
-                    roomType = allotment.Room.RoomType1.val,
                     semester = student.semester,
                     usn = student.usn,
-                    year = allotment.year
+                    allotments = allotmentViewModel,
+                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year
                 };
 
                 return viewmodel;
@@ -440,8 +470,8 @@ namespace BusinessLayer
             Student student = helper.GetStudent(bid);
             if (student != null)
             {
-                Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
-                Room room = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock && x.roomNumber == allotment.roomNum).First();
+                List<AllotmentDisplayViewModel> allotmentViewModel = ConstructViewModelForAlloment(student);
+
 
                 // construct the view model
                 RemoveStudentViewModel viewModel = new RemoveStudentViewModel()
@@ -454,17 +484,34 @@ namespace BusinessLayer
                     gender = db.Genders.Where(x => x.id == student.gender).First().val,
                     course = db.Courses.Where(x => x.id == student.course).First().val,
                     branch = db.Departments.Where(x => x.id == student.branch).First().val,
-                    blockNumber = allotment.hostelBlock,
-                    roomNumber = allotment.roomNum,
-                    roomType = db.RoomTypes.Where(x => x.id == room.roomType).First().val,
-                    floorNumber = int.Parse(room.roomNumber.ToString().Substring(0, 1)),
-                    doj = allotment.dateOfJoin,
-                    year = allotment.year
+                    allotments = allotmentViewModel
                 };
 
                 return viewModel;
             }
             return null;
+        }
+
+        public List<AllotmentDisplayViewModel> ConstructViewModelForAlloment(Student student)
+        {
+            List<AllotmentDisplayViewModel> allotmentViewModel = new List<AllotmentDisplayViewModel>();
+
+            // get the student and the allotment
+            foreach (var allotment in student.Allotments)
+            {
+                allotmentViewModel.Add(new AllotmentDisplayViewModel
+                {
+                    blockNumber = allotment.hostelBlock,
+                    doj = allotment.dateOfJoin,
+                    dol = allotment.dateOfLeave.HasValue ? allotment.dateOfLeave.Value.Date + "" : "",
+                    roomNumber = allotment.roomNum,
+                    roomType = allotment.Room.RoomType1.val,
+                    floorNumber = allotment.roomNum.ToString().ToCharArray()[0],
+                    year = allotment.year + " - " + (allotment.year + 1)
+                });
+            }
+
+            return allotmentViewModel;
         }
 
         public string PerformRemoveStudent(RemoveStudentViewModel userInput)

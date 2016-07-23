@@ -571,10 +571,10 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             return Json(helper.GetStudentListForAutoComplete(term), JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult ShowAllTransactions(string bid)
+        public ActionResult ShowAllTransactions(string bid, bool archive = false)
         {
             TransactionHelper helper = new TransactionHelper();
-            return PartialView("_AllTransactions", helper.GetAllTransactionsForStudent(bid));
+            return PartialView("_AllTransactions", helper.GetAllTransactionsForStudent(bid, archive));
         }
 
         [HttpGet]

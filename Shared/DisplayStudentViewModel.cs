@@ -6,22 +6,38 @@ using System.Web;
 
 namespace HostelManagement.Areas.HostelMessManagement.Models
 {
-    public class DisplayStudentViewModel : StudentViewModel
+    public class DisplayStudentViewModel
     {
         [Required]
+        [Display(Name = "Student Full Name")]
+        public string name { get; set; }
+
+        [Display(Name = "University Seat Number")]
+        public string usn { get; set; }
+
+        [Required]
+        [Display(Name = "Semester")]
+        public int semester { get; set; }
+
+        [Required]
         [Display(Name = "Gender")]
-        public new string gender { get; set; }
+        public string gender { get; set; }
 
         [Required]
         [Display(Name = "Course")]
-        public new string course { get; set; }
+        public string course { get; set; }
 
         [Required]
         [Display(Name = "Department")]
-        public new string branch { get; set; }
+        public string branch { get; set; }
 
         [Required]
-        [Display(Name = "Room Type")]
-        public new string roomType { get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Date of Birth")]
+        public DateTime dob { get; set; }
+
+        public int year { get; set; }
+
+        public List<AllotmentDisplayViewModel> allotments { get; set; }
     }
 }

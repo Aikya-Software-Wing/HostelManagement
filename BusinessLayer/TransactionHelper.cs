@@ -45,6 +45,8 @@ namespace BusinessLayer
                 Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
                 Room room = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock && x.roomNumber == allotment.roomNum).First();
 
+                List<AllotmentDisplayViewModel> allotmentViewModel = helper.ConstructViewModelForAlloment(student);
+
                 // construct the view model
                 HostelTransactionViewModel viewModel = new HostelTransactionViewModel()
                 {
@@ -56,14 +58,10 @@ namespace BusinessLayer
                     gender = db.Genders.Where(x => x.id == student.gender).First().val,
                     course = db.Courses.Where(x => x.id == student.course).First().val,
                     branch = db.Departments.Where(x => x.id == student.branch).First().val,
-                    blockNumber = allotment.hostelBlock,
-                    roomNumber = allotment.roomNum,
-                    roomType = db.RoomTypes.Where(x => x.id == room.roomType).First().val,
-                    floorNumber = int.Parse(room.roomNumber.ToString().Substring(0, 1)),
-                    doj = allotment.dateOfJoin,
-                    year = allotment.year,
+                    allotments = allotmentViewModel,
                     academicYear = DateTime.Now.Year,
-                    dateOfPayment = DateTime.Now.Date
+                    dateOfPayment = DateTime.Now.Date,
+                    year = student.Allotments.OrderBy(x => x.year).First().year
                 };
 
                 return viewModel;
@@ -85,6 +83,8 @@ namespace BusinessLayer
                 Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
                 Room room = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock && x.roomNumber == allotment.roomNum).First();
 
+                List<AllotmentDisplayViewModel> allotmentViewModel = helper.ConstructViewModelForAlloment(student);
+
                 // construct the hostel transaction view model
                 HostelTransactionViewModel viewModel = new HostelTransactionViewModel()
                 {
@@ -96,17 +96,13 @@ namespace BusinessLayer
                     gender = db.Genders.Where(x => x.id == student.gender).First().val,
                     course = db.Courses.Where(x => x.id == student.course).First().val,
                     branch = db.Departments.Where(x => x.id == student.branch).First().val,
-                    blockNumber = allotment.hostelBlock,
-                    roomNumber = allotment.roomNum,
-                    roomType = db.RoomTypes.Where(x => x.id == room.roomType).First().val,
-                    floorNumber = int.Parse(room.roomNumber.ToString().Substring(0, 1)),
-                    doj = allotment.dateOfJoin,
-                    year = allotment.year,
+                    allotments = allotmentViewModel,
                     academicYear = DateTime.Now.Year,
                     dateOfPayment = DateTime.Now.Date,
                     referenceNumber = "DS",
                     bankName = "RNSIT",
-                    paymentType = 4
+                    paymentType = 4,
+                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year
                 };
 
                 return viewModel;
@@ -233,6 +229,8 @@ namespace BusinessLayer
                 Allotment allotment = db.Allotments.Where(x => x.bid == bid).OrderByDescending(x => x.year).First();
                 Room room = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock && x.roomNumber == allotment.roomNum).First();
 
+                List<AllotmentDisplayViewModel> allotmentViewModel = helper.ConstructViewModelForAlloment(student);
+
                 // construct the mess transaction view model
                 MessTransactionViewModel viewModel = new MessTransactionViewModel()
                 {
@@ -244,15 +242,11 @@ namespace BusinessLayer
                     gender = db.Genders.Where(x => x.id == student.gender).First().val,
                     course = db.Courses.Where(x => x.id == student.course).First().val,
                     branch = db.Departments.Where(x => x.id == student.branch).First().val,
-                    blockNumber = allotment.hostelBlock,
-                    roomNumber = allotment.roomNum,
-                    roomType = db.RoomTypes.Where(x => x.id == room.roomType).First().val,
-                    floorNumber = int.Parse(room.roomNumber.ToString().Substring(0, 1)),
-                    doj = allotment.dateOfJoin,
-                    year = allotment.year,
+                    allotments = allotmentViewModel,
                     academicYear = DateTime.Now.Year,
                     dateOfPayment = DateTime.Now.Date,
-                    month = DateTime.Now.AddMonths(-1).Month
+                    month = DateTime.Now.AddMonths(-1).Month,
+                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year
                 };
 
                 return viewModel;
@@ -281,8 +275,14 @@ namespace BusinessLayer
                 int numberOfDays = DateTime.DaysInMonth(DateTime.Now.Year, month);
 
                 // get the bill for that month
-                MessBill bill = db.MessBills.Where(x => x.bid == userInput.bid && x.month == month).OrderByDescending(x => x.dateOfDeclaration).First();
+                List<MessBill> bills = db.MessBills.Where(x => x.bid == userInput.bid && x.month == month).OrderByDescending(x => x.dateOfDeclaration).ToList();
 
+                if(bills.Count <= 0)
+                {
+                    return "Bill not found!";
+                }
+
+                MessBill bill = bills.First();
                 // user can not be absent for more number of days than the number of days in the month
                 if (userInput.numDaysAbsent > bill.numDays)
                 {
@@ -784,27 +784,44 @@ namespace BusinessLayer
             return "Update Failed!!";
         }
 
-        public List<TransactionsViewModel> GetAllTransactionsForStudent(string bid)
+        public List<TransactionsViewModel> GetAllTransactionsForStudent(string bid, bool archieve = false)
         {
             StudentHelper helper = new StudentHelper();
 
-            Student student = helper.GetStudent(bid);
+            Student student = helper.GetStudent(bid, archieve);
             List<HostelTransaction> transactions = db.HostelTransactions.Where(x => x.bid == student.bid).ToList();
             List<TransactionsViewModel> viewModel = new List<TransactionsViewModel>();
 
             foreach (HostelTransaction transcation in transactions)
             {
-                viewModel.Add(new TransactionsViewModel
+                if (transcation.amount.Value < 0)
                 {
-                    id = transcation.receipt + "",
-                    academicYear = transcation.year + " - " + (transcation.year + 1),
-                    accountHead = transcation.AcHead.val,
-                    amount = transcation.amount.Value,
-                    bankName = transcation.bankName,
-                    dateOfPay = transcation.dateOfPay.Date,
-                    paymentType = transcation.PaymentType.val,
-                    transaction = "Debit"
-                });
+                    viewModel.Add(new TransactionsViewModel
+                    {
+                        id = transcation.receipt + "",
+                        academicYear = transcation.year + " - " + (transcation.year + 1),
+                        accountHead = transcation.AcHead.val,
+                        amount = -transcation.amount.Value,
+                        bankName = transcation.bankName,
+                        dateOfPay = transcation.dateOfPay.Date,
+                        paymentType = transcation.PaymentType.val,
+                        transaction = "Credit"
+                    });
+                }
+                else
+                {
+                    viewModel.Add(new TransactionsViewModel
+                    {
+                        id = transcation.receipt + "",
+                        academicYear = transcation.year + " - " + (transcation.year + 1),
+                        accountHead = transcation.AcHead.val,
+                        amount = transcation.amount.Value,
+                        bankName = transcation.bankName,
+                        dateOfPay = transcation.dateOfPay.Date,
+                        paymentType = transcation.PaymentType.val,
+                        transaction = "Debit"
+                    });
+                }
             }
 
             DateTime dateOfFee = new DateTime(2016, 7, 1);

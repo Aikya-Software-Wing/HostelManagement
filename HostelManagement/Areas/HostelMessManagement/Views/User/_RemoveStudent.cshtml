@@ -41,42 +41,50 @@
         <br />
         @Html.DisplayTextFor(m => m.branch)
     </div>
-    <div class="col-md-3">
-        @Html.LabelFor(m => m.year)
-        <br />
-        @Html.DisplayTextFor(m => m.year)
-    </div>
 </div>
 <hr />
-<div class="row">
-    <h4>Hostel Information</h4>
-    <div class="col-md-3">
-        @Html.LabelFor(m => m.blockNumber)
-        <br />
-        @Html.DisplayTextFor(m => m.blockNumber)
+@for (int i = 0; i < Model.allotments.Count; i++)
+{
+    <div class="row">
+        <h4>Hostel Information</h4>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].blockNumber)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].blockNumber)
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].roomNumber)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].roomNumber)
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].floorNumber)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].floorNumber)
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].roomType)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].roomType)
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].doj)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].doj)
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].dol)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].dol)
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.allotments[i].year)
+            <br />
+            @Html.DisplayTextFor(m => m.allotments[i].year)
+        </div>
     </div>
-    <div class="col-md-3">
-        @Html.LabelFor(m => m.roomNumber)
-        <br />
-        @Html.DisplayTextFor(m => m.roomNumber)
-    </div>
-    <div class="col-md-3">
-        @Html.LabelFor(m => m.floorNumber)
-        <br />
-        @Html.DisplayTextFor(m => m.floorNumber)
-    </div>
-    <div class="col-md-3">
-        @Html.LabelFor(m => m.roomType)
-        <br />
-        @Html.DisplayTextFor(m => m.roomType)
-    </div>
-    <div class="col-md-3">
-        @Html.LabelFor(m => m.doj)
-        <br />
-        @Html.DisplayTextFor(m => m.doj)
-    </div>
-</div>
-<hr />
+    <hr />
+}
 <div class="row" style="margin-bottom:200px;" id="myDiv">
     <div class="col-sm-6">
         @using (Ajax.BeginForm("PerformRemoveStudent", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "transactionOutputDivId", OnSuccess = "LoadDues" }, new { }))

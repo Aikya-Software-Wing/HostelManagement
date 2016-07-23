@@ -1,0 +1,49 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.StudentSearchViewModel
+@{
+    ViewBag.Title = "ViewStudent";
+}
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h2 class="text-center">View Student</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-8 col-md-offset-3">
+        @using (Ajax.BeginForm("ViewStudent", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "studentId", InsertionMode = InsertionMode.Replace }, new { @class = "form-inline" }))
+        {
+            <div class="row">
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.bid)
+                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control", id = "bidID" })
+                </div>
+                <div class="col-md-6"></div>
+                <div class="form-group col-md-2 pull-left">
+                    <input type="submit" class="btn btn-primary form-control" value="View" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div id="studentId">
+            Please enter the BID above to view student details
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#bidID').autocomplete({
+            source: '@Url.Action("GetStudentList", "User")'
+        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+            return $("<li>")
+            .append("<a>" + item.label + " (" + item.gender + ")" + "<br>Dept:" + item.dept + ",Sem:" + item.sem + "</a>")
+            .appendTo(ul);
+        };;
+    })
+</script>
