@@ -496,6 +496,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         public ActionResult ChangeRoom(StudentSearchViewModel userInput)
         {
             StudentHelper helper = new StudentHelper();
+            TransactionHelper helper1 = new TransactionHelper();
             string error = "";
 
             if (helper.CanChangeRoom(userInput.bid, out error))
@@ -503,10 +504,11 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                 Student student = helper.GetStudent(userInput.bid);
 
                 // construct the lists required for the dropdown and add them to the view bag
-                ViewBag.hostelBlockList = new SelectList(helper.GetHostelsForStudent(student.Gender1.id+""), "blockNumber", "blockNumber", student.Allotments.OrderByDescending(x => x.year).First().hostelBlock);
+                ViewBag.hostelBlockList = new SelectList(helper.GetHostelsForStudent(student.Gender1.id + ""), "blockNumber", "blockNumber", student.Allotments.OrderByDescending(x => x.year).First().hostelBlock);
 
                 ViewBag.roomNumberList = new SelectList(helper.GetRoomsIncludingCurrent(userInput.bid), "roomNumber", "roomNumber", student.Allotments.OrderByDescending(x => x.year).First().roomNum);
-                ViewBag.gender = student.Gender1.val;
+                ViewBag.gender = student.Gender1.id;
+                ViewBag.academicYear = helper1.GetAcademicYear(DateTime.Now);
                 TempData["bid"] = student.bid;
 
                 return PartialView("_ChangeRoom");
@@ -540,6 +542,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             DisplayStudentViewModel viewModel = helper.GetStudentDetails(userInput.bid, out error);
             if (viewModel != null)
             {
+                ViewBag.bid = userInput.bid;
                 return PartialView("_ViewStudent", viewModel);
             }
             return Content(error);
@@ -572,6 +575,34 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         {
             TransactionHelper helper = new TransactionHelper();
             return PartialView("_AllTransactions", helper.GetAllTransactionsForStudent(bid));
+        }
+
+        [HttpGet]
+        public ActionResult RemoveStudent()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RemoveStudent(StudentSearchViewModel userInput)
+        {
+            StudentHelper helper = new StudentHelper();
+            string error = "";
+
+            if (helper.CanRemoveStudent(userInput.bid, out error))
+            {
+                RemoveStudentViewModel viewModel = helper.ConstructViewModelForRemoveStudent(userInput.bid);
+                ViewBag.depositRefund = helper.GetDepositRefund(userInput.bid);
+                return PartialView("_RemoveStudent", viewModel);
+            }
+
+            return Content(error);
+        }
+
+        public ActionResult PerformRemoveStudent(RemoveStudentViewModel userInput)
+        {
+            StudentHelper helper = new StudentHelper();
+            return Content(helper.PerformRemoveStudent(userInput));
         }
     }
 }

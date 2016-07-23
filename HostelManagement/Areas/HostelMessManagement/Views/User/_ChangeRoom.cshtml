@@ -27,7 +27,7 @@
             </div>
             <div class="form-group col-xs-2">
                 @Html.LabelFor(m => m.year)
-                @Html.TextBoxFor(m => m.year, new { @class = "form-control", id = "roomTypeTextID" })
+                @Html.TextBoxFor(m => m.year, new { @class = "form-control", id = "roomTypeTextID", @Value=ViewBag.academicYear + " - " + (ViewBag.academicYear + 1), disabled="disabled" })
                 @Html.ValidationMessageFor(m => m.year)
             </div>
         </fieldset>

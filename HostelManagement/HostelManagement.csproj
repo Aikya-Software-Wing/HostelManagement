@@ -242,6 +242,8 @@
     <Content Include="Areas\HostelMessManagement\Views\User\_MessFeeDueDisplay.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\ShowAllMessDues.cshtml" />
     <Content Include="Areas\HostelMessManagement\Views\User\_AllTransactions.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\RemoveStudent.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\User\_RemoveStudent.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />

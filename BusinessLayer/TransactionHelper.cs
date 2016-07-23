@@ -327,6 +327,10 @@ namespace BusinessLayer
         /// <returns></returns>
         public decimal GetFee(int id, int year, string bid, int custom)
         {
+            if (id.ToString().EndsWith("5"))
+            {
+                return 0;
+            }
             if (custom == 0)
             {
                 return db.HostelCharges.Where(x => x.id == id && x.year <= year).OrderByDescending(x => x.year).First().val.Value;
@@ -792,7 +796,7 @@ namespace BusinessLayer
             {
                 viewModel.Add(new TransactionsViewModel
                 {
-                    id = transcation.id + "",
+                    id = transcation.receipt + "",
                     academicYear = transcation.year + " - " + (transcation.year + 1),
                     accountHead = transcation.AcHead.val,
                     amount = transcation.amount.Value,
@@ -862,7 +866,7 @@ namespace BusinessLayer
                     paymentType = transaction.PaymentType.val,
                     dateOfPay = transaction.dateOfPay.Date,
                     transaction = "Debit",
-                    id = transaction.id + ""
+                    id = transaction.receipt + ""
                 });
             }
 
@@ -870,7 +874,7 @@ namespace BusinessLayer
         }
 
 
-        private int GetAcademicYear(DateTime date)
+        public int GetAcademicYear(DateTime date)
         {
             if (date.Month < 7)
             {

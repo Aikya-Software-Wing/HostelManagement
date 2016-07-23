@@ -53,6 +53,7 @@
     <Compile Include="MessFeeDueViewModel.cs" />
     <Compile Include="MessTransactionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveStudentViewModel.cs" />
     <Compile Include="SearchViewModel.cs" />
     <Compile Include="StudentDueSummaryViewModel.cs" />
     <Compile Include="StudentMessDueSummaryViewModel.cs" />

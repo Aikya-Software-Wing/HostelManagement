@@ -181,7 +181,10 @@ namespace BusinessLayer
             List<Student> studentList = db.Students.Where(x => x.bid == bid).ToList();
             if (studentList.Count > 0)
             {
-                return studentList.First();
+                if (studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0)
+                {
+                    return studentList.First();
+                }
             }
             return null;
         }
@@ -210,14 +213,21 @@ namespace BusinessLayer
 
         public string PerformRoomChange(ChangeRoomViewModel userInput, string bid)
         {
+            TransactionHelper helper = new TransactionHelper();
             Student student = GetStudent(bid);
             Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
             Room currentRoom = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock && x.roomNumber == allotment.roomNum).First();
+            userInput.year = helper.GetAcademicYear(DateTime.Now);
 
             // if the user did not make any changes
             if (allotment.hostelBlock == userInput.hostelBlock && allotment.roomNum == userInput.roomNumber)
             {
                 return "No change detected!";
+            }
+
+            if (student.HostelTransactions.Where(x => x.year == userInput.year).ToList().Count > 0)
+            {
+                return "Hostel Transactions for the year have been performed, can not change room";
             }
 
             // initiate a transaction
@@ -355,15 +365,12 @@ namespace BusinessLayer
             if (student != null)
             {
                 // find the student his/her allotment and dues
-                Allotment alllotment = student.Allotments.OrderByDescending(x => x.year).First();
-                Tuple<List<HostelFeeDueViewModel>, Hashtable> result = helper.GetStudentDues(student.bid);
-                List<HostelFeeDueViewModel> viewModel = result.Item1;
-                Hashtable totalDues = result.Item2;
+                Allotment alllotment = student.Allotments.Where(x => x.dateOfLeave == null).First();
+                int currentAcademicYear = helper.GetAcademicYear(DateTime.Now);
 
-                // if the student has dues, the room can not be changed
-                if (viewModel.Where(x => x.academicYear < DateTime.Now.Year).ToList().Count > 0)
+                if (currentAcademicYear == alllotment.year)
                 {
-                    error = "Cannot change room, dues pending!";
+                    error = "Can not update allotment more than once per academic year";
                     return false;
                 }
 
@@ -389,6 +396,180 @@ namespace BusinessLayer
                 });
             }
             return list;
+        }
+
+        public bool CanRemoveStudent(string bid, out string error)
+        {
+            TransactionHelper helper = new TransactionHelper();
+            error = "";
+            Student student = GetStudent(bid);
+
+            if (student != null)
+            {
+                List<TransactionsViewModel> transactions = helper.GetAllTransactionsForStudent(bid);
+
+                decimal dues = transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Credit").Sum(x => x.amount) - transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
+                decimal avaiableDeposit = transactions.Where(x => x.accountHead == "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
+
+                if (dues > avaiableDeposit)
+                {
+                    error = "Too many dues. Can not remove student!";
+                    return false;
+                }
+
+                return true;
+            }
+
+            error = "Can not find student";
+            return false;
+        }
+
+        public decimal GetDepositRefund(string bid)
+        {
+            TransactionHelper helper = new TransactionHelper();
+            List<TransactionsViewModel> transactions = helper.GetAllTransactionsForStudent(bid);
+            decimal dues = transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Credit").Sum(x => x.amount) - transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
+            decimal avaiableDeposit = transactions.Where(x => x.accountHead == "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
+            return avaiableDeposit - dues;
+        }
+
+        public RemoveStudentViewModel ConstructViewModelForRemoveStudent(string bid)
+        {
+            StudentHelper helper = new StudentHelper();
+            // find the student, allotment and room
+            Student student = helper.GetStudent(bid);
+            if (student != null)
+            {
+                Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
+                Room room = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock && x.roomNumber == allotment.roomNum).First();
+
+                // construct the view model
+                RemoveStudentViewModel viewModel = new RemoveStudentViewModel()
+                {
+                    bid = student.bid,
+                    name = student.name,
+                    dob = student.dob,
+                    semester = student.semester,
+                    usn = student.usn,
+                    gender = db.Genders.Where(x => x.id == student.gender).First().val,
+                    course = db.Courses.Where(x => x.id == student.course).First().val,
+                    branch = db.Departments.Where(x => x.id == student.branch).First().val,
+                    blockNumber = allotment.hostelBlock,
+                    roomNumber = allotment.roomNum,
+                    roomType = db.RoomTypes.Where(x => x.id == room.roomType).First().val,
+                    floorNumber = int.Parse(room.roomNumber.ToString().Substring(0, 1)),
+                    doj = allotment.dateOfJoin,
+                    year = allotment.year
+                };
+
+                return viewModel;
+            }
+            return null;
+        }
+
+        public string PerformRemoveStudent(RemoveStudentViewModel userInput)
+        {
+            TransactionHelper helper = new TransactionHelper();
+            Student student = GetStudent(userInput.bid);
+            Allotment allotment = student.Allotments.Where(x => x.dateOfLeave == null).First();
+            List<TransactionsViewModel> transactions = helper.GetAllTransactionsForStudent(userInput.bid);
+            decimal rentPaid = transactions.Where(x => x.accountHead == "Rent" && x.transaction == "Debit").Sum(x => x.amount);
+            decimal fixPaid = transactions.Where(x => x.accountHead == "Fixed Charges" && x.transaction == "Debit").Sum(x => x.amount);
+            userInput.depRefund = GetDepositRefund(userInput.bid);
+
+            if (userInput.rentRefund > rentPaid)
+            {
+                return "Can not refund more rent than paid";
+            }
+
+            if (userInput.fixRefund > fixPaid)
+            {
+                return "Can not refund more fixed changes than paid";
+            }
+
+            if (userInput.rentRefund > 0 && string.IsNullOrWhiteSpace(userInput.rentRefundRef))
+            {
+                return "Reference number needed to refund rent";
+            }
+
+            if (userInput.fixRefund > 0 && string.IsNullOrWhiteSpace(userInput.fixRefundRef))
+            {
+                return "Reference number needed to refund fixed charges";
+            }
+
+            if (userInput.depRefund > 0 && string.IsNullOrWhiteSpace(userInput.depRefundRef))
+            {
+                return "Reference number needed to refund deposit";
+            }
+
+            using (var tran = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    if (userInput.rentRefund > 0)
+                    {
+                        db.HostelTransactions.Add(new HostelTransaction
+                        {
+                            receipt = userInput.rentRefundRef,
+                            bankName = "Canara Bank",
+                            bid = userInput.bid,
+                            amount = -userInput.rentRefund,
+                            dateOfPay = DateTime.Now,
+                            head = 5,
+                            year = helper.GetAcademicYear(DateTime.Now),
+                            paymentTypeId = 5
+                        });
+                        db.SaveChanges();
+                    }
+
+                    if (userInput.fixRefund > 0)
+                    {
+                        db.HostelTransactions.Add(new HostelTransaction
+                        {
+                            receipt = userInput.fixRefundRef,
+                            bankName = "Canara Bank",
+                            bid = userInput.bid,
+                            amount = -userInput.fixRefund,
+                            dateOfPay = DateTime.Now,
+                            head = 5,
+                            year = helper.GetAcademicYear(DateTime.Now),
+                            paymentTypeId = 5
+                        });
+                        db.SaveChanges();
+                    }
+
+                    if (userInput.depRefund > 0)
+                    {
+                        db.HostelTransactions.Add(new HostelTransaction
+                        {
+                            receipt = userInput.depRefundRef,
+                            bankName = "Canara Bank",
+                            bid = userInput.bid,
+                            amount = -userInput.depRefund,
+                            dateOfPay = DateTime.Now,
+                            head = 5,
+                            year = helper.GetAcademicYear(DateTime.Now),
+                            paymentTypeId = 5
+                        });
+                        db.SaveChanges();
+                    }
+
+                    allotment.dateOfLeave = DateTime.Now;
+                    allotment.Room.currentOccupancy -= 1;
+                    db.Allotments.Attach(allotment);
+                    db.Entry(allotment).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    tran.Commit();
+                }
+                catch (Exception e)
+                {
+                    tran.Rollback();
+                    return "An error occurred: " + e.Message + "(" + e.InnerException.Message + ")";
+                }
+            }
+
+            return "Success!";
         }
     }
 }

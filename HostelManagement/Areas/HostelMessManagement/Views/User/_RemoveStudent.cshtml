@@ -1,0 +1,209 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.RemoveStudentViewModel
+
+<div class="row">
+    <h4>Personal Information</h4>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.name)
+        <br />
+        @Html.DisplayFor(m => m.name)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.usn)
+        <br />
+        @Html.DisplayTextFor(m => m.usn)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.gender)
+        <br />
+        @Html.DisplayTextFor(m => m.gender)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.dob)
+        <br />
+        @Html.DisplayTextFor(m => m.dob)
+    </div>
+</div>
+<hr />
+<div class="row">
+    <h4>Education Information</h4>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.course)
+        <br />
+        @Html.DisplayTextFor(m => m.course)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.semester)
+        <br />
+        @Html.DisplayTextFor(m => m.semester)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.branch)
+        <br />
+        @Html.DisplayTextFor(m => m.branch)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.year)
+        <br />
+        @Html.DisplayTextFor(m => m.year)
+    </div>
+</div>
+<hr />
+<div class="row">
+    <h4>Hostel Information</h4>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.blockNumber)
+        <br />
+        @Html.DisplayTextFor(m => m.blockNumber)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.roomNumber)
+        <br />
+        @Html.DisplayTextFor(m => m.roomNumber)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.floorNumber)
+        <br />
+        @Html.DisplayTextFor(m => m.floorNumber)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.roomType)
+        <br />
+        @Html.DisplayTextFor(m => m.roomType)
+    </div>
+    <div class="col-md-3">
+        @Html.LabelFor(m => m.doj)
+        <br />
+        @Html.DisplayTextFor(m => m.doj)
+    </div>
+</div>
+<hr />
+<div class="row" style="margin-bottom:200px;" id="myDiv">
+    <div class="col-sm-6">
+        @using (Ajax.BeginForm("PerformRemoveStudent", "User", null, new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "transactionOutputDivId", OnSuccess = "LoadDues" }, new { }))
+            {
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.rentRefund)
+                    @Html.TextBoxFor(m => m.rentRefund, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.rentRefund)
+                </div>
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.rentRefundRef)
+                    @Html.TextBoxFor(m => m.rentRefundRef, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.rentRefundRef)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.fixRefund)
+                    @Html.TextBoxFor(m => m.fixRefund, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.fixRefund)
+                </div>
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.fixRefundRef)
+                    @Html.TextBoxFor(m => m.fixRefundRef, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.fixRefundRef)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.depRefund)
+                    @Html.TextBoxFor(m => m.depRefund, new { @class = "form-control", @Value = ViewBag.depositRefund, disabled = "disabled" })
+                    @Html.ValidationMessageFor(m => m.depRefund)
+                </div>
+                <div class="form-group col-sm-4">
+                    @Html.LabelFor(m => m.depRefundRef)
+                    @Html.TextBoxFor(m => m.depRefundRef, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.depRefundRef)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6 col-sm-offset-3">
+                    <input type="submit" class="btn btn-primary btn-block" id="submitButtonId" />
+                </div>
+            </div>
+            @Html.HiddenFor(m => m.name)
+            @Html.HiddenFor(m => m.bid)
+            @Html.HiddenFor(m => m.usn)
+            @Html.HiddenFor(m => m.gender)
+            @Html.HiddenFor(m => m.course)
+            @Html.HiddenFor(m => m.semester)
+            @Html.HiddenFor(m => m.branch)
+            @Html.HiddenFor(m => m.year)
+            @Html.HiddenFor(m => m.dob)
+            @Html.HiddenFor(m => m.blockNumber)
+            @Html.HiddenFor(m => m.roomNumber)
+            @Html.HiddenFor(m => m.floorNumber)
+            @Html.HiddenFor(m => m.roomType)
+            @Html.HiddenFor(m => m.doj)
+
+        }
+    </div>
+    <div class="col-sm-6">
+        <div id="dueTableDivId">
+            @Html.Action("ShowDues", new { bid = Model.bid })
+        </div>
+    </div>
+</div>
+
+<div class="footer" id="footerID">
+    @Html.Action("ShowAllTransactions", new { bid = Model.bid })
+</div>
+
+
+
+<style>
+    .footer {
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        overflow-y: scroll;
+    }
+</style>
+
+<div id="resultModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Message</h4>
+            </div>
+            <div class="modal-body">
+                <div id="transactionOutputDivId">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" language=javascript>
+    $.validator.unobtrusive.parse(document);
+    function LoadDues() {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ShowDues", "User")',
+            data: { bid: '@Model.bid' },
+            success: function (res) {
+                $("#dueTableDivId").html(res);
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ShowAllTransactions", "User")',
+            data: { bid: '@Model.bid' },
+            success: function (res) {
+                $("#footerID").html(res);
+            }
+        });
+
+        $('#resultModal').modal('show');
+    }
+</script>
