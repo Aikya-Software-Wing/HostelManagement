@@ -160,7 +160,18 @@ namespace BusinessLayer
             // for each student, generate the buill
             foreach (Student student in studentList)
             {
-                Allotment allotment = student.Allotments.Where(x => x.dateOfLeave == null).First();
+                List<Allotment> allotments = student.Allotments.Where(x => x.dateOfLeave == null).ToList();
+                Allotment allotment; 
+
+                if(allotments.Count > 0)
+                {
+                    allotment = allotments.First();
+                }
+                else
+                {
+                    continue;
+                }
+
                 if (allotment.dateOfJoin < DateTime.Now.AddMonths(-1))
                 {
                     db.MessBills.Add(new MessBill
