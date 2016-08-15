@@ -10,18 +10,15 @@
 </div>
 <hr />
 <div class="row">
-    <div class="col-md-8 col-md-offset-3">
+    <div class="col-md-5 col-md-offset-4">
         @using (Ajax.BeginForm("ViewStudent", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "studentId", InsertionMode = InsertionMode.Replace }, new { @class = "form-inline" }))
         {
-            <div class="row">
-                <div class="form-group col-md-6">
-                    @Html.LabelFor(m => m.bid)
-                    @Html.TextBoxFor(m => m.bid, new { @class = "form-control", id = "bidID" })
-                </div>
-                <div class="col-md-6"></div>
-                <div class="form-group col-md-2 pull-left">
-                    <input type="submit" class="btn btn-primary form-control" value="View" />
-                </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">BID</span>
+                @Html.TextBoxFor(m => m.bid, new { @class = "form-control", id = "bidID" })
+                <span class="input-group-btn">
+                    <input class="btn btn-primary" type="submit" value="View!" />
+                </span>
             </div>
         }
     </div>

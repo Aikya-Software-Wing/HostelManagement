@@ -1,8 +1,55 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
-<h2>Welcome Admin!!!</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/core.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/theme.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-ui-1.11.4.js"></script>
+    <link href="~/Content/HomepageStyle.css" rel="stylesheet" />
+</head>
 
-<h4> Please use the nav-bar above</h4>
+<body>
+
+    <div id="bg">
+        <img src="~/Content/rnsit_1.jpg" alt="">
+    </div>
+
+    <!--Where relevant things start-->
+    <div class="container-fluid">
+
+        <div class="row" style="padding-top:25px;"><div class="col-xs-12" align="center"><h2 id="page_title">Welcome, @User.Identity.Name!</h2></div></div>
+        <hr>
+
+        <div class="row" id="content_box">
+            <div class="col-md-4">
+                @Html.ActionLink("Add User", "AddUser", "Home", new { area = "Administration" }, new { id = "btn_quickaccess", @class = "btn" })
+            </div>
+            <div class="col-md-4">
+                @Html.ActionLink("Remove User", "RemoveUser", "Home", new { area = "Administration" }, new { id = "btn_quickaccess", @class = "btn" })
+            </div>
+            <div class="col-md-4">
+                @Html.ActionLink("Logout", "Logout", "Home", new { area = "Administration" }, new { id = "btn_quickaccess", @class = "btn" })
+            </div>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
