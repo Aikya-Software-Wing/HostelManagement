@@ -4,9 +4,12 @@ using HostelManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace HostelManagement.Areas.HostelMessManagement.Controllers
 {
@@ -143,6 +146,38 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             TransactionHelper helper = new TransactionHelper();
 
             return Content(helper.ChangeHostelFees(userInput, originalValues, rentId, fixId, depId));
+        }
+
+        public ActionResult GenerateReport()
+        {
+            return View();
+        }
+
+        public ActionResult GenerateReportByBID(string[] StartBID, string[] EndBID)
+        {
+            ReportHelper helper = new ReportHelper();
+
+            List<string> startStudent, endStudent;
+            helper.ExtractValidRanges(StartBID, EndBID, out startStudent, out endStudent);
+
+            if (startStudent.Count <= 0)
+            {
+                ModelState.AddModelError("Range", "Enter a valid range");
+                return View("GenerateReport");
+            }
+
+            List<TransactionsViewModel> viewModel = helper.GetTransactionsByStudentRange(startStudent, endStudent);
+
+            var stream = helper.GenerateExcel(viewModel);
+
+            DateTime now = DateTime.Now;
+
+            string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
+            string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+            stream.Position = 0;
+
+            return File(stream, contentType, fileName);
         }
 
     }

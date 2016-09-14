@@ -9,6 +9,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
     public class TransactionsViewModel
     {
         public string id { get; set; }
+        public string bid { get; set; }
         public DateTime dateOfPay { get; set; }
         public string paymentType { get; set; }
         public string accountHead { get; set; }

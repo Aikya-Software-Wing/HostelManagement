@@ -810,6 +810,7 @@ namespace BusinessLayer
                     viewModel.Add(new TransactionsViewModel
                     {
                         id = transcation.receipt + "",
+                        bid = bid,
                         academicYear = transcation.year + " - " + (transcation.year + 1),
                         accountHead = transcation.AcHead.val,
                         amount = -transcation.amount.Value,
@@ -824,6 +825,7 @@ namespace BusinessLayer
                     viewModel.Add(new TransactionsViewModel
                     {
                         id = transcation.receipt + "",
+                        bid = bid,
                         academicYear = transcation.year + " - " + (transcation.year + 1),
                         accountHead = transcation.AcHead.val,
                         amount = transcation.amount.Value,
@@ -852,6 +854,7 @@ namespace BusinessLayer
                 viewModel.Add(new TransactionsViewModel
                 {
                     id = "1",
+                    bid = bid,
                     academicYear = hostelfee.academicYear + " - " + (hostelfee.academicYear + 1),
                     accountHead = hostelfee.accountHead,
                     amount = hostelfee.amount,
@@ -872,6 +875,7 @@ namespace BusinessLayer
                 viewModel.Add(new TransactionsViewModel
                 {
                     id = bill.billNum + "",
+                    bid = bid,
                     academicYear = messFee.academicYear + " - " + (messFee.academicYear + 1),
                     accountHead = "Mess Bill",
                     amount = messFee.amount,
@@ -888,6 +892,7 @@ namespace BusinessLayer
                 viewModel.Add(new TransactionsViewModel
                 {
                     academicYear = transaction.year + " - " + (transaction.year + 1),
+                    bid = bid,
                     accountHead = "Mess Bill",
                     amount = transaction.amount.Value,
                     bankName = transaction.bankName,
