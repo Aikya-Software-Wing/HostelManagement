@@ -604,5 +604,10 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             StudentHelper helper = new StudentHelper();
             return Content(helper.PerformRemoveStudent(userInput));
         }
+
+        public ActionResult MeetDevelopers()
+        {
+            return View();
+        }
     }
 }

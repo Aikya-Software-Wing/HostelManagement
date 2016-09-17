@@ -1,0 +1,31 @@
+﻿@using (@Html.BeginForm("GenerateReportByDate", "Manager", FormMethod.Post))
+{
+    <div id="BidRangeDiv">
+        <div class="row">
+            <fieldset class="form-group">
+                <div class="form-group col-xs-3">
+                    <label>Start Date</label>
+                    <input name="StartDate" class="form-control" type="date" required />
+                </div>
+                <div class="form-group col-xs-3">
+                    <label>End Date</label>
+                    <input name="EndDate" class="form-control" type="date" required />
+                </div>
+                <div class="form-group col-xs-3">
+                </div>
+                <div class="form-group col-xs-3">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        @Html.ValidationSummary()
+    </div>
+    <div class="row">
+        <fieldset class="form-group">
+            <div class="form-group col-xs-3">
+                <input type="submit" class="btn btn-primary btn-block" />
+            </div>
+        </fieldset>
+    </div>
+}

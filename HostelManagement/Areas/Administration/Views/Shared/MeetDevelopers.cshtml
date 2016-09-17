@@ -1,0 +1,92 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet The Developers</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/DevPageStyle.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Hostel Management", "Index", "Home", new { area = "Administration" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Add User", "AddUser", "Home", new { area = "Administration" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Remove User", "RemoveUser", "Home", new { area = "Administration" }, new { @class = "nav-link" })</li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li>@Html.ActionLink("Logout", "Logout", "Home", new { area = "Administration" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Where relevant things start-->
+    <div class="container-fluid" style="width:100%">
+
+        <div align="center"><h2 id="page_title">Meet the Developers</h2></div>
+        <hr>
+        <div class="row">
+            <div class="container" id="content_box">
+
+                <ul>
+                    <li>
+                        <h3>Dr. G T Raju</h3>
+                        <p>Project Guide (HOD - Department of Computer Science and Engineering)</p>
+                    </li>
+                    <li>
+                        <h3>Mr. Ravikiran</h3>
+                        <p>Adviser (Faculty member, Department of CSE)</p>
+                    </li>
+                    <li>
+                        <h3>Mr. Kartik Hegde</h3>
+                        <p>Adviser (Faculty member, Department of CSE)</p>
+                    </li>
+                    <li>
+                        <h3>Shivam Mishra</h3>
+                        <p>Database Architect (Alumnus - Department of CSE, RNSIT, Batch of 2016)</p>
+                    </li>
+                    <li>
+                        <h3>Lalit Aditya</h3>
+                        <p>Back-End Developer (Student - 5th Semester, Department of CSE)</p>
+                    </li>
+                    <li>
+                        <h3>Krupa Hebbar</h3>
+                        <p>UI/UX Designer (Student - 5th Semester, Department of CSE)</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>	<!--End of row-->
+        <hr>
+
+    </div> <!--End of container-->
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/jquery.validate.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+
+</body>
+
+</html>

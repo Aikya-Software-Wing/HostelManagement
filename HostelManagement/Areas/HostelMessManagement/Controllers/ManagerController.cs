@@ -150,7 +150,46 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
 
         public ActionResult GenerateReport()
         {
+            SetUpDropDown();
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult GenerateReport(string reportType)
+        {
+            TempData["queryField"] = reportType;
+            StudentHelper studentHelper = new StudentHelper();
+            TransactionHelper transactionHelper = new TransactionHelper();
+            switch (reportType)
+            {
+                case "1":
+                    return PartialView("_ReportByBID");
+                case "2":
+                    ViewBag.dataList = new SelectList(studentHelper.GetGenders(), "id", "val");
+                    return PartialView("_ReportByDropDown");
+                case "3":
+                    List<SelectListItem> temp = new List<SelectListItem>();
+                    for (int i = 1; i <= 8; i++)
+                    {
+                        temp.Add(new SelectListItem { Text = i + "", Value = i + "" });
+                    }
+                    ViewBag.dataList = new SelectList(temp, "Value", "Text");
+                    return PartialView("_ReportByDropDown");
+                case "4":
+                    ViewBag.dataList = new SelectList(studentHelper.GetCourses(), "id", "val");
+                    return PartialView("_ReportByDropDown");
+                case "5":
+                    return PartialView("_ReportByDate");
+                case "6":
+                    ViewBag.dataList = new SelectList(transactionHelper.GetPaymentTypes(true), "id", "val");
+                    return PartialView("_ReportByDropDown");
+                case "7":
+                    ViewBag.dataList = new SelectList(transactionHelper.GetAccountHeads(), "id", "val");
+                    return PartialView("_ReportByDropDown");
+                case "8":
+                    return PartialView("_ReportByAmount");
+            }
+            return Content(reportType);
         }
 
         public ActionResult GenerateReportByBID(string[] StartBID, string[] EndBID)
@@ -162,6 +201,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
 
             if (startStudent.Count <= 0)
             {
+                SetUpDropDown();
                 ModelState.AddModelError("Range", "Enter a valid range");
                 return View("GenerateReport");
             }
@@ -178,6 +218,105 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             stream.Position = 0;
 
             return File(stream, contentType, fileName);
+        }
+
+        public ActionResult GenerateReportByDropDown(string value)
+        {
+            ReportHelper helper = new ReportHelper();
+            List<TransactionsViewModel> viewModel = null;
+            switch (TempData.Peek("queryField").ToString())
+            {
+                case "2":
+                    viewModel = helper.GetTransactionsByGender(int.Parse(value));
+                    break;
+                case "3":
+                    viewModel = helper.GetTransactionsBySem(int.Parse(value));
+                    break;
+                case "4":
+                    viewModel = helper.GetTransactionsByCourse(int.Parse(value));
+                    break;
+                case "6":
+                    viewModel = helper.GetTransactionsByPaymentType(int.Parse(value));
+                    break;
+                case "7":
+                    viewModel = helper.GetTransactionsByAccountHead(int.Parse(value));
+                    break;
+            }
+            var stream = helper.GenerateExcel(viewModel);
+
+            DateTime now = DateTime.Now;
+
+            string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
+            string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+            stream.Position = 0;
+
+            return File(stream, contentType, fileName);
+        }
+
+        public ActionResult GenerateReportByDate(DateTime StartDate, DateTime EndDate)
+        {
+            ReportHelper helper = new ReportHelper();
+
+            if (StartDate > EndDate)
+            {
+                SetUpDropDown();
+                ModelState.AddModelError("Range", "Enter a valid range");
+                return View("GenerateReport");
+            }
+
+            List<TransactionsViewModel> viewModel = helper.GetTransactionsByDateRange(StartDate, EndDate);
+
+            var stream = helper.GenerateExcel(viewModel);
+
+            DateTime now = DateTime.Now;
+
+            string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
+            string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+            stream.Position = 0;
+
+            return File(stream, contentType, fileName);
+        }
+
+        public ActionResult GenerateReportByAmount(decimal StartAmt, decimal EndAmt)
+        {
+            ReportHelper helper = new ReportHelper();
+
+            if (StartAmt > EndAmt)
+            {
+                SetUpDropDown();
+                ModelState.AddModelError("Range", "Enter a valid range");
+                return View("GenerateReport");
+            }
+
+            List<TransactionsViewModel> viewModel = helper.GetTransactionsByAmountRange(StartAmt, EndAmt);
+
+            var stream = helper.GenerateExcel(viewModel);
+
+            DateTime now = DateTime.Now;
+
+            string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
+            string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+            stream.Position = 0;
+
+            return File(stream, contentType, fileName);
+        }
+
+        [NonAction]
+        private void SetUpDropDown()
+        {
+            List<SelectListItem> reportTypeList = new List<SelectListItem>();
+            reportTypeList.Add(new SelectListItem { Text = "BID", Value = "1" });
+            reportTypeList.Add(new SelectListItem { Text = "Gender", Value = "2" });
+            reportTypeList.Add(new SelectListItem { Text = "Semester", Value = "3" });
+            reportTypeList.Add(new SelectListItem { Text = "Course", Value = "4" });
+            reportTypeList.Add(new SelectListItem { Text = "Date", Value = "5" });
+            reportTypeList.Add(new SelectListItem { Text = "Payment Type", Value = "6" });
+            reportTypeList.Add(new SelectListItem { Text = "Account Head", Value = "7" });
+            reportTypeList.Add(new SelectListItem { Text = "Amount", Value = "8" });
+            ViewBag.reportTypeList = new SelectList(reportTypeList, "Value", "Text");
         }
 
     }

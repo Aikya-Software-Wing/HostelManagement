@@ -1,0 +1,28 @@
+h2,h3,h4,h5,h6,p{
+	font-family: montserrat;
+}
+
+#page_title{
+	margin: 0;
+	padding: 1%
+}
+
+#content_box{
+	padding: 3%;
+}
+
+#content_box > ul > li {
+	display: block;
+	padding-bottom: 1%;
+}
+
+#content_box > ul > li:before {
+/*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e250";
+    font-family: 'Glyphicons Halflings';
+    float: left;
+    margin-top: 4px;
+    margin-left: -30px;
+    color: DarkGrey;
+}
+

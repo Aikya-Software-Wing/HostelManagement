@@ -171,6 +171,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DevPageStyle.css" />
     <Content Include="Content\HomepageStyle.css" />
     <Content Include="Content\rnsit_1.jpg" />
     <Content Include="Content\Site.css" />
@@ -261,6 +262,13 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Areas\HostelMessManagement\Views\Manager\GenerateReport.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\Manager\_ReportByAmount.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\Manager\_ReportByDate.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\Manager\_ReportByBID.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\Manager\_ReportByDropDown.cshtml" />
+    <Content Include="Areas\HostelMessManagement\Views\Shared\MeetDevelopers.cshtml" />
+    <Content Include="Areas\Archive\Views\Shared\MeetDevelopers.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\MeetDevelopers.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -310,6 +318,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\MeetDevelopers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

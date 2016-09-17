@@ -110,6 +110,11 @@ namespace HostelManagement.Controllers
             return View(model);
         }
 
+        public ActionResult MeetDevelopers()
+        {
+            return View();
+        }
+
         private IAuthenticationManager GetAuthenticationManager()
         {
             var ctx = Request.GetOwinContext();

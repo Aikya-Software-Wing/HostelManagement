@@ -1,0 +1,29 @@
+﻿@using (@Html.BeginForm("GenerateReportByDropDown", "Manager", FormMethod.Post))
+{
+    <div id="BidRangeDiv">
+        <div class="row">
+            <fieldset class="form-group">
+                <div class="form-group col-xs-3">
+                    <label>Select </label>
+                    @Html.DropDownList("value", (SelectList)ViewBag.dataList, "Select", new { @class = "form-control" })
+                </div>
+                <div class="form-group col-xs-3">
+                </div>
+                <div class="form-group col-xs-3">
+                </div>
+                <div class="form-group col-xs-3">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        @Html.ValidationSummary()
+    </div>
+    <div class="row">
+        <fieldset class="form-group">
+            <div class="form-group col-xs-3">
+                <input type="submit" class="btn btn-primary btn-block" />
+            </div>
+        </fieldset>
+    </div>
+}
