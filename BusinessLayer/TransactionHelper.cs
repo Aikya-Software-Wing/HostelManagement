@@ -7,15 +7,27 @@ using System.Linq;
 
 namespace BusinessLayer
 {
+    /// <summary>
+    /// Class that contains the business logic for hostel and mess transactions
+    /// </summary>
     public class TransactionHelper
     {
         private HostelManagementEntities1 db = new HostelManagementEntities1();
 
+        /// <summary>
+        /// Method to get all the account heads
+        /// </summary>
+        /// <returns>a list of account heads</returns>
         public List<AcHead> GetAccountHeads()
         {
             return db.AcHeads.ToList();
         }
 
+        /// <summary>
+        /// Method to get all the payment types
+        /// </summary>
+        /// <param name="includeDiscount">true, if discount is a payment type, false otherwise</param>
+        /// <returns>a list of payment types</returns>
         public List<PaymentType> GetPaymentTypes(bool includeDiscount)
         {
             if (!includeDiscount)
@@ -25,9 +37,16 @@ namespace BusinessLayer
             return db.PaymentTypes.ToList();
         }
 
+        /// <summary>
+        /// Method to get academic years from the year of joining
+        /// </summary>
+        /// <param name="yearOfJoining">the year of joining</param>
+        /// <returns>a list of academic years</returns>
         public List<string> GetValidAcademicYears(int yearOfJoining)
         {
             List<string> academicYearList = new List<string>();
+
+            // generate the list of academic years
             for (int i = yearOfJoining; i <= DateTime.Now.Year; i++)
             {
                 academicYearList.Add(i + "");
@@ -35,6 +54,11 @@ namespace BusinessLayer
             return academicYearList;
         }
 
+        /// <summary>
+        /// Method to construct the form for hostel transaction
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <returns>the form</returns>
         public HostelTransactionViewModel ConstructViewModelForHostelTransaction(string bid)
         {
             StudentHelper helper = new StudentHelper();
@@ -69,6 +93,12 @@ namespace BusinessLayer
             return null;
         }
 
+        /// <summary>
+        /// Method to constuct the form for hostel fee discount
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="error">out, error message</param>
+        /// <returns>the form</returns>
         public HostelTransactionViewModel ConstructViewModelForHostelFeeDiscount(string bid, out string error)
         {
             error = "";
@@ -114,8 +144,14 @@ namespace BusinessLayer
             }
         }
 
+        /// <summary>
+        /// Method to perfrom a hostel fee discount
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>result</returns>
         public string PerformFeeDiscount(HostelTransactionViewModel userInput)
         {
+            // add the discount as a transaction
             db.HostelTransactions.Add(new HostelTransaction()
             {
                 head = userInput.acHead,
@@ -128,9 +164,14 @@ namespace BusinessLayer
                 amount = userInput.amount
             });
             db.SaveChanges();
+
             return "Success!!";
         }
 
+        /// <summary>
+        /// Method to check if mess bills can be generated
+        /// </summary>
+        /// <returns>true, if the bill were generated, false otherwise</returns>
         public bool CanGenerateMessBill()
         {
             int month = DateTime.Now.AddMonths(-1).Month;
@@ -147,6 +188,10 @@ namespace BusinessLayer
             return canGenerateMessBill;
         }
 
+        /// <summary>
+        /// Method to generate mess bills
+        /// </summary>
+        /// <returns>result</returns>
         public string GenerateMessBill()
         {
             // get the list of student BIDs and mess fees
@@ -188,6 +233,11 @@ namespace BusinessLayer
             return "Success!!";
         }
 
+        /// <summary>
+        /// Method to add mess transaction to the database
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>result</returns>
         public string PerformMessTransaction(MessTransactionViewModel userInput)
         {
             // find the student and get his/her mess dues
@@ -227,6 +277,12 @@ namespace BusinessLayer
             return "Can not pay fee if not due or if bill not generated";
         }
 
+        /// <summary>
+        /// Method to construct the from for mess transaction
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="error">out, error messsage</param>
+        /// <returns>the form</returns>
         public MessTransactionViewModel ConstructViewModelForMessTransaction(string bid, out string error)
         {
             error = "";
@@ -269,6 +325,11 @@ namespace BusinessLayer
             }
         }
 
+        /// <summary>
+        /// Method to discount the mess bill if the student was absent
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>result</returns>
         public string ReportAbsenceForMess(MessAbsenceViewModel userInput)
         {
             StudentHelper helper = new StudentHelper();
@@ -311,6 +372,11 @@ namespace BusinessLayer
             return "Student Not Found";
         }
 
+        /// <summary>
+        /// Method to add hostel transaction to the database
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>result</returns>
         public string PerformHostelTransaction(HostelTransactionViewModel userInput)
         {
             db.HostelTransactions.Add(new HostelTransaction()
@@ -551,6 +617,14 @@ namespace BusinessLayer
             return dues;
         }
 
+        /// <summary>
+        /// Method to get the amount of hostel fee due
+        /// </summary>
+        /// <param name="head">the account head</param>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="year">the academic year</param>
+        /// <param name="notDue">true, if only dues are required, false, otherwise</param>
+        /// <returns>the amount</returns>
         public decimal GetHostelFeePayable(string head, string bid, int year, bool notDue = true)
         {
             // retrieve the student dues
@@ -566,6 +640,13 @@ namespace BusinessLayer
             return dues.Where(x => x.accountHead.StartsWith(head) && x.academicYear == year).Sum(x => x.amount);
         }
 
+        /// <summary>
+        /// Method to get the mess fee for the given month
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="month">the month</param>
+        /// <param name="year">the academic year</param>
+        /// <returns>amount</returns>
         public decimal GetMessFeePayable(string bid, int month, int year)
         {
             decimal amountDue = 0;
@@ -582,6 +663,10 @@ namespace BusinessLayer
             return amountDue;
         }
 
+        /// <summary>
+        /// Method to get all hostel fee dues
+        /// </summary>
+        /// <returns>a list of the students and dues</returns>
         public List<StudentDueSummaryViewModel> GetAllHostelDues()
         {
             List<StudentDueSummaryViewModel> viewModel = new List<StudentDueSummaryViewModel>();
@@ -627,6 +712,10 @@ namespace BusinessLayer
             return viewModel;
         }
 
+        /// <summary>
+        /// Method to get all mess dues
+        /// </summary>
+        /// <returns>a list of the students and dues</returns>
         public List<StudentMessDueSummaryViewModel> GetAllMessDues()
         {
             List<StudentMessDueSummaryViewModel> viewModel = new List<StudentMessDueSummaryViewModel>();
@@ -654,54 +743,108 @@ namespace BusinessLayer
             return viewModel;
         }
 
+        /// <summary>
+        /// Method to construct the form for mess fee change
+        /// </summary>
+        /// <returns>the form</returns>
         public MessChargesViewModel ConstructViewModelForMessFeeChange()
         {
             return new MessChargesViewModel() { dailymess = db.HostelCharges.Where(x => x.id == 0).OrderByDescending(x => x.year).First().val.Value };
         }
 
+        /// <summary>
+        /// Method to check if the mess fee can be changed
+        /// </summary>
+        /// <returns>true if the mess fee can be changed, false, otherwise</returns>
         public bool CanChangeMessFees()
         {
             return db.HostelCharges.Where(x => x.id == 0).OrderByDescending(x => x.year).First().year != DateTime.Now.Year;
         }
 
+        /// <summary>
+        /// Method to get the fee given an id
+        /// </summary>
+        /// <param name="id">the id of the fee</param>
+        /// <returns>the fee</returns>
         public decimal GetFee(int id)
         {
             return db.HostelCharges.Where(x => x.id == id).First().val.Value;
         }
 
+        /// <summary>
+        /// Method to generate the fee ID for rent
+        /// </summary>
+        /// <param name="hostelType">the type of hostel</param>
+        /// <param name="roomType">the type of room</param>
+        /// <returns>the fee ID</returns>
         public int GetRentFeeId(int hostelType, int roomType)
         {
             return int.Parse(hostelType + "" + roomType + "1");
         }
 
+        /// <summary>
+        /// Method to generate the fee ID for fixed charges
+        /// </summary>
+        /// <param name="hostelType">the type of hostel</param>
+        /// <param name="roomType">the type of room</param>
+        /// <returns>the fee ID</returns>
         public int GetFixFeeId(int hostelType, int roomType)
         {
             return int.Parse(hostelType + "" + roomType + "2");
         }
 
+        /// <summary>
+        /// Method to generate the fee ID for deposit
+        /// </summary>
+        /// <param name="hostelType">the type of hostel</param>
+        /// <param name="roomType">the type of room</param>
+        /// <returns>the fee ID</returns>
         public int GetDepFeeId(int hostelType, int roomType)
         {
             return int.Parse(hostelType + "" + roomType + "3");
         }
 
+        /// <summary>
+        /// Method to check if the rent can be changed
+        /// </summary>
+        /// <param name="hostelType">the type of hostel</param>
+        /// <param name="roomType">the type of room</param>
+        /// <returns>true, if the rent can be changed, false otherwise</returns>
         public bool CanChangeRent(int hostelType, int roomType)
         {
             int temp = GetRentFeeId(hostelType, roomType);
             return db.HostelCharges.Where(x => x.id == temp).OrderByDescending(x => x.year).First().year != DateTime.Now.Year;
         }
 
+        /// <summary>
+        /// Method to check if the fixed deposit can be changed
+        /// </summary>
+        /// <param name="hostelType">the type of hostel</param>
+        /// <param name="roomType">the type of room</param>
+        /// <returns>true, if the fixed deposit can be changed, false otherwise</returns>
         public bool CanChangeFix(int hostelType, int roomType)
         {
             var temp = GetFixFeeId(hostelType, roomType);
             return db.HostelCharges.Where(x => x.id == temp).OrderByDescending(x => x.year).First().year != DateTime.Now.Year;
         }
 
+        /// <summary>
+        /// Method to check if the deposit can be changed
+        /// </summary>
+        /// <param name="hostelType">the type of hostel</param>
+        /// <param name="roomType">the type of room</param>
+        /// <returns>true, if the seposit can be changed, false otherwise</returns>
         public bool CanChangeDep(int hostelType, int roomType)
         {
             var temp = GetDepFeeId(hostelType, roomType);
             return db.HostelCharges.Where(x => x.id == temp).OrderByDescending(x => x.year).First().year != DateTime.Now.Year;
         }
 
+        /// <summary>
+        /// Method to change the mess fee
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>result</returns>
         public string ChangeMessFees(MessChargesViewModel userInput)
         {
             // find the value of the daily mess fees in the database
@@ -717,6 +860,11 @@ namespace BusinessLayer
             return "Update Failed!";
         }
 
+        /// <summary>
+        /// Method to construct the form for hostel fee change
+        /// </summary>
+        /// <param name="userInput">the user input</param>
+        /// <returns>the form</returns>
         public HostelChargesViewModel ConstructViewModelForHostelFeeChange(SearchViewModel userInput)
         {
             HostelChargesViewModel model = new HostelChargesViewModel();
@@ -759,6 +907,15 @@ namespace BusinessLayer
             db.SaveChanges();
         }
 
+        /// <summary>
+        /// Method to change the hostel fees
+        /// </summary>
+        /// <param name="userInput">the changed fees that the user input</param>
+        /// <param name="originalValues">the original value of the fees</param>
+        /// <param name="rentId">the rent ID</param>
+        /// <param name="fixId">the fixed deposit ID</param>
+        /// <param name="depId">the deposit ID</param>
+        /// <returns>result</returns>
         public string ChangeHostelFees(HostelChargesViewModel userInput, HostelChargesViewModel originalValues, int rentId, int fixId, int depId)
         {
             // find out the items that the user has changed
@@ -795,6 +952,12 @@ namespace BusinessLayer
             return "Update Failed!!";
         }
 
+        /// <summary>
+        /// Method to get all the transactions performed by a student
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="archieve">true if the student is in archive, false otherwise</param>
+        /// <returns>a list of transactions</returns>
         public List<TransactionsViewModel> GetAllTransactionsForStudent(string bid, bool archieve = false)
         {
             StudentHelper helper = new StudentHelper();
@@ -906,7 +1069,11 @@ namespace BusinessLayer
             return viewModel.OrderBy(x => x.dateOfPay).ToList();
         }
 
-
+        /// <summary>
+        /// Method to get academic year given the date
+        /// </summary>
+        /// <param name="date">the date</param>
+        /// <returns>academic year</returns>
         public int GetAcademicYear(DateTime date)
         {
             if (date.Month < 7)
@@ -916,6 +1083,15 @@ namespace BusinessLayer
             return date.Year;
         }
 
+        /// <summary>
+        /// Method to constaruct view model for the fees
+        /// </summary>
+        /// <param name="student">the BID of the student</param>
+        /// <param name="feeId">the ID of the fee</param>
+        /// <param name="differentFirstBill">true, if the first bill has to be different</param>
+        /// <param name="i">the year</param>
+        /// <param name="accountHead">the account head</param>
+        /// <returns>the view model</returns>
         private TransactionsViewModel GetTransactionViewModel(Student student, int feeId, bool differentFirstBill, DateTime i, string accountHead)
         {
             int academicYear = GetAcademicYear(i);
@@ -927,7 +1103,7 @@ namespace BusinessLayer
                 amount = GetHostelFeePayable(accountHead, student.bid, academicYear, false),
                 bankName = "RNSIT",
                 dateOfPay = differentFirstBill ? i.Date : new DateTime(i.Year, 7, 1).Date,
-                paymentType = "...",
+                paymentType = "NA",
                 transaction = "Credit"
             };
         }

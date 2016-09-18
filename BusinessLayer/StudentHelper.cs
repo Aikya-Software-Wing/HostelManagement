@@ -1,15 +1,15 @@
 ﻿using HostelManagement.Areas.HostelMessManagement.Models;
 using Shared;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
+    /// <summary>
+    /// Class that conaains the business logic for the student activities
+    /// </summary>
     public class StudentHelper
     {
         private HostelManagementEntities1 db = new HostelManagementEntities1();
@@ -124,11 +124,21 @@ namespace BusinessLayer
             }
         }
 
+        /// <summary>
+        /// Method to get all the room types
+        /// </summary>
+        /// <returns>a list of the room type</returns>
         public List<RoomType> GetRoomTypes()
         {
             return db.RoomTypes.ToList();
         }
 
+        /// <summary>
+        /// Method to get the fee breakup for a room
+        /// </summary>
+        /// <param name="gender">the students' gender (used to determine the hostel)</param>
+        /// <param name="roomType">the type of the room</param>
+        /// <returns>a list of charges (dailymess, rent, fixed charges, deposit)</returns>
         public List<decimal> GetFeeBreakup(string gender, string roomType)
         {
             // get the Database ID for gender and room type
@@ -158,6 +168,11 @@ namespace BusinessLayer
             return charges;
         }
 
+        /// <summary>
+        /// Method to determine the hostels that a student can stay in
+        /// </summary>
+        /// <param name="gender">the students gender</param>
+        /// <returns>a list of hostels</returns>
         public List<Hostel> GetHostelsForStudent(string gender)
         {
             int genderId = int.Parse(gender);
@@ -165,42 +180,81 @@ namespace BusinessLayer
             return hostels;
         }
 
+        /// <summary>
+        /// Method to get all the available rooms in the hostel
+        /// </summary>
+        /// <param name="hostel">the hostel ID</param>
+        /// <returns>a list of rooms</returns>
         public List<Room> GetAvailableRoomsInHostel(int hostel)
         {
             List<Room> rooms = db.Rooms.Where(x => x.hostelBlockNumber == hostel && x.currentOccupancy < x.maxOccupancy).ToList();
             return rooms;
         }
 
+        /// <summary>
+        /// Method to get the type of room
+        /// </summary>
+        /// <param name="hostel">the ID of the hostel</param>
+        /// <param name="roomNumber">the room number</param>
+        /// <returns>the room type</returns>
         public string GetRoomType(int hostel, int roomNumber)
         {
             return db.Rooms.Where(x => x.roomNumber == roomNumber && x.hostelBlockNumber == hostel).First().RoomType1.val;
         }
 
+        /// <summary>
+        /// Method to get the student, given the BID
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="archive">true, if the student is in the archive false otherwise</param>
+        /// <returns>the student</returns>
         public Student GetStudent(string bid, bool archive = false)
         {
+            // get a list of students with the given BID
             List<Student> studentList = db.Students.Where(x => x.bid == bid).ToList();
+
+            // if the student exsists
             if (studentList.Count > 0)
             {
+                // if student is in the archive
                 if (archive && !(studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0))
                 {
                     return studentList.First();
                 }
+                
+                // if the is not in the archive
                 if (!(archive) && studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0)
                 {
                     return studentList.First();
                 }
             }
+
+            // if the student is not found
             return null;
         }
 
+        /// <summary>
+        /// Method to get all the rooms that a student can stay in including his current room
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <returns>a list of rooms</returns>
         public List<Room> GetRoomsIncludingCurrent(string bid)
         {
             List<Room> roomList = new List<Room>();
+
+            // get the student
             Student student = GetStudent(bid);
-            Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
+
+            // if the student exists
             if (student != null)
             {
+                // get the student current room
+                Allotment allotment = student.Allotments.OrderByDescending(x => x.year).First();
+
+                // get all rooms in the current block where the student is staying
                 var rooms = db.Rooms.Where(x => x.hostelBlockNumber == allotment.hostelBlock);
+
+                // for each room in the current block, add it to the list if it is vacant
                 foreach (Room room in rooms)
                 {
                     if (room.roomNumber == allotment.roomNum || room.currentOccupancy < room.maxOccupancy)
@@ -212,9 +266,16 @@ namespace BusinessLayer
                 return roomList;
             }
 
+            // if the student does not exsist
             return null;
         }
 
+        /// <summary>
+        /// Method to change the allotment for a student
+        /// </summary>
+        /// <param name="userInput">the form that the user has filled</param>
+        /// <param name="bid">the bid of the student</param>
+        /// <returns>the result to be displayed to the user</returns>
         public string PerformRoomChange(ChangeRoomViewModel userInput, string bid)
         {
             TransactionHelper helper = new TransactionHelper();
@@ -272,7 +333,7 @@ namespace BusinessLayer
                     // commit the transaction
                     transaction.Commit();
                 }
-                catch (Exception exe)
+                catch (Exception)
                 {
                     transaction.Rollback();
                     return "An error occured! Please try again later!";
@@ -281,6 +342,13 @@ namespace BusinessLayer
             return "Success!";
         }
 
+        /// <summary>
+        /// Method to get the details of a student
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="error">out, an error message</param>
+        /// <param name="archive">true, if the student is in the archive false otherwise</param>
+        /// <returns>the details of the student</returns>
         public DisplayStudentViewModel GetStudentDetails(string bid, out string error, bool archive = false)
         {
             error = "";
@@ -346,6 +414,11 @@ namespace BusinessLayer
             }
         }
 
+        /// <summary>
+        /// Method to add additional fee for a student
+        /// </summary>
+        /// <param name="userInput">the form that the user has filled</param>
+        /// <returns>the result</returns>
         public string AddAdditionalFee(AddAdditionalFeeViewModel userInput)
         {
             Student student = GetStudent(userInput.bid);
@@ -384,6 +457,12 @@ namespace BusinessLayer
             return "Success!";
         }
 
+        /// <summary>
+        /// Method to determine wheater a student can change his/her current room
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="error">out, an error message</param>
+        /// <returns>true, if the student can change room, false, otherwise</returns>
         public bool CanChangeRoom(string bid, out string error)
         {
             error = "";
@@ -410,9 +489,17 @@ namespace BusinessLayer
             return false;
         }
 
+        /// <summary>
+        /// Method to a get the list of students for autocomplete
+        /// </summary>
+        /// <param name="incompleteName">the incomplete name of the student</param>
+        /// <returns>a list of possible candidates</returns>
         public List<AutoCompleteViewModel> GetStudentListForAutoComplete(string incompleteName)
         {
+            // get all the students that match the incomplete name
             List<Student> studentList = db.Students.Where(x => x.name.Contains(incompleteName)).ToList();
+
+            // construct the view model
             List<AutoCompleteViewModel> list = new List<AutoCompleteViewModel>();
             foreach (Student s in studentList)
             {
@@ -428,41 +515,70 @@ namespace BusinessLayer
             return list;
         }
 
+        /// <summary>
+        /// Method to check if a student can be removed from the hostel
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <param name="error">the error message</param>
+        /// <returns>true, if the student can be removed false otherwise</returns>
         public bool CanRemoveStudent(string bid, out string error)
         {
             TransactionHelper helper = new TransactionHelper();
             error = "";
+
+            // get the student
             Student student = GetStudent(bid);
 
+            // if the student exists
             if (student != null)
             {
+                // get all the transactions perfromed by the student
                 List<TransactionsViewModel> transactions = helper.GetAllTransactionsForStudent(bid);
 
+                // calculate his dues and available deposit
                 decimal dues = transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Credit").Sum(x => x.amount) - transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
                 decimal avaiableDeposit = transactions.Where(x => x.accountHead == "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
 
+                // if the student has too many dues, he can not be removed
                 if (dues > avaiableDeposit)
                 {
                     error = "Too many dues. Can not remove student!";
                     return false;
                 }
 
+                // the student can be removed
                 return true;
             }
 
+            // the student does not exist
             error = "Can not find student";
             return false;
         }
 
+        /// <summary>
+        /// Method to get the amount of deposit that can refunded
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <returns>the deposit that can be refunded</returns>
         public decimal GetDepositRefund(string bid)
         {
             TransactionHelper helper = new TransactionHelper();
+
+            // get all the transactions that were performed by the student
             List<TransactionsViewModel> transactions = helper.GetAllTransactionsForStudent(bid);
+
+            // calculate his dues and dues and available deposit
             decimal dues = transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Credit").Sum(x => x.amount) - transactions.Where(x => x.accountHead != "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
             decimal avaiableDeposit = transactions.Where(x => x.accountHead == "Deposit" && x.transaction == "Debit").Sum(x => x.amount);
+
             return avaiableDeposit - dues;
         }
 
+        /// <summary>
+        /// Method to construct the form to remove a student
+        /// </summary>
+        /// <param name="bid">the BID of the student</param>
+        /// <returns>the form</returns>
         public RemoveStudentViewModel ConstructViewModelForRemoveStudent(string bid)
         {
             StudentHelper helper = new StudentHelper();
@@ -492,6 +608,11 @@ namespace BusinessLayer
             return null;
         }
 
+        /// <summary>
+        /// Method to construct the form to change allotment
+        /// </summary>
+        /// <param name="student">the student</param>
+        /// <returns>the form</returns>
         public List<AllotmentDisplayViewModel> ConstructViewModelForAlloment(Student student)
         {
             List<AllotmentDisplayViewModel> allotmentViewModel = new List<AllotmentDisplayViewModel>();
@@ -514,45 +635,67 @@ namespace BusinessLayer
             return allotmentViewModel;
         }
 
+        /// <summary>
+        /// Method to remove a student from the hostel
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>error message</returns>
         public string PerformRemoveStudent(RemoveStudentViewModel userInput)
         {
             TransactionHelper helper = new TransactionHelper();
+
+            // get the student
             Student student = GetStudent(userInput.bid);
+
+            // get the current room that the student is staying in
             Allotment allotment = student.Allotments.Where(x => x.dateOfLeave == null).First();
+
+            // get all the transactions that were perfromed by the student
             List<TransactionsViewModel> transactions = helper.GetAllTransactionsForStudent(userInput.bid);
+
+            // get the amount of rent and fixed deposit that were payed
             decimal rentPaid = transactions.Where(x => x.accountHead == "Rent" && x.transaction == "Debit").Sum(x => x.amount);
             decimal fixPaid = transactions.Where(x => x.accountHead == "Fixed Charges" && x.transaction == "Debit").Sum(x => x.amount);
+
+            // get the amount refund requested by the user
             userInput.depRefund = GetDepositRefund(userInput.bid);
 
+            // if user wants to refund more rent than the student has payed
             if (userInput.rentRefund > rentPaid)
             {
                 return "Can not refund more rent than paid";
             }
 
+            // if user wants to refund more fixed deposit than the student has payed
             if (userInput.fixRefund > fixPaid)
             {
                 return "Can not refund more fixed changes than paid";
             }
 
+            // if the user has not entered the a reference number for the rent refund
             if (userInput.rentRefund > 0 && string.IsNullOrWhiteSpace(userInput.rentRefundRef))
             {
                 return "Reference number needed to refund rent";
             }
 
+            // if the user has not entered the a reference number for the fixed deposit refund
             if (userInput.fixRefund > 0 && string.IsNullOrWhiteSpace(userInput.fixRefundRef))
             {
                 return "Reference number needed to refund fixed charges";
             }
 
+            // if the user has not entered the a reference number for the deposit refund
             if (userInput.depRefund > 0 && string.IsNullOrWhiteSpace(userInput.depRefundRef))
             {
                 return "Reference number needed to refund deposit";
             }
 
+            // begin a transaction
             using (var tran = db.Database.BeginTransaction())
             {
                 try
                 {
+                    // if the user would like to refund rent add the appropriate transaction
                     if (userInput.rentRefund > 0)
                     {
                         db.HostelTransactions.Add(new HostelTransaction
@@ -569,6 +712,7 @@ namespace BusinessLayer
                         db.SaveChanges();
                     }
 
+                    // if the user would like to refund fixed deposit add the appropriate transaction
                     if (userInput.fixRefund > 0)
                     {
                         db.HostelTransactions.Add(new HostelTransaction
@@ -585,6 +729,7 @@ namespace BusinessLayer
                         db.SaveChanges();
                     }
 
+                    // if the user would like to refund deposit add the appropriate transaction
                     if (userInput.depRefund > 0)
                     {
                         db.HostelTransactions.Add(new HostelTransaction
@@ -601,16 +746,19 @@ namespace BusinessLayer
                         db.SaveChanges();
                     }
 
+                    // update the allotment of the student
                     allotment.dateOfLeave = DateTime.Now;
                     allotment.Room.currentOccupancy -= 1;
                     db.Allotments.Attach(allotment);
                     db.Entry(allotment).State = EntityState.Modified;
                     db.SaveChanges();
 
+                    // commit the transaction 
                     tran.Commit();
                 }
                 catch (Exception e)
                 {
+                    // if an error has occured rollback all changes
                     tran.Rollback();
                     return "An error occurred: " + e.Message + "(" + e.InnerException.Message + ")";
                 }
