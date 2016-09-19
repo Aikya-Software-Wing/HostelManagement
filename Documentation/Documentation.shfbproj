@@ -27,26 +27,44 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\BusinessLayer\BusinessLayer.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\BusinessLayer\BusinessLayer.csproj" />
+      <DocumentationSource sourceFile="..\HostelManagement\HostelManagement.csproj" />
+      <DocumentationSource sourceFile="..\Shared\Shared.csproj" />
     </DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
-    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
+    <BuildAssemblerVerbosity>OnlyErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>OpenXml</HelpFileFormat>
     <IndentHtml>True</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
-    <NamespaceGrouping>False</NamespaceGrouping>
+    <NamespaceGrouping>True</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
-    <RootNamespaceContainer>False</RootNamespaceContainer>
-    <PresentationStyle>VS2013</PresentationStyle>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <PresentationStyle>OpenXML</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
     <HelpTitle>Business Layer Documentation</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <FeedbackEMailLinkText>Feedback</FeedbackEMailLinkText>
+    <FeedbackEMailAddress>lalitadithya5071%40gmail.com</FeedbackEMailAddress>
+    <MissingTags>AutoDocumentCtors, AutoDocumentDispose</MissingTags>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="BusinessLayer" isDocumented="True" xmlns="">The Business Layer</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement" isDocumented="True" xmlns="">The MVC namespace</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.Administration" isDocumented="True" xmlns="">The admin area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.Administration.Controllers" isDocumented="True" xmlns="">Controllers for admin area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.Administration.Models" isDocumented="True" xmlns="">Models for admin area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.Archive" isDocumented="True" xmlns="">The archive area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.Archive.Controllers" isDocumented="True" xmlns="">Controllers for archive area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.HostelMessManagement" isDocumented="True" xmlns="">The hostel mess management area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Areas.HostelMessManagement.Controllers" isDocumented="True" xmlns="">Controllers for hostel mess management area</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Controllers" isDocumented="True" xmlns="">All the controllers outside all the areas</NamespaceSummaryItem>
+<NamespaceSummaryItem name="HostelManagement.Models" isDocumented="True" xmlns="">All models outside all areas</NamespaceSummaryItem></NamespaceSummaries>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, InheritedFrameworkInternalMembers, InheritedFrameworkPrivateMembers, Internals, Privates, Protected, ProtectedInternalAsProtected, PublicCompilerGenerated</VisibleItems>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

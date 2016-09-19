@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 using Microsoft.AspNet.Identity;
@@ -9,10 +8,20 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace HostelManagement
 {
+    /// <summary>
+    /// The class to configure the application
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// User manager factory
+        /// </summary>
         public static Func<UserManager<AppUser>> UserManagerFactory { get; private set; }
 
+        /// <summary>
+        /// Method to configure the application
+        /// </summary>
+        /// <param name="app">the app builder</param>
         public void Configuration(IAppBuilder app)
         {
             app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions

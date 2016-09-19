@@ -2,19 +2,21 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace HostelManagement.Controllers
 {
+    /// <summary>
+    /// The home controller
+    /// </summary>
 
     [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly UserManager<AppUser> userManager;
+
 
         public HomeController() : this(Startup.UserManagerFactory.Invoke())
         {
@@ -37,7 +39,11 @@ namespace HostelManagement.Controllers
         }
 
 
-        // GET: Home
+        /// <summary>
+        /// Action method to display the login page
+        /// </summary>
+        /// <param name="returnUrl">the redirection URL</param>
+        /// <returns>view</returns>
         [HttpGet]
         public ActionResult Index(string returnUrl)
         {
@@ -60,6 +66,11 @@ namespace HostelManagement.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Action method to log in the user
+        /// </summary>
+        /// <param name="model">the form filled by the user</param>
+        /// <returns>view</returns>
         [HttpPost]
         public async Task<ActionResult> Index(LoginViewModel model)
         {
@@ -110,6 +121,10 @@ namespace HostelManagement.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Action Method to display the page to meet the developers
+        /// </summary>
+        /// <returns>view</returns>
         public ActionResult MeetDevelopers()
         {
             return View();

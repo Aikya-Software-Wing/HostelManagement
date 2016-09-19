@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace HostelManagement
 {
+    /// <summary>
+    /// a class for filter configuration
+    /// </summary>
     public class FilterConfig
     {
+        /// <summary>
+        /// Method to register the filters
+        /// </summary>
+        /// <param name="filters">the filters</param>
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());

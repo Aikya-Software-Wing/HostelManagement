@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace HostelManagement
 {
+    /// <summary>
+    /// Class to configure the route
+    /// </summary>
     public class RouteConfig
     {
+        /// <summary>
+        /// Method to register the routes
+        /// </summary>
+        /// <param name="routes">the route collection</param>
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");

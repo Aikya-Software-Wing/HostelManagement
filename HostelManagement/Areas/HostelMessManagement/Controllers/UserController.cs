@@ -1,18 +1,17 @@
 ﻿using BusinessLayer;
 using HostelManagement.Areas.HostelMessManagement.Models;
-using HostelManagement.Models;
-using Shared;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace HostelManagement.Areas.HostelMessManagement.Controllers
 {
+    /// <summary>
+    /// Controller for User
+    /// </summary>
     [Authorize(Roles = "User,Manager")]
     public class UserController : Controller
     {
@@ -565,24 +564,44 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             ViewBag.departmentList = new SelectList(helper.GetDepartments(), "id", "val"); ;
         }
 
+        /// <summary>
+        /// Action method to get the list of studented for auto complete
+        /// </summary>
+        /// <param name="term">the input given by the user</param>
+        /// <returns>a list of the candidates in JSON format</returns>
         public ActionResult GetStudentList(string term)
         {
             StudentHelper helper = new StudentHelper();
             return Json(helper.GetStudentListForAutoComplete(term), JsonRequestBehavior.AllowGet);
         }
 
+        /// <summary>
+        /// Action Method to show all transactions for a given student
+        /// </summary>
+        /// <param name="bid">The BID of the student</param>
+        /// <param name="archive">true, if the student if the student is in the archive, false otherwise</param>
+        /// <returns>a partial view that contains all the transaction</returns>
         public ActionResult ShowAllTransactions(string bid, bool archive = false)
         {
             TransactionHelper helper = new TransactionHelper();
             return PartialView("_AllTransactions", helper.GetAllTransactionsForStudent(bid, archive));
         }
 
+        /// <summary>
+        /// Action method to disaply the page to search for a student to be removed
+        /// </summary>
+        /// <returns>a view</returns>
         [HttpGet]
         public ActionResult RemoveStudent()
         {
             return View();
         }
 
+        /// <summary>
+        /// Method to get the form to remove a student
+        /// </summary>
+        /// <param name="userInput">the from filled by the user</param>
+        /// <returns>form if the student was found, else error message</returns>
         [HttpPost]
         public ActionResult RemoveStudent(StudentSearchViewModel userInput)
         {
@@ -599,12 +618,21 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             return Content(error);
         }
 
+        /// <summary>
+        /// Action method to remove the student
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>message</returns>
         public ActionResult PerformRemoveStudent(RemoveStudentViewModel userInput)
         {
             StudentHelper helper = new StudentHelper();
             return Content(helper.PerformRemoveStudent(userInput));
         }
 
+        /// <summary>
+        /// Action method to get the meet the developers page
+        /// </summary>
+        /// <returns>a view</returns>
         public ActionResult MeetDevelopers()
         {
             return View();

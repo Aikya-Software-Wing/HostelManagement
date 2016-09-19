@@ -1,18 +1,17 @@
 ﻿using BusinessLayer;
 using HostelManagement.Areas.HostelMessManagement.Models;
-using HostelManagement.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace HostelManagement.Areas.HostelMessManagement.Controllers
 {
+    /// <summary>
+    /// Controller for Manager
+    /// </summary>
     [Authorize(Roles = "Manager")]
     public class ManagerController : Controller
     {
@@ -148,18 +147,31 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             return Content(helper.ChangeHostelFees(userInput, originalValues, rentId, fixId, depId));
         }
 
+        /// <summary>
+        /// Action method to display a form to select the type of report
+        /// </summary>
+        /// <returns>a view</returns>
         public ActionResult GenerateReport()
         {
             SetUpDropDown();
             return View();
         }
 
+        /// <summary>
+        /// Action method to get the form to filled after selecting the report type
+        /// </summary>
+        /// <param name="reportType">the type of report</param>
+        /// <returns>a partial view or error message</returns>
         [HttpPost]
         public ActionResult GenerateReport(string reportType)
         {
-            TempData["queryField"] = reportType;
             StudentHelper studentHelper = new StudentHelper();
             TransactionHelper transactionHelper = new TransactionHelper();
+
+            // save the report type for later use
+            TempData["queryField"] = reportType;
+            
+            // switch based on report type
             switch (reportType)
             {
                 case "1":
@@ -168,37 +180,50 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                     ViewBag.dataList = new SelectList(studentHelper.GetGenders(), "id", "val");
                     return PartialView("_ReportByDropDown");
                 case "3":
+                    // generate a list for the semesters
                     List<SelectListItem> temp = new List<SelectListItem>();
                     for (int i = 1; i <= 8; i++)
                     {
                         temp.Add(new SelectListItem { Text = i + "", Value = i + "" });
                     }
                     ViewBag.dataList = new SelectList(temp, "Value", "Text");
+
                     return PartialView("_ReportByDropDown");
                 case "4":
                     ViewBag.dataList = new SelectList(studentHelper.GetCourses(), "id", "val");
+
                     return PartialView("_ReportByDropDown");
                 case "5":
                     return PartialView("_ReportByDate");
                 case "6":
                     ViewBag.dataList = new SelectList(transactionHelper.GetPaymentTypes(true), "id", "val");
+
                     return PartialView("_ReportByDropDown");
                 case "7":
                     ViewBag.dataList = new SelectList(transactionHelper.GetAccountHeads(), "id", "val");
+
                     return PartialView("_ReportByDropDown");
                 case "8":
                     return PartialView("_ReportByAmount");
             }
-            return Content(reportType);
+            return Content("An error occurred");
         }
 
+        /// <summary>
+        /// Action method to generate the report using BID ranges
+        /// </summary>
+        /// <param name="StartBID">the start BID range</param>
+        /// <param name="EndBID">the end BID range</param>
+        /// <returns>the report (excel file) or error message</returns>
         public ActionResult GenerateReportByBID(string[] StartBID, string[] EndBID)
         {
             ReportHelper helper = new ReportHelper();
-
             List<string> startStudent, endStudent;
+
+            // get only valid ranges
             helper.ExtractValidRanges(StartBID, EndBID, out startStudent, out endStudent);
 
+            // if no valid ranges could be found
             if (startStudent.Count <= 0)
             {
                 SetUpDropDown();
@@ -206,24 +231,34 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                 return View("GenerateReport");
             }
 
+            // get the transactions
             List<TransactionsViewModel> viewModel = helper.GetTransactionsByStudentRange(startStudent, endStudent);
 
+            // generate excel file
             var stream = helper.GenerateExcel(viewModel);
 
+            // set the properties for the excel file
             DateTime now = DateTime.Now;
-
             string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
             string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
+            // reset the stream position (for safety purposes)
             stream.Position = 0;
 
             return File(stream, contentType, fileName);
         }
 
+        /// <summary>
+        /// Action method to generate report based on value
+        /// </summary>
+        /// <param name="value">the selected value</param>
+        /// <returns>the report or a error message</returns>
         public ActionResult GenerateReportByDropDown(string value)
         {
             ReportHelper helper = new ReportHelper();
             List<TransactionsViewModel> viewModel = null;
+
+            // generate the report based on the previously saved report type
             switch (TempData.Peek("queryField").ToString())
             {
                 case "2":
@@ -242,22 +277,32 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                     viewModel = helper.GetTransactionsByAccountHead(int.Parse(value));
                     break;
             }
+
+            // generate the excel file
             var stream = helper.GenerateExcel(viewModel);
 
+            // set the property for the excel file
             DateTime now = DateTime.Now;
-
             string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
             string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
+            // reset the stream position (for safety)
             stream.Position = 0;
 
             return File(stream, contentType, fileName);
         }
 
+        /// <summary>
+        /// Action method to generate a report based on date range
+        /// </summary>
+        /// <param name="StartDate">the start date</param>
+        /// <param name="EndDate">the end date</param>
+        /// <returns>the report</returns>
         public ActionResult GenerateReportByDate(DateTime StartDate, DateTime EndDate)
         {
             ReportHelper helper = new ReportHelper();
 
+            // sanity check
             if (StartDate > EndDate)
             {
                 SetUpDropDown();
@@ -265,24 +310,34 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                 return View("GenerateReport");
             }
 
+            // get the transactions
             List<TransactionsViewModel> viewModel = helper.GetTransactionsByDateRange(StartDate, EndDate);
 
+            // generate the excel file
             var stream = helper.GenerateExcel(viewModel);
 
+            // set the properties of the excel file
             DateTime now = DateTime.Now;
-
             string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
             string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
+            // reset the stream position (for safety purpose)
             stream.Position = 0;
 
             return File(stream, contentType, fileName);
         }
 
+        /// <summary>
+        /// Action method to generate report by amount range
+        /// </summary>
+        /// <param name="StartAmt">the start amount</param>
+        /// <param name="EndAmt">the end amount</param>
+        /// <returns>the report or an error message</returns>
         public ActionResult GenerateReportByAmount(decimal StartAmt, decimal EndAmt)
         {
             ReportHelper helper = new ReportHelper();
 
+            // sanity check
             if (StartAmt > EndAmt)
             {
                 SetUpDropDown();
@@ -290,20 +345,26 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
                 return View("GenerateReport");
             }
 
+            // get the transactions
             List<TransactionsViewModel> viewModel = helper.GetTransactionsByAmountRange(StartAmt, EndAmt);
 
+            // generate the excel file
             var stream = helper.GenerateExcel(viewModel);
 
+            // set the properties for the excel file
             DateTime now = DateTime.Now;
-
             string fileName = "Report - " + now.ToLongDateString() + " " + now.ToLongTimeString() + ".xlsx";
             string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
+            // reset the stream position (for safety purposes)
             stream.Position = 0;
 
             return File(stream, contentType, fileName);
         }
 
+        /// <summary>
+        /// Helper method to set the list drop down for report generation
+        /// </summary>
         [NonAction]
         private void SetUpDropDown()
         {
