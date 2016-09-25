@@ -221,7 +221,7 @@ namespace BusinessLayer
                 {
                     return studentList.First();
                 }
-                
+
                 // if the is not in the archive
                 if (!(archive) && studentList.First().Allotments.Where(x => x.dateOfLeave == null).Count() > 0)
                 {
@@ -627,7 +627,7 @@ namespace BusinessLayer
                     dol = allotment.dateOfLeave.HasValue ? allotment.dateOfLeave.Value.Date + "" : "",
                     roomNumber = allotment.roomNum,
                     roomType = allotment.Room.RoomType1.val,
-                    floorNumber = allotment.roomNum.ToString().ToCharArray()[0],
+                    floorNumber = int.Parse((allotment.roomNum + "")[0] + ""),
                     year = allotment.year + " - " + (allotment.year + 1)
                 });
             }

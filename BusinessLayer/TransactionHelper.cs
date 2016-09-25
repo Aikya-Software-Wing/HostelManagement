@@ -206,9 +206,9 @@ namespace BusinessLayer
             foreach (Student student in studentList)
             {
                 List<Allotment> allotments = student.Allotments.Where(x => x.dateOfLeave == null).ToList();
-                Allotment allotment; 
+                Allotment allotment;
 
-                if(allotments.Count > 0)
+                if (allotments.Count > 0)
                 {
                     allotment = allotments.First();
                 }
@@ -349,7 +349,7 @@ namespace BusinessLayer
                 // get the bill for that month
                 List<MessBill> bills = db.MessBills.Where(x => x.bid == userInput.bid && x.month == month).OrderByDescending(x => x.dateOfDeclaration).ToList();
 
-                if(bills.Count <= 0)
+                if (bills.Count <= 0)
                 {
                     return "Bill not found!";
                 }
@@ -433,7 +433,15 @@ namespace BusinessLayer
 
             // retrieve the student from the database and find the most recent year of joining
             Student student = db.Students.Where(x => x.bid == bid).First();
-            int yearOfJoining = student.Allotments.OrderBy(x => x.dateOfJoin != null).First().year;
+            int yearOfJoining;
+            try
+            {
+                yearOfJoining = student.Allotments.Where(x => x.dateOfLeave == null).OrderBy(x => x.dateOfJoin).First().year;
+            }
+            catch (InvalidOperationException)
+            {
+                return null;
+            }
 
             // for each year since the year of joining until the current year
             for (int i = yearOfJoining; i <= GetAcademicYear(DateTime.Now); i++)
@@ -522,14 +530,17 @@ namespace BusinessLayer
                     // if not, all the computed values if there is due
                     if (allTransactions)
                     {
-                        viewModel.Add(new HostelFeeDueViewModel()
+                        if (amount - amountPaid != 0)
                         {
-                            academicYear = i,
-                            accountHead = head.custom == 1 ? head.val + "(" + customAcHead + ")" : head.val,
-                            amount = amount,
-                            amountPaid = amountPaid,
-                            amountDue = amount - amountPaid,
-                        });
+                            viewModel.Add(new HostelFeeDueViewModel()
+                            {
+                                academicYear = i,
+                                accountHead = head.custom == 1 ? head.val + "(" + customAcHead + ")" : head.val,
+                                amount = amount,
+                                amountPaid = amountPaid,
+                                amountDue = amount - amountPaid,
+                            });
+                        }
                     }
                     else
                     {
@@ -682,6 +693,10 @@ namespace BusinessLayer
             {
                 // get the students dues
                 Tuple<List<HostelFeeDueViewModel>, Hashtable> result = GetStudentDues(bid);
+                if(result == null)
+                {
+                    continue;
+                }
                 Hashtable totalDues = result.Item2;
                 bool noDues = true;
 
@@ -965,7 +980,7 @@ namespace BusinessLayer
             Student student = helper.GetStudent(bid, archieve);
 
             // sanity check
-            if(student == null)
+            if (student == null)
             {
                 return null;
             }
@@ -975,6 +990,11 @@ namespace BusinessLayer
 
             foreach (HostelTransaction transcation in transactions)
             {
+                if (transcation.amount.Value == 0)
+                {
+                    continue;
+                }
+
                 if (transcation.amount.Value < 0)
                 {
                     viewModel.Add(new TransactionsViewModel
@@ -1021,18 +1041,21 @@ namespace BusinessLayer
                 {
                     dateOfBill = filtertedStudentAllotments.First().dateOfJoin;
                 }
-                viewModel.Add(new TransactionsViewModel
+                if (hostelfee.amount != 0)
                 {
-                    id = "1",
-                    bid = bid,
-                    academicYear = hostelfee.academicYear + " - " + (hostelfee.academicYear + 1),
-                    accountHead = hostelfee.accountHead,
-                    amount = hostelfee.amount,
-                    bankName = "Canara Bank",
-                    dateOfPay = dateOfBill,
-                    paymentType = "",
-                    transaction = "Credit"
-                });
+                    viewModel.Add(new TransactionsViewModel
+                    {
+                        id = "1",
+                        bid = bid,
+                        academicYear = hostelfee.academicYear + " - " + (hostelfee.academicYear + 1),
+                        accountHead = hostelfee.accountHead,
+                        amount = hostelfee.amount,
+                        bankName = "Canara Bank",
+                        dateOfPay = dateOfBill,
+                        paymentType = "",
+                        transaction = "Credit"
+                    });
+                }
             }
 
 
