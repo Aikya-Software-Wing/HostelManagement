@@ -957,12 +957,19 @@ namespace BusinessLayer
         /// </summary>
         /// <param name="bid">the BID of the student</param>
         /// <param name="archieve">true if the student is in archive, false otherwise</param>
-        /// <returns>a list of transactions</returns>
+        /// <returns>a list of transactions or null if none could be found</returns>
         public List<TransactionsViewModel> GetAllTransactionsForStudent(string bid, bool archieve = false)
         {
             StudentHelper helper = new StudentHelper();
 
             Student student = helper.GetStudent(bid, archieve);
+
+            // sanity check
+            if(student == null)
+            {
+                return null;
+            }
+
             List<HostelTransaction> transactions = db.HostelTransactions.Where(x => x.bid == student.bid).ToList();
             List<TransactionsViewModel> viewModel = new List<TransactionsViewModel>();
 

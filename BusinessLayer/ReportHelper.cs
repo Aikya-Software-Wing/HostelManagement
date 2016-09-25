@@ -36,11 +36,21 @@ namespace BusinessLayer
                 Student startStudent = helper.GetStudent(startBID[i]);
                 Student endStudent = helper.GetStudent(endBID[i]);
 
+                // if the student could not be found in the first attempt, check in the archive
+                if(startStudent == null)
+                {
+                    startStudent = helper.GetStudent(startBID[i], true);
+                }
+                if(endStudent == null)
+                {
+                    endStudent = helper.GetStudent(endBID[i], true);
+                }
+
                 // check if the start student and end student are present in the database
                 if (startStudent != null && endStudent != null)
                 {
-                    // check if the start student is before the end student
-                    if (int.Parse(startStudent.bid.Substring(4).Trim()) < int.Parse(endStudent.bid.Substring(4).Trim()))
+                    // check if the start student is before or the same as the end student
+                    if (int.Parse(startStudent.bid.Substring(4).Trim()) <= int.Parse(endStudent.bid.Substring(4).Trim()))
                     {
                         startStudents.Add(startStudent.bid);
                         endStudents.Add(endStudent.bid);
@@ -72,7 +82,13 @@ namespace BusinessLayer
                 // iterate over all students in the current range
                 do
                 {
-                    result.AddRange(helper.GetAllTransactionsForStudent(currentBidPrefix + currentBidSuffix));
+                    var list = helper.GetAllTransactionsForStudent(currentBidPrefix + currentBidSuffix);
+                    if(list == null)
+                    {
+                        list = helper.GetAllTransactionsForStudent(currentBidPrefix + currentBidSuffix, true);
+                    }
+
+                    result.AddRange(list);
                     currentBidSuffix++;
                 } while (currentBidSuffix <= int.Parse(endStudents[i].Substring(4)));
             }
