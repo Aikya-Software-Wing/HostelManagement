@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddAdditionalFeeViewModel.cs" />
+    <Compile Include="AddHostelViewModel.cs" />
     <Compile Include="AllotmentDisplayViewModel.cs" />
     <Compile Include="AutoCompleteViewModel.cs" />
     <Compile Include="ChangeRoomViewModel.cs" />

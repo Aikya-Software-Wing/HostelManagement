@@ -270,6 +270,7 @@
     <Content Include="Areas\HostelMessManagement\Views\Shared\MeetDevelopers.cshtml" />
     <Content Include="Areas\Archive\Views\Shared\MeetDevelopers.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\MeetDevelopers.cshtml" />
+    <Content Include="Areas\Administration\Views\Home\AddHostel.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />

@@ -1,5 +1,7 @@
-﻿using HostelManagement.Areas.Administration.Models;
+﻿using BusinessLayer;
+using HostelManagement.Areas.Administration.Models;
 using Microsoft.AspNet.Identity;
+using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 
@@ -125,6 +127,34 @@ namespace HostelManagement.Areas.Administration.Controllers
                 return Content("Can not remove current user");
             }
             return Content("Can not remove root account");
+        }
+
+        /// <summary>
+        /// Action method to display the form to add a hostel
+        /// </summary>
+        /// <returns>a view</returns>
+        public ActionResult AddHostel()
+        {
+            StudentHelper helper = new StudentHelper();
+            ViewBag.genderList = new SelectList(helper.GetGenders(), "id", "val");
+
+            return View();
+        }
+
+        /// <summary>
+        /// Action method to add hostel
+        /// </summary>
+        /// <param name="userInput">the form filled by user</param>
+        /// <returns>message in JSON format</returns>
+        [HttpPost]
+        public ActionResult AddHostel(AddHostelViewModel userInput)
+        {
+            StudentHelper helper = new StudentHelper();
+            InfrastructureHelper helper1 = new InfrastructureHelper();
+
+            ViewBag.genderList = new SelectList(helper.GetGenders(), "id", "val");
+
+            return Json(helper1.AddHostel(userInput), JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
