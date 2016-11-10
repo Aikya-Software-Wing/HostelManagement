@@ -105,6 +105,7 @@
     <Compile Include="MessTransaction.cs">
       <DependentUpon>DataLayer.tt</DependentUpon>
     </Compile>
+    <Compile Include="MetaData.cs" />
     <Compile Include="PaymentType.cs">
       <DependentUpon>DataLayer.tt</DependentUpon>
     </Compile>

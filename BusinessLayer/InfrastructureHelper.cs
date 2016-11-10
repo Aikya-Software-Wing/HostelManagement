@@ -38,5 +38,33 @@ namespace BusinessLayer
 
             return "Success!";
         }
+
+        /// <summary>
+        /// Method to get all hostel blocks
+        /// </summary>
+        /// <returns>a list of hostel blocks</returns>
+        public List<Hostel> GetHostelBlocks()
+        {
+            return db.Hostels.ToList();
+        }
+
+        /// <summary>
+        /// Method to get all room types
+        /// </summary>
+        /// <returns>a list of room types</returns>
+        public List<RoomType> GetRoomTypes()
+        {
+            return db.RoomTypes.ToList();
+        }
+
+        /// <summary>
+        /// Method to add a room to a hostel
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        public void AddRoom(Room userInput)
+        {
+            db.Rooms.Add(userInput);
+            db.SaveChanges();
+        }
     }
 }

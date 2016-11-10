@@ -158,6 +158,44 @@ namespace HostelManagement.Areas.Administration.Controllers
         }
 
         /// <summary>
+        /// Action method to display a form to add a room
+        /// </summary>
+        /// <returns>a view</returns>
+        [HttpGet]
+        public ActionResult AddRooms()
+        {
+            InfrastructureHelper helper = new InfrastructureHelper();
+
+            ViewBag.hostelBlocks = new SelectList(helper.GetHostelBlocks(), "blockNumber", "blockNumber");
+            ViewBag.roomTypes = new SelectList(helper.GetRoomTypes(), "id", "val");
+
+            return View();
+        }
+
+        /// <summary>
+        /// Action method to add a room
+        /// </summary>
+        /// <param name="userInput">the form filled by the user</param>
+        /// <returns>a view</returns>
+        [HttpPost]
+        public ActionResult AddRooms(Room userInput)
+        {
+            InfrastructureHelper helper = new InfrastructureHelper();
+
+            ViewBag.hostelBlocks = new SelectList(helper.GetHostelBlocks(), "blockNumber", "blockNumber");
+            ViewBag.roomTypes = new SelectList(helper.GetRoomTypes(), "id", "val");
+
+            if(!ModelState.IsValid)
+            {
+                return View(userInput);
+            }
+
+            helper.AddRoom(userInput);
+
+            return View();
+        }
+
+        /// <summary>
         /// Action Method to logout the user
         /// </summary>
         /// <returns>View</returns>
