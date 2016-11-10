@@ -436,7 +436,7 @@ namespace BusinessLayer
             int yearOfJoining;
             try
             {
-                yearOfJoining = student.Allotments.Where(x => x.dateOfLeave == null).OrderBy(x => x.dateOfJoin).First().year;
+                yearOfJoining = student.Allotments.OrderBy(x => x.dateOfJoin).First().year;
             }
             catch (InvalidOperationException)
             {

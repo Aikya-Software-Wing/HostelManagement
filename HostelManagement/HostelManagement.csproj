@@ -271,6 +271,7 @@
     <Content Include="Areas\Archive\Views\Shared\MeetDevelopers.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\MeetDevelopers.cshtml" />
     <Content Include="Areas\Administration\Views\Home\AddHostel.cshtml" />
+    <None Include="Properties\PublishProfiles\myProfile.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -286,7 +287,9 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
