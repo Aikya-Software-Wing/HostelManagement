@@ -530,17 +530,14 @@ namespace BusinessLayer
                     // if not, all the computed values if there is due
                     if (allTransactions)
                     {
-                        if (amount - amountPaid != 0)
+                        viewModel.Add(new HostelFeeDueViewModel()
                         {
-                            viewModel.Add(new HostelFeeDueViewModel()
-                            {
-                                academicYear = i,
-                                accountHead = head.custom == 1 ? head.val + "(" + customAcHead + ")" : head.val,
-                                amount = amount,
-                                amountPaid = amountPaid,
-                                amountDue = amount - amountPaid,
-                            });
-                        }
+                            academicYear = i,
+                            accountHead = head.custom == 1 ? head.val + "(" + customAcHead + ")" : head.val,
+                            amount = amount,
+                            amountPaid = amountPaid,
+                            amountDue = amount - amountPaid,
+                        });
                     }
                     else
                     {
@@ -693,7 +690,7 @@ namespace BusinessLayer
             {
                 // get the students dues
                 Tuple<List<HostelFeeDueViewModel>, Hashtable> result = GetStudentDues(bid);
-                if(result == null)
+                if (result == null)
                 {
                     continue;
                 }

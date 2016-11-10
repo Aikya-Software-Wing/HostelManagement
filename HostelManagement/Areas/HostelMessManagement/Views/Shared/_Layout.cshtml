@@ -98,7 +98,16 @@
 
                     @if (User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("Generate Report", "GenerateReport", "Manager", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Reports
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Generate Report", "GenerateReport", "Manager", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("Generate Individual Student Report", "GenerateStudentReport", "Manager", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            </ul>
+                        </li>
                     }
 
                 </ul>

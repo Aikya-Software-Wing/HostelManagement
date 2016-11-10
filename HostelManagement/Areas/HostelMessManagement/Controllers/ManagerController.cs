@@ -1,7 +1,12 @@
 ﻿using BusinessLayer;
+using DevExpress.XtraPrinting;
 using HostelManagement.Areas.HostelMessManagement.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -170,7 +175,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
 
             // save the report type for later use
             TempData["queryField"] = reportType;
-            
+
             // switch based on report type
             switch (reportType)
             {
@@ -360,6 +365,112 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             stream.Position = 0;
 
             return File(stream, contentType, fileName);
+        }
+
+        /// <summary>
+        /// Action method to display form that user has to fill to generate individual student report
+        /// </summary>
+        /// <returns>a view</returns>
+        [HttpGet]
+        public ActionResult GenerateStudentReport()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Action Method to generate student report
+        /// </summary>
+        /// <param name="userInput">the student</param>
+        /// <returns>a pdf file</returns>
+        [HttpPost]
+        public ActionResult GenerateStudentReport(StudentSearchViewModel userInput)
+        {
+            // find the student, if not found, return error
+            StudentHelper helper = new StudentHelper();
+            var studentInfo = helper.GetStudent(userInput.bid);
+            if(studentInfo == null)
+            {
+                ModelState.AddModelError("", "Student not found!");
+                return View(userInput);
+            }
+
+            StudentReportDataSet studentDataSet = new StudentReportDataSet();
+
+            // add data to student table
+            DataRow myDataRow = studentDataSet.Tables["Student"].NewRow();
+            myDataRow["Name"] = studentInfo.name;
+            myDataRow["Sem"] = studentInfo.semester;
+            myDataRow["Gender"] = studentInfo.Gender1.val;
+            myDataRow["Course"] = studentInfo.Course1.val;
+            myDataRow["Branch"] = studentInfo.Department.val;
+            myDataRow["DateOfBirth"] = studentInfo.dob.ToLongDateString();
+            studentDataSet.Tables["Student"].Rows.Add(myDataRow);
+
+            // add data to allotment table
+            foreach (var allotment in studentInfo.Allotments)
+            {
+                myDataRow = studentDataSet.Tables["Allotment"].NewRow();
+                myDataRow["DateOfJoin"] = allotment.dateOfJoin.ToLongDateString();
+                myDataRow["DateOfLeave"] = allotment.dateOfLeave.HasValue ? allotment.dateOfLeave.Value.ToLongDateString() : "";
+                myDataRow["HostelBlock"] = allotment.hostelBlock;
+                myDataRow["RoomNumber"] = allotment.roomNum;
+                studentDataSet.Tables["Allotment"].Rows.Add(myDataRow);
+            }
+
+            // get data for hostel fee table
+            TransactionHelper helper1 = new TransactionHelper();
+            Tuple<List<HostelFeeDueViewModel>, Hashtable> result = helper1.GetStudentDues(userInput.bid, true);
+            List<HostelFeeDueViewModel> viewModel = result.Item1;
+
+            // add data to hostel fee table
+            foreach (var item in viewModel)
+            {
+                if (item.amount != 0)
+                {
+                    myDataRow = studentDataSet.Tables["HostelFee"].NewRow();
+                    myDataRow["Year"] = item.academicYear;
+                    myDataRow["Fee Type"] = item.accountHead;
+                    myDataRow["Fee Amount"] = item.amount;
+                    myDataRow["Amount Paid"] = item.amountPaid;
+                    myDataRow["Amount Due"] = item.amountDue;
+                    studentDataSet.Tables["HostelFee"].Rows.Add(myDataRow);
+                }
+            }
+
+            // get data for mess fee table
+            List<MessFeeDueViewModel> viewModel1 = helper1.GetMessDue(userInput.bid, true);
+
+            // add data to mess fee table
+            foreach (var item in viewModel1)
+            {
+                myDataRow = studentDataSet.Tables["MeeFee"].NewRow();
+                myDataRow["Year"] = item.academicYear;
+                myDataRow["Month"] = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(item.month);
+                myDataRow["Amount"] = item.amount;
+                myDataRow["Amount Paid"] = item.amountPaid;
+                myDataRow["Amount Due"] = item.amountDue;
+                studentDataSet.Tables["MeeFee"].Rows.Add(myDataRow);
+            }
+
+            // set data source for the report
+            StudentReport studentReport = new StudentReport();
+            studentReport.DataSource = studentDataSet;
+
+            // export to pdf, write memory stream to response directly
+            using (MemoryStream ms = new MemoryStream())
+            {
+                PdfExportOptions opts = new PdfExportOptions();
+                opts.ShowPrintDialogOnOpen = true;
+                studentReport.ExportToPdf(ms, opts);
+                ms.Seek(0, SeekOrigin.Begin);
+                byte[] report = ms.ToArray();
+                Response.ContentType = "application/pdf";
+                Response.Clear();
+                Response.OutputStream.Write(report, 0, report.Length);
+                Response.End();
+            }
+
+            return null;
         }
 
         /// <summary>
