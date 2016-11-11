@@ -5,99 +5,319 @@
 }
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>@ViewBag.Title</title>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
-    <script src="~/scripts/jquery.validate-vsdoc.js"></script>
-    <script src="~/scripts/jquery.validate.min.js"></script>
-    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
-    <link href="~/Content/themes/base/core.css" rel="stylesheet" />
-    <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
-    <link href="~/Content/themes/base/theme.css" rel="stylesheet" />
-    <script src="~/scripts/jquery-ui-1.11.4.js"></script>
-    <link href="~/Content/HomepageStyle.css" rel="stylesheet" />
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Le styles -->
+    <!-- Use new way for google web fonts
+    http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-web-fonts -->
+    <!-- Headings -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />  -->
+    <!-- Text -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link href="~/Content/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/supr-theme/jquery.ui.supr.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/icons.css" rel="stylesheet" type="text/css" />
+    <!-- Plugin stylesheets -->
+    <link href="~/Content/plugins/qtip/jquery.qtip.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/plugins/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/plugins/jpages/jPages.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/plugins/prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/inputlimiter/jquery.inputlimiter.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/ibutton/jquery.ibutton.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/uniform/uniform.default.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/color-picker/color-picker.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/select/select2.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/validate/validate.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/pnotify/jquery.pnotify.default.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/pretty-photo/prettyPhoto.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/smartWizzard/smart_wizard.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/dataTables/jquery.dataTables.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/elfinder/elfinder.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/plupload/jquery.ui.plupload/css/jquery.ui.plupload.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/plugins/search/tipuesearch.css" type="text/css" rel="stylesheet" />
+
+    <!-- Main stylesheets -->
+    <link href="~/Content/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Content/images/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/images/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/images/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="~/Content/images/apple-touch-icon-57-precomposed.png" />
+
+    <script type="text/javascript">
+        //adding load class to body and hide page
+        //document.documentElement.className += 'loadstate';
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
+    <!-- loading animation -->
+    <div id="qLoverlay"></div>
+    <div id="qLbar"></div>
 
-    <div id="bg">
-        <img src="~/Content/rnsit_1.jpg" alt="">
-    </div>
+    <div id="header">
 
-    <!--Where relevant things start-->
-    <div class="container-fluid">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="#">Hostel Management System</a>
+                    <div class="nav-no-collapse">
+                        <ul class="nav pull-right usernav">
+                            <li class="dropdown">
+                                <a>
+                                    <span class="txt">@User.Identity.Name</span>
+                                </a>
+                            </li>
+                            <li><a href="@Url.Action("Logout", "User", new { area = "HostelMessManagement" })"><span class="icon16 icomoon-icon-exit"></span> Logout</a></li>
+                        </ul>
+                    </div><!-- /.nav-collapse -->
+                </div>
+            </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->
 
-        <div class="row" style="padding-top:25px;"><div class="col-xs-12" align="center"><h2 id="page_title">Welcome, @User.Identity.Name!</h2></div></div>
-        <hr>
+    </div><!-- End #header -->
 
-        <div class="row" id="content_box">
-            <div class="col-md-4">
-                @Html.ActionLink("Hostel Transaction", "HostelTransaction", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Mess Transaction", "MessTransaction", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Generate Mess Bill", "GenerateMessBill", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
+    <div id="wrapper">
+
+        <!--Responsive navigation button-->
+        <div class="resBtn">
+            <a href="#"><span class="icon16 minia-icon-list-3"></span></a>
         </div>
-        <hr>
-        <div class="row" id="content_box">
-            <div class="col-md-4">
-                @Html.ActionLink("List of hostel fee defaulters", "ShowAllDues", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("List of mess fee defaulters", "ShowAllMessDues", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Report Absence for Mess", "ReportAbsenceForMess", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-        </div>
-        <hr>
-        <div class="row" id="content_box">
-            <div class="col-md-4">
-                @Html.ActionLink("Add Student", "AddStudent", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("View Student", "ViewStudent", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Remove Student", "RemoveStudent", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-        </div>
-        <hr>
-        <div class="row" id="content_box">
-            <div class="col-md-4">
-                @Html.ActionLink("Update Student Allotment", "ChangeRoom", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Update Hostel Fees", "ChangeFees", "Manager", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Add Additional Fee", "AddAdditionalFee", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-        </div>
-        <hr>
-        <div class="row" id="content_box">
-            <div class="col-md-4">
-                @Html.ActionLink("Discount Fee", "DiscountFees", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Visit Archive", "Index", "Home", new { area = "Archive" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Logout", "Logout", "User", new { area = "HostelMessManagement" }, new { id = "btn_quickaccess", @class = "btn" })
-            </div>
-        </div>
-        <hr>
-    </div>
+
+        <!--Sidebar collapse button-->
+        <!-- <div class="collapseBtn">
+             <a href="#" class="tipR" title="Hide sidebar"><span class="icon12 minia-icon-layout"></span></a>
+        </div> -->
+        <!--Sidebar background-->
+        <div id="sidebarbg"></div>
+        <!--Sidebar content-->
+        <div id="sidebar">
+
+            <!-- <div class="shortcuts">
+                <ul>
+                    <li><a href="#" title="Support section" class="tip"><span class="icon24 wpzoom-support"></span></a></li>
+                    <li><a href="#" title="Database backup" class="tip"><span class="icon24 icomoon-icon-database"></span></a></li>
+                    <li><a href="#" title="Sales statistics" class="tip"><span class="icon24 iconic-icon-chart"></span></a></li>
+                    <li><a href="#" title="Write post" class="tip"><span class="icon24 icomoon-icon-pencil"></span></a></li>
+                </ul>
+            </div> -->
+
+            <div class="sidenav">
+
+                <div class="sidebar-widget" style="margin: -1px 0 0 0;">
+                    <h5 class="title" style="margin-bottom:0">Navigation</h5>
+                </div><!-- End .sidenav-widget -->
+
+                <div class="mainnav">
+                    <ul>
+                        <li>
+                            <a href="#"><span class="icon16 entypo-icon-users"></span>Student</a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddStudent", "User", new { area = "HostelMessManagement" })"><span class="icon16 icomoon-icon-plus"></span>Add Student</a></li>
+                                <li><a href="@Url.Action("ViewStudent", "User", new { area = "HostelMessManagement" })"><span class="icon16 typ-icon-views"></span>View Student</a></li>
+                                <li><a href="@Url.Action("RemoveStudent", "User", new { area = "HostelMessManagement" })"><span class="icon16 typ-icon-delete"></span>Remove Student</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-home-3"></span>Hostel</a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("HostelTransaction", "User", new { area = "HostelMessManagement" })"><span class="icon16 iconic-icon-transfer"></span>Transactions</a></li>
+                                <li><a href="@Url.Action("ChangeRoom", "User", new { area = "HostelMessManagement" })"><span class="icon16 entypo-icon-home"></span>Update Allotment</a></li>
+                                <li><a href="@Url.Action("ShowAllDues", "User", new { area = "HostelMessManagement" })"><span class="icon16 brocco-icon-warning"></span>View Defaulters</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><span class="icon16 silk-icon-food"></span>Mess</a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("MessTransaction", "User", new { area = "HostelMessManagement" })"><span class="icon16 iconic-icon-transfer"></span>Transactions</a></li>
+                                <li><a href="@Url.Action("GenerateMessBill", "User", new { area = "HostelMessManagement" })"><span class="icon16 icomoon-icon-paper"></span>Generate Bills</a></li>
+                                <li><a href="@Url.Action("ReportAbsenceForMess", "User", new { area = "HostelMessManagement" })"><span class="icon16 typ-icon-cross"></span>Report Absence</a></li>
+                                <li><a href="@Url.Action("ShowAllMessDues", "User", new { area = "HostelMessManagement" })"><span class="icon16 brocco-icon-warning"></span>View Defaulters</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><span class="icon16 entypo-icon-printer"></span>Reports</a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("GenerateStudentReport", "User", new { area = "HostelMessManagement" })"><span class="icon16 icomoon-icon-user"></span>Student Report</a></li>
+                                <li><a href="@Url.Action("GenerateReport", "User", new { area = "HostelMessManagement" })"><span class="icon16 icomoon-icon-search"></span>Other Reports</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-calculate"></span>Fees</a>
+                            <ul class="sub">
+                                @if (User.IsInRole("manager"))
+                                {
+                                    <li><a href="@Url.Action("ChangeFees", "Manager", new { area = "HostelMessManagement" })"><span class="icon16 icomoon-icon-bars"></span>Update Fees</a></li>
+                                }
+                                <li><a href="@Url.Action("DiscountFees", "User", new { area = "HostelMessManagement" })"><span class="icon16 brocco-icon-gift"></span>Discount</a></li>
+                                <li><a href="@Url.Action("AddAdditionalFee", "User", new { area = "HostelMessManagement" })"><span class="icon16 entypo-icon-add"></span>Add Additional Fee</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("ViewStudent", "Home", new { area = "Archive" })"><span class="icon16 entypo-icon-archive"></span>Archive</a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("MeetDevelopers", "User")"><span class="icon16 iconic-icon-question-mark"></span>About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End sidenav -->
+
+            <div class="sidebar-widget">
+
+            </div><!-- End .sidenav-widget -->
+
+        </div><!-- End #sidebar -->
+        <!--Body content-->
+        <div id="content" class="clearfix">
+            <div class="contentwrapper">
+                <!--Content wrapper-->
+
+                <div class="heading">
+                    <h3>Dashboard</h3>
+                </div><!-- End .heading-->
+                <!-- Build page from here: -->
+                <div class="row-fluid">
+
+                    <div class="span8">
+                        <div class="centerContent">
+
+                            <ul class="bigBtnIcon">
+                                <li>
+                                    <a href="@Url.Action("AddStudent", "User", new { area = "HostelMessManagement" })" title="Add Student" class="tipB">
+                                        <span class="icon entypo-icon-users"></span>
+                                        <span class="txt">Student</span>
+                                        <!-- <span class="notification">5</span> -->
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("HostelTransaction", "User", new { area = "HostelMessManagement" })" title="Hostel Transaction" class="tipB">
+                                        <span class="icon icomoon-icon-home-3"></span>
+                                        <span class="txt">Hostel</span>
+                                        <!-- <span class="notification blue">12</span> -->
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("MessTransaction", "User", new { area = "HostelMessManagement" })" title="Mess Transaction" class="tipB">
+                                        <span class="icon silk-icon-food"></span>
+                                        <span class="txt">Mess</span>
+                                        <!-- <span class="notification blue">12</span> -->
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("GenerateReport", "User", new { area = "HostelMessManagement" })" title="Generate Report" class="tipB">
+                                        <span class="icon entypo-icon-printer"></span>
+                                        <span class="txt">Report</span>
+                                        <!-- <span class="notification blue">12</span> -->
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ViewStudent", "Home", new { area = "Archive" })" title="Visit Archive" class="tipB">
+                                        <span class="icon entypo-icon-archive"></span>
+                                        <span class="txt">Archive</span>
+                                        <!-- <span class="notification blue">12</span> -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div><!-- End .span8 -->
+
+                </div><!-- End .row-fluid -->
+
+            </div><!-- End contentwrapper -->
+        </div><!-- End #content -->
+
+    </div><!-- End #wrapper -->
+    <!-- Le javascript
+    ================================================== -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.mousewheel.js"></script>
+
+    <!-- Load plugins -->
+    <script type="text/javascript" src="~/Content/plugins/qtip/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/flot/jquery.flot.grow.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/flot/jquery.flot.tooltip_0.4.4.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/flot/jquery.flot.orderBars.js"></script>
+
+    <script type="text/javascript" src="~/Content/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/knob/jquery.knob.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/prettify/prettify.js"></script>
+
+    <script type="text/javascript" src="~/Content/plugins/watermark/jquery.watermark.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/elastic/jquery.elastic.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/inputlimiter/jquery.inputlimiter.1.3.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/maskedinput/jquery.maskedinput-1.3.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/ibutton/jquery.ibutton.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/uniform/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/stepper/ui.stepper.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/color-picker/colorpicker.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/timeentry/jquery.timeentry.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/select/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/tiny_mce/jquery.tinymce.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/search/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/search/tipuesearch_data.js"></script><!-- JSON for searched results -->
+    <script type="text/javascript" src="~/Content/plugins/search/tipuesearch.js"></script>
+
+    <script type="text/javascript" src="~/Content/plugins/animated-progress-bar/jquery.progressbar.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/pnotify/jquery.pnotify.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/lazy-load/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/jpages/jPages.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/pretty-photo/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/smartWizzard/jquery.smartWizard-2.0.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/plugins/ios-fix/ios-orientationchange-fix.js"></script>
+
+    <script type="text/javascript" src="~/Content/plugins/dataTables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/elfinder/elfinder.min.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/plupload/plupload.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/plupload/plupload.html4.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/plupload/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+
+    <!-- Init plugins -->
+    <script type="text/javascript" src="~/Content/js/statistic.js"></script><!-- Control graphs ( chart, pies and etc) -->
+    <!-- Important Place before main.js  -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <script src="~/scripts/jquery.validate.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="~/Content/plugins/touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/main.js"></script>
+
+
 </body>
 </html>

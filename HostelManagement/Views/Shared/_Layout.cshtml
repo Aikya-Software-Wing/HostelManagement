@@ -1,34 +1,67 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>@ViewBag.Title</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Le styles -->
+    <link href="Content/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="Content/css/supr-theme/jquery.ui.supr.css" rel="stylesheet" type="text/css" />
+    <link href="Content/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="Content/plugins/uniform/uniform.default.css" type="text/css" rel="stylesheet" />
+
+    <!-- Main stylesheets -->
+    <link href="Content/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                @Html.ActionLink("Hostel Management", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-        </div>
-    </div>
 
-    <div class="container-fluid body-content">
+<body class="loginPage">
+
+    <div class="container-fluid">
+
+        <div id="header">
+
+            <div class="row-fluid">
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container">
+                            @Html.ActionLink("Hostel Management", "Index", "Home", new { area = "" }, new { @class = "brand" })
+                        </div>
+                    </div><!-- /navbar-inner -->
+                </div><!-- /navbar -->
+
+
+            </div><!-- End .row-fluid -->
+
+        </div><!-- End #header -->
+
+    </div><!-- End .container-fluid -->
+
+    <div class="container-fluid">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>@Html.ActionLink("Meet The Developers", "MeetDevelopers")</p>
-        </footer>
-    </div>
-
+    </div><!-- End .container-fluid -->
+    <!-- Le javascript
+    ================================================== -->
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/scripts/jquery.validate.js"></script>
     <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="Content/plugins/touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="Content/plugins/ios-fix/ios-orientationchange-fix.js"></script>
+    <script type="text/javascript" src="Content/plugins/uniform/jquery.uniform.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input, textarea, select").not('.nostyle').uniform();
+        });
+    </script>
 </body>
 </html>

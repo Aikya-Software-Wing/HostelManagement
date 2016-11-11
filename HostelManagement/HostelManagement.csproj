@@ -178,6 +178,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="403.html" />
+    <Content Include="404.html" />
+    <Content Include="405.html" />
+    <Content Include="500.html" />
+    <Content Include="503.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -367,6 +372,10 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Archive\Models\" />
     <Folder Include="Areas\HostelMessManagement\Models\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\images\" />
+    <Folder Include="Content\js\" />
+    <Folder Include="Content\plugins\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
