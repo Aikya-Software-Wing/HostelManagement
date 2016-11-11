@@ -498,6 +498,12 @@ namespace BusinessLayer
         {
             // get all the students that match the incomplete name
             List<Student> studentList = db.Students.Where(x => x.name.Contains(incompleteName)).ToList();
+            studentList.AddRange(db.Students.Where(x => x.usn.Contains(incompleteName)).ToList());
+            int roomNumber = 0;
+            if (int.TryParse(incompleteName, out roomNumber))
+            {
+                studentList.AddRange(db.Students.Where(x => x.Allotments.Where(y => y.roomNum == roomNumber).Count() > 0).ToList());
+            }
 
             // construct the view model
             List<AutoCompleteViewModel> list = new List<AutoCompleteViewModel>();
@@ -508,8 +514,8 @@ namespace BusinessLayer
                     label = s.name,
                     value = s.bid,
                     dept = s.Department.code,
-                    sem = s.semester + "",
-                    gender = s.Gender1.val.ToCharArray()[0] + ""
+                    room = s.Allotments.OrderByDescending(x => x.dateOfJoin).FirstOrDefault().roomNum + "",
+                    usn = s.usn
                 });
             }
             return list;

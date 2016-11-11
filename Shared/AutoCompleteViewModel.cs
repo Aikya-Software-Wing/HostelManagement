@@ -21,13 +21,13 @@
         public string dept { get; set; }
 
         /// <summary>
-        /// The semester of the potential student
+        /// The room number of the potential student
         /// </summary>
-        public string sem { get; set; }
+        public string room { get; set; }
 
         /// <summary>
-        /// The gender of the student
+        /// The usn of the student
         /// </summary>
-        public string gender { get; set; }
+        public string usn { get; set; }
     }
 }
