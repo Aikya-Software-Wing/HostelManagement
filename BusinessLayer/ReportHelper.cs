@@ -202,12 +202,12 @@ namespace BusinessLayer
                 if (studentHelper.GetStudent(bid) != null)
                 {
                     // student is not in the archieve
-                    result.AddRange(transactionHelper.GetAllTransactionsForStudent(bid));
+                    result.AddRange(transactionHelper.GetAllTransactionsForStudent(bid).Where(x => x.transaction == "Debit" || x.transaction == "Refund").ToList());
                 }
                 else
                 {
                     // student is in the archieve
-                    result.AddRange(transactionHelper.GetAllTransactionsForStudent(bid, true));
+                    result.AddRange(transactionHelper.GetAllTransactionsForStudent(bid, true).Where(x => x.transaction == "Debit" || x.transaction == "Refund").ToList());
                 }
             }
 

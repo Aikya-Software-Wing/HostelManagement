@@ -1040,18 +1040,18 @@ namespace BusinessLayer
                 }
                 if (hostelfee.amount != 0)
                 {
-                    //viewModel.Add(new TransactionsViewModel
-                    //{
-                    //    id = bid+""+hostelfee.accountHead+""+hostelfee.academicYear,
-                    //    bid = bid,
-                    //    academicYear = hostelfee.academicYear + " - " + (hostelfee.academicYear + 1),
-                    //    accountHead = hostelfee.accountHead,
-                    //    amount = hostelfee.amount,
-                    //    bankName = "Canara Bank",
-                    //    dateOfPay = dateOfBill,
-                    //    paymentType = "NA",
-                    //    transaction = "Credit"
-                    //});
+                    viewModel.Add(new TransactionsViewModel
+                    {
+                        id = bid + "" + hostelfee.accountHead + "" + hostelfee.academicYear,
+                        bid = bid,
+                        academicYear = hostelfee.academicYear + " - " + (hostelfee.academicYear + 1),
+                        accountHead = hostelfee.accountHead,
+                        amount = hostelfee.amount,
+                        bankName = "Canara Bank",
+                        dateOfPay = dateOfBill,
+                        paymentType = "NA",
+                        transaction = "Credit"
+                    });
                 }
             }
 
@@ -1061,19 +1061,19 @@ namespace BusinessLayer
 
             foreach (MessFeeDueViewModel messFee in messFees)
             {
-                //MessBill bill = messBills.Where(x => x.year == messFee.academicYear && x.month == messFee.month).First();
-                //viewModel.Add(new TransactionsViewModel
-                //{
-                //    id = bill.billNum + "",
-                //    bid = bid,
-                //    academicYear = messFee.academicYear + " - " + (messFee.academicYear + 1),
-                //    accountHead = "Mess Bill",
-                //    amount = messFee.amount,
-                //    bankName = "Canara Bank",
-                //    dateOfPay = bill.dateOfDeclaration,
-                //    paymentType = "NA",
-                //    transaction = "Credit"
-                //});
+                MessBill bill = messBills.Where(x => x.year == messFee.academicYear && x.month == messFee.month).First();
+                viewModel.Add(new TransactionsViewModel
+                {
+                    id = bill.billNum + "",
+                    bid = bid,
+                    academicYear = messFee.academicYear + " - " + (messFee.academicYear + 1),
+                    accountHead = "Mess Bill",
+                    amount = messFee.amount,
+                    bankName = "Canara Bank",
+                    dateOfPay = bill.dateOfDeclaration,
+                    paymentType = "NA",
+                    transaction = "Credit"
+                });
             }
 
             List<MessTransaction> messTransactions = db.MessTransactions.Where(x => x.bid == bid).ToList();

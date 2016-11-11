@@ -62,7 +62,7 @@
             source: '@Url.Action("GetStudentList", "User")'
         }).data("ui-autocomplete")._renderItem = function (ul, item) {
             return $("<li>")
-            .append("<a>" + item.label + " (" + item.gender + ")" + "<br>Dept:" + item.dept + ",Sem:" + item.sem + "</a>")
+            .append("<a>" + item.label + " (" + item.usn + ")" + "<br>Dept:" + item.dept + ",room:" + item.room + "</a>")
             .appendTo(ul);
         };;
     })
