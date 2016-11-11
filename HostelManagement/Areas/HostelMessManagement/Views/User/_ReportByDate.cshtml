@@ -1,13 +1,15 @@
-﻿@using (@Html.BeginForm("GenerateReportByDropDown", "Manager", FormMethod.Post))
+﻿@using (@Html.BeginForm("GenerateReportByDate", "User", FormMethod.Post))
 {
     <div id="BidRangeDiv">
         <div class="row">
             <fieldset class="form-group">
                 <div class="form-group col-xs-3">
-                    <label>Select </label>
-                    @Html.DropDownList("value", (SelectList)ViewBag.dataList, "Select", new { @class = "form-control" })
+                    <label>Start Date</label>
+                    <input name="StartDate" class="form-control" type="date" required />
                 </div>
                 <div class="form-group col-xs-3">
+                    <label>End Date</label>
+                    <input name="EndDate" class="form-control" type="date" required />
                 </div>
                 <div class="form-group col-xs-3">
                 </div>

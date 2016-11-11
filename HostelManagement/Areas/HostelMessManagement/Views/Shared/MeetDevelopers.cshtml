@@ -93,11 +93,16 @@
                     </li>
 
                     <li>@Html.ActionLink("Visit Archive", "Index", "Home", new { area = "Archive" }, new { @class = "nav-link" })</li>
-
-                    @if (User.IsInRole("Manager"))
-                    {
-                        <li>@Html.ActionLink("Generate Report", "GenerateReport", "Manager", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
-                    }
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Reports
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Generate Report", "GenerateReport", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Generate Individual Student Report", "GenerateStudentReport", "User", new { area = "HostelMessManagement" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </li>
 
                 </ul>
                 <ul class="nav navbar-nav pull-right">
