@@ -279,7 +279,8 @@ namespace BusinessLayer
             // set the table style
             table.TableStyle = OfficeOpenXml.Table.TableStyles.Medium1;
             table.ShowHeader = true;
-            table.ShowTotal = false;
+            table.ShowTotal = true;
+            table.Columns[totCols - 1].TotalsRowFunction = OfficeOpenXml.Table.RowFunctions.Sum;
 
             // initialize a memory stream
             var memStream = new MemoryStream();
