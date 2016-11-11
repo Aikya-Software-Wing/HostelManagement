@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
+  <HelpKINode Title="academicYear property">
+    <HelpKINode Title="HostelFeeDueViewModel.academicYear Property " Url="html/b0bdfe8e-e33e-9fca-d1c2-0d1d876de18e.htm" />
+    <HelpKINode Title="HostelTransactionViewModel.academicYear Property " Url="html/b5a77675-098e-6042-25e5-da7409554809.htm" />
+    <HelpKINode Title="MessFeeDueViewModel.academicYear Property " Url="html/157d0d6b-99c9-8e52-e4b1-0dfbf1eeebff.htm" />
+    <HelpKINode Title="MessTransactionViewModel.academicYear Property " Url="html/3aa3e157-00c5-e35b-b76a-87784a79a13b.htm" />
+    <HelpKINode Title="TransactionsViewModel.academicYear Property " Url="html/020097fb-bc93-ad0d-21bb-c6b33d887663.htm" />
+  </HelpKINode>
+  <HelpKINode Title="accountHead property">
+    <HelpKINode Title="HostelFeeDueViewModel.accountHead Property " Url="html/1b436c0b-89fe-e9a9-ea3a-168b7e826abe.htm" />
+    <HelpKINode Title="TransactionsViewModel.accountHead Property " Url="html/74dd0a69-656d-fc46-0fea-302ca9eddc69.htm" />
+  </HelpKINode>
   <HelpKINode Title="AcHead class">
     <HelpKINode Title="AcHead Class" Url="html/3aea8c21-92d3-494e-c3be-778440c9d678.htm" />
     <HelpKINode Title="about AcHead class" Url="html/3aea8c21-92d3-494e-c3be-778440c9d678.htm" />
@@ -8,6 +19,7 @@
     <HelpKINode Title="properties" Url="html/3215ec4a-1e02-b77c-66af-9fedb41f99b2.htm" />
   </HelpKINode>
   <HelpKINode Title="AcHead property" Url="html/d2ac55cc-ec0a-a714-0eb7-51da09b117d2.htm" />
+  <HelpKINode Title="acHead property" Url="html/143d6c3c-c5e6-e368-6b3b-9f96db0f5cbb.htm" />
   <HelpKINode Title="AcHead.AcHead constructor" Url="html/d87493fd-e254-06f8-8737-164e64aec94f.htm" />
   <HelpKINode Title="AcHead.custom property" Url="html/fd1d7115-9996-6298-3066-67326d455e23.htm" />
   <HelpKINode Title="AcHead.HostelTransactions property" Url="html/0bd3567e-e557-37c9-4231-65bbedecb984.htm" />
@@ -15,14 +27,53 @@
   <HelpKINode Title="AcHead.recurr property" Url="html/e3bee7fe-603f-8b28-728c-703c46e8ac92.htm" />
   <HelpKINode Title="AcHead.val property" Url="html/7e72a24d-2cf4-b172-dab9-185cade1f100.htm" />
   <HelpKINode Title="AcHeads property" Url="html/e3a1ed7a-1ab2-bf60-975a-f6ef6d950ef5.htm" />
+  <HelpKINode Title="Action property">
+    <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent.Action Property " Url="html/64b3df49-3893-ffc3-6ceb-d5ded20d7738.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent.Action Property " Url="html/09bfed26-f1d3-8330-2bdf-8fcf628e0169.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent.Action Property " Url="html/ddca8a3d-85b2-e803-ebb0-3a22793fe2ea.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent.Action Property " Url="html/4667bda9-0a2d-6df6-cec0-9aa4558ac77c.htm" />
+  </HelpKINode>
   <HelpKINode Title="AddAdditionalFee method">
     <HelpKINode Title="StudentHelper.AddAdditionalFee Method " Url="html/3c95c462-e744-a2ed-6f56-b04e7dc35033.htm" />
     <HelpKINode Title="UserController.AddAdditionalFee Method " Url="html/8f1e3973-f454-85eb-3edb-e9a1c6323f49.htm" />
   </HelpKINode>
+  <HelpKINode Title="AddAdditionalFeeViewModel class">
+    <HelpKINode Title="AddAdditionalFeeViewModel Class" Url="html/8b357d48-870d-fd34-eeb2-bc1c139c051a.htm" />
+    <HelpKINode Title="about AddAdditionalFeeViewModel class" Url="html/8b357d48-870d-fd34-eeb2-bc1c139c051a.htm" />
+    <HelpKINode Title="constructor" Url="html/fa31c422-0b21-8a2e-219c-cac528943390.htm" />
+    <HelpKINode Title="methods" Url="html/c1f96503-c8ce-c117-6df0-a0dad65f7176.htm" />
+    <HelpKINode Title="properties" Url="html/881cb0a6-76ad-dc67-a88a-eb8e1617d7a2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddAdditionalFeeViewModel.AddAdditionalFeeViewModel constructor" Url="html/fa31c422-0b21-8a2e-219c-cac528943390.htm" />
+  <HelpKINode Title="AddAdditionalFeeViewModel.amount property" Url="html/24d2f788-5ca5-c320-0ec7-66fa8aac8001.htm" />
+  <HelpKINode Title="AddAdditionalFeeViewModel.bid property" Url="html/ede21261-2ba8-c133-b9a3-696bcb6a1ccb.htm" />
+  <HelpKINode Title="AddAdditionalFeeViewModel.description property" Url="html/fe722535-e50f-0176-d26c-016011606359.htm" />
+  <HelpKINode Title="AddAdditionalFeeViewModel.year property" Url="html/bb8228b3-b16c-1f57-4eda-a1f673fefd8e.htm" />
+  <HelpKINode Title="AddAllotmentRow method" Url="html/dc35d445-d0ba-b92e-4047-d98744ea75e2.htm" />
+  <HelpKINode Title="AddHostel method">
+    <HelpKINode Title="HomeController.AddHostel Method " Url="html/c36bdbb6-42cd-698e-1569-55a787484235.htm" />
+    <HelpKINode Title="InfrastructureHelper.AddHostel Method " Url="html/a49ce36d-42b8-8cf7-9e27-87db792255ad.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddHostelFeeRow method" Url="html/b946d444-6bea-6c90-d5c3-926517dd6da3.htm" />
+  <HelpKINode Title="AddHostelViewModel class">
+    <HelpKINode Title="AddHostelViewModel Class" Url="html/7aebafc5-d662-6d95-5db6-d1251066bf14.htm" />
+    <HelpKINode Title="about AddHostelViewModel class" Url="html/7aebafc5-d662-6d95-5db6-d1251066bf14.htm" />
+    <HelpKINode Title="constructor" Url="html/1c35675c-d211-eca5-ecb3-0852f3198260.htm" />
+    <HelpKINode Title="methods" Url="html/89d9cacc-8576-bf1c-a86c-c00ba07736e9.htm" />
+    <HelpKINode Title="properties" Url="html/6b880c1f-530b-0d9e-4b3b-04d81e6e3210.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddHostelViewModel.AddHostelViewModel constructor" Url="html/1c35675c-d211-eca5-ecb3-0852f3198260.htm" />
+  <HelpKINode Title="AddHostelViewModel.blockNumber property" Url="html/128c3f8e-86f9-a054-a934-b5e153d599f1.htm" />
+  <HelpKINode Title="AddHostelViewModel.occupantType property" Url="html/c5d09c57-b126-71fe-8516-ad5f48cd2098.htm" />
+  <HelpKINode Title="AddHostelViewModel.type property" Url="html/36921727-508e-09f2-06b1-27ccc034e8ac.htm" />
+  <HelpKINode Title="AddMeeFeeRow method" Url="html/38639c81-0fcc-4506-dcfc-3d1bc478c5a0.htm" />
+  <HelpKINode Title="AddRoom method" Url="html/37c0c596-e8b7-04e3-b2d2-f2e9693dd9a4.htm" />
+  <HelpKINode Title="AddRooms method" Url="html/75e9863d-0859-f0b5-b062-c6db9c5b3ef5.htm" />
   <HelpKINode Title="AddStudent method">
     <HelpKINode Title="StudentHelper.AddStudent Method " Url="html/6053f76e-58d4-dff5-b5af-1b3e9dea5225.htm" />
     <HelpKINode Title="UserController.AddStudent Method " Url="html/d69d23f8-ea26-cc4f-b1c6-68d17e090212.htm" />
   </HelpKINode>
+  <HelpKINode Title="AddStudentRow method" Url="html/59aafce5-281f-5936-19b7-68da1999f4e2.htm" />
   <HelpKINode Title="AddUser method" Url="html/6cc2486a-647b-c31f-8614-7ad3235c9860.htm" />
   <HelpKINode Title="AddUserViewModel class">
     <HelpKINode Title="AddUserViewModel Class" Url="html/2011e59a-efb1-0e55-a0b4-5025f804c6da.htm" />
@@ -52,6 +103,7 @@
     <HelpKINode Title="methods" Url="html/fe9bb375-b39f-db4b-36cc-acf85d8b615c.htm" />
     <HelpKINode Title="properties" Url="html/4fb68f43-6f53-3af8-7292-4199a7b5c0cf.htm" />
   </HelpKINode>
+  <HelpKINode Title="Allotment property" Url="html/9d0aa056-9c9b-4340-c980-85c746d6ae38.htm" />
   <HelpKINode Title="Allotment.Allotment constructor" Url="html/1ab790b5-ba07-fdee-d2ec-f91624ea833a.htm" />
   <HelpKINode Title="Allotment.bid property" Url="html/86d1d7f0-faf1-f557-9a04-f3d977d594f8.htm" />
   <HelpKINode Title="Allotment.dateOfJoin property" Url="html/17118f11-b8cb-0c87-a09c-8df41f7df01a.htm" />
@@ -62,15 +114,82 @@
   <HelpKINode Title="Allotment.slNum property" Url="html/1b3f0e51-0621-183f-3e30-08a4b50a19e0.htm" />
   <HelpKINode Title="Allotment.Student property" Url="html/2ef7b795-7197-189e-ae1b-d4f65726b294.htm" />
   <HelpKINode Title="Allotment.year property" Url="html/edfe5fa1-4854-3e44-8cbd-8cf0d49b3130.htm" />
+  <HelpKINode Title="AllotmentDataTable class">
+    <HelpKINode Title="events" Url="html/aebab8eb-a84e-1ffb-89b1-0da6348a31f8.htm" />
+    <HelpKINode Title="fields" Url="html/e137be48-c970-d7fb-6b0a-44d5b516d93e.htm" />
+    <HelpKINode Title="methods" Url="html/77d56537-4953-8776-6009-3db1cbff2cb1.htm" />
+    <HelpKINode Title="properties" Url="html/ce6aa898-8941-477e-71ff-02b8ec3c414e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AllotmentDisplayViewModel class">
+    <HelpKINode Title="AllotmentDisplayViewModel Class" Url="html/67dc054f-79b3-7030-7da1-6659b6087f25.htm" />
+    <HelpKINode Title="about AllotmentDisplayViewModel class" Url="html/67dc054f-79b3-7030-7da1-6659b6087f25.htm" />
+    <HelpKINode Title="constructor" Url="html/5d741c28-a516-cfb2-40ed-032551dee142.htm" />
+    <HelpKINode Title="methods" Url="html/a1f9df9f-bc4d-a8ac-6503-717ab9f5fe22.htm" />
+    <HelpKINode Title="properties" Url="html/d6519b45-2187-1088-0e74-306441b69234.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AllotmentDisplayViewModel.AllotmentDisplayViewModel constructor" Url="html/5d741c28-a516-cfb2-40ed-032551dee142.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.blockNumber property" Url="html/b752295f-c9f4-9d27-c516-89027ff9d884.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.doj property" Url="html/8781309c-cb23-dac1-4793-e49f07eb9dcf.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.dol property" Url="html/5f874fd0-6fa7-8460-c253-c82769f5d7fc.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.floorNumber property" Url="html/83f498fc-0f43-f725-8fdf-2df2170dbf55.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.roomNumber property" Url="html/7fe46545-ff77-b62a-6e49-0fa0bf884557.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.roomType property" Url="html/eb48d904-a4e5-a020-efd5-893c698a29f1.htm" />
+  <HelpKINode Title="AllotmentDisplayViewModel.year property" Url="html/9e20b420-5b6e-9706-2076-efda5a084d12.htm" />
+  <HelpKINode Title="AllotmentRow class">
+    <HelpKINode Title="fields" Url="html/e99a5de4-d7ad-ca47-63db-0d4ea755afd0.htm" />
+    <HelpKINode Title="methods" Url="html/c2256508-def4-b2b9-5f21-f7341fe70d53.htm" />
+    <HelpKINode Title="properties" Url="html/513a3e11-908b-5fe6-34c7-9bcf5ddc6438.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AllotmentRowChanged event" Url="html/88e7094a-8005-2c08-da91-22d89ca0c023.htm" />
+  <HelpKINode Title="AllotmentRowChangeEvent class">
+    <HelpKINode Title="methods" Url="html/18803e54-7d7f-6d6b-74ce-61ddc366ba6e.htm" />
+    <HelpKINode Title="properties" Url="html/80fa7eb2-11e1-baca-1139-314ffa183791.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AllotmentRowChanging event" Url="html/2f9c8862-dbab-c811-7f78-1163a47a1884.htm" />
+  <HelpKINode Title="AllotmentRowDeleted event" Url="html/8642e53d-880b-cded-5dbb-7ed8ceb7790a.htm" />
+  <HelpKINode Title="AllotmentRowDeleting event" Url="html/abc835ec-57c7-8378-f0c4-9aa70f1f3869.htm" />
+  <HelpKINode Title="allotments property" Url="html/9df91fa3-46f6-bf51-9e67-f3f5d388c774.htm" />
   <HelpKINode Title="Allotments property">
     <HelpKINode Title="HostelManagementEntities1.Allotments Property " Url="html/05aaf9db-9f7a-5242-f8de-fd0f5316a6a7.htm" />
     <HelpKINode Title="Room.Allotments Property " Url="html/2f723ba1-ef6a-47bd-19ab-2335c47478a6.htm" />
     <HelpKINode Title="Student.Allotments Property " Url="html/4c827d62-5f61-4ec4-7f17-756e237565f4.htm" />
   </HelpKINode>
   <HelpKINode Title="amount property">
+    <HelpKINode Title="AddAdditionalFeeViewModel.amount Property " Url="html/24d2f788-5ca5-c320-0ec7-66fa8aac8001.htm" />
     <HelpKINode Title="HostelBill.amount Property " Url="html/a37541ef-79ea-8ef9-7a18-fc98a9a52b50.htm" />
+    <HelpKINode Title="HostelFeeDueViewModel.amount Property " Url="html/ccde9b5b-29be-4148-5e30-57444058bec9.htm" />
     <HelpKINode Title="HostelTransaction.amount Property " Url="html/03095b07-ce27-9956-f9aa-de8beb123c0e.htm" />
+    <HelpKINode Title="MessFeeDueViewModel.amount Property " Url="html/74089c99-3a7b-8072-a64d-122c042d8931.htm" />
+    <HelpKINode Title="HostelTransactionViewModel.amount Property " Url="html/89a64947-a460-dfd3-5e54-96e85913e4c6.htm" />
     <HelpKINode Title="MessTransaction.amount Property " Url="html/e8c70926-a454-61d3-7382-aef24edc194f.htm" />
+    <HelpKINode Title="MessTransactionViewModel.amount Property " Url="html/b94eb7f5-1a48-960b-c07a-9b4159468395.htm" />
+    <HelpKINode Title="TransactionsViewModel.amount Property " Url="html/f1f8166c-b2a3-abd7-b975-3d9b0f121a03.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Amount property" Url="html/ee93910e-77b9-f4c6-74ac-5b4633902071.htm" />
+  <HelpKINode Title="AmountColumn property" Url="html/94123e46-3470-831f-df48-63f0e63b2fbb.htm" />
+  <HelpKINode Title="amountDue property">
+    <HelpKINode Title="HostelFeeDueViewModel.amountDue Property " Url="html/b576279a-e658-5410-1714-03e7635924af.htm" />
+    <HelpKINode Title="MessFeeDueViewModel.amountDue Property " Url="html/74718027-7001-b6ce-d001-9bab79ea3b03.htm" />
+  </HelpKINode>
+  <HelpKINode Title="amountPaid property">
+    <HelpKINode Title="HostelFeeDueViewModel.amountPaid Property " Url="html/11ad58b5-0c74-d3b9-aa26-33bd9ba6ab5a.htm" />
+    <HelpKINode Title="MessFeeDueViewModel.amountPaid Property " Url="html/84cbe779-08ac-a204-d81d-9c4fd4eadcbb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Amount_Due property">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Amount_Due Property " Url="html/74f713ac-98e5-fc7b-6874-9a87f05cc0b1.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Amount_Due Property " Url="html/0f21381a-1be8-9087-a0dc-1982a126c7fe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Amount_DueColumn property">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Amount_DueColumn Property " Url="html/4d36c588-7b91-9f3c-7589-cfd851323830.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Amount_DueColumn Property " Url="html/3b691d48-b074-2630-ca4f-bc3365c17f98.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Amount_Paid property">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Amount_Paid Property " Url="html/f2d009e3-af07-de30-0743-412d8a1dbf01.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Amount_Paid Property " Url="html/3e52a10e-f8be-1897-4b9d-b15ddeec331e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Amount_PaidColumn property">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Amount_PaidColumn Property " Url="html/97b640c5-ad4b-d949-f12a-5d973f017153.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Amount_PaidColumn Property " Url="html/a355a47c-5529-849e-45c7-bf5a3fa365b8.htm" />
   </HelpKINode>
   <HelpKINode Title="AppDbContext class">
     <HelpKINode Title="AppDbContext Class" Url="html/d05620d1-d2c7-a222-185f-6213ddd28baf.htm" />
@@ -104,24 +223,60 @@
     <HelpKINode Title="ArchiveAreaRegistration.AreaName Property " Url="html/ecf13c41-e7c2-a501-72b3-5f7625ede899.htm" />
     <HelpKINode Title="HostelMessManagementAreaRegistration.AreaName Property " Url="html/0971632c-8542-3421-01dd-6fb10cd85486.htm" />
   </HelpKINode>
+  <HelpKINode Title="AutoCompleteViewModel class">
+    <HelpKINode Title="AutoCompleteViewModel Class" Url="html/8acdeaee-9ece-6617-7e7d-caefcd3ff7ff.htm" />
+    <HelpKINode Title="about AutoCompleteViewModel class" Url="html/8acdeaee-9ece-6617-7e7d-caefcd3ff7ff.htm" />
+    <HelpKINode Title="constructor" Url="html/4ec2a00a-bbb0-871e-38cb-a1a23cf11586.htm" />
+    <HelpKINode Title="methods" Url="html/a0969fa4-53eb-7e39-d066-bbc026e12929.htm" />
+    <HelpKINode Title="properties" Url="html/28c47eb0-0a09-c4af-11be-981c8aa41254.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AutoCompleteViewModel.AutoCompleteViewModel constructor" Url="html/4ec2a00a-bbb0-871e-38cb-a1a23cf11586.htm" />
+  <HelpKINode Title="AutoCompleteViewModel.dept property" Url="html/7108b75e-e1d3-4916-fbaf-4ceee10f316b.htm" />
+  <HelpKINode Title="AutoCompleteViewModel.label property" Url="html/86d43c21-3a40-ccdb-f2c7-96c866080255.htm" />
+  <HelpKINode Title="AutoCompleteViewModel.room property" Url="html/b668d4a6-0017-6014-a367-228bd2e5dacd.htm" />
+  <HelpKINode Title="AutoCompleteViewModel.usn property" Url="html/853e2933-a483-4898-dc0f-2efae99eac52.htm" />
+  <HelpKINode Title="AutoCompleteViewModel.value property" Url="html/6b7ec743-e48f-cff7-f9a7-efe3f958003f.htm" />
   <HelpKINode Title="bankName property">
     <HelpKINode Title="HostelTransaction.bankName Property " Url="html/53649df6-37ed-a03e-7c69-f551ac72bbfa.htm" />
+    <HelpKINode Title="HostelTransactionViewModel.bankName Property " Url="html/ba6dff38-94ae-b92d-345f-a8a021996cdf.htm" />
     <HelpKINode Title="MessTransaction.bankName Property " Url="html/1d6e0e0b-19e1-d9b8-39dd-ae8ddbeb4e82.htm" />
+    <HelpKINode Title="MessTransactionViewModel.bankName Property " Url="html/c636e3b1-5486-4c4e-f450-757614d32dc6.htm" />
+    <HelpKINode Title="TransactionsViewModel.bankName Property " Url="html/94332f90-f1bd-3562-10c5-a3e964d7133e.htm" />
   </HelpKINode>
   <HelpKINode Title="bid property">
+    <HelpKINode Title="AddAdditionalFeeViewModel.bid Property " Url="html/ede21261-2ba8-c133-b9a3-696bcb6a1ccb.htm" />
     <HelpKINode Title="Allotment.bid Property " Url="html/86d1d7f0-faf1-f557-9a04-f3d977d594f8.htm" />
     <HelpKINode Title="HostelBill.bid Property " Url="html/f23990bb-f9d3-561e-bde8-3897e94fd478.htm" />
     <HelpKINode Title="HostelTransaction.bid Property " Url="html/013dd094-3981-3a2f-909b-c73e2f29edd1.htm" />
+    <HelpKINode Title="HostelTransactionViewModel.bid Property " Url="html/e1979658-3bee-856c-d9fc-7f91f2049f2d.htm" />
+    <HelpKINode Title="MessAbsenceViewModel.bid Property " Url="html/44a438f0-cdab-eb24-2748-5df609d74a1d.htm" />
     <HelpKINode Title="MessBill.bid Property " Url="html/110c5d07-6e64-f44b-c114-5e020cdb2a29.htm" />
     <HelpKINode Title="MessTransaction.bid Property " Url="html/35c65fb7-7b85-61ca-5f6c-60250398ecab.htm" />
+    <HelpKINode Title="MessTransactionViewModel.bid Property " Url="html/981d85c0-7476-1f3a-fe90-908d09563dbe.htm" />
+    <HelpKINode Title="RemoveStudentViewModel.bid Property " Url="html/7c860c1b-5bf9-2fb8-90d4-9314d0dd4dfb.htm" />
     <HelpKINode Title="Student.bid Property " Url="html/d9455565-8afd-afac-caf1-1e4d202cb07c.htm" />
+    <HelpKINode Title="StudentDueSummaryViewModel.bid Property " Url="html/9a7c029b-48a2-2b70-2754-1b6f3c9fea66.htm" />
+    <HelpKINode Title="StudentMessDueSummaryViewModel.bid Property " Url="html/06abb75e-ee25-f915-feac-a9b06764dcbe.htm" />
+    <HelpKINode Title="StudentSearchViewModel.bid Property " Url="html/a7b31a70-c3af-1867-1946-13cddb178a2a.htm" />
+    <HelpKINode Title="TransactionsViewModel.bid Property " Url="html/bb485647-ceb7-a878-daa4-34f5d73d539e.htm" />
   </HelpKINode>
   <HelpKINode Title="billNum property">
     <HelpKINode Title="MessBill.billNum Property " Url="html/1ae3cd5d-d847-8cf7-9228-2a1d7a997db7.htm" />
     <HelpKINode Title="MessTransaction.billNum Property " Url="html/3914c79b-f5f7-3c0c-b420-f02f74d1a64b.htm" />
   </HelpKINode>
-  <HelpKINode Title="blockNumber property" Url="html/215987ed-5292-66d4-cd5c-43445e7c1480.htm" />
-  <HelpKINode Title="branch property" Url="html/97200e75-1a32-702a-44d1-789dc4b1fe9c.htm" />
+  <HelpKINode Title="blockNumber property">
+    <HelpKINode Title="AddHostelViewModel.blockNumber Property " Url="html/128c3f8e-86f9-a054-a934-b5e153d599f1.htm" />
+    <HelpKINode Title="AllotmentDisplayViewModel.blockNumber Property " Url="html/b752295f-c9f4-9d27-c516-89027ff9d884.htm" />
+    <HelpKINode Title="Hostel.blockNumber Property " Url="html/215987ed-5292-66d4-cd5c-43445e7c1480.htm" />
+    <HelpKINode Title="StudentViewModel.blockNumber Property " Url="html/3a164e2a-0726-32d9-84ad-d20f8fb40605.htm" />
+  </HelpKINode>
+  <HelpKINode Title="branch property">
+    <HelpKINode Title="DisplayStudentViewModel.branch Property " Url="html/08f54b48-9c93-1181-26e1-4e3d86053cea.htm" />
+    <HelpKINode Title="StudentViewModel.branch Property " Url="html/d575f2c0-58b0-db0e-d268-42be8c97a243.htm" />
+    <HelpKINode Title="Student.branch Property " Url="html/97200e75-1a32-702a-44d1-789dc4b1fe9c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Branch property" Url="html/2c1e1546-7a4c-ce04-f304-e10fca975a4d.htm" />
+  <HelpKINode Title="BranchColumn property" Url="html/4be693f6-4e4e-a9a0-9d0d-7334fad99ca9.htm" />
   <HelpKINode Title="BusinessLayer namespace" Url="html/016cce25-ec8b-731f-7669-aedc9f6fc4f3.htm" />
   <HelpKINode Title="BusinessLayer.AcHead class" Url="html/3aea8c21-92d3-494e-c3be-778440c9d678.htm" />
   <HelpKINode Title="BusinessLayer.Allotment class" Url="html/8545f1f5-4084-9959-9616-4c559f7045e8.htm" />
@@ -133,11 +288,13 @@
   <HelpKINode Title="BusinessLayer.HostelCharge class" Url="html/6593cb1a-295f-43f5-a031-be2ac0a031ab.htm" />
   <HelpKINode Title="BusinessLayer.HostelManagementEntities1 class" Url="html/70d8d440-48cd-5ed7-4078-a00497294e3a.htm" />
   <HelpKINode Title="BusinessLayer.HostelTransaction class" Url="html/25f43fd8-6d3e-239b-795b-c04599d213e1.htm" />
+  <HelpKINode Title="BusinessLayer.InfrastructureHelper class" Url="html/bd9d2666-0b07-ec70-ba8b-1f38e0d0a7c3.htm" />
   <HelpKINode Title="BusinessLayer.MessBill class" Url="html/5609b402-74e7-be8e-00aa-32b4880bba7e.htm" />
   <HelpKINode Title="BusinessLayer.MessTransaction class" Url="html/faf64add-d412-b80b-b51f-639379dc43ea.htm" />
   <HelpKINode Title="BusinessLayer.PaymentType class" Url="html/845c78c9-1b47-ac48-8527-9bb334420f82.htm" />
   <HelpKINode Title="BusinessLayer.ReportHelper class" Url="html/599f9d26-1003-01db-e94f-fbe230597d5b.htm" />
   <HelpKINode Title="BusinessLayer.Room class" Url="html/862e7f2e-e49d-9448-9c19-de89f0603d08.htm" />
+  <HelpKINode Title="BusinessLayer.RoomMetaData class" Url="html/3975c785-454c-f410-a3cb-6e8145ec802f.htm" />
   <HelpKINode Title="BusinessLayer.RoomType class" Url="html/c93b6586-148a-125d-16d1-e7b2f369b982.htm" />
   <HelpKINode Title="BusinessLayer.Student class" Url="html/150a3bba-7314-7265-817e-0196892c6460.htm" />
   <HelpKINode Title="BusinessLayer.StudentHelper class" Url="html/7297b2f0-2bcb-3562-bd73-e0210158cfd0.htm" />
@@ -157,6 +314,26 @@
   </HelpKINode>
   <HelpKINode Title="ChangeRoom method" Url="html/938d2385-c29c-6a37-85b7-47700dc3f3b6.htm" />
   <HelpKINode Title="ChangeRoomAllotment method" Url="html/9261ed1d-56df-4779-6586-75cacbfefa22.htm" />
+  <HelpKINode Title="ChangeRoomViewModel class">
+    <HelpKINode Title="ChangeRoomViewModel Class" Url="html/ea194580-63da-1010-5702-ee757d92ddeb.htm" />
+    <HelpKINode Title="about ChangeRoomViewModel class" Url="html/ea194580-63da-1010-5702-ee757d92ddeb.htm" />
+    <HelpKINode Title="constructor" Url="html/5b2a8f33-dc8b-0fd2-5a4d-a7ca84ddad33.htm" />
+    <HelpKINode Title="methods" Url="html/eba0046b-5751-7c81-bcb0-318909d36f0a.htm" />
+    <HelpKINode Title="properties" Url="html/d6d072e0-51dc-eccf-50ea-66448dc21f26.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ChangeRoomViewModel.ChangeRoomViewModel constructor" Url="html/5b2a8f33-dc8b-0fd2-5a4d-a7ca84ddad33.htm" />
+  <HelpKINode Title="ChangeRoomViewModel.floor property" Url="html/71f52012-d808-fa11-7260-63a1ecfb0d8e.htm" />
+  <HelpKINode Title="ChangeRoomViewModel.hostelBlock property" Url="html/024f2055-2ac0-07a8-e2e5-166da4489631.htm" />
+  <HelpKINode Title="ChangeRoomViewModel.roomNumber property" Url="html/3990194b-5986-864e-cf1b-ec2a7ac52d76.htm" />
+  <HelpKINode Title="ChangeRoomViewModel.roomType property" Url="html/f789f413-0593-d7a7-156a-87ac47737e91.htm" />
+  <HelpKINode Title="ChangeRoomViewModel.year property" Url="html/c7aeba40-74dd-f5dd-016d-67f9817e4e40.htm" />
+  <HelpKINode Title="Clone method">
+    <HelpKINode Title="AllotmentDataTable.Clone Method " Url="html/b8b6e3eb-a4bc-224d-3758-c30dcb33864e.htm" />
+    <HelpKINode Title="HostelFeeDataTable.Clone Method " Url="html/36c0803f-8f26-43ae-a70e-b2af829fba88.htm" />
+    <HelpKINode Title="MeeFeeDataTable.Clone Method " Url="html/38fe44b2-a1f5-0168-202a-7ba264c93ac7.htm" />
+    <HelpKINode Title="StudentDataTable.Clone Method " Url="html/9fd3ac89-9231-5dbd-eaf5-8b4242cb5c60.htm" />
+    <HelpKINode Title="StudentReportDataSet.Clone Method " Url="html/e9634ef4-3675-c014-faa8-50ba1a3392d3.htm" />
+  </HelpKINode>
   <HelpKINode Title="code property" Url="html/193a1ba6-4b68-8404-ee60-eb6fb7358dcf.htm" />
   <HelpKINode Title="Configuration method" Url="html/6c13a701-f619-c62c-934a-83089eab6eb7.htm" />
   <HelpKINode Title="ConstructViewModelForAlloment method" Url="html/80a9b7aa-b271-374c-2a03-bc61f55af80a.htm" />
@@ -166,6 +343,12 @@
   <HelpKINode Title="ConstructViewModelForMessFeeChange method" Url="html/2ce1a098-124a-7c11-980d-a3b5e6026db0.htm" />
   <HelpKINode Title="ConstructViewModelForMessTransaction method" Url="html/14093ad5-6dbd-c087-b3ed-37dfcf4b5400.htm" />
   <HelpKINode Title="ConstructViewModelForRemoveStudent method" Url="html/245e7e64-c349-dde2-e068-fe1c3a471d4d.htm" />
+  <HelpKINode Title="Count property">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.Count Property " Url="html/5d75951c-61bc-4d14-cee1-3052a84ff3f1.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Count Property " Url="html/03c2a63b-7608-e06a-2e7e-19a07fcbcdef.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Count Property " Url="html/41f59b45-1784-1095-bd48-17e50cd84df9.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.Count Property " Url="html/df23c1e3-163b-4cf8-0747-10b5933e4114.htm" />
+  </HelpKINode>
   <HelpKINode Title="Course class">
     <HelpKINode Title="Course Class" Url="html/4b513449-8aa9-47c2-d34d-88ceb5a3c2a9.htm" />
     <HelpKINode Title="about Course class" Url="html/4b513449-8aa9-47c2-d34d-88ceb5a3c2a9.htm" />
@@ -173,21 +356,45 @@
     <HelpKINode Title="methods" Url="html/dca1c407-11fc-0e3b-7a79-5752977d2a4b.htm" />
     <HelpKINode Title="properties" Url="html/5293812e-e6ca-f703-f17b-b6a41d1dbb67.htm" />
   </HelpKINode>
-  <HelpKINode Title="course property" Url="html/14688a37-b61f-ac31-8242-c970d68933d8.htm" />
+  <HelpKINode Title="Course property" Url="html/5a741456-aa05-7767-0ddf-f2dccf1d5410.htm" />
+  <HelpKINode Title="course property">
+    <HelpKINode Title="DisplayStudentViewModel.course Property " Url="html/f63b2be8-5a7b-c0b3-2d42-6c11ce3d3944.htm" />
+    <HelpKINode Title="Student.course Property " Url="html/14688a37-b61f-ac31-8242-c970d68933d8.htm" />
+    <HelpKINode Title="StudentViewModel.course Property " Url="html/488fdc1e-a737-cbfc-78af-e7a3dbc4cb39.htm" />
+  </HelpKINode>
   <HelpKINode Title="Course.Course constructor" Url="html/20d07647-52a6-4b8d-f042-5d2a49fae09c.htm" />
   <HelpKINode Title="Course.id property" Url="html/d01156e0-988d-e78f-afd4-a4d3d0c5991e.htm" />
   <HelpKINode Title="Course.Students property" Url="html/d95c3c5d-3b59-d9f3-bf18-da80040c9e68.htm" />
   <HelpKINode Title="Course.val property" Url="html/4a0bc39f-e135-7802-d88f-c987964d0de2.htm" />
   <HelpKINode Title="Course1 property" Url="html/0a1bb1c4-6cba-0af8-04b5-da7ecf347a02.htm" />
+  <HelpKINode Title="CourseColumn property" Url="html/d6cb1703-4544-eb28-5c76-c2af7c70107a.htm" />
   <HelpKINode Title="Courses property" Url="html/3f586075-3c1c-1c76-3186-d1943da8e54e.htm" />
+  <HelpKINode Title="CreateInstance method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.CreateInstance Method " Url="html/9f9e0d95-2fb6-c3fc-0da0-c0a51c5f8fe7.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.CreateInstance Method " Url="html/a5bb4ec8-9205-1e35-fa3a-98e8d1d8340d.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.CreateInstance Method " Url="html/e27046a1-fa7e-3f7f-0fc4-d244e468431a.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.CreateInstance Method " Url="html/2d9b5aec-8bf5-81b0-1a20-612565fd7044.htm" />
+  </HelpKINode>
   <HelpKINode Title="currentOccupancy property" Url="html/e0c867f6-2fc1-6b2f-23dc-5fbe0ce7181d.htm" />
   <HelpKINode Title="custom property" Url="html/fd1d7115-9996-6298-3066-67326d455e23.htm" />
+  <HelpKINode Title="dailymess property" Url="html/9552f1b4-e40b-7119-bc0f-2703394e9b7f.htm" />
+  <HelpKINode Title="DateOfBirth property" Url="html/c55f1521-09ba-9eea-38a0-23c7f2ebe3db.htm" />
+  <HelpKINode Title="DateOfBirthColumn property" Url="html/d8cf3da2-259e-6851-7815-b85f2ed20de8.htm" />
   <HelpKINode Title="dateOfDeclaration property" Url="html/8d5bf20f-95c9-bf05-5d9c-cef6e6e5f597.htm" />
+  <HelpKINode Title="DateOfJoin property" Url="html/b2461645-caad-402f-84a8-9e33e6a448b6.htm" />
   <HelpKINode Title="dateOfJoin property" Url="html/17118f11-b8cb-0c87-a09c-8df41f7df01a.htm" />
+  <HelpKINode Title="DateOfJoinColumn property" Url="html/0f2a5a78-580e-05cb-85d8-00327a8d5bc5.htm" />
   <HelpKINode Title="dateOfLeave property" Url="html/a9660db4-a566-fecf-8b2b-f135bd1c599e.htm" />
+  <HelpKINode Title="DateOfLeave property" Url="html/0cc0ad95-95a7-a419-4c81-8b9aead85511.htm" />
+  <HelpKINode Title="DateOfLeaveColumn property" Url="html/348be40a-90f6-049e-4322-ed351885f923.htm" />
   <HelpKINode Title="dateOfPay property">
     <HelpKINode Title="HostelTransaction.dateOfPay Property " Url="html/bf356f51-a69a-105a-e871-4a2b3a2f0967.htm" />
     <HelpKINode Title="MessTransaction.dateOfPay Property " Url="html/0efd7780-cb52-0675-7495-fe21eac015b5.htm" />
+    <HelpKINode Title="TransactionsViewModel.dateOfPay Property " Url="html/f9d0ed13-e05e-68fe-82da-178cb2de7b17.htm" />
+  </HelpKINode>
+  <HelpKINode Title="dateOfPayment property">
+    <HelpKINode Title="HostelTransactionViewModel.dateOfPayment Property " Url="html/740fea3b-cd23-0b3b-e9f2-29ab1518db25.htm" />
+    <HelpKINode Title="MessTransactionViewModel.dateOfPayment Property " Url="html/18f1ff17-03d3-4ac4-c1c9-8f71f72fa388.htm" />
   </HelpKINode>
   <HelpKINode Title="Department class">
     <HelpKINode Title="Department Class" Url="html/c0d7a736-091e-987f-1db7-b3550d9f98ee.htm" />
@@ -203,14 +410,53 @@
   <HelpKINode Title="Department.Students property" Url="html/b2bbc131-3c97-5a55-a1fd-ba3b21a9b6a8.htm" />
   <HelpKINode Title="Department.val property" Url="html/dbac0416-bc54-94ca-10a6-6b47244fa226.htm" />
   <HelpKINode Title="Departments property" Url="html/007aa9a5-e256-efa7-468d-49a2deb77d91.htm" />
-  <HelpKINode Title="descr property" Url="html/321cde6b-db70-d254-521c-d8cdb57d41d6.htm" />
-  <HelpKINode Title="DiscountFees method" Url="html/758a53ee-90f5-2e8c-1702-13f2fa1c59b9.htm" />
-  <HelpKINode Title="Dispose method">
-    <HelpKINode Title="HomeController.Dispose Method " Url="html/7833c7f6-d53a-dda1-dd55-3bdbfee77e4c.htm" />
-    <HelpKINode Title="HomeController.Dispose Method " Url="html/22d19f4c-fce5-2473-901c-d29058518f96.htm" />
+  <HelpKINode Title="deposit property">
+    <HelpKINode Title="HostelChargesViewModel.deposit Property " Url="html/05c9ccfb-5ca7-d1f9-5097-f0a10a1518b0.htm" />
+    <HelpKINode Title="StudentDueSummaryViewModel.deposit Property " Url="html/34e52e01-819c-4040-c66c-6ea41d3cc66c.htm" />
   </HelpKINode>
-  <HelpKINode Title="dob property" Url="html/da854635-29c1-4f12-427b-4f8d451b5bab.htm" />
+  <HelpKINode Title="depRefund property" Url="html/49e4ee03-98ef-e3fd-006a-d79a6e3cd387.htm" />
+  <HelpKINode Title="depRefundRef property" Url="html/f7ee30e1-881f-dc4e-3d33-3093f760948f.htm" />
+  <HelpKINode Title="dept property" Url="html/7108b75e-e1d3-4916-fbaf-4ceee10f316b.htm" />
+  <HelpKINode Title="descr property" Url="html/321cde6b-db70-d254-521c-d8cdb57d41d6.htm" />
+  <HelpKINode Title="description property" Url="html/fe722535-e50f-0176-d26c-016011606359.htm" />
+  <HelpKINode Title="DiscountFees method" Url="html/758a53ee-90f5-2e8c-1702-13f2fa1c59b9.htm" />
+  <HelpKINode Title="DisplayStudentViewModel class">
+    <HelpKINode Title="DisplayStudentViewModel Class" Url="html/19b271e4-5ffd-8414-159a-eeb8bf720ed7.htm" />
+    <HelpKINode Title="about DisplayStudentViewModel class" Url="html/19b271e4-5ffd-8414-159a-eeb8bf720ed7.htm" />
+    <HelpKINode Title="constructor" Url="html/26a01ee3-2a7b-ba11-73b3-51828f0f4d54.htm" />
+    <HelpKINode Title="methods" Url="html/1d66ed0f-7b15-fdff-0ad3-8a355807528f.htm" />
+    <HelpKINode Title="properties" Url="html/3d0d7742-b581-9d6a-a78f-7d86b701e9df.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DisplayStudentViewModel.allotments property" Url="html/9df91fa3-46f6-bf51-9e67-f3f5d388c774.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.branch property" Url="html/08f54b48-9c93-1181-26e1-4e3d86053cea.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.course property" Url="html/f63b2be8-5a7b-c0b3-2d42-6c11ce3d3944.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.DisplayStudentViewModel constructor" Url="html/26a01ee3-2a7b-ba11-73b3-51828f0f4d54.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.dob property" Url="html/433bfb6f-6a60-1c7d-41f3-8063579bfe2e.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.gender property" Url="html/33bae2eb-130f-e7b7-cedb-a92ea7fce2d0.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.name property" Url="html/5a240277-3939-9a1a-00c4-dc2e885f153f.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.semester property" Url="html/830af07a-30e8-7fc2-1f1c-4891c7606934.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.usn property" Url="html/cb785f24-c07a-26e1-18de-e6722a7271b3.htm" />
+  <HelpKINode Title="DisplayStudentViewModel.year property" Url="html/e52c919b-5068-6f60-fc0f-657c6af1a9df.htm" />
+  <HelpKINode Title="Dispose method">
+    <HelpKINode Title="HomeController.Dispose Method " Url="html/22d19f4c-fce5-2473-901c-d29058518f96.htm" />
+    <HelpKINode Title="HomeController.Dispose Method " Url="html/7833c7f6-d53a-dda1-dd55-3bdbfee77e4c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="dob property">
+    <HelpKINode Title="DisplayStudentViewModel.dob Property " Url="html/433bfb6f-6a60-1c7d-41f3-8063579bfe2e.htm" />
+    <HelpKINode Title="Student.dob Property " Url="html/da854635-29c1-4f12-427b-4f8d451b5bab.htm" />
+    <HelpKINode Title="StudentViewModel.dob Property " Url="html/c9605c1d-c117-4ae7-f67f-baa4691ce22d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="doj property">
+    <HelpKINode Title="AllotmentDisplayViewModel.doj Property " Url="html/8781309c-cb23-dac1-4793-e49f07eb9dcf.htm" />
+    <HelpKINode Title="StudentViewModel.doj Property " Url="html/94770eee-5c53-32ec-0c47-1a8160c030d8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="dol property" Url="html/5f874fd0-6fa7-8460-c253-c82769f5d7fc.htm" />
+  <HelpKINode Title="dues property" Url="html/7f0a8027-8691-8199-2aab-3a8a2391401b.htm" />
   <HelpKINode Title="ExtractValidRanges method" Url="html/0af2b066-3d4a-5d9f-290e-93c2de472127.htm" />
+  <HelpKINode Title="Fee_Amount property" Url="html/2c352cef-e629-4501-f310-e78772c0ea71.htm" />
+  <HelpKINode Title="Fee_AmountColumn property" Url="html/f5ee25de-901d-2ded-5ca9-cc5b9d6865b3.htm" />
+  <HelpKINode Title="Fee_Type property" Url="html/8a2b9520-3013-b591-4fd8-453f01bd2e44.htm" />
+  <HelpKINode Title="Fee_TypeColumn property" Url="html/2b2cf675-b0a8-1fc1-3acf-f02e0a9e9be7.htm" />
   <HelpKINode Title="FilterConfig class">
     <HelpKINode Title="FilterConfig Class" Url="html/22b62624-4365-1e8b-00ed-8c05fa2adf03.htm" />
     <HelpKINode Title="about FilterConfig class" Url="html/22b62624-4365-1e8b-00ed-8c05fa2adf03.htm" />
@@ -219,6 +465,17 @@
   </HelpKINode>
   <HelpKINode Title="FilterConfig.FilterConfig constructor" Url="html/244707bf-83ed-edcb-3e99-e955319b34ef.htm" />
   <HelpKINode Title="FilterConfig.RegisterGlobalFilters method" Url="html/7fd2b4ac-47ea-2648-d286-0ca3259b1a77.htm" />
+  <HelpKINode Title="fix property">
+    <HelpKINode Title="HostelChargesViewModel.fix Property " Url="html/eef2a54e-dbc1-679d-8c69-d9b455b9a8ee.htm" />
+    <HelpKINode Title="StudentDueSummaryViewModel.fix Property " Url="html/74a26145-4752-0ae1-2b97-098eb6d8870f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="fixRefund property" Url="html/289321b7-8f16-af39-cb60-ce31519d03bc.htm" />
+  <HelpKINode Title="fixRefundRef property" Url="html/0e4deb9b-66c1-6393-5103-0800bb874a98.htm" />
+  <HelpKINode Title="floor property" Url="html/71f52012-d808-fa11-7260-63a1ecfb0d8e.htm" />
+  <HelpKINode Title="floorNumber property">
+    <HelpKINode Title="AllotmentDisplayViewModel.floorNumber Property " Url="html/83f498fc-0f43-f725-8fdf-2df2170dbf55.htm" />
+    <HelpKINode Title="StudentViewModel.floorNumber Property " Url="html/2216c601-cc17-e2c5-7e1e-e73660ce7274.htm" />
+  </HelpKINode>
   <HelpKINode Title="Gender class">
     <HelpKINode Title="Gender Class" Url="html/17ddeebf-a71d-f254-b0d7-5d01f48fdc81.htm" />
     <HelpKINode Title="about Gender class" Url="html/17ddeebf-a71d-f254-b0d7-5d01f48fdc81.htm" />
@@ -226,25 +483,35 @@
     <HelpKINode Title="methods" Url="html/3e4f5347-7bb0-753b-50ea-8f5066ea1826.htm" />
     <HelpKINode Title="properties" Url="html/959e0394-e19e-1d09-f793-beb50d928e7e.htm" />
   </HelpKINode>
-  <HelpKINode Title="Gender property" Url="html/c5c8aed9-aa6b-97c2-8eb0-ba2679aa9fd6.htm" />
-  <HelpKINode Title="gender property" Url="html/86d66e09-fa84-e648-0da4-3767d6132120.htm" />
+  <HelpKINode Title="gender property">
+    <HelpKINode Title="Student.gender Property " Url="html/86d66e09-fa84-e648-0da4-3767d6132120.htm" />
+    <HelpKINode Title="DisplayStudentViewModel.gender Property " Url="html/33bae2eb-130f-e7b7-cedb-a92ea7fce2d0.htm" />
+    <HelpKINode Title="StudentViewModel.gender Property " Url="html/70ba8c83-3ab5-9f06-dd8d-73a6e282ded7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Gender property">
+    <HelpKINode Title="Hostel.Gender Property " Url="html/c5c8aed9-aa6b-97c2-8eb0-ba2679aa9fd6.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentRow.Gender Property " Url="html/c26247f5-9be0-e35e-acc3-f57c2d0f5def.htm" />
+  </HelpKINode>
   <HelpKINode Title="Gender.Gender constructor" Url="html/7e863f65-f205-76be-7354-d30873e79beb.htm" />
   <HelpKINode Title="Gender.Hostels property" Url="html/38fbb59a-f592-75b0-d4fd-39994c9cd568.htm" />
   <HelpKINode Title="Gender.id property" Url="html/f4ea395b-cfa2-d13d-2897-6f38cf0bacf4.htm" />
   <HelpKINode Title="Gender.Students property" Url="html/793275aa-4053-ae46-eeee-19ffd4be8457.htm" />
   <HelpKINode Title="Gender.val property" Url="html/446f6511-65a2-ad81-424b-de3d1563b56e.htm" />
   <HelpKINode Title="Gender1 property" Url="html/b49339b7-902c-884e-996d-ff800c062f42.htm" />
+  <HelpKINode Title="GenderColumn property" Url="html/c348bf02-32b0-ec44-e0d9-8dbd25b38839.htm" />
   <HelpKINode Title="Genders property" Url="html/59938bb4-dfcc-ed10-8e2e-a00b315d049a.htm" />
+  <HelpKINode Title="GenerateBid method" Url="html/f18e835b-0497-bcc2-3659-1a3bd3da8285.htm" />
   <HelpKINode Title="GenerateExcel method" Url="html/3617a9fe-ccf5-e0c1-6506-1d827032e073.htm" />
   <HelpKINode Title="GenerateMessBill method">
     <HelpKINode Title="TransactionHelper.GenerateMessBill Method " Url="html/60499b78-6fc4-4994-5781-418a96fd07ec.htm" />
     <HelpKINode Title="UserController.GenerateMessBill Method " Url="html/5325b00b-6356-1425-b655-9174ed0ffd6a.htm" />
   </HelpKINode>
-  <HelpKINode Title="GenerateReport method" Url="html/7945bdca-c8b0-fdbe-c1b1-c6d5bacfe3d7.htm" />
-  <HelpKINode Title="GenerateReportByAmount method" Url="html/c1224aec-ad7c-fc2c-712d-789d9015b2dd.htm" />
-  <HelpKINode Title="GenerateReportByBID method" Url="html/b62ca713-cae2-0a24-0768-f9e699ff1f1a.htm" />
-  <HelpKINode Title="GenerateReportByDate method" Url="html/a5c3ccdf-2f8f-1613-45fe-c3c6c14637a7.htm" />
-  <HelpKINode Title="GenerateReportByDropDown method" Url="html/c4aa03c8-5738-6364-78a1-6360d7346f9e.htm" />
+  <HelpKINode Title="GenerateReport method" Url="html/a92b3fd5-11bb-4cb0-4fd5-8fb6678c7889.htm" />
+  <HelpKINode Title="GenerateReportByAmount method" Url="html/b3fe8e1a-bad2-ac16-79bb-26d1154a4733.htm" />
+  <HelpKINode Title="GenerateReportByBID method" Url="html/b118d791-74c8-4a4d-1ad9-fe9fc39dd718.htm" />
+  <HelpKINode Title="GenerateReportByDate method" Url="html/058c5d4d-8e1b-4d5c-c886-6e81931a30b1.htm" />
+  <HelpKINode Title="GenerateReportByDropDown method" Url="html/c3986d59-5bf0-e924-83dc-be4737c8a1ff.htm" />
+  <HelpKINode Title="GenerateStudentReport method" Url="html/3fcff9d3-61fe-8cda-66f4-1e9a38653018.htm" />
   <HelpKINode Title="GetAcademicYear method" Url="html/6606709f-8137-06f9-76e5-fe86ef894412.htm" />
   <HelpKINode Title="GetAccountHeads method" Url="html/f0c1d85b-5e27-f990-4dd0-9a5689b7205c.htm" />
   <HelpKINode Title="GetAllHostelDues method" Url="html/973fd07f-4bd9-126c-9db4-f0330c147f21.htm" />
@@ -252,6 +519,7 @@
   <HelpKINode Title="GetAllTransactions method" Url="html/ce87e12c-7e39-2686-9d11-f9425a4152be.htm" />
   <HelpKINode Title="GetAllTransactionsForStudent method" Url="html/14ae4916-f568-6670-fe3d-957a773b70de.htm" />
   <HelpKINode Title="GetAmount method" Url="html/963c7574-6c58-b942-4122-79f5fbfc17db.htm" />
+  <HelpKINode Title="GetAuthenticationManager method" Url="html/2e74c379-8a02-c775-e43d-bf63dff0045c.htm" />
   <HelpKINode Title="GetAvailableRoomsInHostel method" Url="html/8eb768c2-9b01-4121-7375-44ff8751fad7.htm" />
   <HelpKINode Title="GetBlocks method" Url="html/31fd11a5-c4f2-131e-03a4-b09eef6d0f17.htm" />
   <HelpKINode Title="GetCourses method" Url="html/9283b03d-0736-0dc0-8d69-6fba1843a634.htm" />
@@ -263,6 +531,7 @@
   <HelpKINode Title="GetFeeBreakUp method" Url="html/78874eb9-1858-946e-eb72-317ad130939d.htm" />
   <HelpKINode Title="GetFixFeeId method" Url="html/7a642445-c7ac-9ee6-87a9-1c29532072f1.htm" />
   <HelpKINode Title="GetGenders method" Url="html/3432edd7-1826-20e8-a449-09a7e0c610e6.htm" />
+  <HelpKINode Title="GetHostelBlocks method" Url="html/fcd34dd8-07fe-3a96-485a-04ebfbcbac3e.htm" />
   <HelpKINode Title="GetHostelFeePayable method" Url="html/88e017b1-8243-dddf-70c8-107fb5eb3fc0.htm" />
   <HelpKINode Title="GetHostelsForStudent method" Url="html/7ddca826-300b-0e29-a580-fd43869bde33.htm" />
   <HelpKINode Title="GetMessAmount method" Url="html/823e1199-4d1c-6880-c545-64b297bce542.htm" />
@@ -273,63 +542,89 @@
   <HelpKINode Title="GetRooms method" Url="html/9ae56b75-ceb7-6071-875c-5458c5c32c3a.htm" />
   <HelpKINode Title="GetRoomsIncludingCurrent method" Url="html/6bd07f7f-e1d1-3e8f-d46f-5a6dc65a229c.htm" />
   <HelpKINode Title="GetRoomType method" Url="html/4df56794-e631-3566-2866-949bbd1d596d.htm" />
-  <HelpKINode Title="GetRoomTypes method" Url="html/67b653eb-919f-3d41-8873-57304899a83e.htm" />
+  <HelpKINode Title="GetRoomTypes method">
+    <HelpKINode Title="InfrastructureHelper.GetRoomTypes Method " Url="html/3e04e4d5-1ed6-746a-05e3-fcc2ea92285b.htm" />
+    <HelpKINode Title="StudentHelper.GetRoomTypes Method " Url="html/67b653eb-919f-3d41-8873-57304899a83e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetRowType method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.GetRowType Method " Url="html/fe59c70e-fc21-4ded-f8ce-ed806ab38851.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.GetRowType Method " Url="html/5b3530fe-c2e8-da4e-7881-75b448bb07a0.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.GetRowType Method " Url="html/cd0fe99e-5566-376d-5567-d0fbc77c5791.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.GetRowType Method " Url="html/9725b1e8-efe3-ec61-6c28-2f30d24a3af0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetSchemaSerializable method" Url="html/3d05f9c2-9846-0441-9080-024a113ce60a.htm" />
   <HelpKINode Title="GetStudent method" Url="html/34d4e43a-9c6d-4693-6a00-f7fa87913e72.htm" />
   <HelpKINode Title="GetStudentDetails method" Url="html/81dbd87e-be14-c85b-5c60-105575fe0464.htm" />
   <HelpKINode Title="GetStudentDues method" Url="html/ce0cec61-8592-8e16-f23e-8ee64f519a36.htm" />
-  <HelpKINode Title="GetStudentList method" Url="html/1ff33a66-ab8b-da86-b910-a9da489b2faa.htm" />
+  <HelpKINode Title="GetStudentList method">
+    <HelpKINode Title="HomeController.GetStudentList Method " Url="html/378b6444-0283-bb3b-6162-d41e8d2fe540.htm" />
+    <HelpKINode Title="UserController.GetStudentList Method " Url="html/1ff33a66-ab8b-da86-b910-a9da489b2faa.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetStudentListForAutoComplete method" Url="html/02c50820-2761-bf0c-50b0-ec4c8a6ebb48.htm" />
   <HelpKINode Title="GetTransactionsByAccountHead method" Url="html/79eb1e06-cb70-1211-1a13-823ac395c86b.htm" />
   <HelpKINode Title="GetTransactionsByAmountRange method" Url="html/259aff9a-b929-4c18-2972-1fa7f84771cb.htm" />
+  <HelpKINode Title="GetTransactionsByBidList method" Url="html/d31c0811-3466-78b1-ad73-43f4ecae22fa.htm" />
   <HelpKINode Title="GetTransactionsByCourse method" Url="html/4ed4a96f-ba4a-4154-2ad5-4f725f1c950d.htm" />
   <HelpKINode Title="GetTransactionsByDateRange method" Url="html/6174ef48-f467-daff-3190-7f60c5018db9.htm" />
   <HelpKINode Title="GetTransactionsByGender method" Url="html/ac08535d-0a48-cf33-408c-e17803659d06.htm" />
   <HelpKINode Title="GetTransactionsByPaymentType method" Url="html/61ccc37b-63e1-e7d3-3411-6f45cda885c6.htm" />
   <HelpKINode Title="GetTransactionsBySem method" Url="html/50789e96-ea72-a899-ab31-343b506b9955.htm" />
   <HelpKINode Title="GetTransactionsByStudentRange method" Url="html/5b9b583e-e6c9-352e-f308-6fa219208bf9.htm" />
+  <HelpKINode Title="GetTransactionViewModel method" Url="html/0b9d2d31-414e-3f00-083c-ede03868cdca.htm" />
   <HelpKINode Title="GetType method" Url="html/b2e0696c-974d-649e-c774-41677f0560d2.htm" />
+  <HelpKINode Title="GetTypedDataSetSchema method" Url="html/4fe6ef81-3623-38d0-b02a-0e2bcdddc72d.htm" />
+  <HelpKINode Title="GetTypedTableSchema method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.GetTypedTableSchema Method " Url="html/b1959d0e-65f8-5a53-bd48-dc5245b97545.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.GetTypedTableSchema Method " Url="html/fa119d9e-bb5d-6028-fce1-645b175c65a5.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.GetTypedTableSchema Method " Url="html/c9a183ce-704d-1c01-0c73-f40999392491.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.GetTypedTableSchema Method " Url="html/7fc34485-ad10-4a8c-99bc-b46a5d129de8.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetValidAcademicYears method" Url="html/c04526d3-da0b-72e3-6113-d0df5f2e1041.htm" />
   <HelpKINode Title="head property" Url="html/a7cd487b-ad49-b925-7da6-c5fa4d3c287c.htm" />
   <HelpKINode Title="HomeController class">
-    <HelpKINode Title="HomeController Class" Url="html/681be5f1-9923-2966-fac7-75e91db126a7.htm" />
     <HelpKINode Title="HomeController Class" Url="html/6a442ec2-758d-31ff-3691-1cb1c4cabb41.htm" />
+    <HelpKINode Title="HomeController Class" Url="html/681be5f1-9923-2966-fac7-75e91db126a7.htm" />
     <HelpKINode Title="HomeController Class" Url="html/a38f5eb4-b2fb-ddf5-3825-640ad5038e4d.htm" />
     <HelpKINode Title="about HomeController class" Url="html/681be5f1-9923-2966-fac7-75e91db126a7.htm" />
     <HelpKINode Title="about HomeController class" Url="html/6a442ec2-758d-31ff-3691-1cb1c4cabb41.htm" />
     <HelpKINode Title="about HomeController class" Url="html/a38f5eb4-b2fb-ddf5-3825-640ad5038e4d.htm" />
     <HelpKINode Title="constructor" Url="html/e7a35948-7e37-4ad2-085a-4006ec316835.htm" />
-    <HelpKINode Title="constructor" Url="html/cb2bcea8-ed6e-f547-62d9-bc5e82a17b36.htm" />
     <HelpKINode Title="constructor" Url="html/ace97fc6-5995-59ea-9145-74d32b8d485d.htm" />
-    <HelpKINode Title="methods" Url="html/c0cdc86e-7bd7-61b0-10a7-ad202d78c437.htm" />
-    <HelpKINode Title="methods" Url="html/717e4712-1ac4-ecb9-e4e6-9395c132cdfb.htm" />
+    <HelpKINode Title="constructor" Url="html/cb2bcea8-ed6e-f547-62d9-bc5e82a17b36.htm" />
     <HelpKINode Title="methods" Url="html/ce2d0abc-f5ba-c741-ccf3-fc04d35c0402.htm" />
-    <HelpKINode Title="properties" Url="html/73cb51d8-e435-f8d8-3c72-f9b49a6b57ff.htm" />
-    <HelpKINode Title="properties" Url="html/5518c814-72f1-8007-2e58-5ba9d9394844.htm" />
+    <HelpKINode Title="methods" Url="html/717e4712-1ac4-ecb9-e4e6-9395c132cdfb.htm" />
+    <HelpKINode Title="methods" Url="html/c0cdc86e-7bd7-61b0-10a7-ad202d78c437.htm" />
     <HelpKINode Title="properties" Url="html/ee36dacf-8ce5-3d44-494c-bb54e1d5cfe8.htm" />
+    <HelpKINode Title="properties" Url="html/5518c814-72f1-8007-2e58-5ba9d9394844.htm" />
+    <HelpKINode Title="properties" Url="html/73cb51d8-e435-f8d8-3c72-f9b49a6b57ff.htm" />
   </HelpKINode>
+  <HelpKINode Title="HomeController.AddHostel method" Url="html/c36bdbb6-42cd-698e-1569-55a787484235.htm" />
+  <HelpKINode Title="HomeController.AddRooms method" Url="html/75e9863d-0859-f0b5-b062-c6db9c5b3ef5.htm" />
   <HelpKINode Title="HomeController.AddUser method" Url="html/6cc2486a-647b-c31f-8614-7ad3235c9860.htm" />
   <HelpKINode Title="HomeController.Dispose method">
     <HelpKINode Title="HomeController.Dispose Method " Url="html/22d19f4c-fce5-2473-901c-d29058518f96.htm" />
     <HelpKINode Title="HomeController.Dispose Method " Url="html/7833c7f6-d53a-dda1-dd55-3bdbfee77e4c.htm" />
   </HelpKINode>
+  <HelpKINode Title="HomeController.GetAuthenticationManager method" Url="html/2e74c379-8a02-c775-e43d-bf63dff0045c.htm" />
+  <HelpKINode Title="HomeController.GetStudentList method" Url="html/378b6444-0283-bb3b-6162-d41e8d2fe540.htm" />
   <HelpKINode Title="HomeController.HomeController constructor">
     <HelpKINode Title="HomeController Constructor " Url="html/cb2bcea8-ed6e-f547-62d9-bc5e82a17b36.htm" />
     <HelpKINode Title="HomeController Constructor " Url="html/ace97fc6-5995-59ea-9145-74d32b8d485d.htm" />
     <HelpKINode Title="HomeController Constructor " Url="html/e7a35948-7e37-4ad2-085a-4006ec316835.htm" />
   </HelpKINode>
   <HelpKINode Title="HomeController.Index method">
-    <HelpKINode Title="HomeController.Index Method " Url="html/c7bdd0b4-be88-ee02-6ae9-485b483a6157.htm" />
-    <HelpKINode Title="HomeController.Index Method " Url="html/77934b85-55d0-e82e-62b2-b4a0e482c841.htm" />
     <HelpKINode Title="HomeController.Index Method " Url="html/f69cd44f-6fd0-b866-19a0-fe6e54a29064.htm" />
+    <HelpKINode Title="HomeController.Index Method " Url="html/77934b85-55d0-e82e-62b2-b4a0e482c841.htm" />
+    <HelpKINode Title="HomeController.Index Method " Url="html/c7bdd0b4-be88-ee02-6ae9-485b483a6157.htm" />
   </HelpKINode>
   <HelpKINode Title="HomeController.Logout method">
     <HelpKINode Title="HomeController.Logout Method " Url="html/cc058d8e-c7e4-a7ce-145f-236a298acd63.htm" />
     <HelpKINode Title="HomeController.Logout Method " Url="html/bd410ddb-aba8-310c-5de0-72412f99ecc9.htm" />
   </HelpKINode>
   <HelpKINode Title="HomeController.MeetDevelopers method">
-    <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/80177972-cf84-ae53-8dc7-3d38690f32a2.htm" />
     <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/4a7f4d69-9f49-9b97-593c-0826268e4c61.htm" />
     <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/047cbaf6-9105-1beb-8245-caf2286bdd4b.htm" />
+    <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/80177972-cf84-ae53-8dc7-3d38690f32a2.htm" />
   </HelpKINode>
   <HelpKINode Title="HomeController.RemoveUser method" Url="html/146bc0e5-6890-5974-c382-ffa31b636fbc.htm" />
   <HelpKINode Title="HomeController.ViewStudent method" Url="html/10dd0a84-f0ae-34f9-9341-2ce12af6038f.htm" />
@@ -365,8 +660,16 @@
     <HelpKINode Title="HostelManagementEntities1.HostelBills Property " Url="html/60fd9d51-e9d6-b814-db23-2c5c076473fb.htm" />
     <HelpKINode Title="Student.HostelBills Property " Url="html/aec633c4-d505-26c5-0340-6fd1248de63a.htm" />
   </HelpKINode>
-  <HelpKINode Title="hostelBlock property" Url="html/4b4bed7b-adeb-8287-91de-b4411db39b74.htm" />
-  <HelpKINode Title="hostelBlockNumber property" Url="html/c155a147-e903-8d45-6390-f6bd0547f8a9.htm" />
+  <HelpKINode Title="hostelBlock property">
+    <HelpKINode Title="Allotment.hostelBlock Property " Url="html/4b4bed7b-adeb-8287-91de-b4411db39b74.htm" />
+    <HelpKINode Title="ChangeRoomViewModel.hostelBlock Property " Url="html/024f2055-2ac0-07a8-e2e5-166da4489631.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelBlock property" Url="html/fa694dca-d9f7-f08d-3c1e-133daa812d90.htm" />
+  <HelpKINode Title="HostelBlockColumn property" Url="html/2b14d751-775a-a461-8555-0a1d78d57cba.htm" />
+  <HelpKINode Title="hostelBlockNumber property">
+    <HelpKINode Title="Room.hostelBlockNumber Property " Url="html/c155a147-e903-8d45-6390-f6bd0547f8a9.htm" />
+    <HelpKINode Title="RoomMetaData.hostelBlockNumber Property " Url="html/e20540f8-3181-559e-7475-431db86d855d.htm" />
+  </HelpKINode>
   <HelpKINode Title="HostelCharge class">
     <HelpKINode Title="HostelCharge Class" Url="html/6593cb1a-295f-43f5-a031-be2ac0a031ab.htm" />
     <HelpKINode Title="about HostelCharge class" Url="html/6593cb1a-295f-43f5-a031-be2ac0a031ab.htm" />
@@ -379,6 +682,50 @@
   <HelpKINode Title="HostelCharge.val property" Url="html/2c76d571-6dcd-50dd-9a56-b1375b3ab937.htm" />
   <HelpKINode Title="HostelCharge.year property" Url="html/b291c1e0-868b-2d6c-15ee-e2aadd5af157.htm" />
   <HelpKINode Title="HostelCharges property" Url="html/7a7bc0f1-640f-7732-0354-5781ae0efe89.htm" />
+  <HelpKINode Title="HostelChargesViewModel class">
+    <HelpKINode Title="HostelChargesViewModel Class" Url="html/78fbbb0e-b401-97be-417c-64ced2f3832c.htm" />
+    <HelpKINode Title="about HostelChargesViewModel class" Url="html/78fbbb0e-b401-97be-417c-64ced2f3832c.htm" />
+    <HelpKINode Title="constructor" Url="html/076dac4c-606d-e0cc-a281-68a376b54630.htm" />
+    <HelpKINode Title="methods" Url="html/ff18b8d9-aa86-cf23-4128-94ff929b183b.htm" />
+    <HelpKINode Title="properties" Url="html/afedd2da-6131-2f83-89f2-928e55e3dece.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelChargesViewModel.deposit property" Url="html/05c9ccfb-5ca7-d1f9-5097-f0a10a1518b0.htm" />
+  <HelpKINode Title="HostelChargesViewModel.fix property" Url="html/eef2a54e-dbc1-679d-8c69-d9b455b9a8ee.htm" />
+  <HelpKINode Title="HostelChargesViewModel.HostelChargesViewModel constructor" Url="html/076dac4c-606d-e0cc-a281-68a376b54630.htm" />
+  <HelpKINode Title="HostelChargesViewModel.rent property" Url="html/e6b1a3f7-f2f9-a943-5a61-9f008b01a666.htm" />
+  <HelpKINode Title="HostelFee property" Url="html/0985d5de-0130-6c30-7e0d-68641193a5af.htm" />
+  <HelpKINode Title="HostelFeeDataTable class">
+    <HelpKINode Title="events" Url="html/9e4f6c93-ac3d-5000-c271-1fc02d98650e.htm" />
+    <HelpKINode Title="fields" Url="html/d8a74601-9376-2ced-5e01-e62407e43d8a.htm" />
+    <HelpKINode Title="methods" Url="html/1c5fda60-3d02-5bbe-0c9c-4b1202668fc7.htm" />
+    <HelpKINode Title="properties" Url="html/26cb8e7f-772a-a0e3-d534-3cb367c8438c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelFeeDueViewModel class">
+    <HelpKINode Title="HostelFeeDueViewModel Class" Url="html/363916eb-ae29-e8cf-f7b2-5ff8799fba91.htm" />
+    <HelpKINode Title="about HostelFeeDueViewModel class" Url="html/363916eb-ae29-e8cf-f7b2-5ff8799fba91.htm" />
+    <HelpKINode Title="constructor" Url="html/42431583-41f9-fde9-11ba-c49785e3a9d7.htm" />
+    <HelpKINode Title="methods" Url="html/d3eea66d-39c0-ab71-c36a-9abadf599e9d.htm" />
+    <HelpKINode Title="properties" Url="html/00a37e55-bd3e-016e-11aa-01ede7e1e198.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelFeeDueViewModel.academicYear property" Url="html/b0bdfe8e-e33e-9fca-d1c2-0d1d876de18e.htm" />
+  <HelpKINode Title="HostelFeeDueViewModel.accountHead property" Url="html/1b436c0b-89fe-e9a9-ea3a-168b7e826abe.htm" />
+  <HelpKINode Title="HostelFeeDueViewModel.amount property" Url="html/ccde9b5b-29be-4148-5e30-57444058bec9.htm" />
+  <HelpKINode Title="HostelFeeDueViewModel.amountDue property" Url="html/b576279a-e658-5410-1714-03e7635924af.htm" />
+  <HelpKINode Title="HostelFeeDueViewModel.amountPaid property" Url="html/11ad58b5-0c74-d3b9-aa26-33bd9ba6ab5a.htm" />
+  <HelpKINode Title="HostelFeeDueViewModel.HostelFeeDueViewModel constructor" Url="html/42431583-41f9-fde9-11ba-c49785e3a9d7.htm" />
+  <HelpKINode Title="HostelFeeRow class">
+    <HelpKINode Title="fields" Url="html/b9a5a18f-6f5f-22aa-78e9-ed7d4c23610f.htm" />
+    <HelpKINode Title="methods" Url="html/916f6433-269b-95e5-7901-801ef81acb03.htm" />
+    <HelpKINode Title="properties" Url="html/e874dff6-c9a8-147e-a00d-2359c19c8845.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelFeeRowChanged event" Url="html/eb2f1cf8-24ea-3a38-7eca-e891b6b1e810.htm" />
+  <HelpKINode Title="HostelFeeRowChangeEvent class">
+    <HelpKINode Title="methods" Url="html/185c09a6-b05d-c06b-8df8-ebc63de7268f.htm" />
+    <HelpKINode Title="properties" Url="html/62fb8dad-2a90-1a47-99a6-36386f6091c2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelFeeRowChanging event" Url="html/8c58701b-2530-7039-c3e7-33480277e02f.htm" />
+  <HelpKINode Title="HostelFeeRowDeleted event" Url="html/3c05e74b-47f9-869c-769b-a65f2ed41ec7.htm" />
+  <HelpKINode Title="HostelFeeRowDeleting event" Url="html/5c5fcc3e-1962-031d-0a35-c694c8a9cae9.htm" />
   <HelpKINode Title="HostelManagement namespace" Url="html/d4335610-d919-2302-4761-769a2eda8830.htm" />
   <HelpKINode Title="HostelManagement.AppDbContext class" Url="html/d05620d1-d2c7-a222-185f-6213ddd28baf.htm" />
   <HelpKINode Title="HostelManagement.AppUser class" Url="html/53d9a397-fe9b-5dd3-4e3e-2aaeafcbb744.htm" />
@@ -387,6 +734,7 @@
   <HelpKINode Title="HostelManagement.Areas.Administration.Controllers namespace" Url="html/2be1f517-8cb7-cf37-261f-94cee183747b.htm" />
   <HelpKINode Title="HostelManagement.Areas.Administration.Controllers.HomeController class" Url="html/a38f5eb4-b2fb-ddf5-3825-640ad5038e4d.htm" />
   <HelpKINode Title="HostelManagement.Areas.Administration.Models namespace" Url="html/bf6d804a-0881-c615-5b86-5f728c3f0669.htm" />
+  <HelpKINode Title="HostelManagement.Areas.Administration.Models.AddHostelViewModel class" Url="html/7aebafc5-d662-6d95-5db6-d1251066bf14.htm" />
   <HelpKINode Title="HostelManagement.Areas.Administration.Models.AddUserViewModel class" Url="html/2011e59a-efb1-0e55-a0b4-5025f804c6da.htm" />
   <HelpKINode Title="HostelManagement.Areas.Archive namespace" Url="html/0c9f8d6b-4e40-e50d-2070-cb3e9e01918f.htm" />
   <HelpKINode Title="HostelManagement.Areas.Archive.ArchiveAreaRegistration class" Url="html/53a51a9c-fe49-9b42-d5a5-c38e5c917893.htm" />
@@ -397,6 +745,25 @@
   <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Controllers.ManagerController class" Url="html/e1b1736c-0333-951e-32d0-6514b9d69d6f.htm" />
   <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Controllers.UserController class" Url="html/1894ba29-8c61-93a5-8ca6-83ef33d5e8ec.htm" />
   <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.HostelMessManagementAreaRegistration class" Url="html/72f0faf4-d40a-9330-ee14-006e4eb4bcc1.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models namespace" Url="html/731381cf-c5e0-e99e-d20b-707a90a70bcc.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.AddAdditionalFeeViewModel class" Url="html/8b357d48-870d-fd34-eeb2-bc1c139c051a.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.AllotmentDisplayViewModel class" Url="html/67dc054f-79b3-7030-7da1-6659b6087f25.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.ChangeRoomViewModel class" Url="html/ea194580-63da-1010-5702-ee757d92ddeb.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.DisplayStudentViewModel class" Url="html/19b271e4-5ffd-8414-159a-eeb8bf720ed7.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.HostelChargesViewModel class" Url="html/78fbbb0e-b401-97be-417c-64ced2f3832c.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.HostelFeeDueViewModel class" Url="html/363916eb-ae29-e8cf-f7b2-5ff8799fba91.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.HostelTransactionViewModel class" Url="html/cca42a22-2220-a493-36ff-153ad5254b2b.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.MessAbsenceViewModel class" Url="html/d13d56a3-7398-8d4c-aca6-6a9669768bea.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.MessChargesViewModel class" Url="html/a1e9e9f8-56c1-2167-846d-c026293a5f2a.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.MessFeeDueViewModel class" Url="html/cf6b6bd0-a082-7b78-2bff-1d3d87031269.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.MessTransactionViewModel class" Url="html/13d85559-136c-95e9-4e19-da019645e4ac.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.RemoveStudentViewModel class" Url="html/543bc452-cff0-cfd1-658c-f3b1559a834b.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.SearchViewModel class" Url="html/85b4499d-2078-2534-67ea-0e0a6bf40fa9.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.StudentDueSummaryViewModel class" Url="html/d85cb39b-69dd-d1f2-e72e-cf08d365de29.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.StudentMessDueSummaryViewModel class" Url="html/c29eadc3-01c4-503d-8190-7d8d47285165.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.StudentSearchViewModel class" Url="html/de6324f4-7f51-1e4a-f841-96244a4abb05.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.StudentViewModel class" Url="html/af975f9d-818a-25cd-1e46-511ca835b9a1.htm" />
+  <HelpKINode Title="HostelManagement.Areas.HostelMessManagement.Models.TransactionsViewModel class" Url="html/d61b90fc-8fac-f513-8eb9-286a0214ac95.htm" />
   <HelpKINode Title="HostelManagement.Controllers namespace" Url="html/f4f5143c-ded9-8cd8-b72e-4c4eb997423e.htm" />
   <HelpKINode Title="HostelManagement.Controllers.HomeController class" Url="html/681be5f1-9923-2966-fac7-75e91db126a7.htm" />
   <HelpKINode Title="HostelManagement.FilterConfig class" Url="html/22b62624-4365-1e8b-00ed-8c05fa2adf03.htm" />
@@ -406,6 +773,23 @@
   <HelpKINode Title="HostelManagement.MvcApplication class" Url="html/0a65f306-3842-434b-3296-602a0fa694bb.htm" />
   <HelpKINode Title="HostelManagement.RouteConfig class" Url="html/ceabedf6-4be8-d2a5-15f1-371eb02ccf3c.htm" />
   <HelpKINode Title="HostelManagement.Startup class" Url="html/d10c7a7c-11e8-2c64-01c7-61adef8911b9.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet class" Url="html/d53272cb-20f2-bda4-cff8-47ee0a56c813.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.AllotmentDataTable class" Url="html/cdc39505-37a8-91f3-c676-b98dc009caa6.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.AllotmentRow class" Url="html/34e9f5a5-df8c-0060-4a26-a5692f8940ea.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.AllotmentRowChangeEvent class" Url="html/538a51d4-547b-5130-9db0-3795725b3da1.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.AllotmentRowChangeEventHandler delegate" Url="html/435e405d-efac-d456-3d4d-549e9874af22.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.HostelFeeDataTable class" Url="html/769ed473-2014-8633-b8ee-0c2dc6b2fad6.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.HostelFeeRow class" Url="html/f2008f92-c048-e508-f743-ade84bdb96c2.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.HostelFeeRowChangeEvent class" Url="html/93e1c25f-609a-cf25-eaf1-9bb10cb54e4e.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.HostelFeeRowChangeEventHandler delegate" Url="html/96cbfd5d-aa01-ff37-af7b-e1a12768b9ad.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.MeeFeeDataTable class" Url="html/e07ad0cf-2a2a-e4f4-5d1f-a35e7d85c070.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.MeeFeeRow class" Url="html/188684c9-b5af-732d-cd2e-8f4e6af80784.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.MeeFeeRowChangeEvent class" Url="html/f7750b0e-fd7b-a001-b775-d346a68a8435.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.MeeFeeRowChangeEventHandler delegate" Url="html/53586e7a-36ce-3bc7-6b16-92eb7ed3167a.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.StudentDataTable class" Url="html/399d10c3-3601-6de4-7d19-fc4d72a0e679.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.StudentRow class" Url="html/d4062262-47ca-bfbf-e1b8-1be7cfd3e10f.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.StudentRowChangeEvent class" Url="html/cc16ca9c-db0f-88a7-fcb9-5adaf65f70bb.htm" />
+  <HelpKINode Title="HostelManagement.StudentReportDataSet.StudentRowChangeEventHandler delegate" Url="html/c939aba6-3314-e4dd-ebd1-1929dece5203.htm" />
   <HelpKINode Title="HostelManagementEntities1 class">
     <HelpKINode Title="HostelManagementEntities1 Class" Url="html/70d8d440-48cd-5ed7-4078-a00497294e3a.htm" />
     <HelpKINode Title="about HostelManagementEntities1 class" Url="html/70d8d440-48cd-5ed7-4078-a00497294e3a.htm" />
@@ -471,6 +855,23 @@
     <HelpKINode Title="PaymentType.HostelTransactions Property " Url="html/cb667cf8-0173-9058-8243-95130c24c5d5.htm" />
     <HelpKINode Title="Student.HostelTransactions Property " Url="html/2e74538e-fe27-9cd8-b438-d66e01dabe42.htm" />
   </HelpKINode>
+  <HelpKINode Title="HostelTransactionViewModel class">
+    <HelpKINode Title="HostelTransactionViewModel Class" Url="html/cca42a22-2220-a493-36ff-153ad5254b2b.htm" />
+    <HelpKINode Title="about HostelTransactionViewModel class" Url="html/cca42a22-2220-a493-36ff-153ad5254b2b.htm" />
+    <HelpKINode Title="constructor" Url="html/34228be8-651e-958d-6103-ef8515a798ed.htm" />
+    <HelpKINode Title="methods" Url="html/a0a5fa74-fe1f-dcdc-a354-7016000147c6.htm" />
+    <HelpKINode Title="properties" Url="html/e99bceb4-29ad-5176-8cc8-9b371ca7a104.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HostelTransactionViewModel.academicYear property" Url="html/b5a77675-098e-6042-25e5-da7409554809.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.acHead property" Url="html/143d6c3c-c5e6-e368-6b3b-9f96db0f5cbb.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.amount property" Url="html/89a64947-a460-dfd3-5e54-96e85913e4c6.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.bankName property" Url="html/ba6dff38-94ae-b92d-345f-a8a021996cdf.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.bid property" Url="html/e1979658-3bee-856c-d9fc-7f91f2049f2d.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.dateOfPayment property" Url="html/740fea3b-cd23-0b3b-e9f2-29ab1518db25.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.HostelTransactionViewModel constructor" Url="html/34228be8-651e-958d-6103-ef8515a798ed.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.paymentType property" Url="html/bfe09721-5b40-2eed-40a1-0d8d4c438e5a.htm" />
+  <HelpKINode Title="HostelTransactionViewModel.referenceNumber property" Url="html/b2a35819-8cb1-d29a-3879-23d9b7f83ea3.htm" />
+  <HelpKINode Title="hostelType property" Url="html/fa02a609-f57a-edbc-d9f7-9d5191dc532a.htm" />
   <HelpKINode Title="id property">
     <HelpKINode Title="AcHead.id Property " Url="html/93a9c84a-389f-f6a1-57f1-44b1bc57ced1.htm" />
     <HelpKINode Title="Course.id Property " Url="html/d01156e0-988d-e78f-afd4-a4d3d0c5991e.htm" />
@@ -482,15 +883,75 @@
     <HelpKINode Title="MessTransaction.id Property " Url="html/9aa64cf2-6753-645b-216c-0d894544d1c6.htm" />
     <HelpKINode Title="PaymentType.id Property " Url="html/1eceb2a4-6ea0-43d3-41fd-7d010a907a00.htm" />
     <HelpKINode Title="RoomType.id Property " Url="html/46a84dab-0dc3-56f6-9aa2-6ba2dfd9fb1a.htm" />
+    <HelpKINode Title="TransactionsViewModel.id Property " Url="html/42234611-8aa6-b2b0-a20a-5cd8086c0baa.htm" />
   </HelpKINode>
   <HelpKINode Title="Index method">
+    <HelpKINode Title="HomeController.Index Method " Url="html/c7bdd0b4-be88-ee02-6ae9-485b483a6157.htm" />
     <HelpKINode Title="HomeController.Index Method " Url="html/f69cd44f-6fd0-b866-19a0-fe6e54a29064.htm" />
     <HelpKINode Title="HomeController.Index Method " Url="html/77934b85-55d0-e82e-62b2-b4a0e482c841.htm" />
-    <HelpKINode Title="HomeController.Index Method " Url="html/c7bdd0b4-be88-ee02-6ae9-485b483a6157.htm" />
     <HelpKINode Title="ManagerController.Index Method " Url="html/af4861a0-2862-0388-e1c1-5c25affa44cb.htm" />
     <HelpKINode Title="UserController.Index Method " Url="html/483c530a-b000-986e-39cb-1201c9cf0f2e.htm" />
   </HelpKINode>
+  <HelpKINode Title="InfrastructureHelper class">
+    <HelpKINode Title="InfrastructureHelper Class" Url="html/bd9d2666-0b07-ec70-ba8b-1f38e0d0a7c3.htm" />
+    <HelpKINode Title="about InfrastructureHelper class" Url="html/bd9d2666-0b07-ec70-ba8b-1f38e0d0a7c3.htm" />
+    <HelpKINode Title="constructor" Url="html/75ad93fa-c318-84db-6bcb-dbabf81f0f49.htm" />
+    <HelpKINode Title="methods" Url="html/8eb3e38d-766a-8eef-726c-abe763b8e9ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InfrastructureHelper.AddHostel method" Url="html/a49ce36d-42b8-8cf7-9e27-87db792255ad.htm" />
+  <HelpKINode Title="InfrastructureHelper.AddRoom method" Url="html/37c0c596-e8b7-04e3-b2d2-f2e9693dd9a4.htm" />
+  <HelpKINode Title="InfrastructureHelper.GetHostelBlocks method" Url="html/fcd34dd8-07fe-3a96-485a-04ebfbcbac3e.htm" />
+  <HelpKINode Title="InfrastructureHelper.GetRoomTypes method" Url="html/3e04e4d5-1ed6-746a-05e3-fcc2ea92285b.htm" />
+  <HelpKINode Title="InfrastructureHelper.InfrastructureHelper constructor" Url="html/75ad93fa-c318-84db-6bcb-dbabf81f0f49.htm" />
+  <HelpKINode Title="InitClass method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.InitClass Method " Url="html/d8f8ce3f-d071-c869-8beb-c8ddc6c965ad.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.InitClass Method " Url="html/b444c893-3bde-b009-db55-a9610abfa0f9.htm" />
+    <HelpKINode Title="StudentReportDataSet.InitClass Method " Url="html/900b6e05-2497-af30-26ee-305c0bdff60a.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.InitClass Method " Url="html/3c333f63-e9ed-1647-59d1-4d2b9021d350.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.InitClass Method " Url="html/06e5ed4b-9c77-a756-54fe-68fb68277891.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InitializeDerivedDataSet method" Url="html/bee213bb-e244-6cc2-46cf-8ee0a93a4a5b.htm" />
+  <HelpKINode Title="InitVars method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.InitVars Method " Url="html/af7194ef-721b-2ef7-8c5b-2827f0c85759.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.InitVars Method " Url="html/6b363d9a-eb4d-7613-f7a1-1fbd220faceb.htm" />
+    <HelpKINode Title="StudentReportDataSet.InitVars Method " Url="html/b66a1430-254e-0b15-7c10-652f3b7c0499.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.InitVars Method " Url="html/f2c98736-ff41-13bb-d571-d536e067c3de.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.InitVars Method " Url="html/e665a817-687b-76a4-8d67-14a6310db22c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsAmountNull method" Url="html/8f3b5ae3-3bfb-4c5f-4f87-d3b9186bb80f.htm" />
+  <HelpKINode Title="IsAmount_DueNull method">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsAmount_DueNull Method " Url="html/ac245377-603d-7730-a2ac-cd1f8525facf.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsAmount_DueNull Method " Url="html/dc68b96e-22d4-b7c2-ed78-8082b58a35df.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsAmount_PaidNull method">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsAmount_PaidNull Method " Url="html/f45ed8ca-f436-75b0-f36b-890f9704ef88.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsAmount_PaidNull Method " Url="html/7f9e3d8f-7430-ef79-f45a-d6eaef59b502.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsBranchNull method" Url="html/1777e203-87e0-447b-04cd-a2353b1d9226.htm" />
+  <HelpKINode Title="IsCourseNull method" Url="html/7f818cde-a388-a4c9-eef5-5e6aaa312c3c.htm" />
+  <HelpKINode Title="IsDateOfBirthNull method" Url="html/2f1d70c2-e417-d742-029e-58166183c3b0.htm" />
+  <HelpKINode Title="IsDateOfJoinNull method" Url="html/c8428a19-a0f8-3ef9-9cf9-b8bad5498b39.htm" />
+  <HelpKINode Title="IsDateOfLeaveNull method" Url="html/8a0f31dd-3d04-d638-9b2d-72933936cb7d.htm" />
+  <HelpKINode Title="IsFee_AmountNull method" Url="html/d01fef17-5d12-7725-1ccc-0bb814cd2b2b.htm" />
+  <HelpKINode Title="IsFee_TypeNull method" Url="html/8343c03f-d701-66f5-ef08-8f27386bd491.htm" />
+  <HelpKINode Title="IsGenderNull method" Url="html/a8dc15e5-7d71-cac5-f1b9-e44e0b7495c9.htm" />
+  <HelpKINode Title="IsHostelBlockNull method" Url="html/f0ef4cf4-a518-94cf-00b1-a80ba80a9432.htm" />
+  <HelpKINode Title="IsMonthNull method" Url="html/53a65b78-0b70-e495-8ff9-466b509ac029.htm" />
+  <HelpKINode Title="IsNameNull method" Url="html/7e84282a-9e1b-a8d6-a526-b8ac67fd3395.htm" />
+  <HelpKINode Title="IsRoomNumberNull method" Url="html/5d42d326-805d-83e9-c226-6e8132286427.htm" />
+  <HelpKINode Title="IsSemNull method" Url="html/543becb2-9575-c4ab-b77c-e85be1e3d2d7.htm" />
   <HelpKINode Title="IsUsnRequired method" Url="html/b02c442a-dea8-c5ae-0020-13d235fc377b.htm" />
+  <HelpKINode Title="IsYearNull method">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsYearNull Method " Url="html/e3c2d8c0-bf4c-1106-7275-cead139a29b3.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsYearNull Method " Url="html/07aed96d-e1ae-3ebc-993d-5b23935ccbcb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Item property">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.Item Property " Url="html/c52b83d9-5403-eae0-9aea-3f22e91c6239.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Item Property " Url="html/5a167405-af58-bf15-a0ba-f97e705bc262.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Item Property " Url="html/40c01092-f740-a126-7d07-8902acd0beba.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.Item Property " Url="html/622ea405-1e45-44c9-fea2-5623764cc13d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="label property" Url="html/86d43c21-3a40-ccdb-f2c7-96c866080255.htm" />
   <HelpKINode Title="LoginViewModel class">
     <HelpKINode Title="LoginViewModel Class" Url="html/015cafe2-5fed-251b-4350-9a3969d9879f.htm" />
     <HelpKINode Title="about LoginViewModel class" Url="html/015cafe2-5fed-251b-4350-9a3969d9879f.htm" />
@@ -503,8 +964,8 @@
   <HelpKINode Title="LoginViewModel.ReturnUrl property" Url="html/6e150d87-740c-d874-da1f-93942988dd5a.htm" />
   <HelpKINode Title="LoginViewModel.UserId property" Url="html/c4d902d0-cced-89e8-fed9-77048b4f255d.htm" />
   <HelpKINode Title="Logout method">
-    <HelpKINode Title="HomeController.Logout Method " Url="html/bd410ddb-aba8-310c-5de0-72412f99ecc9.htm" />
     <HelpKINode Title="HomeController.Logout Method " Url="html/cc058d8e-c7e4-a7ce-145f-236a298acd63.htm" />
+    <HelpKINode Title="HomeController.Logout Method " Url="html/bd410ddb-aba8-310c-5de0-72412f99ecc9.htm" />
     <HelpKINode Title="ManagerController.Logout Method " Url="html/237a94ad-cd14-bb3e-2f8e-de628d8ddf31.htm" />
     <HelpKINode Title="UserController.Logout Method " Url="html/d9043758-814c-49e9-10cb-9701d857d774.htm" />
   </HelpKINode>
@@ -517,22 +978,50 @@
   </HelpKINode>
   <HelpKINode Title="ManagerController.ChangeFees method" Url="html/10483c2f-7fcd-3857-4d39-9f25efa2e8a9.htm" />
   <HelpKINode Title="ManagerController.ChangeMessFees method" Url="html/a6701f41-576f-4940-b6f3-0938bfedce51.htm" />
-  <HelpKINode Title="ManagerController.GenerateReport method" Url="html/7945bdca-c8b0-fdbe-c1b1-c6d5bacfe3d7.htm" />
-  <HelpKINode Title="ManagerController.GenerateReportByAmount method" Url="html/c1224aec-ad7c-fc2c-712d-789d9015b2dd.htm" />
-  <HelpKINode Title="ManagerController.GenerateReportByBID method" Url="html/b62ca713-cae2-0a24-0768-f9e699ff1f1a.htm" />
-  <HelpKINode Title="ManagerController.GenerateReportByDate method" Url="html/a5c3ccdf-2f8f-1613-45fe-c3c6c14637a7.htm" />
-  <HelpKINode Title="ManagerController.GenerateReportByDropDown method" Url="html/c4aa03c8-5738-6364-78a1-6360d7346f9e.htm" />
   <HelpKINode Title="ManagerController.Index method" Url="html/af4861a0-2862-0388-e1c1-5c25affa44cb.htm" />
   <HelpKINode Title="ManagerController.Logout method" Url="html/237a94ad-cd14-bb3e-2f8e-de628d8ddf31.htm" />
   <HelpKINode Title="ManagerController.ManagerController constructor" Url="html/f1bda345-d43d-57a3-2cc6-44172125b6bc.htm" />
   <HelpKINode Title="ManagerController.UpdateFees method" Url="html/9f05c9f8-f432-53b5-374b-7151f8028ee8.htm" />
-  <HelpKINode Title="maxOccupancy property" Url="html/97d19e30-e27f-aa4f-06e2-b38136eedec2.htm" />
+  <HelpKINode Title="maxOccupancy property">
+    <HelpKINode Title="Room.maxOccupancy Property " Url="html/97d19e30-e27f-aa4f-06e2-b38136eedec2.htm" />
+    <HelpKINode Title="RoomMetaData.maxOccupancy Property " Url="html/49ddb61a-de47-1f29-ed55-aa5f0ccafa13.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MeeFee property" Url="html/7d96659c-a727-4cb8-24df-277271a29cc8.htm" />
+  <HelpKINode Title="MeeFeeDataTable class">
+    <HelpKINode Title="events" Url="html/d6c6d232-db4f-01d8-4e04-068d9942d0d7.htm" />
+    <HelpKINode Title="fields" Url="html/fbcec774-6b0e-3b68-abc1-2a694cc7a288.htm" />
+    <HelpKINode Title="methods" Url="html/11ef7f26-fea9-1a58-cb35-dff89e674ef7.htm" />
+    <HelpKINode Title="properties" Url="html/5f2f9900-2404-fdf5-0971-6695f939c245.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MeeFeeRow class">
+    <HelpKINode Title="fields" Url="html/d5f259da-f7cc-7ff0-b433-9b4244c8f2fb.htm" />
+    <HelpKINode Title="methods" Url="html/a676abc2-fa73-ef44-7794-60ffc693cdd8.htm" />
+    <HelpKINode Title="properties" Url="html/9c0b6984-cb03-3197-869d-6c238151fdd4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MeeFeeRowChanged event" Url="html/e81f3508-7e6c-93ea-0a71-a0ab951a49bf.htm" />
+  <HelpKINode Title="MeeFeeRowChangeEvent class">
+    <HelpKINode Title="methods" Url="html/24423688-d5ad-5825-5060-74ed99154472.htm" />
+    <HelpKINode Title="properties" Url="html/229bcf13-63a7-9d96-2595-ed303dab2f76.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MeeFeeRowChanging event" Url="html/99112059-d1ea-b493-f32a-b8a7c7f3f77c.htm" />
+  <HelpKINode Title="MeeFeeRowDeleted event" Url="html/cfad2b37-6b34-570b-56d6-7d77592ddf54.htm" />
+  <HelpKINode Title="MeeFeeRowDeleting event" Url="html/4fb758cb-1799-b7ed-d108-c8e29ad4973f.htm" />
   <HelpKINode Title="MeetDevelopers method">
-    <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/047cbaf6-9105-1beb-8245-caf2286bdd4b.htm" />
     <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/4a7f4d69-9f49-9b97-593c-0826268e4c61.htm" />
     <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/80177972-cf84-ae53-8dc7-3d38690f32a2.htm" />
+    <HelpKINode Title="HomeController.MeetDevelopers Method " Url="html/047cbaf6-9105-1beb-8245-caf2286bdd4b.htm" />
     <HelpKINode Title="UserController.MeetDevelopers Method " Url="html/ee1bb75b-44db-1bc4-2ee3-008dac033686.htm" />
   </HelpKINode>
+  <HelpKINode Title="MessAbsenceViewModel class">
+    <HelpKINode Title="MessAbsenceViewModel Class" Url="html/d13d56a3-7398-8d4c-aca6-6a9669768bea.htm" />
+    <HelpKINode Title="about MessAbsenceViewModel class" Url="html/d13d56a3-7398-8d4c-aca6-6a9669768bea.htm" />
+    <HelpKINode Title="constructor" Url="html/2e1de88a-913b-0259-c22a-a5ac0405ec92.htm" />
+    <HelpKINode Title="methods" Url="html/f843c087-c585-992a-d545-0cca48381a90.htm" />
+    <HelpKINode Title="properties" Url="html/d5329938-5ff4-481f-a1e7-2810310c1803.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MessAbsenceViewModel.bid property" Url="html/44a438f0-cdab-eb24-2748-5df609d74a1d.htm" />
+  <HelpKINode Title="MessAbsenceViewModel.MessAbsenceViewModel constructor" Url="html/2e1de88a-913b-0259-c22a-a5ac0405ec92.htm" />
+  <HelpKINode Title="MessAbsenceViewModel.numDaysAbsent property" Url="html/a91f1361-c49d-6ffa-92a4-1a81bd4b88c8.htm" />
   <HelpKINode Title="MessBill class">
     <HelpKINode Title="MessBill Class" Url="html/5609b402-74e7-be8e-00aa-32b4880bba7e.htm" />
     <HelpKINode Title="about MessBill class" Url="html/5609b402-74e7-be8e-00aa-32b4880bba7e.htm" />
@@ -554,6 +1043,29 @@
     <HelpKINode Title="HostelManagementEntities1.MessBills Property " Url="html/e3ba8a9b-315b-f741-1eb5-604086b2e2d2.htm" />
     <HelpKINode Title="Student.MessBills Property " Url="html/13e0fec1-0747-12eb-0a19-2ecc0fa3607c.htm" />
   </HelpKINode>
+  <HelpKINode Title="MessChargesViewModel class">
+    <HelpKINode Title="MessChargesViewModel Class" Url="html/a1e9e9f8-56c1-2167-846d-c026293a5f2a.htm" />
+    <HelpKINode Title="about MessChargesViewModel class" Url="html/a1e9e9f8-56c1-2167-846d-c026293a5f2a.htm" />
+    <HelpKINode Title="constructor" Url="html/ba3ecf93-ea8f-594b-0357-fd7ed04a5fd1.htm" />
+    <HelpKINode Title="methods" Url="html/d31a1a45-ae67-37d2-b11e-e6c8562a095e.htm" />
+    <HelpKINode Title="properties" Url="html/d40fdbf2-256b-9261-0ed3-64ebd4251f47.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MessChargesViewModel.dailymess property" Url="html/9552f1b4-e40b-7119-bc0f-2703394e9b7f.htm" />
+  <HelpKINode Title="MessChargesViewModel.MessChargesViewModel constructor" Url="html/ba3ecf93-ea8f-594b-0357-fd7ed04a5fd1.htm" />
+  <HelpKINode Title="MessFeeDueViewModel class">
+    <HelpKINode Title="MessFeeDueViewModel Class" Url="html/cf6b6bd0-a082-7b78-2bff-1d3d87031269.htm" />
+    <HelpKINode Title="about MessFeeDueViewModel class" Url="html/cf6b6bd0-a082-7b78-2bff-1d3d87031269.htm" />
+    <HelpKINode Title="constructor" Url="html/16fb6453-9b9d-7821-78ac-a93b0fd3a2ad.htm" />
+    <HelpKINode Title="methods" Url="html/fdad9f07-b068-9778-e831-fc8671466dc1.htm" />
+    <HelpKINode Title="properties" Url="html/71363ded-2e9c-e550-3b29-388b06fbc408.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MessFeeDueViewModel.academicYear property" Url="html/157d0d6b-99c9-8e52-e4b1-0dfbf1eeebff.htm" />
+  <HelpKINode Title="MessFeeDueViewModel.amount property" Url="html/74089c99-3a7b-8072-a64d-122c042d8931.htm" />
+  <HelpKINode Title="MessFeeDueViewModel.amountDue property" Url="html/74718027-7001-b6ce-d001-9bab79ea3b03.htm" />
+  <HelpKINode Title="MessFeeDueViewModel.amountPaid property" Url="html/84cbe779-08ac-a204-d81d-9c4fd4eadcbb.htm" />
+  <HelpKINode Title="MessFeeDueViewModel.MessFeeDueViewModel constructor" Url="html/16fb6453-9b9d-7821-78ac-a93b0fd3a2ad.htm" />
+  <HelpKINode Title="MessFeeDueViewModel.month property" Url="html/d3031b13-c734-8803-8cf5-6afbc9ad9be0.htm" />
+  <HelpKINode Title="MessFeeDueViewModel.numberOfDays property" Url="html/417a7163-bb9d-969c-ef14-6d52f0851612.htm" />
   <HelpKINode Title="MessTransaction class">
     <HelpKINode Title="MessTransaction Class" Url="html/faf64add-d412-b80b-b51f-639379dc43ea.htm" />
     <HelpKINode Title="about MessTransaction class" Url="html/faf64add-d412-b80b-b51f-639379dc43ea.htm" />
@@ -581,21 +1093,90 @@
     <HelpKINode Title="PaymentType.MessTransactions Property " Url="html/3b0559dc-12c0-4e21-9efa-c3b7cb356ca3.htm" />
     <HelpKINode Title="Student.MessTransactions Property " Url="html/7cade502-0bdb-2bff-0623-dbf730597477.htm" />
   </HelpKINode>
-  <HelpKINode Title="month property" Url="html/2a0d8106-bba0-8da5-aafd-f052dfc7e47c.htm" />
+  <HelpKINode Title="MessTransactionViewModel class">
+    <HelpKINode Title="MessTransactionViewModel Class" Url="html/13d85559-136c-95e9-4e19-da019645e4ac.htm" />
+    <HelpKINode Title="about MessTransactionViewModel class" Url="html/13d85559-136c-95e9-4e19-da019645e4ac.htm" />
+    <HelpKINode Title="constructor" Url="html/e45908a3-86db-fa95-d56b-3ccc70e8226c.htm" />
+    <HelpKINode Title="methods" Url="html/8fff1439-70f9-2ade-d168-337fb5f9f36c.htm" />
+    <HelpKINode Title="properties" Url="html/c9a193fd-856c-22dd-e7af-5dc7a2f6d4f6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MessTransactionViewModel.academicYear property" Url="html/3aa3e157-00c5-e35b-b76a-87784a79a13b.htm" />
+  <HelpKINode Title="MessTransactionViewModel.amount property" Url="html/b94eb7f5-1a48-960b-c07a-9b4159468395.htm" />
+  <HelpKINode Title="MessTransactionViewModel.bankName property" Url="html/c636e3b1-5486-4c4e-f450-757614d32dc6.htm" />
+  <HelpKINode Title="MessTransactionViewModel.bid property" Url="html/981d85c0-7476-1f3a-fe90-908d09563dbe.htm" />
+  <HelpKINode Title="MessTransactionViewModel.dateOfPayment property" Url="html/18f1ff17-03d3-4ac4-c1c9-8f71f72fa388.htm" />
+  <HelpKINode Title="MessTransactionViewModel.MessTransactionViewModel constructor" Url="html/e45908a3-86db-fa95-d56b-3ccc70e8226c.htm" />
+  <HelpKINode Title="MessTransactionViewModel.month property" Url="html/ecc9d0d8-e37a-f7b7-762b-5c30dac0e32c.htm" />
+  <HelpKINode Title="MessTransactionViewModel.paymentType property" Url="html/5d4868a0-f3f0-352c-b79e-9f0ba48888b6.htm" />
+  <HelpKINode Title="MessTransactionViewModel.referenceNumber property" Url="html/c9c2b185-a241-42a2-8056-bc5f287bed36.htm" />
+  <HelpKINode Title="month property">
+    <HelpKINode Title="MessBill.month Property " Url="html/2a0d8106-bba0-8da5-aafd-f052dfc7e47c.htm" />
+    <HelpKINode Title="MessFeeDueViewModel.month Property " Url="html/d3031b13-c734-8803-8cf5-6afbc9ad9be0.htm" />
+    <HelpKINode Title="MessTransactionViewModel.month Property " Url="html/ecc9d0d8-e37a-f7b7-762b-5c30dac0e32c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Month property" Url="html/13125188-35e8-39bf-cba8-d29509f3db18.htm" />
+  <HelpKINode Title="MonthColumn property" Url="html/197df06e-07c8-b253-8851-65147512be88.htm" />
   <HelpKINode Title="MvcApplication class">
     <HelpKINode Title="MvcApplication Class" Url="html/0a65f306-3842-434b-3296-602a0fa694bb.htm" />
     <HelpKINode Title="about MvcApplication class" Url="html/0a65f306-3842-434b-3296-602a0fa694bb.htm" />
     <HelpKINode Title="constructor" Url="html/97c0845e-b318-fb81-a23c-eeff3f09bd45.htm" />
     <HelpKINode Title="events" Url="html/5335deed-e78b-883e-42f8-5ea09b25e46b.htm" />
+    <HelpKINode Title="fields" Url="html/2d25fc4d-6523-7d1c-62c7-f9e5c7267487.htm" />
     <HelpKINode Title="methods" Url="html/8d805146-4392-9726-0c8f-d1778aac1f3a.htm" />
     <HelpKINode Title="properties" Url="html/1873f57e-f55b-5003-bf4a-743adde3c023.htm" />
   </HelpKINode>
   <HelpKINode Title="MvcApplication.Application_Start method" Url="html/bcac6f5c-1cd6-00dc-333b-5f957fbe27c9.htm" />
   <HelpKINode Title="MvcApplication.MvcApplication constructor" Url="html/97c0845e-b318-fb81-a23c-eeff3f09bd45.htm" />
-  <HelpKINode Title="name property" Url="html/3f540ace-3d9c-31fa-b25b-516491ea12ce.htm" />
+  <HelpKINode Title="name property">
+    <HelpKINode Title="DisplayStudentViewModel.name Property " Url="html/5a240277-3939-9a1a-00c4-dc2e885f153f.htm" />
+    <HelpKINode Title="Student.name Property " Url="html/3f540ace-3d9c-31fa-b25b-516491ea12ce.htm" />
+    <HelpKINode Title="StudentViewModel.name Property " Url="html/d0d21677-42ba-cdc9-d80c-e1002bab6813.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Name property" Url="html/a6ab44c6-c17a-03bd-c47a-d2463190ffc8.htm" />
+  <HelpKINode Title="NameColumn property" Url="html/3cbcd89a-c9a5-1e76-ec09-23b0a9598ef4.htm" />
+  <HelpKINode Title="NewAllotmentRow method" Url="html/bcb8a7f8-aa67-c9d0-d201-afc84429f87c.htm" />
+  <HelpKINode Title="NewHostelFeeRow method" Url="html/4ed8f9e6-6dfb-5079-bc5f-905deb6f4124.htm" />
+  <HelpKINode Title="NewMeeFeeRow method" Url="html/5e08a63c-5b5a-8595-e4ca-b3290fe7d754.htm" />
+  <HelpKINode Title="NewRowFromBuilder method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.NewRowFromBuilder Method " Url="html/58eab7e0-1c69-b688-c086-dfb4128ebf26.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.NewRowFromBuilder Method " Url="html/3e01d0fb-5c00-e4e1-2fa3-665ef7b0796f.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.NewRowFromBuilder Method " Url="html/e8f825e6-7eb2-e6af-acdc-3d3742f29fe3.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.NewRowFromBuilder Method " Url="html/7b926cfb-a4f2-9a4a-e12f-8c4bc49f21d0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NewStudentRow method" Url="html/3005ef37-feca-e49e-f7fd-e8eaa00d91da.htm" />
+  <HelpKINode Title="numberOfDays property" Url="html/417a7163-bb9d-969c-ef14-6d52f0851612.htm" />
   <HelpKINode Title="numDays property" Url="html/0112bb6c-47da-d799-6ce5-6392846f9a5b.htm" />
-  <HelpKINode Title="occupantType property" Url="html/073905b8-7848-64b2-f7db-6f4fb3cce02f.htm" />
+  <HelpKINode Title="numDaysAbsent property" Url="html/a91f1361-c49d-6ffa-92a4-1a81bd4b88c8.htm" />
+  <HelpKINode Title="occupantType property">
+    <HelpKINode Title="AddHostelViewModel.occupantType Property " Url="html/c5d09c57-b126-71fe-8516-ad5f48cd2098.htm" />
+    <HelpKINode Title="Hostel.occupantType Property " Url="html/073905b8-7848-64b2-f7db-6f4fb3cce02f.htm" />
+  </HelpKINode>
   <HelpKINode Title="OnModelCreating method" Url="html/54d40623-651a-e4c4-cd18-117cfe75e109.htm" />
+  <HelpKINode Title="OnRowChanged method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowChanged Method " Url="html/d8b0623e-a9c3-e562-0df4-3ef5209a8149.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowChanged Method " Url="html/ac7a35d2-b8e6-0274-d53d-cf94194b685b.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowChanged Method " Url="html/ad86f6bb-51a5-a943-1c2c-43bc7cd28fc0.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowChanged Method " Url="html/a3ead54e-621c-3965-c1b0-176a4135e263.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OnRowChanging method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowChanging Method " Url="html/6ece738f-0f1f-e063-65ee-614512cc2de3.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowChanging Method " Url="html/266e9d8a-d7a3-5e14-0bcc-253797e5d201.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowChanging Method " Url="html/d4a7ee93-d6f2-a3e2-b0cc-94a4cdba4892.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowChanging Method " Url="html/3a3588c8-949d-1fd5-cd62-b19bfac52cf0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OnRowDeleted method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowDeleted Method " Url="html/54ff1dca-04c6-f218-35c4-7f745403c12a.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowDeleted Method " Url="html/9c5bfe57-4f76-757e-543c-984cf9eb33cd.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowDeleted Method " Url="html/342a6407-4497-d485-7370-29eaf26adae7.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowDeleted Method " Url="html/198f5f6b-9aca-fada-7e54-24c65d63693e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OnRowDeleting method">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowDeleting Method " Url="html/82e58e9c-de7e-f5ac-fd14-033d5ca10901.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowDeleting Method " Url="html/1d0f3f7d-f0c1-ceae-48e5-dc4126c73481.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowDeleting Method " Url="html/2f14a4f3-fbad-7cf2-614f-7ef3b12c0717.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowDeleting Method " Url="html/b736b297-9cd6-5f13-9b98-ac9fdf7b50d0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="other property" Url="html/9cff8c01-54a2-1ccb-b218-789204f2982d.htm" />
   <HelpKINode Title="Password property">
     <HelpKINode Title="AddUserViewModel.Password Property " Url="html/476291af-0816-443c-67f6-a20d34a76e12.htm" />
     <HelpKINode Title="LoginViewModel.Password Property " Url="html/84cea04e-5d86-af19-a9b6-6cb73de628b3.htm" />
@@ -609,8 +1190,13 @@
     <HelpKINode Title="properties" Url="html/5f21e2f6-5ffc-6214-98ab-7131d0a65549.htm" />
   </HelpKINode>
   <HelpKINode Title="PaymentType property">
-    <HelpKINode Title="HostelTransaction.PaymentType Property " Url="html/20795e72-1d02-4858-c6d7-22f9ef84a415.htm" />
     <HelpKINode Title="MessTransaction.PaymentType Property " Url="html/7df2beba-490a-8433-6037-b23acfae38aa.htm" />
+    <HelpKINode Title="HostelTransaction.PaymentType Property " Url="html/20795e72-1d02-4858-c6d7-22f9ef84a415.htm" />
+  </HelpKINode>
+  <HelpKINode Title="paymentType property">
+    <HelpKINode Title="MessTransactionViewModel.paymentType Property " Url="html/5d4868a0-f3f0-352c-b79e-9f0ba48888b6.htm" />
+    <HelpKINode Title="TransactionsViewModel.paymentType Property " Url="html/48d0ffe5-a7e7-bb10-4e0b-00fda7386349.htm" />
+    <HelpKINode Title="HostelTransactionViewModel.paymentType Property " Url="html/bfe09721-5b40-2eed-40a1-0d8d4c438e5a.htm" />
   </HelpKINode>
   <HelpKINode Title="PaymentType.HostelTransactions property" Url="html/cb667cf8-0173-9058-8243-95130c24c5d5.htm" />
   <HelpKINode Title="PaymentType.id property" Url="html/1eceb2a4-6ea0-43d3-41fd-7d010a907a00.htm" />
@@ -637,11 +1223,16 @@
     <HelpKINode Title="UserController.PerformRemoveStudent Method " Url="html/e4da8134-dcee-4093-2fec-9c3ee84635b2.htm" />
   </HelpKINode>
   <HelpKINode Title="PerformRoomChange method" Url="html/8e6f08ee-1b07-6d1b-d55e-1276caf7eed0.htm" />
+  <HelpKINode Title="ReadXmlSerializable method" Url="html/c54135cb-6a23-f5ea-ab33-53c6460b52de.htm" />
   <HelpKINode Title="receipt property">
     <HelpKINode Title="HostelTransaction.receipt Property " Url="html/de20489a-1f3a-8cb2-0bfa-118cc588539d.htm" />
     <HelpKINode Title="MessTransaction.receipt Property " Url="html/858937ca-98c0-756b-e23c-299d5104c74a.htm" />
   </HelpKINode>
   <HelpKINode Title="recurr property" Url="html/e3bee7fe-603f-8b28-728c-703c46e8ac92.htm" />
+  <HelpKINode Title="referenceNumber property">
+    <HelpKINode Title="HostelTransactionViewModel.referenceNumber Property " Url="html/b2a35819-8cb1-d29a-3879-23d9b7f83ea3.htm" />
+    <HelpKINode Title="MessTransactionViewModel.referenceNumber Property " Url="html/c9c2b185-a241-42a2-8056-bc5f287bed36.htm" />
+  </HelpKINode>
   <HelpKINode Title="RegisterArea method">
     <HelpKINode Title="AdministrationAreaRegistration.RegisterArea Method " Url="html/ab1c714b-c68c-f70d-2616-2cdf85f64928.htm" />
     <HelpKINode Title="ArchiveAreaRegistration.RegisterArea Method " Url="html/195008df-25d9-f394-ebef-cab39e4d653b.htm" />
@@ -660,8 +1251,34 @@
   <HelpKINode Title="RegisterModel.Role property" Url="html/f4fcacdc-e180-fc89-2756-a7a1cb4801c5.htm" />
   <HelpKINode Title="RegisterModel.UserId property" Url="html/a1773745-9f7a-673a-c1f0-a8cee092bc35.htm" />
   <HelpKINode Title="RegisterRoutes method" Url="html/f1a08d65-9f2b-99d3-7626-266fb493954a.htm" />
+  <HelpKINode Title="Relations property" Url="html/b90847dd-5129-4838-a0a3-56807ea7b23b.htm" />
+  <HelpKINode Title="RemoveAllotmentRow method" Url="html/45b00fec-4bad-95c9-93ab-b54f160caa5b.htm" />
+  <HelpKINode Title="RemoveHostelFeeRow method" Url="html/90a3d0e9-9a15-acbb-5340-622e7cccd335.htm" />
+  <HelpKINode Title="RemoveMeeFeeRow method" Url="html/c6e1bb4b-9fe5-1626-66cd-9906a84ba769.htm" />
   <HelpKINode Title="RemoveStudent method" Url="html/b3327146-d2f2-0d7e-f7d5-396278507a5b.htm" />
+  <HelpKINode Title="RemoveStudentRow method" Url="html/68545e1e-8254-f423-10cd-7de7d1d1dd4e.htm" />
+  <HelpKINode Title="RemoveStudentViewModel class">
+    <HelpKINode Title="RemoveStudentViewModel Class" Url="html/543bc452-cff0-cfd1-658c-f3b1559a834b.htm" />
+    <HelpKINode Title="about RemoveStudentViewModel class" Url="html/543bc452-cff0-cfd1-658c-f3b1559a834b.htm" />
+    <HelpKINode Title="constructor" Url="html/256e22a2-fb71-6a23-51ed-a191661588bc.htm" />
+    <HelpKINode Title="methods" Url="html/f583cfc8-54f3-25bc-51de-4aa001080752.htm" />
+    <HelpKINode Title="properties" Url="html/7fdb73ae-ced8-b0a4-49c0-b5ed16af8cfc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RemoveStudentViewModel.bid property" Url="html/7c860c1b-5bf9-2fb8-90d4-9314d0dd4dfb.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.depRefund property" Url="html/49e4ee03-98ef-e3fd-006a-d79a6e3cd387.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.depRefundRef property" Url="html/f7ee30e1-881f-dc4e-3d33-3093f760948f.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.fixRefund property" Url="html/289321b7-8f16-af39-cb60-ce31519d03bc.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.fixRefundRef property" Url="html/0e4deb9b-66c1-6393-5103-0800bb874a98.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.RemoveStudentViewModel constructor" Url="html/256e22a2-fb71-6a23-51ed-a191661588bc.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.rentRefund property" Url="html/d0475650-e26c-b8cb-8a64-b0e4e13ce2a2.htm" />
+  <HelpKINode Title="RemoveStudentViewModel.rentRefundRef property" Url="html/66151d4a-dffa-df6b-9215-1df3d070d523.htm" />
   <HelpKINode Title="RemoveUser method" Url="html/146bc0e5-6890-5974-c382-ffa31b636fbc.htm" />
+  <HelpKINode Title="rent property">
+    <HelpKINode Title="HostelChargesViewModel.rent Property " Url="html/e6b1a3f7-f2f9-a943-5a61-9f008b01a666.htm" />
+    <HelpKINode Title="StudentDueSummaryViewModel.rent Property " Url="html/6a3e6c48-d6b4-3a0a-6f4f-621789a34fbf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="rentRefund property" Url="html/d0475650-e26c-b8cb-8a64-b0e4e13ce2a2.htm" />
+  <HelpKINode Title="rentRefundRef property" Url="html/66151d4a-dffa-df6b-9215-1df3d070d523.htm" />
   <HelpKINode Title="ReportAbsenceForMess method">
     <HelpKINode Title="TransactionHelper.ReportAbsenceForMess Method " Url="html/c33c2fd4-b6fe-c85a-1c7a-20402eed3075.htm" />
     <HelpKINode Title="UserController.ReportAbsenceForMess Method " Url="html/3e98d5c3-6aaf-24d2-e06a-46ab1b1e36ac.htm" />
@@ -677,6 +1294,7 @@
   <HelpKINode Title="ReportHelper.GetAllTransactions method" Url="html/ce87e12c-7e39-2686-9d11-f9425a4152be.htm" />
   <HelpKINode Title="ReportHelper.GetTransactionsByAccountHead method" Url="html/79eb1e06-cb70-1211-1a13-823ac395c86b.htm" />
   <HelpKINode Title="ReportHelper.GetTransactionsByAmountRange method" Url="html/259aff9a-b929-4c18-2972-1fa7f84771cb.htm" />
+  <HelpKINode Title="ReportHelper.GetTransactionsByBidList method" Url="html/d31c0811-3466-78b1-ad73-43f4ecae22fa.htm" />
   <HelpKINode Title="ReportHelper.GetTransactionsByCourse method" Url="html/4ed4a96f-ba4a-4154-2ad5-4f725f1c950d.htm" />
   <HelpKINode Title="ReportHelper.GetTransactionsByDateRange method" Url="html/6174ef48-f467-daff-3190-7f60c5018db9.htm" />
   <HelpKINode Title="ReportHelper.GetTransactionsByGender method" Url="html/ac08535d-0a48-cf33-408c-e17803659d06.htm" />
@@ -697,6 +1315,7 @@
     <HelpKINode Title="properties" Url="html/ee6bbd45-0c14-930d-7928-65cb10a974ba.htm" />
   </HelpKINode>
   <HelpKINode Title="Room property" Url="html/ff367392-7462-e657-41db-c2a8b0aa0d22.htm" />
+  <HelpKINode Title="room property" Url="html/b668d4a6-0017-6014-a367-228bd2e5dacd.htm" />
   <HelpKINode Title="Room.Allotments property" Url="html/2f723ba1-ef6a-47bd-19ab-2335c47478a6.htm" />
   <HelpKINode Title="Room.currentOccupancy property" Url="html/e0c867f6-2fc1-6b2f-23dc-5fbe0ce7181d.htm" />
   <HelpKINode Title="Room.Hostel property" Url="html/2fac3e09-a82e-1891-31d5-566918ef8704.htm" />
@@ -706,8 +1325,28 @@
   <HelpKINode Title="Room.roomNumber property" Url="html/a8d8fa06-0002-f33d-17b1-572a9a8a714d.htm" />
   <HelpKINode Title="Room.roomType property" Url="html/03bab07e-95dd-019c-e3db-de14e816fddd.htm" />
   <HelpKINode Title="Room.RoomType1 property" Url="html/df08e5ec-dd05-93a2-a435-fdb9b81b1292.htm" />
+  <HelpKINode Title="RoomMetaData class">
+    <HelpKINode Title="RoomMetaData Class" Url="html/3975c785-454c-f410-a3cb-6e8145ec802f.htm" />
+    <HelpKINode Title="about RoomMetaData class" Url="html/3975c785-454c-f410-a3cb-6e8145ec802f.htm" />
+    <HelpKINode Title="constructor" Url="html/c8b06a2f-843d-b9e8-b148-c458298e837b.htm" />
+    <HelpKINode Title="methods" Url="html/19caf976-e526-b4b7-6e1b-f9a80e6f4651.htm" />
+    <HelpKINode Title="properties" Url="html/0087d12f-9ac1-1000-468c-d858a7a24269.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RoomMetaData.hostelBlockNumber property" Url="html/e20540f8-3181-559e-7475-431db86d855d.htm" />
+  <HelpKINode Title="RoomMetaData.maxOccupancy property" Url="html/49ddb61a-de47-1f29-ed55-aa5f0ccafa13.htm" />
+  <HelpKINode Title="RoomMetaData.RoomMetaData constructor" Url="html/c8b06a2f-843d-b9e8-b148-c458298e837b.htm" />
+  <HelpKINode Title="RoomMetaData.roomNumber property" Url="html/72b0abc6-62a9-4afb-930d-3e7a56810a69.htm" />
+  <HelpKINode Title="RoomMetaData.roomType property" Url="html/ee71a5f7-78d7-6331-0db6-c7921ea9b839.htm" />
   <HelpKINode Title="roomNum property" Url="html/b493ecff-c75e-6528-2d25-c01e2597b150.htm" />
-  <HelpKINode Title="roomNumber property" Url="html/a8d8fa06-0002-f33d-17b1-572a9a8a714d.htm" />
+  <HelpKINode Title="roomNumber property">
+    <HelpKINode Title="AllotmentDisplayViewModel.roomNumber Property " Url="html/7fe46545-ff77-b62a-6e49-0fa0bf884557.htm" />
+    <HelpKINode Title="ChangeRoomViewModel.roomNumber Property " Url="html/3990194b-5986-864e-cf1b-ec2a7ac52d76.htm" />
+    <HelpKINode Title="Room.roomNumber Property " Url="html/a8d8fa06-0002-f33d-17b1-572a9a8a714d.htm" />
+    <HelpKINode Title="RoomMetaData.roomNumber Property " Url="html/72b0abc6-62a9-4afb-930d-3e7a56810a69.htm" />
+    <HelpKINode Title="StudentViewModel.roomNumber Property " Url="html/0a2391ff-c331-cd54-07b0-d7bc4ba739eb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RoomNumber property" Url="html/3c8cdf7f-3bc8-2be8-1b7a-e7127230ab68.htm" />
+  <HelpKINode Title="RoomNumberColumn property" Url="html/0101060c-72ed-9f85-e4c2-4164264a701a.htm" />
   <HelpKINode Title="Rooms property">
     <HelpKINode Title="Hostel.Rooms Property " Url="html/e03c1a08-36f0-fdb7-4d87-2640f9df47d5.htm" />
     <HelpKINode Title="HostelManagementEntities1.Rooms Property " Url="html/385b006c-7bc5-df67-d8a6-b41db1cc38c3.htm" />
@@ -720,7 +1359,14 @@
     <HelpKINode Title="methods" Url="html/977b2ef1-fded-1758-2234-206efedcf2e6.htm" />
     <HelpKINode Title="properties" Url="html/da106e5b-aad4-8cad-b307-44a9c45bad57.htm" />
   </HelpKINode>
-  <HelpKINode Title="roomType property" Url="html/03bab07e-95dd-019c-e3db-de14e816fddd.htm" />
+  <HelpKINode Title="roomType property">
+    <HelpKINode Title="AllotmentDisplayViewModel.roomType Property " Url="html/eb48d904-a4e5-a020-efd5-893c698a29f1.htm" />
+    <HelpKINode Title="ChangeRoomViewModel.roomType Property " Url="html/f789f413-0593-d7a7-156a-87ac47737e91.htm" />
+    <HelpKINode Title="Room.roomType Property " Url="html/03bab07e-95dd-019c-e3db-de14e816fddd.htm" />
+    <HelpKINode Title="RoomMetaData.roomType Property " Url="html/ee71a5f7-78d7-6331-0db6-c7921ea9b839.htm" />
+    <HelpKINode Title="SearchViewModel.roomType Property " Url="html/7c90dddd-ba6c-8a78-14cd-8124a61f14e2.htm" />
+    <HelpKINode Title="StudentViewModel.roomType Property " Url="html/a62bb680-18d1-a555-25e5-c20fdc1093f9.htm" />
+  </HelpKINode>
   <HelpKINode Title="RoomType.id property" Url="html/46a84dab-0dc3-56f6-9aa2-6ba2dfd9fb1a.htm" />
   <HelpKINode Title="RoomType.Rooms property" Url="html/4c78e1e3-b22a-da50-5c0d-3c7a65bd0ab1.htm" />
   <HelpKINode Title="RoomType.RoomType constructor" Url="html/d84c2b87-2289-8903-da6f-b829ba8cf937.htm" />
@@ -735,7 +1381,67 @@
   </HelpKINode>
   <HelpKINode Title="RouteConfig.RegisterRoutes method" Url="html/f1a08d65-9f2b-99d3-7626-266fb493954a.htm" />
   <HelpKINode Title="RouteConfig.RouteConfig constructor" Url="html/622047f9-358a-d5d9-857c-444cb9a228f5.htm" />
-  <HelpKINode Title="semester property" Url="html/b6e3a9ad-3a29-3af5-064b-2c5e44db83d6.htm" />
+  <HelpKINode Title="Row property">
+    <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent.Row Property " Url="html/c3ef3dd3-ace7-9210-ffaa-1ade5d5bd23d.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent.Row Property " Url="html/cbd2f463-88cb-3a08-cb5a-15a24e64a4ac.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent.Row Property " Url="html/dab86481-c82e-3440-c220-2a58648549d3.htm" />
+    <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent.Row Property " Url="html/c5264080-0ca3-7b9a-1405-009e3d71979d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SchemaChanged method" Url="html/335cab02-e30f-313f-fe27-7aea38c129a0.htm" />
+  <HelpKINode Title="SchemaSerializationMode property" Url="html/1c9fe474-904d-b96f-78a1-a2105607227b.htm" />
+  <HelpKINode Title="SearchViewModel class">
+    <HelpKINode Title="SearchViewModel Class" Url="html/85b4499d-2078-2534-67ea-0e0a6bf40fa9.htm" />
+    <HelpKINode Title="about SearchViewModel class" Url="html/85b4499d-2078-2534-67ea-0e0a6bf40fa9.htm" />
+    <HelpKINode Title="constructor" Url="html/9dc4af44-ef5f-b108-04e9-85887e016edb.htm" />
+    <HelpKINode Title="methods" Url="html/fae8aaf4-d7c9-877b-bc99-ab5fb60877f2.htm" />
+    <HelpKINode Title="properties" Url="html/e94994b2-f775-2edf-bc6e-659aa4353d39.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SearchViewModel.hostelType property" Url="html/fa02a609-f57a-edbc-d9f7-9d5191dc532a.htm" />
+  <HelpKINode Title="SearchViewModel.roomType property" Url="html/7c90dddd-ba6c-8a78-14cd-8124a61f14e2.htm" />
+  <HelpKINode Title="SearchViewModel.SearchViewModel constructor" Url="html/9dc4af44-ef5f-b108-04e9-85887e016edb.htm" />
+  <HelpKINode Title="Sem property" Url="html/301b4c03-cb38-0b22-564d-ef6b53bc9d40.htm" />
+  <HelpKINode Title="SemColumn property" Url="html/673f8c1c-4804-4efd-5185-a975f1280c0f.htm" />
+  <HelpKINode Title="semester property">
+    <HelpKINode Title="DisplayStudentViewModel.semester Property " Url="html/830af07a-30e8-7fc2-1f1c-4891c7606934.htm" />
+    <HelpKINode Title="Student.semester Property " Url="html/b6e3a9ad-3a29-3af5-064b-2c5e44db83d6.htm" />
+    <HelpKINode Title="StudentViewModel.semester Property " Url="html/5ee5ae22-83f3-10d5-510a-38b0dcfcda51.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetAmountNull method" Url="html/1e5f5401-cfd3-8724-103a-32ab16a0454d.htm" />
+  <HelpKINode Title="SetAmount_DueNull method">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetAmount_DueNull Method " Url="html/0fed74e8-8a6c-b0cb-9469-d11732842309.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetAmount_DueNull Method " Url="html/a69abb3f-350c-cfc6-9528-dc8f53debce1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetAmount_PaidNull method">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetAmount_PaidNull Method " Url="html/0523762a-9e00-41db-6804-ee96476e54d7.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetAmount_PaidNull Method " Url="html/a714f60f-8feb-e368-cd5b-19654de433c2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetBranchNull method" Url="html/659961da-b217-4a9c-29a7-ed8c7f3452c9.htm" />
+  <HelpKINode Title="SetCourseNull method" Url="html/62ae54d3-d32e-88bd-d841-072976ce87cf.htm" />
+  <HelpKINode Title="SetDateOfBirthNull method" Url="html/643ccf02-0883-3ac0-300f-48ca5195a59d.htm" />
+  <HelpKINode Title="SetDateOfJoinNull method" Url="html/21874ce3-9418-67a8-ec9d-1dff12745667.htm" />
+  <HelpKINode Title="SetDateOfLeaveNull method" Url="html/38c2c7ae-efd3-684b-c37a-084a21e6df39.htm" />
+  <HelpKINode Title="SetFee_AmountNull method" Url="html/87580959-900f-2432-ad67-b52f7be3bec6.htm" />
+  <HelpKINode Title="SetFee_TypeNull method" Url="html/0409bdd9-c70d-c9bf-4313-9934d5505edb.htm" />
+  <HelpKINode Title="SetGenderNull method" Url="html/6341e16e-b0ac-cbe2-bdc1-51daed4488c3.htm" />
+  <HelpKINode Title="SetHostelBlockNull method" Url="html/f1b97a51-fad1-7f3e-b30b-aaf19ef747e4.htm" />
+  <HelpKINode Title="SetMonthNull method" Url="html/1cd5eb38-9f4f-beec-958d-ff06ea329620.htm" />
+  <HelpKINode Title="SetNameNull method" Url="html/e23ff7f8-f30d-e83a-36ec-620914baeef5.htm" />
+  <HelpKINode Title="SetRoomNumberNull method" Url="html/de4b5831-06fd-9cc8-91a0-dfcc05878695.htm" />
+  <HelpKINode Title="SetSemNull method" Url="html/63b7ed84-9797-fc2f-9f6a-62fc385c4868.htm" />
+  <HelpKINode Title="SetUpDropDown method" Url="html/32ac5dc6-9a99-6fa2-4ccd-8fc6e18014c7.htm" />
+  <HelpKINode Title="SetUpDropDownViewData method" Url="html/d28f570b-0473-da6e-ab3a-0a01cded9cf8.htm" />
+  <HelpKINode Title="SetYearNull method">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetYearNull Method " Url="html/0ec39424-1d64-9beb-fb3e-fd96730114c6.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetYearNull Method " Url="html/80ddec8a-181d-a528-7f73-d1775dd64531.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Shared namespace" Url="html/6a2004c4-4cea-b7f1-6390-16598c5aebc0.htm" />
+  <HelpKINode Title="Shared.AutoCompleteViewModel class" Url="html/8acdeaee-9ece-6617-7e7d-caefcd3ff7ff.htm" />
+  <HelpKINode Title="ShouldSerializeAllotment method" Url="html/8a97f1da-5145-fd22-f3a1-700d3969f4f6.htm" />
+  <HelpKINode Title="ShouldSerializeHostelFee method" Url="html/2e1fab8e-7621-b597-3506-fe12f6baaccb.htm" />
+  <HelpKINode Title="ShouldSerializeMeeFee method" Url="html/91487924-3fc3-2aff-0773-006164367a88.htm" />
+  <HelpKINode Title="ShouldSerializeRelations method" Url="html/41854d42-dbc9-82b0-2ed3-d7b4e33babbf.htm" />
+  <HelpKINode Title="ShouldSerializeStudent method" Url="html/b42f3399-3a86-759e-d555-944e724223ec.htm" />
+  <HelpKINode Title="ShouldSerializeTables method" Url="html/436ecc96-6a4e-bc45-6179-73e366d8c364.htm" />
   <HelpKINode Title="ShowAllDues method" Url="html/9c7ff16d-ebcc-0cf3-8837-1df0233ecb3b.htm" />
   <HelpKINode Title="ShowAllMessDues method" Url="html/aa1c939c-73d2-5be0-c4b7-19f400b19a9a.htm" />
   <HelpKINode Title="ShowAllTransactions method" Url="html/031fb6c6-6d09-d741-a088-4396b78a8339.htm" />
@@ -766,6 +1472,7 @@
     <HelpKINode Title="HostelTransaction.Student Property " Url="html/531a0253-7ac3-9f4a-abb9-ac9be142202e.htm" />
     <HelpKINode Title="MessBill.Student Property " Url="html/ef9648a1-742e-707e-c98b-4aecbfa2a4e9.htm" />
     <HelpKINode Title="MessTransaction.Student Property " Url="html/e568b407-7eb0-25ff-a068-0f91bc87ebdb.htm" />
+    <HelpKINode Title="StudentReportDataSet.Student Property " Url="html/f9a3c414-781d-bf32-3802-02656ebf4dd2.htm" />
   </HelpKINode>
   <HelpKINode Title="Student.Allotments property" Url="html/4c827d62-5f61-4ec4-7f17-756e237565f4.htm" />
   <HelpKINode Title="Student.bid property" Url="html/d9455565-8afd-afac-caf1-1e4d202cb07c.htm" />
@@ -784,6 +1491,25 @@
   <HelpKINode Title="Student.semester property" Url="html/b6e3a9ad-3a29-3af5-064b-2c5e44db83d6.htm" />
   <HelpKINode Title="Student.Student constructor" Url="html/94098fe8-ee8c-1238-18f3-23e2857e1816.htm" />
   <HelpKINode Title="Student.usn property" Url="html/c6ac3e9e-8d82-8334-86d9-a3a428440816.htm" />
+  <HelpKINode Title="StudentDataTable class">
+    <HelpKINode Title="events" Url="html/786b8f7f-e8ee-97fe-8b6d-222a4d6d40ec.htm" />
+    <HelpKINode Title="fields" Url="html/b0afa8a3-591b-595d-d59f-a8668398c70a.htm" />
+    <HelpKINode Title="methods" Url="html/74763bcf-c7ad-f858-a8a5-e3416bfa1eb5.htm" />
+    <HelpKINode Title="properties" Url="html/2de040ca-c086-ce13-0c86-a507740971af.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentDueSummaryViewModel class">
+    <HelpKINode Title="StudentDueSummaryViewModel Class" Url="html/d85cb39b-69dd-d1f2-e72e-cf08d365de29.htm" />
+    <HelpKINode Title="about StudentDueSummaryViewModel class" Url="html/d85cb39b-69dd-d1f2-e72e-cf08d365de29.htm" />
+    <HelpKINode Title="constructor" Url="html/d1e7f485-4217-44cb-9911-34b220b09dac.htm" />
+    <HelpKINode Title="methods" Url="html/8a198072-e7f6-167b-718b-84c23384905b.htm" />
+    <HelpKINode Title="properties" Url="html/c1cd7108-68ff-df81-1b7a-3c349bd6fb96.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentDueSummaryViewModel.bid property" Url="html/9a7c029b-48a2-2b70-2754-1b6f3c9fea66.htm" />
+  <HelpKINode Title="StudentDueSummaryViewModel.deposit property" Url="html/34e52e01-819c-4040-c66c-6ea41d3cc66c.htm" />
+  <HelpKINode Title="StudentDueSummaryViewModel.fix property" Url="html/74a26145-4752-0ae1-2b97-098eb6d8870f.htm" />
+  <HelpKINode Title="StudentDueSummaryViewModel.other property" Url="html/9cff8c01-54a2-1ccb-b218-789204f2982d.htm" />
+  <HelpKINode Title="StudentDueSummaryViewModel.rent property" Url="html/6a3e6c48-d6b4-3a0a-6f4f-621789a34fbf.htm" />
+  <HelpKINode Title="StudentDueSummaryViewModel.StudentDueSummaryViewModel constructor" Url="html/d1e7f485-4217-44cb-9911-34b220b09dac.htm" />
   <HelpKINode Title="StudentHelper class">
     <HelpKINode Title="StudentHelper Class" Url="html/7297b2f0-2bcb-3562-bd73-e0210158cfd0.htm" />
     <HelpKINode Title="about StudentHelper class" Url="html/7297b2f0-2bcb-3562-bd73-e0210158cfd0.htm" />
@@ -796,6 +1522,7 @@
   <HelpKINode Title="StudentHelper.CanRemoveStudent method" Url="html/391e827d-541c-bc8a-5537-b769e9d4ede4.htm" />
   <HelpKINode Title="StudentHelper.ConstructViewModelForAlloment method" Url="html/80a9b7aa-b271-374c-2a03-bc61f55af80a.htm" />
   <HelpKINode Title="StudentHelper.ConstructViewModelForRemoveStudent method" Url="html/245e7e64-c349-dde2-e068-fe1c3a471d4d.htm" />
+  <HelpKINode Title="StudentHelper.GenerateBid method" Url="html/f18e835b-0497-bcc2-3659-1a3bd3da8285.htm" />
   <HelpKINode Title="StudentHelper.GetAvailableRoomsInHostel method" Url="html/8eb768c2-9b01-4121-7375-44ff8751fad7.htm" />
   <HelpKINode Title="StudentHelper.GetCourses method" Url="html/9283b03d-0736-0dc0-8d69-6fba1843a634.htm" />
   <HelpKINode Title="StudentHelper.GetDepartments method" Url="html/e4d9b2ab-66ef-3ddd-0d91-b7a0144f0c7d.htm" />
@@ -813,12 +1540,342 @@
   <HelpKINode Title="StudentHelper.PerformRemoveStudent method" Url="html/55925f2d-3c5c-b906-99fa-c1d30ae1f2ee.htm" />
   <HelpKINode Title="StudentHelper.PerformRoomChange method" Url="html/8e6f08ee-1b07-6d1b-d55e-1276caf7eed0.htm" />
   <HelpKINode Title="StudentHelper.StudentHelper constructor" Url="html/678d0eae-a87a-da42-f3f8-0625123d6de8.htm" />
+  <HelpKINode Title="StudentMessDueSummaryViewModel class">
+    <HelpKINode Title="StudentMessDueSummaryViewModel Class" Url="html/c29eadc3-01c4-503d-8190-7d8d47285165.htm" />
+    <HelpKINode Title="about StudentMessDueSummaryViewModel class" Url="html/c29eadc3-01c4-503d-8190-7d8d47285165.htm" />
+    <HelpKINode Title="constructor" Url="html/7a36ac4c-bd88-2ca7-55a8-be1b6aec55e0.htm" />
+    <HelpKINode Title="methods" Url="html/cd18237b-5928-8c0d-b9a1-b1524b33696b.htm" />
+    <HelpKINode Title="properties" Url="html/9df4cf18-7a90-f4ad-ff8c-94ab4b03a329.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentMessDueSummaryViewModel.bid property" Url="html/06abb75e-ee25-f915-feac-a9b06764dcbe.htm" />
+  <HelpKINode Title="StudentMessDueSummaryViewModel.dues property" Url="html/7f0a8027-8691-8199-2aab-3a8a2391401b.htm" />
+  <HelpKINode Title="StudentMessDueSummaryViewModel.StudentMessDueSummaryViewModel constructor" Url="html/7a36ac4c-bd88-2ca7-55a8-be1b6aec55e0.htm" />
+  <HelpKINode Title="StudentReportDataSet class">
+    <HelpKINode Title="StudentReportDataSet Class" Url="html/d53272cb-20f2-bda4-cff8-47ee0a56c813.htm" />
+    <HelpKINode Title="about StudentReportDataSet class" Url="html/d53272cb-20f2-bda4-cff8-47ee0a56c813.htm" />
+    <HelpKINode Title="constructor" Url="html/bfd4a805-a457-0cb6-ecfe-0afde51af356.htm" />
+    <HelpKINode Title="events" Url="html/040494a5-cf02-704e-f85f-b699bb3c3911.htm" />
+    <HelpKINode Title="fields" Url="html/48eaa6c3-2771-8ba5-f680-b1154b29508d.htm" />
+    <HelpKINode Title="methods" Url="html/32050969-afd3-d6f2-bd65-85680d0ce6db.htm" />
+    <HelpKINode Title="properties" Url="html/cf2a7ea6-2696-8676-2654-64b98b753dd6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.Allotment property" Url="html/9d0aa056-9c9b-4340-c980-85c746d6ae38.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable class">
+    <HelpKINode Title="StudentReportDataSet.AllotmentDataTable Class" Url="html/cdc39505-37a8-91f3-c676-b98dc009caa6.htm" />
+    <HelpKINode Title="about StudentReportDataSet.AllotmentDataTable class" Url="html/cdc39505-37a8-91f3-c676-b98dc009caa6.htm" />
+    <HelpKINode Title="constructor" Url="html/47271ff9-7712-388b-25a5-31769cf510a5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.AddAllotmentRow method" Url="html/dc35d445-d0ba-b92e-4047-d98744ea75e2.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.AllotmentDataTable constructor" Url="html/47271ff9-7712-388b-25a5-31769cf510a5.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.AllotmentRowChanged event" Url="html/88e7094a-8005-2c08-da91-22d89ca0c023.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.AllotmentRowChanging event" Url="html/2f9c8862-dbab-c811-7f78-1163a47a1884.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.AllotmentRowDeleted event" Url="html/8642e53d-880b-cded-5dbb-7ed8ceb7790a.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.AllotmentRowDeleting event" Url="html/abc835ec-57c7-8378-f0c4-9aa70f1f3869.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.Clone method" Url="html/b8b6e3eb-a4bc-224d-3758-c30dcb33864e.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.Count property" Url="html/5d75951c-61bc-4d14-cee1-3052a84ff3f1.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.CreateInstance method" Url="html/9f9e0d95-2fb6-c3fc-0da0-c0a51c5f8fe7.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.DateOfJoinColumn property" Url="html/0f2a5a78-580e-05cb-85d8-00327a8d5bc5.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.DateOfLeaveColumn property" Url="html/348be40a-90f6-049e-4322-ed351885f923.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.GetRowType method" Url="html/fe59c70e-fc21-4ded-f8ce-ed806ab38851.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.GetTypedTableSchema method" Url="html/b1959d0e-65f8-5a53-bd48-dc5245b97545.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.HostelBlockColumn property" Url="html/2b14d751-775a-a461-8555-0a1d78d57cba.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.InitClass method" Url="html/d8f8ce3f-d071-c869-8beb-c8ddc6c965ad.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.InitVars method" Url="html/af7194ef-721b-2ef7-8c5b-2827f0c85759.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.Item property" Url="html/c52b83d9-5403-eae0-9aea-3f22e91c6239.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.NewAllotmentRow method" Url="html/bcb8a7f8-aa67-c9d0-d201-afc84429f87c.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.NewRowFromBuilder method" Url="html/58eab7e0-1c69-b688-c086-dfb4128ebf26.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowChanged method" Url="html/d8b0623e-a9c3-e562-0df4-3ef5209a8149.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowChanging method" Url="html/6ece738f-0f1f-e063-65ee-614512cc2de3.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowDeleted method" Url="html/54ff1dca-04c6-f218-35c4-7f745403c12a.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.OnRowDeleting method" Url="html/82e58e9c-de7e-f5ac-fd14-033d5ca10901.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.RemoveAllotmentRow method" Url="html/45b00fec-4bad-95c9-93ab-b54f160caa5b.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentDataTable.RoomNumberColumn property" Url="html/0101060c-72ed-9f85-e4c2-4164264a701a.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow class">
+    <HelpKINode Title="StudentReportDataSet.AllotmentRow Class" Url="html/34e9f5a5-df8c-0060-4a26-a5692f8940ea.htm" />
+    <HelpKINode Title="about StudentReportDataSet.AllotmentRow class" Url="html/34e9f5a5-df8c-0060-4a26-a5692f8940ea.htm" />
+    <HelpKINode Title="constructor" Url="html/e614deb1-07dd-1431-9358-d617a6b3b726.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.AllotmentRow constructor" Url="html/e614deb1-07dd-1431-9358-d617a6b3b726.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.DateOfJoin property" Url="html/b2461645-caad-402f-84a8-9e33e6a448b6.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.DateOfLeave property" Url="html/0cc0ad95-95a7-a419-4c81-8b9aead85511.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.HostelBlock property" Url="html/fa694dca-d9f7-f08d-3c1e-133daa812d90.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.IsDateOfJoinNull method" Url="html/c8428a19-a0f8-3ef9-9cf9-b8bad5498b39.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.IsDateOfLeaveNull method" Url="html/8a0f31dd-3d04-d638-9b2d-72933936cb7d.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.IsHostelBlockNull method" Url="html/f0ef4cf4-a518-94cf-00b1-a80ba80a9432.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.IsRoomNumberNull method" Url="html/5d42d326-805d-83e9-c226-6e8132286427.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.RoomNumber property" Url="html/3c8cdf7f-3bc8-2be8-1b7a-e7127230ab68.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.SetDateOfJoinNull method" Url="html/21874ce3-9418-67a8-ec9d-1dff12745667.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.SetDateOfLeaveNull method" Url="html/38c2c7ae-efd3-684b-c37a-084a21e6df39.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.SetHostelBlockNull method" Url="html/f1b97a51-fad1-7f3e-b30b-aaf19ef747e4.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRow.SetRoomNumberNull method" Url="html/de4b5831-06fd-9cc8-91a0-dfcc05878695.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent class">
+    <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent Class" Url="html/538a51d4-547b-5130-9db0-3795725b3da1.htm" />
+    <HelpKINode Title="about StudentReportDataSet.AllotmentRowChangeEvent class" Url="html/538a51d4-547b-5130-9db0-3795725b3da1.htm" />
+    <HelpKINode Title="constructor" Url="html/973c0869-0df6-91ae-620d-b9dbd5b93b44.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent.Action property" Url="html/64b3df49-3893-ffc3-6ceb-d5ded20d7738.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent.AllotmentRowChangeEvent constructor" Url="html/973c0869-0df6-91ae-620d-b9dbd5b93b44.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEvent.Row property" Url="html/c3ef3dd3-ace7-9210-ffaa-1ade5d5bd23d.htm" />
+  <HelpKINode Title="StudentReportDataSet.AllotmentRowChangeEventHandler delegate" Url="html/435e405d-efac-d456-3d4d-549e9874af22.htm" />
+  <HelpKINode Title="StudentReportDataSet.Clone method" Url="html/e9634ef4-3675-c014-faa8-50ba1a3392d3.htm" />
+  <HelpKINode Title="StudentReportDataSet.GetSchemaSerializable method" Url="html/3d05f9c2-9846-0441-9080-024a113ce60a.htm" />
+  <HelpKINode Title="StudentReportDataSet.GetTypedDataSetSchema method" Url="html/4fe6ef81-3623-38d0-b02a-0e2bcdddc72d.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFee property" Url="html/0985d5de-0130-6c30-7e0d-68641193a5af.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable class">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable Class" Url="html/769ed473-2014-8633-b8ee-0c2dc6b2fad6.htm" />
+    <HelpKINode Title="about StudentReportDataSet.HostelFeeDataTable class" Url="html/769ed473-2014-8633-b8ee-0c2dc6b2fad6.htm" />
+    <HelpKINode Title="constructor" Url="html/31e6478f-ddee-3530-903a-1f470fae07d5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.AddHostelFeeRow method" Url="html/b946d444-6bea-6c90-d5c3-926517dd6da3.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Amount_DueColumn property" Url="html/4d36c588-7b91-9f3c-7589-cfd851323830.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Amount_PaidColumn property" Url="html/97b640c5-ad4b-d949-f12a-5d973f017153.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Clone method" Url="html/36c0803f-8f26-43ae-a70e-b2af829fba88.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Count property" Url="html/03c2a63b-7608-e06a-2e7e-19a07fcbcdef.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.CreateInstance method" Url="html/a5bb4ec8-9205-1e35-fa3a-98e8d1d8340d.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Fee_AmountColumn property" Url="html/f5ee25de-901d-2ded-5ca9-cc5b9d6865b3.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Fee_TypeColumn property" Url="html/2b2cf675-b0a8-1fc1-3acf-f02e0a9e9be7.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.GetRowType method" Url="html/5b3530fe-c2e8-da4e-7881-75b448bb07a0.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.GetTypedTableSchema method" Url="html/fa119d9e-bb5d-6028-fce1-645b175c65a5.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.HostelFeeDataTable constructor" Url="html/31e6478f-ddee-3530-903a-1f470fae07d5.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.HostelFeeRowChanged event" Url="html/eb2f1cf8-24ea-3a38-7eca-e891b6b1e810.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.HostelFeeRowChanging event" Url="html/8c58701b-2530-7039-c3e7-33480277e02f.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.HostelFeeRowDeleted event" Url="html/3c05e74b-47f9-869c-769b-a65f2ed41ec7.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.HostelFeeRowDeleting event" Url="html/5c5fcc3e-1962-031d-0a35-c694c8a9cae9.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.InitClass method" Url="html/b444c893-3bde-b009-db55-a9610abfa0f9.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.InitVars method" Url="html/6b363d9a-eb4d-7613-f7a1-1fbd220faceb.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.Item property" Url="html/5a167405-af58-bf15-a0ba-f97e705bc262.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.NewHostelFeeRow method" Url="html/4ed8f9e6-6dfb-5079-bc5f-905deb6f4124.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.NewRowFromBuilder method" Url="html/3e01d0fb-5c00-e4e1-2fa3-665ef7b0796f.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowChanged method" Url="html/ac7a35d2-b8e6-0274-d53d-cf94194b685b.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowChanging method" Url="html/266e9d8a-d7a3-5e14-0bcc-253797e5d201.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowDeleted method" Url="html/9c5bfe57-4f76-757e-543c-984cf9eb33cd.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.OnRowDeleting method" Url="html/1d0f3f7d-f0c1-ceae-48e5-dc4126c73481.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.RemoveHostelFeeRow method" Url="html/90a3d0e9-9a15-acbb-5340-622e7cccd335.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.YearColumn property" Url="html/1b25fca4-0ffc-6b5c-2701-eda605958804.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow class">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow Class" Url="html/f2008f92-c048-e508-f743-ade84bdb96c2.htm" />
+    <HelpKINode Title="about StudentReportDataSet.HostelFeeRow class" Url="html/f2008f92-c048-e508-f743-ade84bdb96c2.htm" />
+    <HelpKINode Title="constructor" Url="html/70324eab-f20a-5fc5-207e-f4cf648697df.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Amount_Due property" Url="html/74f713ac-98e5-fc7b-6874-9a87f05cc0b1.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Amount_Paid property" Url="html/f2d009e3-af07-de30-0743-412d8a1dbf01.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Fee_Amount property" Url="html/2c352cef-e629-4501-f310-e78772c0ea71.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Fee_Type property" Url="html/8a2b9520-3013-b591-4fd8-453f01bd2e44.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.HostelFeeRow constructor" Url="html/70324eab-f20a-5fc5-207e-f4cf648697df.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsAmount_DueNull method" Url="html/ac245377-603d-7730-a2ac-cd1f8525facf.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsAmount_PaidNull method" Url="html/f45ed8ca-f436-75b0-f36b-890f9704ef88.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsFee_AmountNull method" Url="html/d01fef17-5d12-7725-1ccc-0bb814cd2b2b.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsFee_TypeNull method" Url="html/8343c03f-d701-66f5-ef08-8f27386bd491.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.IsYearNull method" Url="html/e3c2d8c0-bf4c-1106-7275-cead139a29b3.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetAmount_DueNull method" Url="html/0fed74e8-8a6c-b0cb-9469-d11732842309.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetAmount_PaidNull method" Url="html/0523762a-9e00-41db-6804-ee96476e54d7.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetFee_AmountNull method" Url="html/87580959-900f-2432-ad67-b52f7be3bec6.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetFee_TypeNull method" Url="html/0409bdd9-c70d-c9bf-4313-9934d5505edb.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.SetYearNull method" Url="html/0ec39424-1d64-9beb-fb3e-fd96730114c6.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Year property" Url="html/6e9ac297-4669-73e5-c9ac-300ee6418bd7.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent class">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent Class" Url="html/93e1c25f-609a-cf25-eaf1-9bb10cb54e4e.htm" />
+    <HelpKINode Title="about StudentReportDataSet.HostelFeeRowChangeEvent class" Url="html/93e1c25f-609a-cf25-eaf1-9bb10cb54e4e.htm" />
+    <HelpKINode Title="constructor" Url="html/0e9ab9ee-b86e-54c7-932c-2fb5d88e6bd6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent.Action property" Url="html/09bfed26-f1d3-8330-2bdf-8fcf628e0169.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent.HostelFeeRowChangeEvent constructor" Url="html/0e9ab9ee-b86e-54c7-932c-2fb5d88e6bd6.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEvent.Row property" Url="html/cbd2f463-88cb-3a08-cb5a-15a24e64a4ac.htm" />
+  <HelpKINode Title="StudentReportDataSet.HostelFeeRowChangeEventHandler delegate" Url="html/96cbfd5d-aa01-ff37-af7b-e1a12768b9ad.htm" />
+  <HelpKINode Title="StudentReportDataSet.InitClass method" Url="html/900b6e05-2497-af30-26ee-305c0bdff60a.htm" />
+  <HelpKINode Title="StudentReportDataSet.InitializeDerivedDataSet method" Url="html/bee213bb-e244-6cc2-46cf-8ee0a93a4a5b.htm" />
+  <HelpKINode Title="StudentReportDataSet.InitVars method" Url="html/b66a1430-254e-0b15-7c10-652f3b7c0499.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFee property" Url="html/7d96659c-a727-4cb8-24df-277271a29cc8.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable class">
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable Class" Url="html/e07ad0cf-2a2a-e4f4-5d1f-a35e7d85c070.htm" />
+    <HelpKINode Title="about StudentReportDataSet.MeeFeeDataTable class" Url="html/e07ad0cf-2a2a-e4f4-5d1f-a35e7d85c070.htm" />
+    <HelpKINode Title="constructor" Url="html/0e5a73f3-b904-284c-544c-52048b0ea827.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.AddMeeFeeRow method" Url="html/38639c81-0fcc-4506-dcfc-3d1bc478c5a0.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.AmountColumn property" Url="html/94123e46-3470-831f-df48-63f0e63b2fbb.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Amount_DueColumn property" Url="html/3b691d48-b074-2630-ca4f-bc3365c17f98.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Amount_PaidColumn property" Url="html/a355a47c-5529-849e-45c7-bf5a3fa365b8.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Clone method" Url="html/38fe44b2-a1f5-0168-202a-7ba264c93ac7.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Count property" Url="html/41f59b45-1784-1095-bd48-17e50cd84df9.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.CreateInstance method" Url="html/e27046a1-fa7e-3f7f-0fc4-d244e468431a.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.GetRowType method" Url="html/cd0fe99e-5566-376d-5567-d0fbc77c5791.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.GetTypedTableSchema method" Url="html/c9a183ce-704d-1c01-0c73-f40999392491.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.InitClass method" Url="html/3c333f63-e9ed-1647-59d1-4d2b9021d350.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.InitVars method" Url="html/f2c98736-ff41-13bb-d571-d536e067c3de.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.Item property" Url="html/40c01092-f740-a126-7d07-8902acd0beba.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.MeeFeeDataTable constructor" Url="html/0e5a73f3-b904-284c-544c-52048b0ea827.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.MeeFeeRowChanged event" Url="html/e81f3508-7e6c-93ea-0a71-a0ab951a49bf.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.MeeFeeRowChanging event" Url="html/99112059-d1ea-b493-f32a-b8a7c7f3f77c.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.MeeFeeRowDeleted event" Url="html/cfad2b37-6b34-570b-56d6-7d77592ddf54.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.MeeFeeRowDeleting event" Url="html/4fb758cb-1799-b7ed-d108-c8e29ad4973f.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.MonthColumn property" Url="html/197df06e-07c8-b253-8851-65147512be88.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.NewMeeFeeRow method" Url="html/5e08a63c-5b5a-8595-e4ca-b3290fe7d754.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.NewRowFromBuilder method" Url="html/e8f825e6-7eb2-e6af-acdc-3d3742f29fe3.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowChanged method" Url="html/ad86f6bb-51a5-a943-1c2c-43bc7cd28fc0.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowChanging method" Url="html/d4a7ee93-d6f2-a3e2-b0cc-94a4cdba4892.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowDeleted method" Url="html/342a6407-4497-d485-7370-29eaf26adae7.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.OnRowDeleting method" Url="html/2f14a4f3-fbad-7cf2-614f-7ef3b12c0717.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.RemoveMeeFeeRow method" Url="html/c6e1bb4b-9fe5-1626-66cd-9906a84ba769.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.YearColumn property" Url="html/59c692c0-8764-404b-b308-4293328e1ffe.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow class">
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow Class" Url="html/188684c9-b5af-732d-cd2e-8f4e6af80784.htm" />
+    <HelpKINode Title="about StudentReportDataSet.MeeFeeRow class" Url="html/188684c9-b5af-732d-cd2e-8f4e6af80784.htm" />
+    <HelpKINode Title="constructor" Url="html/7006dfdb-22b4-fb47-b1ff-b7d685122692.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Amount property" Url="html/ee93910e-77b9-f4c6-74ac-5b4633902071.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Amount_Due property" Url="html/0f21381a-1be8-9087-a0dc-1982a126c7fe.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Amount_Paid property" Url="html/3e52a10e-f8be-1897-4b9d-b15ddeec331e.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsAmountNull method" Url="html/8f3b5ae3-3bfb-4c5f-4f87-d3b9186bb80f.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsAmount_DueNull method" Url="html/dc68b96e-22d4-b7c2-ed78-8082b58a35df.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsAmount_PaidNull method" Url="html/7f9e3d8f-7430-ef79-f45a-d6eaef59b502.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsMonthNull method" Url="html/53a65b78-0b70-e495-8ff9-466b509ac029.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.IsYearNull method" Url="html/07aed96d-e1ae-3ebc-993d-5b23935ccbcb.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.MeeFeeRow constructor" Url="html/7006dfdb-22b4-fb47-b1ff-b7d685122692.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Month property" Url="html/13125188-35e8-39bf-cba8-d29509f3db18.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetAmountNull method" Url="html/1e5f5401-cfd3-8724-103a-32ab16a0454d.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetAmount_DueNull method" Url="html/a69abb3f-350c-cfc6-9528-dc8f53debce1.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetAmount_PaidNull method" Url="html/a714f60f-8feb-e368-cd5b-19654de433c2.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetMonthNull method" Url="html/1cd5eb38-9f4f-beec-958d-ff06ea329620.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.SetYearNull method" Url="html/80ddec8a-181d-a528-7f73-d1775dd64531.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Year property" Url="html/71e25c89-9fbe-f5bf-2c8c-03c282c1bd69.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent class">
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent Class" Url="html/f7750b0e-fd7b-a001-b775-d346a68a8435.htm" />
+    <HelpKINode Title="about StudentReportDataSet.MeeFeeRowChangeEvent class" Url="html/f7750b0e-fd7b-a001-b775-d346a68a8435.htm" />
+    <HelpKINode Title="constructor" Url="html/6ae6c726-6bcd-576a-888c-1dcecd833c9d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent.Action property" Url="html/ddca8a3d-85b2-e803-ebb0-3a22793fe2ea.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent.MeeFeeRowChangeEvent constructor" Url="html/6ae6c726-6bcd-576a-888c-1dcecd833c9d.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEvent.Row property" Url="html/dab86481-c82e-3440-c220-2a58648549d3.htm" />
+  <HelpKINode Title="StudentReportDataSet.MeeFeeRowChangeEventHandler delegate" Url="html/53586e7a-36ce-3bc7-6b16-92eb7ed3167a.htm" />
+  <HelpKINode Title="StudentReportDataSet.ReadXmlSerializable method" Url="html/c54135cb-6a23-f5ea-ab33-53c6460b52de.htm" />
+  <HelpKINode Title="StudentReportDataSet.Relations property" Url="html/b90847dd-5129-4838-a0a3-56807ea7b23b.htm" />
+  <HelpKINode Title="StudentReportDataSet.SchemaChanged method" Url="html/335cab02-e30f-313f-fe27-7aea38c129a0.htm" />
+  <HelpKINode Title="StudentReportDataSet.SchemaSerializationMode property" Url="html/1c9fe474-904d-b96f-78a1-a2105607227b.htm" />
+  <HelpKINode Title="StudentReportDataSet.ShouldSerializeAllotment method" Url="html/8a97f1da-5145-fd22-f3a1-700d3969f4f6.htm" />
+  <HelpKINode Title="StudentReportDataSet.ShouldSerializeHostelFee method" Url="html/2e1fab8e-7621-b597-3506-fe12f6baaccb.htm" />
+  <HelpKINode Title="StudentReportDataSet.ShouldSerializeMeeFee method" Url="html/91487924-3fc3-2aff-0773-006164367a88.htm" />
+  <HelpKINode Title="StudentReportDataSet.ShouldSerializeRelations method" Url="html/41854d42-dbc9-82b0-2ed3-d7b4e33babbf.htm" />
+  <HelpKINode Title="StudentReportDataSet.ShouldSerializeStudent method" Url="html/b42f3399-3a86-759e-d555-944e724223ec.htm" />
+  <HelpKINode Title="StudentReportDataSet.ShouldSerializeTables method" Url="html/436ecc96-6a4e-bc45-6179-73e366d8c364.htm" />
+  <HelpKINode Title="StudentReportDataSet.Student property" Url="html/f9a3c414-781d-bf32-3802-02656ebf4dd2.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable class">
+    <HelpKINode Title="StudentReportDataSet.StudentDataTable Class" Url="html/399d10c3-3601-6de4-7d19-fc4d72a0e679.htm" />
+    <HelpKINode Title="about StudentReportDataSet.StudentDataTable class" Url="html/399d10c3-3601-6de4-7d19-fc4d72a0e679.htm" />
+    <HelpKINode Title="constructor" Url="html/ea44dc30-760b-313a-ca39-3cba23f7b99c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.AddStudentRow method" Url="html/59aafce5-281f-5936-19b7-68da1999f4e2.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.BranchColumn property" Url="html/4be693f6-4e4e-a9a0-9d0d-7334fad99ca9.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.Clone method" Url="html/9fd3ac89-9231-5dbd-eaf5-8b4242cb5c60.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.Count property" Url="html/df23c1e3-163b-4cf8-0747-10b5933e4114.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.CourseColumn property" Url="html/d6cb1703-4544-eb28-5c76-c2af7c70107a.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.CreateInstance method" Url="html/2d9b5aec-8bf5-81b0-1a20-612565fd7044.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.DateOfBirthColumn property" Url="html/d8cf3da2-259e-6851-7815-b85f2ed20de8.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.GenderColumn property" Url="html/c348bf02-32b0-ec44-e0d9-8dbd25b38839.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.GetRowType method" Url="html/9725b1e8-efe3-ec61-6c28-2f30d24a3af0.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.GetTypedTableSchema method" Url="html/7fc34485-ad10-4a8c-99bc-b46a5d129de8.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.InitClass method" Url="html/06e5ed4b-9c77-a756-54fe-68fb68277891.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.InitVars method" Url="html/e665a817-687b-76a4-8d67-14a6310db22c.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.Item property" Url="html/622ea405-1e45-44c9-fea2-5623764cc13d.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.NameColumn property" Url="html/3cbcd89a-c9a5-1e76-ec09-23b0a9598ef4.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.NewRowFromBuilder method" Url="html/7b926cfb-a4f2-9a4a-e12f-8c4bc49f21d0.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.NewStudentRow method" Url="html/3005ef37-feca-e49e-f7fd-e8eaa00d91da.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowChanged method" Url="html/a3ead54e-621c-3965-c1b0-176a4135e263.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowChanging method" Url="html/3a3588c8-949d-1fd5-cd62-b19bfac52cf0.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowDeleted method" Url="html/198f5f6b-9aca-fada-7e54-24c65d63693e.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.OnRowDeleting method" Url="html/b736b297-9cd6-5f13-9b98-ac9fdf7b50d0.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.RemoveStudentRow method" Url="html/68545e1e-8254-f423-10cd-7de7d1d1dd4e.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.SemColumn property" Url="html/673f8c1c-4804-4efd-5185-a975f1280c0f.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.StudentDataTable constructor" Url="html/ea44dc30-760b-313a-ca39-3cba23f7b99c.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.StudentRowChanged event" Url="html/953489d5-608f-cbef-e045-f64bb596fe10.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.StudentRowChanging event" Url="html/c2c2b580-7108-9748-e2ac-2968b9e70283.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.StudentRowDeleted event" Url="html/633af255-8b60-088d-8dc0-3adfdfec43d6.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentDataTable.StudentRowDeleting event" Url="html/0d9c381c-d8d0-5502-7dff-7e81b8a1d3c6.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentReportDataSet constructor" Url="html/bfd4a805-a457-0cb6-ecfe-0afde51af356.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow class">
+    <HelpKINode Title="StudentReportDataSet.StudentRow Class" Url="html/d4062262-47ca-bfbf-e1b8-1be7cfd3e10f.htm" />
+    <HelpKINode Title="about StudentReportDataSet.StudentRow class" Url="html/d4062262-47ca-bfbf-e1b8-1be7cfd3e10f.htm" />
+    <HelpKINode Title="constructor" Url="html/eb3c7dcf-410c-7ab4-cdb1-52ccd7396fbc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.StudentRow.Branch property" Url="html/2c1e1546-7a4c-ce04-f304-e10fca975a4d.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.Course property" Url="html/5a741456-aa05-7767-0ddf-f2dccf1d5410.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.DateOfBirth property" Url="html/c55f1521-09ba-9eea-38a0-23c7f2ebe3db.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.Gender property" Url="html/c26247f5-9be0-e35e-acc3-f57c2d0f5def.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.IsBranchNull method" Url="html/1777e203-87e0-447b-04cd-a2353b1d9226.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.IsCourseNull method" Url="html/7f818cde-a388-a4c9-eef5-5e6aaa312c3c.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.IsDateOfBirthNull method" Url="html/2f1d70c2-e417-d742-029e-58166183c3b0.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.IsGenderNull method" Url="html/a8dc15e5-7d71-cac5-f1b9-e44e0b7495c9.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.IsNameNull method" Url="html/7e84282a-9e1b-a8d6-a526-b8ac67fd3395.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.IsSemNull method" Url="html/543becb2-9575-c4ab-b77c-e85be1e3d2d7.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.Name property" Url="html/a6ab44c6-c17a-03bd-c47a-d2463190ffc8.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.Sem property" Url="html/301b4c03-cb38-0b22-564d-ef6b53bc9d40.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.SetBranchNull method" Url="html/659961da-b217-4a9c-29a7-ed8c7f3452c9.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.SetCourseNull method" Url="html/62ae54d3-d32e-88bd-d841-072976ce87cf.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.SetDateOfBirthNull method" Url="html/643ccf02-0883-3ac0-300f-48ca5195a59d.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.SetGenderNull method" Url="html/6341e16e-b0ac-cbe2-bdc1-51daed4488c3.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.SetNameNull method" Url="html/e23ff7f8-f30d-e83a-36ec-620914baeef5.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.SetSemNull method" Url="html/63b7ed84-9797-fc2f-9f6a-62fc385c4868.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRow.StudentRow constructor" Url="html/eb3c7dcf-410c-7ab4-cdb1-52ccd7396fbc.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent class">
+    <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent Class" Url="html/cc16ca9c-db0f-88a7-fcb9-5adaf65f70bb.htm" />
+    <HelpKINode Title="about StudentReportDataSet.StudentRowChangeEvent class" Url="html/cc16ca9c-db0f-88a7-fcb9-5adaf65f70bb.htm" />
+    <HelpKINode Title="constructor" Url="html/b6454ef1-11d0-8146-a01f-8247c7e33c51.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent.Action property" Url="html/4667bda9-0a2d-6df6-cec0-9aa4558ac77c.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent.Row property" Url="html/c5264080-0ca3-7b9a-1405-009e3d71979d.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRowChangeEvent.StudentRowChangeEvent constructor" Url="html/b6454ef1-11d0-8146-a01f-8247c7e33c51.htm" />
+  <HelpKINode Title="StudentReportDataSet.StudentRowChangeEventHandler delegate" Url="html/c939aba6-3314-e4dd-ebd1-1929dece5203.htm" />
+  <HelpKINode Title="StudentReportDataSet.Tables property" Url="html/05abfe39-a825-0688-0d52-e53788d69319.htm" />
+  <HelpKINode Title="StudentRow class">
+    <HelpKINode Title="fields" Url="html/f5585b70-9c31-c74f-32e6-2f46523ba211.htm" />
+    <HelpKINode Title="methods" Url="html/ed51ebdb-f93d-742b-55c6-ac8d7cfd9db2.htm" />
+    <HelpKINode Title="properties" Url="html/e0de620a-3c42-83dd-1858-0e36895b9e01.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentRowChanged event" Url="html/953489d5-608f-cbef-e045-f64bb596fe10.htm" />
+  <HelpKINode Title="StudentRowChangeEvent class">
+    <HelpKINode Title="methods" Url="html/e336ec8c-d4be-7dd1-593c-a769327269f1.htm" />
+    <HelpKINode Title="properties" Url="html/e5843bbe-e325-27c8-fad8-1498cf4a19f1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentRowChanging event" Url="html/c2c2b580-7108-9748-e2ac-2968b9e70283.htm" />
+  <HelpKINode Title="StudentRowDeleted event" Url="html/633af255-8b60-088d-8dc0-3adfdfec43d6.htm" />
+  <HelpKINode Title="StudentRowDeleting event" Url="html/0d9c381c-d8d0-5502-7dff-7e81b8a1d3c6.htm" />
   <HelpKINode Title="Students property">
     <HelpKINode Title="Course.Students Property " Url="html/d95c3c5d-3b59-d9f3-bf18-da80040c9e68.htm" />
     <HelpKINode Title="Department.Students Property " Url="html/b2bbc131-3c97-5a55-a1fd-ba3b21a9b6a8.htm" />
     <HelpKINode Title="Gender.Students Property " Url="html/793275aa-4053-ae46-eeee-19ffd4be8457.htm" />
     <HelpKINode Title="HostelManagementEntities1.Students Property " Url="html/9da5d357-35ac-12cc-e3ef-45a57509e1c2.htm" />
   </HelpKINode>
+  <HelpKINode Title="StudentSearchViewModel class">
+    <HelpKINode Title="StudentSearchViewModel Class" Url="html/de6324f4-7f51-1e4a-f841-96244a4abb05.htm" />
+    <HelpKINode Title="about StudentSearchViewModel class" Url="html/de6324f4-7f51-1e4a-f841-96244a4abb05.htm" />
+    <HelpKINode Title="constructor" Url="html/85f8cffe-24f6-f4e6-a74c-11320939e09e.htm" />
+    <HelpKINode Title="methods" Url="html/1d30a0a4-7265-1144-df33-76d3830cfb01.htm" />
+    <HelpKINode Title="properties" Url="html/c4792f46-ad00-7971-236c-288fdc1053ca.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentSearchViewModel.bid property" Url="html/a7b31a70-c3af-1867-1946-13cddb178a2a.htm" />
+  <HelpKINode Title="StudentSearchViewModel.StudentSearchViewModel constructor" Url="html/85f8cffe-24f6-f4e6-a74c-11320939e09e.htm" />
+  <HelpKINode Title="StudentViewModel class">
+    <HelpKINode Title="StudentViewModel Class" Url="html/af975f9d-818a-25cd-1e46-511ca835b9a1.htm" />
+    <HelpKINode Title="about StudentViewModel class" Url="html/af975f9d-818a-25cd-1e46-511ca835b9a1.htm" />
+    <HelpKINode Title="constructor" Url="html/7280378e-6b8a-b725-164a-f6063eb76980.htm" />
+    <HelpKINode Title="methods" Url="html/e4b45111-5da1-ad83-962e-81c68aefc4e8.htm" />
+    <HelpKINode Title="properties" Url="html/10ee6dac-058c-c198-905a-30c3063683cc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StudentViewModel.blockNumber property" Url="html/3a164e2a-0726-32d9-84ad-d20f8fb40605.htm" />
+  <HelpKINode Title="StudentViewModel.branch property" Url="html/d575f2c0-58b0-db0e-d268-42be8c97a243.htm" />
+  <HelpKINode Title="StudentViewModel.course property" Url="html/488fdc1e-a737-cbfc-78af-e7a3dbc4cb39.htm" />
+  <HelpKINode Title="StudentViewModel.dob property" Url="html/c9605c1d-c117-4ae7-f67f-baa4691ce22d.htm" />
+  <HelpKINode Title="StudentViewModel.doj property" Url="html/94770eee-5c53-32ec-0c47-1a8160c030d8.htm" />
+  <HelpKINode Title="StudentViewModel.floorNumber property" Url="html/2216c601-cc17-e2c5-7e1e-e73660ce7274.htm" />
+  <HelpKINode Title="StudentViewModel.gender property" Url="html/70ba8c83-3ab5-9f06-dd8d-73a6e282ded7.htm" />
+  <HelpKINode Title="StudentViewModel.name property" Url="html/d0d21677-42ba-cdc9-d80c-e1002bab6813.htm" />
+  <HelpKINode Title="StudentViewModel.roomNumber property" Url="html/0a2391ff-c331-cd54-07b0-d7bc4ba739eb.htm" />
+  <HelpKINode Title="StudentViewModel.roomType property" Url="html/a62bb680-18d1-a555-25e5-c20fdc1093f9.htm" />
+  <HelpKINode Title="StudentViewModel.semester property" Url="html/5ee5ae22-83f3-10d5-510a-38b0dcfcda51.htm" />
+  <HelpKINode Title="StudentViewModel.StudentViewModel constructor" Url="html/7280378e-6b8a-b725-164a-f6063eb76980.htm" />
+  <HelpKINode Title="StudentViewModel.usn property" Url="html/ae693845-0b62-0aec-9e4d-a9ac8486601d.htm" />
+  <HelpKINode Title="StudentViewModel.year property" Url="html/9c6ca446-8d61-1796-01ac-7c70605a6161.htm" />
+  <HelpKINode Title="Tables property" Url="html/05abfe39-a825-0688-0d52-e53788d69319.htm" />
+  <HelpKINode Title="transaction property" Url="html/4971cb54-2222-f98f-c40a-b21c374316bd.htm" />
   <HelpKINode Title="TransactionHelper class">
     <HelpKINode Title="TransactionHelper Class" Url="html/00ac092a-4405-ce04-c53c-b9d7276b549e.htm" />
     <HelpKINode Title="about TransactionHelper class" Url="html/00ac092a-4405-ce04-c53c-b9d7276b549e.htm" />
@@ -852,6 +1909,7 @@
   <HelpKINode Title="TransactionHelper.GetPaymentTypes method" Url="html/aeaced5d-9df2-29a9-3d5a-1dea6a44aa8a.htm" />
   <HelpKINode Title="TransactionHelper.GetRentFeeId method" Url="html/8605f40a-a2d5-6acf-5ac6-e0e749a5aefa.htm" />
   <HelpKINode Title="TransactionHelper.GetStudentDues method" Url="html/ce0cec61-8592-8e16-f23e-8ee64f519a36.htm" />
+  <HelpKINode Title="TransactionHelper.GetTransactionViewModel method" Url="html/0b9d2d31-414e-3f00-083c-ede03868cdca.htm" />
   <HelpKINode Title="TransactionHelper.GetValidAcademicYears method" Url="html/c04526d3-da0b-72e3-6113-d0df5f2e1041.htm" />
   <HelpKINode Title="TransactionHelper.PerformFeeDiscount method" Url="html/f83fd368-f1f0-dd6a-9b5a-c0f85e27d000.htm" />
   <HelpKINode Title="TransactionHelper.PerformHostelTransaction method" Url="html/a761c14c-8d10-968c-068f-975d761e75f5.htm" />
@@ -859,7 +1917,27 @@
   <HelpKINode Title="TransactionHelper.ReportAbsenceForMess method" Url="html/c33c2fd4-b6fe-c85a-1c7a-20402eed3075.htm" />
   <HelpKINode Title="TransactionHelper.TransactionHelper constructor" Url="html/0ad1a71f-f75e-4445-e90e-9984ed01fc64.htm" />
   <HelpKINode Title="TransactionHelper.UpdateFeeInDatabase method" Url="html/eac1e9cc-582a-8633-92dc-21659ed9dc17.htm" />
-  <HelpKINode Title="type property" Url="html/75d5fcb2-6454-9475-f1c3-9ccdd79c7ef8.htm" />
+  <HelpKINode Title="TransactionsViewModel class">
+    <HelpKINode Title="TransactionsViewModel Class" Url="html/d61b90fc-8fac-f513-8eb9-286a0214ac95.htm" />
+    <HelpKINode Title="about TransactionsViewModel class" Url="html/d61b90fc-8fac-f513-8eb9-286a0214ac95.htm" />
+    <HelpKINode Title="constructor" Url="html/d2ba8bff-e777-9972-e864-0a6f66de1418.htm" />
+    <HelpKINode Title="methods" Url="html/da42e794-9f75-77b4-46d5-2c7799c5dcad.htm" />
+    <HelpKINode Title="properties" Url="html/565ba836-d7ba-a85c-b037-3ad58fab806f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TransactionsViewModel.academicYear property" Url="html/020097fb-bc93-ad0d-21bb-c6b33d887663.htm" />
+  <HelpKINode Title="TransactionsViewModel.accountHead property" Url="html/74dd0a69-656d-fc46-0fea-302ca9eddc69.htm" />
+  <HelpKINode Title="TransactionsViewModel.amount property" Url="html/f1f8166c-b2a3-abd7-b975-3d9b0f121a03.htm" />
+  <HelpKINode Title="TransactionsViewModel.bankName property" Url="html/94332f90-f1bd-3562-10c5-a3e964d7133e.htm" />
+  <HelpKINode Title="TransactionsViewModel.bid property" Url="html/bb485647-ceb7-a878-daa4-34f5d73d539e.htm" />
+  <HelpKINode Title="TransactionsViewModel.dateOfPay property" Url="html/f9d0ed13-e05e-68fe-82da-178cb2de7b17.htm" />
+  <HelpKINode Title="TransactionsViewModel.id property" Url="html/42234611-8aa6-b2b0-a20a-5cd8086c0baa.htm" />
+  <HelpKINode Title="TransactionsViewModel.paymentType property" Url="html/48d0ffe5-a7e7-bb10-4e0b-00fda7386349.htm" />
+  <HelpKINode Title="TransactionsViewModel.transaction property" Url="html/4971cb54-2222-f98f-c40a-b21c374316bd.htm" />
+  <HelpKINode Title="TransactionsViewModel.TransactionsViewModel constructor" Url="html/d2ba8bff-e777-9972-e864-0a6f66de1418.htm" />
+  <HelpKINode Title="type property">
+    <HelpKINode Title="AddHostelViewModel.type Property " Url="html/36921727-508e-09f2-06b1-27ccc034e8ac.htm" />
+    <HelpKINode Title="Hostel.type Property " Url="html/75d5fcb2-6454-9475-f1c3-9ccdd79c7ef8.htm" />
+  </HelpKINode>
   <HelpKINode Title="UpdateFeeInDatabase method" Url="html/eac1e9cc-582a-8633-92dc-21659ed9dc17.htm" />
   <HelpKINode Title="UpdateFees method" Url="html/9f05c9f8-f432-53b5-374b-7151f8028ee8.htm" />
   <HelpKINode Title="UserController class">
@@ -875,6 +1953,12 @@
   <HelpKINode Title="UserController.ChangeRoomAllotment method" Url="html/9261ed1d-56df-4779-6586-75cacbfefa22.htm" />
   <HelpKINode Title="UserController.DiscountFees method" Url="html/758a53ee-90f5-2e8c-1702-13f2fa1c59b9.htm" />
   <HelpKINode Title="UserController.GenerateMessBill method" Url="html/5325b00b-6356-1425-b655-9174ed0ffd6a.htm" />
+  <HelpKINode Title="UserController.GenerateReport method" Url="html/a92b3fd5-11bb-4cb0-4fd5-8fb6678c7889.htm" />
+  <HelpKINode Title="UserController.GenerateReportByAmount method" Url="html/b3fe8e1a-bad2-ac16-79bb-26d1154a4733.htm" />
+  <HelpKINode Title="UserController.GenerateReportByBID method" Url="html/b118d791-74c8-4a4d-1ad9-fe9fc39dd718.htm" />
+  <HelpKINode Title="UserController.GenerateReportByDate method" Url="html/058c5d4d-8e1b-4d5c-c886-6e81931a30b1.htm" />
+  <HelpKINode Title="UserController.GenerateReportByDropDown method" Url="html/c3986d59-5bf0-e924-83dc-be4737c8a1ff.htm" />
+  <HelpKINode Title="UserController.GenerateStudentReport method" Url="html/3fcff9d3-61fe-8cda-66f4-1e9a38653018.htm" />
   <HelpKINode Title="UserController.GetAmount method" Url="html/963c7574-6c58-b942-4122-79f5fbfc17db.htm" />
   <HelpKINode Title="UserController.GetBlocks method" Url="html/31fd11a5-c4f2-131e-03a4-b09eef6d0f17.htm" />
   <HelpKINode Title="UserController.GetFeeBreakUp method" Url="html/78874eb9-1858-946e-eb72-317ad130939d.htm" />
@@ -893,6 +1977,8 @@
   <HelpKINode Title="UserController.PerformRemoveStudent method" Url="html/e4da8134-dcee-4093-2fec-9c3ee84635b2.htm" />
   <HelpKINode Title="UserController.RemoveStudent method" Url="html/b3327146-d2f2-0d7e-f7d5-396278507a5b.htm" />
   <HelpKINode Title="UserController.ReportAbsenceForMess method" Url="html/3e98d5c3-6aaf-24d2-e06a-46ab1b1e36ac.htm" />
+  <HelpKINode Title="UserController.SetUpDropDown method" Url="html/32ac5dc6-9a99-6fa2-4ccd-8fc6e18014c7.htm" />
+  <HelpKINode Title="UserController.SetUpDropDownViewData method" Url="html/d28f570b-0473-da6e-ab3a-0a01cded9cf8.htm" />
   <HelpKINode Title="UserController.ShowAllDues method" Url="html/9c7ff16d-ebcc-0cf3-8837-1df0233ecb3b.htm" />
   <HelpKINode Title="UserController.ShowAllMessDues method" Url="html/aa1c939c-73d2-5be0-c4b7-19f400b19a9a.htm" />
   <HelpKINode Title="UserController.ShowAllTransactions method" Url="html/031fb6c6-6d09-d741-a088-4396b78a8339.htm" />
@@ -907,7 +1993,12 @@
   </HelpKINode>
   <HelpKINode Title="UserManagerFactory property" Url="html/ad586bf9-f9f9-dd4c-360e-616ba35906fd.htm" />
   <HelpKINode Title="Username property" Url="html/b0238d71-6287-446b-bb86-3d27389efe7c.htm" />
-  <HelpKINode Title="usn property" Url="html/c6ac3e9e-8d82-8334-86d9-a3a428440816.htm" />
+  <HelpKINode Title="usn property">
+    <HelpKINode Title="AutoCompleteViewModel.usn Property " Url="html/853e2933-a483-4898-dc0f-2efae99eac52.htm" />
+    <HelpKINode Title="DisplayStudentViewModel.usn Property " Url="html/cb785f24-c07a-26e1-18de-e6722a7271b3.htm" />
+    <HelpKINode Title="Student.usn Property " Url="html/c6ac3e9e-8d82-8334-86d9-a3a428440816.htm" />
+    <HelpKINode Title="StudentViewModel.usn Property " Url="html/ae693845-0b62-0aec-9e4d-a9ac8486601d.htm" />
+  </HelpKINode>
   <HelpKINode Title="val property">
     <HelpKINode Title="AcHead.val Property " Url="html/7e72a24d-2cf4-b172-dab9-185cade1f100.htm" />
     <HelpKINode Title="Course.val Property " Url="html/4a0bc39f-e135-7802-d88f-c987964d0de2.htm" />
@@ -917,21 +2008,31 @@
     <HelpKINode Title="PaymentType.val Property " Url="html/ecd99b20-7706-5409-cbeb-9f7bf2d310c1.htm" />
     <HelpKINode Title="RoomType.val Property " Url="html/840088be-6c6f-59ed-cfd6-79dadf6008c2.htm" />
   </HelpKINode>
-  <HelpKINode Title="version">
-    <HelpKINode Title="1.0.0.0" Url="html/113990ca-58e2-4bda-b417-f36b5a260e27.htm" />
-    <HelpKINode Title="history" Url="html/2171a3eb-6b34-403e-b0ee-9910c48a8215.htm" />
-  </HelpKINode>
+  <HelpKINode Title="value property" Url="html/6b7ec743-e48f-cff7-f9a7-efe3f958003f.htm" />
   <HelpKINode Title="ViewStudent method">
     <HelpKINode Title="HomeController.ViewStudent Method " Url="html/10dd0a84-f0ae-34f9-9341-2ce12af6038f.htm" />
     <HelpKINode Title="UserController.ViewStudent Method " Url="html/29343c57-5a2c-72ae-846b-a63056898673.htm" />
   </HelpKINode>
   <HelpKINode Title="Welcome" Url="html/51a93020-79cb-4bbf-8949-c4b5f43fd54e.htm" />
   <HelpKINode Title="year property">
-    <HelpKINode Title="Allotment.year Property " Url="html/edfe5fa1-4854-3e44-8cbd-8cf0d49b3130.htm" />
-    <HelpKINode Title="HostelBill.year Property " Url="html/5e0d7acd-7be4-c264-b7a3-a30d55118a41.htm" />
+    <HelpKINode Title="AddAdditionalFeeViewModel.year Property " Url="html/bb8228b3-b16c-1f57-4eda-a1f673fefd8e.htm" />
+    <HelpKINode Title="AllotmentDisplayViewModel.year Property " Url="html/9e20b420-5b6e-9706-2076-efda5a084d12.htm" />
+    <HelpKINode Title="ChangeRoomViewModel.year Property " Url="html/c7aeba40-74dd-f5dd-016d-67f9817e4e40.htm" />
+    <HelpKINode Title="DisplayStudentViewModel.year Property " Url="html/e52c919b-5068-6f60-fc0f-657c6af1a9df.htm" />
     <HelpKINode Title="HostelCharge.year Property " Url="html/b291c1e0-868b-2d6c-15ee-e2aadd5af157.htm" />
     <HelpKINode Title="HostelTransaction.year Property " Url="html/a3f7d963-35a9-8b2c-9c36-8c3dcd26aa37.htm" />
+    <HelpKINode Title="Allotment.year Property " Url="html/edfe5fa1-4854-3e44-8cbd-8cf0d49b3130.htm" />
+    <HelpKINode Title="HostelBill.year Property " Url="html/5e0d7acd-7be4-c264-b7a3-a30d55118a41.htm" />
     <HelpKINode Title="MessBill.year Property " Url="html/8df527a4-5cad-b83b-2cd3-18f570a97b2f.htm" />
     <HelpKINode Title="MessTransaction.year Property " Url="html/ffcca9b6-7700-4d92-eeec-cc7ead9f827c.htm" />
+    <HelpKINode Title="StudentViewModel.year Property " Url="html/9c6ca446-8d61-1796-01ac-7c70605a6161.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Year property">
+    <HelpKINode Title="StudentReportDataSet.MeeFeeRow.Year Property " Url="html/71e25c89-9fbe-f5bf-2c8c-03c282c1bd69.htm" />
+    <HelpKINode Title="StudentReportDataSet.HostelFeeRow.Year Property " Url="html/6e9ac297-4669-73e5-c9ac-300ee6418bd7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="YearColumn property">
+    <HelpKINode Title="StudentReportDataSet.HostelFeeDataTable.YearColumn Property " Url="html/1b25fca4-0ffc-6b5c-2701-eda605958804.htm" />
+    <HelpKINode Title="StudentReportDataSet.MeeFeeDataTable.YearColumn Property " Url="html/59c692c0-8764-404b-b308-4293328e1ffe.htm" />
   </HelpKINode>
 </HelpKI>

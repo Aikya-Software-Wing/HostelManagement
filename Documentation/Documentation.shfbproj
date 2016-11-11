@@ -33,7 +33,7 @@
     </DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>OpenXml</HelpFileFormat>
+    <HelpFileFormat>Website</HelpFileFormat>
     <IndentHtml>True</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -44,27 +44,32 @@
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>True</RootNamespaceContainer>
-    <PresentationStyle>OpenXML</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>Business Layer Documentation</HelpTitle>
+    <HelpTitle>Hostel and Mess Management System Documentation</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
-    <FeedbackEMailLinkText>Feedback</FeedbackEMailLinkText>
+    <FeedbackEMailLinkText>Lalit Adithya</FeedbackEMailLinkText>
     <FeedbackEMailAddress>lalitadithya5071%40gmail.com</FeedbackEMailAddress>
     <MissingTags>AutoDocumentCtors, AutoDocumentDispose</MissingTags>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="BusinessLayer" isDocumented="True" xmlns="">The Business Layer</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement" isDocumented="True" xmlns="">The MVC namespace</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.Administration" isDocumented="True" xmlns="">The admin area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.Administration.Controllers" isDocumented="True" xmlns="">Controllers for admin area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.Administration.Models" isDocumented="True" xmlns="">Models for admin area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.Archive" isDocumented="True" xmlns="">The archive area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.Archive.Controllers" isDocumented="True" xmlns="">Controllers for archive area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.HostelMessManagement" isDocumented="True" xmlns="">The hostel mess management area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Areas.HostelMessManagement.Controllers" isDocumented="True" xmlns="">Controllers for hostel mess management area</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Controllers" isDocumented="True" xmlns="">All the controllers outside all the areas</NamespaceSummaryItem>
-<NamespaceSummaryItem name="HostelManagement.Models" isDocumented="True" xmlns="">All models outside all areas</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="HostelManagement" isDocumented="True" xmlns="">The MVC namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.Administration" isDocumented="True" xmlns="">The admin area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.Administration.Controllers" isDocumented="True" xmlns="">Controllers for admin area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.Administration.Models" isDocumented="True" xmlns="">Models for admin area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.Archive" isDocumented="True" xmlns="">The archive area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.Archive.Controllers" isDocumented="True" xmlns="">Controllers for archive area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.HostelMessManagement" isDocumented="True" xmlns="">The hostel mess management area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Areas.HostelMessManagement.Controllers" isDocumented="True" xmlns="">Controllers for hostel mess management area</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Controllers" isDocumented="True" xmlns="">All the controllers outside all the areas</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="HostelManagement.Models" isDocumented="True" xmlns="">All models outside all areas</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, InheritedFrameworkInternalMembers, InheritedFrameworkPrivateMembers, Internals, Privates, Protected, ProtectedInternalAsProtected, PublicCompilerGenerated</VisibleItems>
+    <FooterText>Guide - Dr. GT Raju%3b Developers - Lalit Adithya, Krupa Hebbar</FooterText>
+    <CopyrightHref>
+    </CopyrightHref>
+    <CopyrightText>Property of RN Shetty Institute of Technology</CopyrightText>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

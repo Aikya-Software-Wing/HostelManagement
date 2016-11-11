@@ -1,18 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="51a93020-79cb-4bbf-8949-c4b5f43fd54e" visible="True" isDefault="true" isSelected="true" title="Welcome to the [TODO: Add project name]">
+  <Topic id="51a93020-79cb-4bbf-8949-c4b5f43fd54e" visible="True" isDefault="true" isSelected="true" title="Hostel and Mess Management System">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
-  </Topic>
-  <Topic id="2171a3eb-6b34-403e-b0ee-9910c48a8215" visible="True" isExpanded="true" title="Version History">
-    <HelpKeywords>
-      <HelpKeyword index="K" term="version, history" />
-    </HelpKeywords>
-    <Topic id="113990ca-58e2-4bda-b417-f36b5a260e27" visible="True" title="Version 1.0.0.0">
-      <HelpKeywords>
-        <HelpKeyword index="K" term="version, 1.0.0.0" />
-      </HelpKeywords>
-    </Topic>
   </Topic>
 </Topics>

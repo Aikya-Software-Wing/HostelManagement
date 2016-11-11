@@ -1,566 +1,1177 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/51a93020-79cb-4bbf-8949-c4b5f43fd54e.htm" />
-  <HelpTOCNode Id="3b1eeb49-8d67-4e5e-bcf2-18f8262b40ff" Title="Version History" Url="html/2171a3eb-6b34-403e-b0ee-9910c48a8215.htm">
-    <HelpTOCNode Title="Version 1.0.0.0" Url="html/113990ca-58e2-4bda-b417-f36b5a260e27.htm" />
-  </HelpTOCNode>
-  <HelpTOCNode Id="535d7058-9a4c-4c6d-95e2-dfebb06fbcc2" Title="BusinessLayer" Url="html/016cce25-ec8b-731f-7669-aedc9f6fc4f3.htm">
-    <HelpTOCNode Id="aa34f83f-ef34-4914-8a24-054fc0245836" Title="AcHead Class" Url="html/3aea8c21-92d3-494e-c3be-778440c9d678.htm">
-      <HelpTOCNode Title="AcHead Constructor " Url="html/d87493fd-e254-06f8-8737-164e64aec94f.htm" />
-      <HelpTOCNode Id="52addf38-ff63-4a1f-a479-e0b85cffd8ab" Title="AcHead Properties" Url="html/3215ec4a-1e02-b77c-66af-9fedb41f99b2.htm">
-        <HelpTOCNode Title="custom Property " Url="html/fd1d7115-9996-6298-3066-67326d455e23.htm" />
-        <HelpTOCNode Title="HostelTransactions Property " Url="html/0bd3567e-e557-37c9-4231-65bbedecb984.htm" />
-        <HelpTOCNode Title="id Property " Url="html/93a9c84a-389f-f6a1-57f1-44b1bc57ced1.htm" />
-        <HelpTOCNode Title="recurr Property " Url="html/e3bee7fe-603f-8b28-728c-703c46e8ac92.htm" />
-        <HelpTOCNode Title="val Property " Url="html/7e72a24d-2cf4-b172-dab9-185cade1f100.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="AcHead Methods" Url="html/5933e1ec-9957-0ede-c9b0-f025f8bf9a97.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="7beae0df-ee23-4fcc-86c2-1132b210babd" Title="Allotment Class" Url="html/8545f1f5-4084-9959-9616-4c559f7045e8.htm">
-      <HelpTOCNode Title="Allotment Constructor " Url="html/1ab790b5-ba07-fdee-d2ec-f91624ea833a.htm" />
-      <HelpTOCNode Id="ef9805f9-c098-41c2-a429-b79313b0f9b9" Title="Allotment Properties" Url="html/4fb68f43-6f53-3af8-7292-4199a7b5c0cf.htm">
-        <HelpTOCNode Title="bid Property " Url="html/86d1d7f0-faf1-f557-9a04-f3d977d594f8.htm" />
-        <HelpTOCNode Title="dateOfJoin Property " Url="html/17118f11-b8cb-0c87-a09c-8df41f7df01a.htm" />
-        <HelpTOCNode Title="dateOfLeave Property " Url="html/a9660db4-a566-fecf-8b2b-f135bd1c599e.htm" />
-        <HelpTOCNode Title="hostelBlock Property " Url="html/4b4bed7b-adeb-8287-91de-b4411db39b74.htm" />
-        <HelpTOCNode Title="Room Property " Url="html/ff367392-7462-e657-41db-c2a8b0aa0d22.htm" />
-        <HelpTOCNode Title="roomNum Property " Url="html/b493ecff-c75e-6528-2d25-c01e2597b150.htm" />
-        <HelpTOCNode Title="slNum Property " Url="html/1b3f0e51-0621-183f-3e30-08a4b50a19e0.htm" />
-        <HelpTOCNode Title="Student Property " Url="html/2ef7b795-7197-189e-ae1b-d4f65726b294.htm" />
-        <HelpTOCNode Title="year Property " Url="html/edfe5fa1-4854-3e44-8cbd-8cf0d49b3130.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Allotment Methods" Url="html/fe9bb375-b39f-db4b-36cc-acf85d8b615c.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="cd0b6649-3369-443a-b210-046ca84bbe3c" Title="Course Class" Url="html/4b513449-8aa9-47c2-d34d-88ceb5a3c2a9.htm">
-      <HelpTOCNode Title="Course Constructor " Url="html/20d07647-52a6-4b8d-f042-5d2a49fae09c.htm" />
-      <HelpTOCNode Id="9feb51a6-276e-4749-a7a0-f3beedcb72a6" Title="Course Properties" Url="html/5293812e-e6ca-f703-f17b-b6a41d1dbb67.htm">
-        <HelpTOCNode Title="id Property " Url="html/d01156e0-988d-e78f-afd4-a4d3d0c5991e.htm" />
-        <HelpTOCNode Title="Students Property " Url="html/d95c3c5d-3b59-d9f3-bf18-da80040c9e68.htm" />
-        <HelpTOCNode Title="val Property " Url="html/4a0bc39f-e135-7802-d88f-c987964d0de2.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Course Methods" Url="html/dca1c407-11fc-0e3b-7a79-5752977d2a4b.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="cd36cb3c-d4b9-480c-a511-7cee11a63225" Title="Department Class" Url="html/c0d7a736-091e-987f-1db7-b3550d9f98ee.htm">
-      <HelpTOCNode Title="Department Constructor " Url="html/cf21215a-1df6-3fab-a815-a732da58e703.htm" />
-      <HelpTOCNode Id="239d87fa-e14e-4f46-a080-33ea9e5bfbee" Title="Department Properties" Url="html/c0690fd7-3298-612e-8d8f-25c6b6e8b9ab.htm">
-        <HelpTOCNode Title="code Property " Url="html/193a1ba6-4b68-8404-ee60-eb6fb7358dcf.htm" />
-        <HelpTOCNode Title="id Property " Url="html/48ebec50-f487-96d8-a81a-cbdcb9f65660.htm" />
-        <HelpTOCNode Title="Students Property " Url="html/b2bbc131-3c97-5a55-a1fd-ba3b21a9b6a8.htm" />
-        <HelpTOCNode Title="val Property " Url="html/dbac0416-bc54-94ca-10a6-6b47244fa226.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Department Methods" Url="html/2f5e0c76-d17e-8532-8fb6-38379f88f2dd.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="3c33e23a-ed40-4662-86ce-5003b7204ff4" Title="Gender Class" Url="html/17ddeebf-a71d-f254-b0d7-5d01f48fdc81.htm">
-      <HelpTOCNode Title="Gender Constructor " Url="html/7e863f65-f205-76be-7354-d30873e79beb.htm" />
-      <HelpTOCNode Id="fa865a9b-28bc-4889-ab35-005572fd8205" Title="Gender Properties" Url="html/959e0394-e19e-1d09-f793-beb50d928e7e.htm">
-        <HelpTOCNode Title="Hostels Property " Url="html/38fbb59a-f592-75b0-d4fd-39994c9cd568.htm" />
-        <HelpTOCNode Title="id Property " Url="html/f4ea395b-cfa2-d13d-2897-6f38cf0bacf4.htm" />
-        <HelpTOCNode Title="Students Property " Url="html/793275aa-4053-ae46-eeee-19ffd4be8457.htm" />
-        <HelpTOCNode Title="val Property " Url="html/446f6511-65a2-ad81-424b-de3d1563b56e.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Gender Methods" Url="html/3e4f5347-7bb0-753b-50ea-8f5066ea1826.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="77beefac-dd15-43c4-94a3-3b7246aa672b" Title="Hostel Class" Url="html/067e8df9-9c63-f4a1-f3d1-dd9c9032e6be.htm">
-      <HelpTOCNode Title="Hostel Constructor " Url="html/18993e4d-4772-83f7-9e2e-e3d3a96e3455.htm" />
-      <HelpTOCNode Id="3b0773c8-3310-4029-9c79-06053211ceb6" Title="Hostel Properties" Url="html/9a925068-acd1-c22d-833b-2446e63e4f0f.htm">
-        <HelpTOCNode Title="blockNumber Property " Url="html/215987ed-5292-66d4-cd5c-43445e7c1480.htm" />
-        <HelpTOCNode Title="Gender Property " Url="html/c5c8aed9-aa6b-97c2-8eb0-ba2679aa9fd6.htm" />
-        <HelpTOCNode Title="occupantType Property " Url="html/073905b8-7848-64b2-f7db-6f4fb3cce02f.htm" />
-        <HelpTOCNode Title="Rooms Property " Url="html/e03c1a08-36f0-fdb7-4d87-2640f9df47d5.htm" />
-        <HelpTOCNode Title="type Property " Url="html/75d5fcb2-6454-9475-f1c3-9ccdd79c7ef8.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Hostel Methods" Url="html/efb1e9d9-4f34-5adc-d28a-21507116dde7.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="6d209bea-cb7b-4a28-b31c-07d94d025841" Title="HostelBill Class" Url="html/cdab0db1-6835-d07c-98e2-2900b8e6d404.htm">
-      <HelpTOCNode Title="HostelBill Constructor " Url="html/3687dc1b-a35a-e1f1-ee31-0b18da2b07c3.htm" />
-      <HelpTOCNode Id="1843b8e5-0182-480e-82d0-da0cb27da12a" Title="HostelBill Properties" Url="html/f8fbeda7-f789-0c18-0467-98a6fbfaff44.htm">
-        <HelpTOCNode Title="amount Property " Url="html/a37541ef-79ea-8ef9-7a18-fc98a9a52b50.htm" />
-        <HelpTOCNode Title="bid Property " Url="html/f23990bb-f9d3-561e-bde8-3897e94fd478.htm" />
-        <HelpTOCNode Title="descr Property " Url="html/321cde6b-db70-d254-521c-d8cdb57d41d6.htm" />
-        <HelpTOCNode Title="id Property " Url="html/b62039dd-cbdc-432d-1450-5973a896280a.htm" />
-        <HelpTOCNode Title="Student Property " Url="html/be397126-d870-fb88-bebb-16e09bfc8738.htm" />
-        <HelpTOCNode Title="year Property " Url="html/5e0d7acd-7be4-c264-b7a3-a30d55118a41.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="HostelBill Methods" Url="html/8754ebd1-77d5-7444-2d34-00f45a7da48a.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="672b9a58-09ec-4c26-971f-f98e7c613e9a" Title="HostelCharge Class" Url="html/6593cb1a-295f-43f5-a031-be2ac0a031ab.htm">
-      <HelpTOCNode Title="HostelCharge Constructor " Url="html/ef2949bd-3604-5f6d-75ad-476fec7c873e.htm" />
-      <HelpTOCNode Id="285af5e5-1bd5-4047-a22a-d81f5471b618" Title="HostelCharge Properties" Url="html/bed1b809-f706-e04c-d9cc-338118cd9a89.htm">
-        <HelpTOCNode Title="id Property " Url="html/fa5f37b4-9655-78ae-6398-44c87dba9e83.htm" />
-        <HelpTOCNode Title="val Property " Url="html/2c76d571-6dcd-50dd-9a56-b1375b3ab937.htm" />
-        <HelpTOCNode Title="year Property " Url="html/b291c1e0-868b-2d6c-15ee-e2aadd5af157.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="HostelCharge Methods" Url="html/7b5f1bbb-32e9-6080-e362-e7dc4feb1044.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="eb3e058d-f468-4701-924a-097748112b4e" Title="HostelManagementEntities1 Class" Url="html/70d8d440-48cd-5ed7-4078-a00497294e3a.htm">
-      <HelpTOCNode Title="HostelManagementEntities1 Constructor " Url="html/7bf4361e-5725-fefc-91ef-9ca90f1e6e45.htm" />
-      <HelpTOCNode Id="ffd1d9c3-0f72-4d34-9557-a6352a400180" Title="HostelManagementEntities1 Properties" Url="html/1125f994-d0a1-22da-e55d-725ef32877c3.htm">
-        <HelpTOCNode Title="AcHeads Property " Url="html/e3a1ed7a-1ab2-bf60-975a-f6ef6d950ef5.htm" />
-        <HelpTOCNode Title="Allotments Property " Url="html/05aaf9db-9f7a-5242-f8de-fd0f5316a6a7.htm" />
-        <HelpTOCNode Title="Courses Property " Url="html/3f586075-3c1c-1c76-3186-d1943da8e54e.htm" />
-        <HelpTOCNode Title="Departments Property " Url="html/007aa9a5-e256-efa7-468d-49a2deb77d91.htm" />
-        <HelpTOCNode Title="Genders Property " Url="html/59938bb4-dfcc-ed10-8e2e-a00b315d049a.htm" />
-        <HelpTOCNode Title="HostelBills Property " Url="html/60fd9d51-e9d6-b814-db23-2c5c076473fb.htm" />
-        <HelpTOCNode Title="HostelCharges Property " Url="html/7a7bc0f1-640f-7732-0354-5781ae0efe89.htm" />
-        <HelpTOCNode Title="Hostels Property " Url="html/44acfccb-c7bd-6584-8fcc-0319591533a6.htm" />
-        <HelpTOCNode Title="HostelTransactions Property " Url="html/be6cdcdf-ae2e-7ed9-7382-7d173fc3edc0.htm" />
-        <HelpTOCNode Title="MessBills Property " Url="html/e3ba8a9b-315b-f741-1eb5-604086b2e2d2.htm" />
-        <HelpTOCNode Title="MessTransactions Property " Url="html/ffa6a100-64ce-a560-d1d1-c64d875f200b.htm" />
-        <HelpTOCNode Title="PaymentTypes Property " Url="html/ca8ce74e-b680-f3cb-8cf7-84d1bfc97162.htm" />
-        <HelpTOCNode Title="Rooms Property " Url="html/385b006c-7bc5-df67-d8a6-b41db1cc38c3.htm" />
-        <HelpTOCNode Title="RoomTypes Property " Url="html/e4ead32d-5e12-34c9-352c-1e74d85755af.htm" />
-        <HelpTOCNode Title="Students Property " Url="html/9da5d357-35ac-12cc-e3ef-45a57509e1c2.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="ac417474-4fe6-41da-8b60-7fe3d40c48e2" Title="HostelManagementEntities1 Methods" Url="html/722b13fc-6712-86c2-e046-f1dd67badfa6.htm">
-        <HelpTOCNode Title="OnModelCreating Method " Url="html/54d40623-651a-e4c4-cd18-117cfe75e109.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="9c442a39-f3c5-4cad-9eb0-471cf244c1f1" Title="HostelTransaction Class" Url="html/25f43fd8-6d3e-239b-795b-c04599d213e1.htm">
-      <HelpTOCNode Title="HostelTransaction Constructor " Url="html/cfb7442d-b2df-12a5-f98f-73d3d1781b38.htm" />
-      <HelpTOCNode Id="612614bc-8d6d-4364-8e37-3363e5d0cc5a" Title="HostelTransaction Properties" Url="html/76080a0a-e35d-0206-63d8-e66554bd7a46.htm">
-        <HelpTOCNode Title="AcHead Property " Url="html/d2ac55cc-ec0a-a714-0eb7-51da09b117d2.htm" />
-        <HelpTOCNode Title="amount Property " Url="html/03095b07-ce27-9956-f9aa-de8beb123c0e.htm" />
-        <HelpTOCNode Title="bankName Property " Url="html/53649df6-37ed-a03e-7c69-f551ac72bbfa.htm" />
-        <HelpTOCNode Title="bid Property " Url="html/013dd094-3981-3a2f-909b-c73e2f29edd1.htm" />
-        <HelpTOCNode Title="dateOfPay Property " Url="html/bf356f51-a69a-105a-e871-4a2b3a2f0967.htm" />
-        <HelpTOCNode Title="head Property " Url="html/a7cd487b-ad49-b925-7da6-c5fa4d3c287c.htm" />
-        <HelpTOCNode Title="id Property " Url="html/645a4621-56a1-349a-75ba-6267e36354e0.htm" />
-        <HelpTOCNode Title="PaymentType Property " Url="html/20795e72-1d02-4858-c6d7-22f9ef84a415.htm" />
-        <HelpTOCNode Title="paymentTypeId Property " Url="html/486ed998-ac89-c961-4b3e-a033ce112794.htm" />
-        <HelpTOCNode Title="receipt Property " Url="html/de20489a-1f3a-8cb2-0bfa-118cc588539d.htm" />
-        <HelpTOCNode Title="Student Property " Url="html/531a0253-7ac3-9f4a-abb9-ac9be142202e.htm" />
-        <HelpTOCNode Title="year Property " Url="html/a3f7d963-35a9-8b2c-9c36-8c3dcd26aa37.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="HostelTransaction Methods" Url="html/cc894301-6fc1-5553-fb41-cecc5ad658dc.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="e38a995d-7d9f-4c84-9aab-d820393088d7" Title="MessBill Class" Url="html/5609b402-74e7-be8e-00aa-32b4880bba7e.htm">
-      <HelpTOCNode Title="MessBill Constructor " Url="html/ec71b795-49dd-c633-a91b-7dbc58e7887c.htm" />
-      <HelpTOCNode Id="34941550-c735-40be-96b3-8c813056f9cf" Title="MessBill Properties" Url="html/34864200-6051-62b1-6602-8d7b16231fa4.htm">
-        <HelpTOCNode Title="bid Property " Url="html/110c5d07-6e64-f44b-c114-5e020cdb2a29.htm" />
-        <HelpTOCNode Title="billNum Property " Url="html/1ae3cd5d-d847-8cf7-9228-2a1d7a997db7.htm" />
-        <HelpTOCNode Title="dateOfDeclaration Property " Url="html/8d5bf20f-95c9-bf05-5d9c-cef6e6e5f597.htm" />
-        <HelpTOCNode Title="MessTransactions Property " Url="html/7a88569f-3ced-cd6c-4bb1-d14e370a2832.htm" />
-        <HelpTOCNode Title="month Property " Url="html/2a0d8106-bba0-8da5-aafd-f052dfc7e47c.htm" />
-        <HelpTOCNode Title="numDays Property " Url="html/0112bb6c-47da-d799-6ce5-6392846f9a5b.htm" />
-        <HelpTOCNode Title="Student Property " Url="html/ef9648a1-742e-707e-c98b-4aecbfa2a4e9.htm" />
-        <HelpTOCNode Title="year Property " Url="html/8df527a4-5cad-b83b-2cd3-18f570a97b2f.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="MessBill Methods" Url="html/084f775e-dc44-60d8-9e9b-9627568a644c.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="d9006dc4-297a-43b8-aa43-c405840c94a3" Title="MessTransaction Class" Url="html/faf64add-d412-b80b-b51f-639379dc43ea.htm">
-      <HelpTOCNode Title="MessTransaction Constructor " Url="html/198070e6-0ec4-1d10-f37d-fe3f0e5f0613.htm" />
-      <HelpTOCNode Id="760af27a-6861-471f-9824-ea843a01b1c3" Title="MessTransaction Properties" Url="html/a5f4adf9-ddcc-72aa-4d87-ff2a56019ef5.htm">
-        <HelpTOCNode Title="amount Property " Url="html/e8c70926-a454-61d3-7382-aef24edc194f.htm" />
-        <HelpTOCNode Title="bankName Property " Url="html/1d6e0e0b-19e1-d9b8-39dd-ae8ddbeb4e82.htm" />
-        <HelpTOCNode Title="bid Property " Url="html/35c65fb7-7b85-61ca-5f6c-60250398ecab.htm" />
-        <HelpTOCNode Title="billNum Property " Url="html/3914c79b-f5f7-3c0c-b420-f02f74d1a64b.htm" />
-        <HelpTOCNode Title="dateOfPay Property " Url="html/0efd7780-cb52-0675-7495-fe21eac015b5.htm" />
-        <HelpTOCNode Title="id Property " Url="html/9aa64cf2-6753-645b-216c-0d894544d1c6.htm" />
-        <HelpTOCNode Title="MessBill Property " Url="html/b7cfced5-96ef-6b90-5bea-acf7661f9be4.htm" />
-        <HelpTOCNode Title="PaymentType Property " Url="html/7df2beba-490a-8433-6037-b23acfae38aa.htm" />
-        <HelpTOCNode Title="paymentTypeId Property " Url="html/70910b29-0a39-0bee-fd7c-db2f78d92077.htm" />
-        <HelpTOCNode Title="receipt Property " Url="html/858937ca-98c0-756b-e23c-299d5104c74a.htm" />
-        <HelpTOCNode Title="Student Property " Url="html/e568b407-7eb0-25ff-a068-0f91bc87ebdb.htm" />
-        <HelpTOCNode Title="year Property " Url="html/ffcca9b6-7700-4d92-eeec-cc7ead9f827c.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="MessTransaction Methods" Url="html/7fcbe2c3-d1fb-183c-5519-0eac7d0c2a1b.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="a9afa76d-4e2f-435d-b66d-b7a9aba0c2b0" Title="PaymentType Class" Url="html/845c78c9-1b47-ac48-8527-9bb334420f82.htm">
-      <HelpTOCNode Title="PaymentType Constructor " Url="html/bfa70232-f81d-026c-ba2f-bc710f42cb52.htm" />
-      <HelpTOCNode Id="c90117da-e101-4e4f-a0c6-6b6096082142" Title="PaymentType Properties" Url="html/5f21e2f6-5ffc-6214-98ab-7131d0a65549.htm">
-        <HelpTOCNode Title="HostelTransactions Property " Url="html/cb667cf8-0173-9058-8243-95130c24c5d5.htm" />
-        <HelpTOCNode Title="id Property " Url="html/1eceb2a4-6ea0-43d3-41fd-7d010a907a00.htm" />
-        <HelpTOCNode Title="MessTransactions Property " Url="html/3b0559dc-12c0-4e21-9efa-c3b7cb356ca3.htm" />
-        <HelpTOCNode Title="val Property " Url="html/ecd99b20-7706-5409-cbeb-9f7bf2d310c1.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="PaymentType Methods" Url="html/28066680-e499-bcf4-8709-73d09e7a8d7f.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="6ab86c25-1d5c-4918-9e36-eac3ad083c83" Title="ReportHelper Class" Url="html/599f9d26-1003-01db-e94f-fbe230597d5b.htm">
-      <HelpTOCNode Title="ReportHelper Constructor " Url="html/361385b9-86c6-86e8-f358-02ca5eed7a78.htm" />
-      <HelpTOCNode Id="73b65f1a-030b-4863-9e65-9128b32bb527" Title="ReportHelper Methods" Url="html/b4a70e19-894c-6996-74d9-4d5433c6d337.htm">
-        <HelpTOCNode Title="ExtractValidRanges Method " Url="html/0af2b066-3d4a-5d9f-290e-93c2de472127.htm" />
-        <HelpTOCNode Title="GenerateExcel Method " Url="html/3617a9fe-ccf5-e0c1-6506-1d827032e073.htm" />
-        <HelpTOCNode Title="GetAllTransactions Method " Url="html/ce87e12c-7e39-2686-9d11-f9425a4152be.htm" />
-        <HelpTOCNode Title="GetTransactionsByAccountHead Method " Url="html/79eb1e06-cb70-1211-1a13-823ac395c86b.htm" />
-        <HelpTOCNode Title="GetTransactionsByAmountRange Method " Url="html/259aff9a-b929-4c18-2972-1fa7f84771cb.htm" />
-        <HelpTOCNode Title="GetTransactionsByCourse Method " Url="html/4ed4a96f-ba4a-4154-2ad5-4f725f1c950d.htm" />
-        <HelpTOCNode Title="GetTransactionsByDateRange Method " Url="html/6174ef48-f467-daff-3190-7f60c5018db9.htm" />
-        <HelpTOCNode Title="GetTransactionsByGender Method " Url="html/ac08535d-0a48-cf33-408c-e17803659d06.htm" />
-        <HelpTOCNode Title="GetTransactionsByPaymentType Method " Url="html/61ccc37b-63e1-e7d3-3411-6f45cda885c6.htm" />
-        <HelpTOCNode Title="GetTransactionsBySem Method " Url="html/50789e96-ea72-a899-ab31-343b506b9955.htm" />
-        <HelpTOCNode Title="GetTransactionsByStudentRange Method " Url="html/5b9b583e-e6c9-352e-f308-6fa219208bf9.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="8183ee3c-22c2-4d75-b291-6963c62a1fbb" Title="Room Class" Url="html/862e7f2e-e49d-9448-9c19-de89f0603d08.htm">
-      <HelpTOCNode Title="Room Constructor " Url="html/cae8241c-ea94-4cd9-4241-2d6357c045b3.htm" />
-      <HelpTOCNode Id="dacc87c5-6572-4bd5-b11c-e512bdcf8853" Title="Room Properties" Url="html/ee6bbd45-0c14-930d-7928-65cb10a974ba.htm">
-        <HelpTOCNode Title="Allotments Property " Url="html/2f723ba1-ef6a-47bd-19ab-2335c47478a6.htm" />
-        <HelpTOCNode Title="currentOccupancy Property " Url="html/e0c867f6-2fc1-6b2f-23dc-5fbe0ce7181d.htm" />
-        <HelpTOCNode Title="Hostel Property " Url="html/2fac3e09-a82e-1891-31d5-566918ef8704.htm" />
-        <HelpTOCNode Title="hostelBlockNumber Property " Url="html/c155a147-e903-8d45-6390-f6bd0547f8a9.htm" />
-        <HelpTOCNode Title="maxOccupancy Property " Url="html/97d19e30-e27f-aa4f-06e2-b38136eedec2.htm" />
-        <HelpTOCNode Title="roomNumber Property " Url="html/a8d8fa06-0002-f33d-17b1-572a9a8a714d.htm" />
-        <HelpTOCNode Title="roomType Property " Url="html/03bab07e-95dd-019c-e3db-de14e816fddd.htm" />
-        <HelpTOCNode Title="RoomType1 Property " Url="html/df08e5ec-dd05-93a2-a435-fdb9b81b1292.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Room Methods" Url="html/b06c954a-7f74-a507-8576-c64d09e121aa.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="c51085ac-948e-4f70-baf3-282f9290384a" Title="RoomType Class" Url="html/c93b6586-148a-125d-16d1-e7b2f369b982.htm">
-      <HelpTOCNode Title="RoomType Constructor " Url="html/d84c2b87-2289-8903-da6f-b829ba8cf937.htm" />
-      <HelpTOCNode Id="ed546da0-aa86-4792-b425-1bb833de52d9" Title="RoomType Properties" Url="html/da106e5b-aad4-8cad-b307-44a9c45bad57.htm">
-        <HelpTOCNode Title="id Property " Url="html/46a84dab-0dc3-56f6-9aa2-6ba2dfd9fb1a.htm" />
-        <HelpTOCNode Title="Rooms Property " Url="html/4c78e1e3-b22a-da50-5c0d-3c7a65bd0ab1.htm" />
-        <HelpTOCNode Title="val Property " Url="html/840088be-6c6f-59ed-cfd6-79dadf6008c2.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="RoomType Methods" Url="html/977b2ef1-fded-1758-2234-206efedcf2e6.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="cb2361bd-215b-4a1d-b2bb-ea0b5d17f7af" Title="Student Class" Url="html/150a3bba-7314-7265-817e-0196892c6460.htm">
-      <HelpTOCNode Title="Student Constructor " Url="html/94098fe8-ee8c-1238-18f3-23e2857e1816.htm" />
-      <HelpTOCNode Id="cf6883c0-7ec5-4cea-9ac3-57fbb6ff0214" Title="Student Properties" Url="html/d73496c2-f67d-ea4c-8185-046af9664c7e.htm">
-        <HelpTOCNode Title="Allotments Property " Url="html/4c827d62-5f61-4ec4-7f17-756e237565f4.htm" />
-        <HelpTOCNode Title="bid Property " Url="html/d9455565-8afd-afac-caf1-1e4d202cb07c.htm" />
-        <HelpTOCNode Title="branch Property " Url="html/97200e75-1a32-702a-44d1-789dc4b1fe9c.htm" />
-        <HelpTOCNode Title="course Property " Url="html/14688a37-b61f-ac31-8242-c970d68933d8.htm" />
-        <HelpTOCNode Title="Course1 Property " Url="html/0a1bb1c4-6cba-0af8-04b5-da7ecf347a02.htm" />
-        <HelpTOCNode Title="Department Property " Url="html/e734fab5-6297-9212-db27-df0ebfaf6498.htm" />
-        <HelpTOCNode Title="dob Property " Url="html/da854635-29c1-4f12-427b-4f8d451b5bab.htm" />
-        <HelpTOCNode Title="gender Property " Url="html/86d66e09-fa84-e648-0da4-3767d6132120.htm" />
-        <HelpTOCNode Title="Gender1 Property " Url="html/b49339b7-902c-884e-996d-ff800c062f42.htm" />
-        <HelpTOCNode Title="HostelBills Property " Url="html/aec633c4-d505-26c5-0340-6fd1248de63a.htm" />
-        <HelpTOCNode Title="HostelTransactions Property " Url="html/2e74538e-fe27-9cd8-b438-d66e01dabe42.htm" />
-        <HelpTOCNode Title="MessBills Property " Url="html/13e0fec1-0747-12eb-0a19-2ecc0fa3607c.htm" />
-        <HelpTOCNode Title="MessTransactions Property " Url="html/7cade502-0bdb-2bff-0623-dbf730597477.htm" />
-        <HelpTOCNode Title="name Property " Url="html/3f540ace-3d9c-31fa-b25b-516491ea12ce.htm" />
-        <HelpTOCNode Title="semester Property " Url="html/b6e3a9ad-3a29-3af5-064b-2c5e44db83d6.htm" />
-        <HelpTOCNode Title="usn Property " Url="html/c6ac3e9e-8d82-8334-86d9-a3a428440816.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="Student Methods" Url="html/8e052ca9-ebcf-b9b8-6138-66e3cdc253f9.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="d5d6c27d-6285-4593-b60c-4907255ecd79" Title="StudentHelper Class" Url="html/7297b2f0-2bcb-3562-bd73-e0210158cfd0.htm">
-      <HelpTOCNode Title="StudentHelper Constructor " Url="html/678d0eae-a87a-da42-f3f8-0625123d6de8.htm" />
-      <HelpTOCNode Id="35430db4-a6bd-4ccd-863f-0c9b0cd1c2d2" Title="StudentHelper Methods" Url="html/72bc6690-bee4-0387-7d24-9f3cc7dbbf29.htm">
-        <HelpTOCNode Title="AddAdditionalFee Method " Url="html/3c95c462-e744-a2ed-6f56-b04e7dc35033.htm" />
-        <HelpTOCNode Title="AddStudent Method " Url="html/6053f76e-58d4-dff5-b5af-1b3e9dea5225.htm" />
-        <HelpTOCNode Title="CanChangeRoom Method " Url="html/e64a6f76-ebc0-e0c5-6e1a-e636681a6064.htm" />
-        <HelpTOCNode Title="CanRemoveStudent Method " Url="html/391e827d-541c-bc8a-5537-b769e9d4ede4.htm" />
-        <HelpTOCNode Title="ConstructViewModelForAlloment Method " Url="html/80a9b7aa-b271-374c-2a03-bc61f55af80a.htm" />
-        <HelpTOCNode Title="ConstructViewModelForRemoveStudent Method " Url="html/245e7e64-c349-dde2-e068-fe1c3a471d4d.htm" />
-        <HelpTOCNode Title="GetAvailableRoomsInHostel Method " Url="html/8eb768c2-9b01-4121-7375-44ff8751fad7.htm" />
-        <HelpTOCNode Title="GetCourses Method " Url="html/9283b03d-0736-0dc0-8d69-6fba1843a634.htm" />
-        <HelpTOCNode Title="GetDepartments Method " Url="html/e4d9b2ab-66ef-3ddd-0d91-b7a0144f0c7d.htm" />
-        <HelpTOCNode Title="GetDepositRefund Method " Url="html/84e641e6-519e-b3bc-34f5-5661254d421f.htm" />
-        <HelpTOCNode Title="GetFeeBreakup Method " Url="html/19e91d20-e8d2-bfc0-6258-5c3c9ae56829.htm" />
-        <HelpTOCNode Title="GetGenders Method " Url="html/3432edd7-1826-20e8-a449-09a7e0c610e6.htm" />
-        <HelpTOCNode Title="GetHostelsForStudent Method " Url="html/7ddca826-300b-0e29-a580-fd43869bde33.htm" />
-        <HelpTOCNode Title="GetRoomsIncludingCurrent Method " Url="html/6bd07f7f-e1d1-3e8f-d46f-5a6dc65a229c.htm" />
-        <HelpTOCNode Title="GetRoomType Method " Url="html/4df56794-e631-3566-2866-949bbd1d596d.htm" />
-        <HelpTOCNode Title="GetRoomTypes Method " Url="html/67b653eb-919f-3d41-8873-57304899a83e.htm" />
-        <HelpTOCNode Title="GetStudent Method " Url="html/34d4e43a-9c6d-4693-6a00-f7fa87913e72.htm" />
-        <HelpTOCNode Title="GetStudentDetails Method " Url="html/81dbd87e-be14-c85b-5c60-105575fe0464.htm" />
-        <HelpTOCNode Title="GetStudentListForAutoComplete Method " Url="html/02c50820-2761-bf0c-50b0-ec4c8a6ebb48.htm" />
-        <HelpTOCNode Title="IsUsnRequired Method " Url="html/b02c442a-dea8-c5ae-0020-13d235fc377b.htm" />
-        <HelpTOCNode Title="PerformRemoveStudent Method " Url="html/55925f2d-3c5c-b906-99fa-c1d30ae1f2ee.htm" />
-        <HelpTOCNode Title="PerformRoomChange Method " Url="html/8e6f08ee-1b07-6d1b-d55e-1276caf7eed0.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="0699db55-962c-44a2-a6b3-caa7c79b99fd" Title="TransactionHelper Class" Url="html/00ac092a-4405-ce04-c53c-b9d7276b549e.htm">
-      <HelpTOCNode Title="TransactionHelper Constructor " Url="html/0ad1a71f-f75e-4445-e90e-9984ed01fc64.htm" />
-      <HelpTOCNode Id="49d435a6-f852-439f-8fc0-07f51948b0b4" Title="TransactionHelper Methods" Url="html/c4ff5bb2-3d24-67c3-5e17-8132c2182009.htm">
-        <HelpTOCNode Title="CanChangeDep Method " Url="html/b08c1867-f44e-8b0d-148a-98f27094dd57.htm" />
-        <HelpTOCNode Title="CanChangeFix Method " Url="html/cded713c-cb8d-b261-1660-8ce39ea0f3cd.htm" />
-        <HelpTOCNode Title="CanChangeMessFees Method " Url="html/fe02b58f-fd37-2552-4c63-e8083e218c91.htm" />
-        <HelpTOCNode Title="CanChangeRent Method " Url="html/805033c7-15af-e09c-39e8-ac9d409ee7a7.htm" />
-        <HelpTOCNode Title="CanGenerateMessBill Method " Url="html/de75b5e3-1a34-6026-4c81-b9cb4e35109c.htm" />
-        <HelpTOCNode Title="ChangeHostelFees Method " Url="html/f43a57aa-05be-2204-3102-3fe65b7346e0.htm" />
-        <HelpTOCNode Title="ChangeMessFees Method " Url="html/312c0ab3-10f1-49c2-dcdd-8e882e8ac7c2.htm" />
-        <HelpTOCNode Title="ConstructViewModelForHostelFeeChange Method " Url="html/70b19b58-ace5-80de-29f0-49ddc209a289.htm" />
-        <HelpTOCNode Title="ConstructViewModelForHostelFeeDiscount Method " Url="html/18a6edff-374d-2463-59d7-211004fd8cc3.htm" />
-        <HelpTOCNode Title="ConstructViewModelForHostelTransaction Method " Url="html/85c1c832-910e-8709-5486-a3b7215d3aca.htm" />
-        <HelpTOCNode Title="ConstructViewModelForMessFeeChange Method " Url="html/2ce1a098-124a-7c11-980d-a3b5e6026db0.htm" />
-        <HelpTOCNode Title="ConstructViewModelForMessTransaction Method " Url="html/14093ad5-6dbd-c087-b3ed-37dfcf4b5400.htm" />
-        <HelpTOCNode Title="GenerateMessBill Method " Url="html/60499b78-6fc4-4994-5781-418a96fd07ec.htm" />
-        <HelpTOCNode Title="GetAcademicYear Method " Url="html/6606709f-8137-06f9-76e5-fe86ef894412.htm" />
-        <HelpTOCNode Title="GetAccountHeads Method " Url="html/f0c1d85b-5e27-f990-4dd0-9a5689b7205c.htm" />
-        <HelpTOCNode Title="GetAllHostelDues Method " Url="html/973fd07f-4bd9-126c-9db4-f0330c147f21.htm" />
-        <HelpTOCNode Title="GetAllMessDues Method " Url="html/afb2e8cd-939e-716b-e404-5f9dc245667b.htm" />
-        <HelpTOCNode Title="GetAllTransactionsForStudent Method " Url="html/14ae4916-f568-6670-fe3d-957a773b70de.htm" />
-        <HelpTOCNode Title="GetDepFeeId Method " Url="html/5f7022d1-2af5-b622-5f16-865518a1ec92.htm" />
-        <HelpTOCNode Id="f2312910-2b1e-48c0-b423-10381ade0c32" Title="GetFee Method " Url="html/52cfc517-e086-e5cf-bcf3-a78e7afcabc9.htm">
-          <HelpTOCNode Title="GetFee Method (Int32)" Url="html/ab9682c8-4438-799b-8fa0-8a559ba24d0f.htm" />
-          <HelpTOCNode Title="GetFee Method (Int32, Int32, String, Int32)" Url="html/bcefaa8d-1971-b815-cf3c-02120ce22af5.htm" />
+  <HelpTOCNode Title="Hostel and Mess Management System" Url="html/51a93020-79cb-4bbf-8949-c4b5f43fd54e.htm" />
+  <HelpTOCNode Id="c974a37c-4f19-420e-acaf-21bce60e065b" Title="Namespaces" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="f2c4558b-d88d-4ca7-974e-601f0d1fa367" Title="BusinessLayer" Url="html/016cce25-ec8b-731f-7669-aedc9f6fc4f3.htm">
+      <HelpTOCNode Id="cd21e9e7-2154-4b77-90c3-e79a7fe5d1fa" Title="AcHead Class" Url="html/3aea8c21-92d3-494e-c3be-778440c9d678.htm">
+        <HelpTOCNode Title="AcHead Constructor " Url="html/d87493fd-e254-06f8-8737-164e64aec94f.htm" />
+        <HelpTOCNode Id="c253086d-419e-4a8b-be47-7ef331f5e345" Title="AcHead Properties" Url="html/3215ec4a-1e02-b77c-66af-9fedb41f99b2.htm">
+          <HelpTOCNode Title="custom Property " Url="html/fd1d7115-9996-6298-3066-67326d455e23.htm" />
+          <HelpTOCNode Title="HostelTransactions Property " Url="html/0bd3567e-e557-37c9-4231-65bbedecb984.htm" />
+          <HelpTOCNode Title="id Property " Url="html/93a9c84a-389f-f6a1-57f1-44b1bc57ced1.htm" />
+          <HelpTOCNode Title="recurr Property " Url="html/e3bee7fe-603f-8b28-728c-703c46e8ac92.htm" />
+          <HelpTOCNode Title="val Property " Url="html/7e72a24d-2cf4-b172-dab9-185cade1f100.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Title="GetFixFeeId Method " Url="html/7a642445-c7ac-9ee6-87a9-1c29532072f1.htm" />
-        <HelpTOCNode Title="GetHostelFeePayable Method " Url="html/88e017b1-8243-dddf-70c8-107fb5eb3fc0.htm" />
-        <HelpTOCNode Title="GetMessDue Method " Url="html/770e0465-1194-f6f0-3df2-577c6907cbf9.htm" />
-        <HelpTOCNode Title="GetMessFeePayable Method " Url="html/8e2d8c2e-d7db-05d1-68b2-852d46a295de.htm" />
-        <HelpTOCNode Title="GetPaymentTypes Method " Url="html/aeaced5d-9df2-29a9-3d5a-1dea6a44aa8a.htm" />
-        <HelpTOCNode Title="GetRentFeeId Method " Url="html/8605f40a-a2d5-6acf-5ac6-e0e749a5aefa.htm" />
-        <HelpTOCNode Title="GetStudentDues Method " Url="html/ce0cec61-8592-8e16-f23e-8ee64f519a36.htm" />
-        <HelpTOCNode Title="GetValidAcademicYears Method " Url="html/c04526d3-da0b-72e3-6113-d0df5f2e1041.htm" />
-        <HelpTOCNode Title="PerformFeeDiscount Method " Url="html/f83fd368-f1f0-dd6a-9b5a-c0f85e27d000.htm" />
-        <HelpTOCNode Title="PerformHostelTransaction Method " Url="html/a761c14c-8d10-968c-068f-975d761e75f5.htm" />
-        <HelpTOCNode Title="PerformMessTransaction Method " Url="html/cb4ea293-d6f9-1267-84ad-cc085ea5dd50.htm" />
-        <HelpTOCNode Title="ReportAbsenceForMess Method " Url="html/c33c2fd4-b6fe-c85a-1c7a-20402eed3075.htm" />
-        <HelpTOCNode Title="UpdateFeeInDatabase Method " Url="html/eac1e9cc-582a-8633-92dc-21659ed9dc17.htm" />
+        <HelpTOCNode Title="AcHead Methods" Url="html/5933e1ec-9957-0ede-c9b0-f025f8bf9a97.htm" />
       </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="b4494286-0299-41a2-87ac-484f156522d9" Title="HostelManagement" Url="html/d4335610-d919-2302-4761-769a2eda8830.htm">
-    <HelpTOCNode Id="850c5d53-abcc-458b-90f3-0af4931e6fec" Title="AppDbContext Class" Url="html/d05620d1-d2c7-a222-185f-6213ddd28baf.htm">
-      <HelpTOCNode Title="AppDbContext Constructor " Url="html/ddbd0c31-45bc-b29d-9edd-ba0030d7cdfd.htm" />
-      <HelpTOCNode Title="AppDbContext Properties" Url="html/ebf78ce3-355d-be1a-dd91-ed2b15708ac3.htm" />
-      <HelpTOCNode Title="AppDbContext Methods" Url="html/57ac5816-6f97-da64-a31b-99f1a565c2ab.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="a1baed88-e2b8-4897-b9af-4fac5a021b1f" Title="AppUser Class" Url="html/53d9a397-fe9b-5dd3-4e3e-2aaeafcbb744.htm">
-      <HelpTOCNode Title="AppUser Constructor " Url="html/08146189-b54c-22b3-c322-c3308269e7dd.htm" />
-      <HelpTOCNode Title="AppUser Properties" Url="html/eeb1a7c5-77d4-68c7-b569-78b24bce527f.htm" />
-      <HelpTOCNode Title="AppUser Methods" Url="html/5d216fa7-789f-5a87-58fe-165ae2a199c0.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="21d860f6-f30e-4bb4-8d10-028da6857ec1" Title="FilterConfig Class" Url="html/22b62624-4365-1e8b-00ed-8c05fa2adf03.htm">
-      <HelpTOCNode Title="FilterConfig Constructor " Url="html/244707bf-83ed-edcb-3e99-e955319b34ef.htm" />
-      <HelpTOCNode Id="f43b1e14-a784-4897-890d-04bd8d9bc5de" Title="FilterConfig Methods" Url="html/f10f1813-e0eb-3c05-2993-50fd49f4acb5.htm">
-        <HelpTOCNode Title="RegisterGlobalFilters Method " Url="html/7fd2b4ac-47ea-2648-d286-0ca3259b1a77.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="874d4959-c294-4558-9aa8-5d832d8c6b45" Title="MvcApplication Class" Url="html/0a65f306-3842-434b-3296-602a0fa694bb.htm">
-      <HelpTOCNode Title="MvcApplication Constructor " Url="html/97c0845e-b318-fb81-a23c-eeff3f09bd45.htm" />
-      <HelpTOCNode Title="MvcApplication Properties" Url="html/1873f57e-f55b-5003-bf4a-743adde3c023.htm" />
-      <HelpTOCNode Id="eac62207-081b-46ba-bc0f-ff2235b772c6" Title="MvcApplication Methods" Url="html/8d805146-4392-9726-0c8f-d1778aac1f3a.htm">
-        <HelpTOCNode Title="Application_Start Method " Url="html/bcac6f5c-1cd6-00dc-333b-5f957fbe27c9.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="MvcApplication Events" Url="html/5335deed-e78b-883e-42f8-5ea09b25e46b.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="bdceb919-6940-44a8-8a01-0beff244ac66" Title="RouteConfig Class" Url="html/ceabedf6-4be8-d2a5-15f1-371eb02ccf3c.htm">
-      <HelpTOCNode Title="RouteConfig Constructor " Url="html/622047f9-358a-d5d9-857c-444cb9a228f5.htm" />
-      <HelpTOCNode Id="9a6177b6-dcf6-45d6-8807-113f8aa56377" Title="RouteConfig Methods" Url="html/8dc3a447-f608-fbfe-3836-647b826ae05a.htm">
-        <HelpTOCNode Title="RegisterRoutes Method " Url="html/f1a08d65-9f2b-99d3-7626-266fb493954a.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="7efbbba7-b562-4d37-8533-7c66e33bdc2e" Title="Startup Class" Url="html/d10c7a7c-11e8-2c64-01c7-61adef8911b9.htm">
-      <HelpTOCNode Title="Startup Constructor " Url="html/0a324dc8-da3c-98ce-e4ca-44a89e4ec82a.htm" />
-      <HelpTOCNode Id="5a73c85e-fc8a-46fb-9049-05bb59f075d1" Title="Startup Properties" Url="html/5e25b1d5-3bcb-9113-c97d-1d280b62ada9.htm">
-        <HelpTOCNode Title="UserManagerFactory Property " Url="html/ad586bf9-f9f9-dd4c-360e-616ba35906fd.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="aae392cd-ce4e-4ef9-81ad-9cc1d5ba0d3b" Title="Startup Methods" Url="html/9eb8da27-7b93-e178-b9be-cb6aa26fbb9b.htm">
-        <HelpTOCNode Title="Configuration Method " Url="html/6c13a701-f619-c62c-934a-83089eab6eb7.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="4024ea93-c15f-433e-89dc-b88c1e908aaa" Title="HostelManagement.Areas.Administration" Url="html/0eb7cd69-ee3a-c857-a6c2-d631ac134c43.htm">
-    <HelpTOCNode Id="726c4b6b-bc78-4e3d-8fa3-a91c39769966" Title="AdministrationAreaRegistration Class" Url="html/cac815d7-a0be-0dfe-b196-930baf0619c3.htm">
-      <HelpTOCNode Title="AdministrationAreaRegistration Constructor " Url="html/6f8a3d2e-99f2-6e9b-32ad-619da368a9a7.htm" />
-      <HelpTOCNode Id="92259b34-0bb2-494d-aa7a-a14fed4fe7ce" Title="AdministrationAreaRegistration Properties" Url="html/18f51977-929e-8275-4b35-17e1dd70fba5.htm">
-        <HelpTOCNode Title="AreaName Property " Url="html/9f8dcfa2-60d2-8146-e32d-d8f07e30877e.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="4b870f86-b8ad-44c0-8510-6b7c26231c8c" Title="AdministrationAreaRegistration Methods" Url="html/6f4d7b2a-17b2-2d98-ff9c-c07ba6282316.htm">
-        <HelpTOCNode Title="RegisterArea Method " Url="html/ab1c714b-c68c-f70d-2616-2cdf85f64928.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="114e472e-d4ed-4ebc-8d72-b6d63632c779" Title="HostelManagement.Areas.Administration.Controllers" Url="html/2be1f517-8cb7-cf37-261f-94cee183747b.htm">
-    <HelpTOCNode Id="6e0e6d4c-5d1e-44d4-9805-07f5c6a22fa3" Title="HomeController Class" Url="html/a38f5eb4-b2fb-ddf5-3825-640ad5038e4d.htm">
-      <HelpTOCNode Id="010f8678-5f60-4d7b-a1bf-bbf6bd2cabd6" Title="HomeController Constructor " Url="html/e7a35948-7e37-4ad2-085a-4006ec316835.htm">
-        <HelpTOCNode Title="HomeController Constructor " Url="html/615c3359-626a-0952-c36c-c473037a51a3.htm" />
-        <HelpTOCNode Title="HomeController Constructor (UserManager`1(AppUser))" Url="html/79179c8b-8f29-bfde-f786-5451e136f873.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="HomeController Properties" Url="html/73cb51d8-e435-f8d8-3c72-f9b49a6b57ff.htm" />
-      <HelpTOCNode Id="18bb411d-0d13-4dc3-95fd-290517d1d2c6" Title="HomeController Methods" Url="html/717e4712-1ac4-ecb9-e4e6-9395c132cdfb.htm">
-        <HelpTOCNode Id="1d3d339b-ea53-47dd-8560-7bc316d5eff3" Title="AddUser Method " Url="html/6cc2486a-647b-c31f-8614-7ad3235c9860.htm">
-          <HelpTOCNode Title="AddUser Method " Url="html/39b08e7c-0857-9abc-1818-07e41ed21868.htm" />
-          <HelpTOCNode Title="AddUser Method (AddUserViewModel)" Url="html/38c19e5a-3e3c-cbe0-fa56-9ea93111880f.htm" />
+      <HelpTOCNode Id="83ec3118-6be6-49b0-9544-bb1d6d2d0d58" Title="Allotment Class" Url="html/8545f1f5-4084-9959-9616-4c559f7045e8.htm">
+        <HelpTOCNode Title="Allotment Constructor " Url="html/1ab790b5-ba07-fdee-d2ec-f91624ea833a.htm" />
+        <HelpTOCNode Id="5e5f3472-c7dd-4ed6-aa9e-d61471ef6f0e" Title="Allotment Properties" Url="html/4fb68f43-6f53-3af8-7292-4199a7b5c0cf.htm">
+          <HelpTOCNode Title="bid Property " Url="html/86d1d7f0-faf1-f557-9a04-f3d977d594f8.htm" />
+          <HelpTOCNode Title="dateOfJoin Property " Url="html/17118f11-b8cb-0c87-a09c-8df41f7df01a.htm" />
+          <HelpTOCNode Title="dateOfLeave Property " Url="html/a9660db4-a566-fecf-8b2b-f135bd1c599e.htm" />
+          <HelpTOCNode Title="hostelBlock Property " Url="html/4b4bed7b-adeb-8287-91de-b4411db39b74.htm" />
+          <HelpTOCNode Title="Room Property " Url="html/ff367392-7462-e657-41db-c2a8b0aa0d22.htm" />
+          <HelpTOCNode Title="roomNum Property " Url="html/b493ecff-c75e-6528-2d25-c01e2597b150.htm" />
+          <HelpTOCNode Title="slNum Property " Url="html/1b3f0e51-0621-183f-3e30-08a4b50a19e0.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/2ef7b795-7197-189e-ae1b-d4f65726b294.htm" />
+          <HelpTOCNode Title="year Property " Url="html/edfe5fa1-4854-3e44-8cbd-8cf0d49b3130.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="08987de3-426e-4eeb-80a7-7263e16f9516" Title="Dispose Method " Url="html/7833c7f6-d53a-dda1-dd55-3bdbfee77e4c.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/e918b723-6b91-b32c-648a-5fca606e846c.htm" />
+        <HelpTOCNode Title="Allotment Methods" Url="html/fe9bb375-b39f-db4b-36cc-acf85d8b615c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="69df489b-840d-49d6-9952-896d20f9296d" Title="Course Class" Url="html/4b513449-8aa9-47c2-d34d-88ceb5a3c2a9.htm">
+        <HelpTOCNode Title="Course Constructor " Url="html/20d07647-52a6-4b8d-f042-5d2a49fae09c.htm" />
+        <HelpTOCNode Id="8f15c55f-f6d9-4107-8c98-00c8a4094f82" Title="Course Properties" Url="html/5293812e-e6ca-f703-f17b-b6a41d1dbb67.htm">
+          <HelpTOCNode Title="id Property " Url="html/d01156e0-988d-e78f-afd4-a4d3d0c5991e.htm" />
+          <HelpTOCNode Title="Students Property " Url="html/d95c3c5d-3b59-d9f3-bf18-da80040c9e68.htm" />
+          <HelpTOCNode Title="val Property " Url="html/4a0bc39f-e135-7802-d88f-c987964d0de2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Title="Index Method " Url="html/c7bdd0b4-be88-ee02-6ae9-485b483a6157.htm" />
-        <HelpTOCNode Title="Logout Method " Url="html/cc058d8e-c7e4-a7ce-145f-236a298acd63.htm" />
-        <HelpTOCNode Title="MeetDevelopers Method " Url="html/80177972-cf84-ae53-8dc7-3d38690f32a2.htm" />
-        <HelpTOCNode Id="7676eae4-8a5c-4682-9faa-4ee31f242189" Title="RemoveUser Method " Url="html/146bc0e5-6890-5974-c382-ffa31b636fbc.htm">
-          <HelpTOCNode Title="RemoveUser Method " Url="html/e7351629-997b-4b3e-151d-c6610dccb932.htm" />
-          <HelpTOCNode Title="RemoveUser Method (String)" Url="html/224a74cd-1a59-d5b9-86d2-f758c8f0be2f.htm" />
+        <HelpTOCNode Title="Course Methods" Url="html/dca1c407-11fc-0e3b-7a79-5752977d2a4b.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="add12d79-b31b-4fd8-97a4-6fefc80a29d8" Title="Department Class" Url="html/c0d7a736-091e-987f-1db7-b3550d9f98ee.htm">
+        <HelpTOCNode Title="Department Constructor " Url="html/cf21215a-1df6-3fab-a815-a732da58e703.htm" />
+        <HelpTOCNode Id="b8242efa-e1af-4ade-8c73-89daca451c05" Title="Department Properties" Url="html/c0690fd7-3298-612e-8d8f-25c6b6e8b9ab.htm">
+          <HelpTOCNode Title="code Property " Url="html/193a1ba6-4b68-8404-ee60-eb6fb7358dcf.htm" />
+          <HelpTOCNode Title="id Property " Url="html/48ebec50-f487-96d8-a81a-cbdcb9f65660.htm" />
+          <HelpTOCNode Title="Students Property " Url="html/b2bbc131-3c97-5a55-a1fd-ba3b21a9b6a8.htm" />
+          <HelpTOCNode Title="val Property " Url="html/dbac0416-bc54-94ca-10a6-6b47244fa226.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Department Methods" Url="html/2f5e0c76-d17e-8532-8fb6-38379f88f2dd.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="38ecfe5d-4310-45f5-98c2-1716e63f82c8" Title="Gender Class" Url="html/17ddeebf-a71d-f254-b0d7-5d01f48fdc81.htm">
+        <HelpTOCNode Title="Gender Constructor " Url="html/7e863f65-f205-76be-7354-d30873e79beb.htm" />
+        <HelpTOCNode Id="554db093-1843-475d-80d9-aefdd2f701da" Title="Gender Properties" Url="html/959e0394-e19e-1d09-f793-beb50d928e7e.htm">
+          <HelpTOCNode Title="Hostels Property " Url="html/38fbb59a-f592-75b0-d4fd-39994c9cd568.htm" />
+          <HelpTOCNode Title="id Property " Url="html/f4ea395b-cfa2-d13d-2897-6f38cf0bacf4.htm" />
+          <HelpTOCNode Title="Students Property " Url="html/793275aa-4053-ae46-eeee-19ffd4be8457.htm" />
+          <HelpTOCNode Title="val Property " Url="html/446f6511-65a2-ad81-424b-de3d1563b56e.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Gender Methods" Url="html/3e4f5347-7bb0-753b-50ea-8f5066ea1826.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="99510dda-428e-4bcf-a352-a1fef714163e" Title="Hostel Class" Url="html/067e8df9-9c63-f4a1-f3d1-dd9c9032e6be.htm">
+        <HelpTOCNode Title="Hostel Constructor " Url="html/18993e4d-4772-83f7-9e2e-e3d3a96e3455.htm" />
+        <HelpTOCNode Id="edbf648d-9b2e-4ba4-82af-9ee6a7149e67" Title="Hostel Properties" Url="html/9a925068-acd1-c22d-833b-2446e63e4f0f.htm">
+          <HelpTOCNode Title="blockNumber Property " Url="html/215987ed-5292-66d4-cd5c-43445e7c1480.htm" />
+          <HelpTOCNode Title="Gender Property " Url="html/c5c8aed9-aa6b-97c2-8eb0-ba2679aa9fd6.htm" />
+          <HelpTOCNode Title="occupantType Property " Url="html/073905b8-7848-64b2-f7db-6f4fb3cce02f.htm" />
+          <HelpTOCNode Title="Rooms Property " Url="html/e03c1a08-36f0-fdb7-4d87-2640f9df47d5.htm" />
+          <HelpTOCNode Title="type Property " Url="html/75d5fcb2-6454-9475-f1c3-9ccdd79c7ef8.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Hostel Methods" Url="html/efb1e9d9-4f34-5adc-d28a-21507116dde7.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d26529ca-6131-4eea-87a8-c55bfc190dc6" Title="HostelBill Class" Url="html/cdab0db1-6835-d07c-98e2-2900b8e6d404.htm">
+        <HelpTOCNode Title="HostelBill Constructor " Url="html/3687dc1b-a35a-e1f1-ee31-0b18da2b07c3.htm" />
+        <HelpTOCNode Id="86a64fd2-a6ec-4b5b-8ab2-6cd5c25733a7" Title="HostelBill Properties" Url="html/f8fbeda7-f789-0c18-0467-98a6fbfaff44.htm">
+          <HelpTOCNode Title="amount Property " Url="html/a37541ef-79ea-8ef9-7a18-fc98a9a52b50.htm" />
+          <HelpTOCNode Title="bid Property " Url="html/f23990bb-f9d3-561e-bde8-3897e94fd478.htm" />
+          <HelpTOCNode Title="descr Property " Url="html/321cde6b-db70-d254-521c-d8cdb57d41d6.htm" />
+          <HelpTOCNode Title="id Property " Url="html/b62039dd-cbdc-432d-1450-5973a896280a.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/be397126-d870-fb88-bebb-16e09bfc8738.htm" />
+          <HelpTOCNode Title="year Property " Url="html/5e0d7acd-7be4-c264-b7a3-a30d55118a41.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="HostelBill Methods" Url="html/8754ebd1-77d5-7444-2d34-00f45a7da48a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="35c09eae-9798-48fd-a857-1cdf7f93c72d" Title="HostelCharge Class" Url="html/6593cb1a-295f-43f5-a031-be2ac0a031ab.htm">
+        <HelpTOCNode Title="HostelCharge Constructor " Url="html/ef2949bd-3604-5f6d-75ad-476fec7c873e.htm" />
+        <HelpTOCNode Id="ac456593-8849-4eb2-a616-9fb2f8fcc41c" Title="HostelCharge Properties" Url="html/bed1b809-f706-e04c-d9cc-338118cd9a89.htm">
+          <HelpTOCNode Title="id Property " Url="html/fa5f37b4-9655-78ae-6398-44c87dba9e83.htm" />
+          <HelpTOCNode Title="val Property " Url="html/2c76d571-6dcd-50dd-9a56-b1375b3ab937.htm" />
+          <HelpTOCNode Title="year Property " Url="html/b291c1e0-868b-2d6c-15ee-e2aadd5af157.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="HostelCharge Methods" Url="html/7b5f1bbb-32e9-6080-e362-e7dc4feb1044.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="542c88bf-8f11-46b6-be1a-80894e665f5a" Title="HostelManagementEntities1 Class" Url="html/70d8d440-48cd-5ed7-4078-a00497294e3a.htm">
+        <HelpTOCNode Title="HostelManagementEntities1 Constructor " Url="html/7bf4361e-5725-fefc-91ef-9ca90f1e6e45.htm" />
+        <HelpTOCNode Id="4d1eb66a-178e-432a-86ed-69e40118251b" Title="HostelManagementEntities1 Properties" Url="html/1125f994-d0a1-22da-e55d-725ef32877c3.htm">
+          <HelpTOCNode Title="AcHeads Property " Url="html/e3a1ed7a-1ab2-bf60-975a-f6ef6d950ef5.htm" />
+          <HelpTOCNode Title="Allotments Property " Url="html/05aaf9db-9f7a-5242-f8de-fd0f5316a6a7.htm" />
+          <HelpTOCNode Title="Courses Property " Url="html/3f586075-3c1c-1c76-3186-d1943da8e54e.htm" />
+          <HelpTOCNode Title="Departments Property " Url="html/007aa9a5-e256-efa7-468d-49a2deb77d91.htm" />
+          <HelpTOCNode Title="Genders Property " Url="html/59938bb4-dfcc-ed10-8e2e-a00b315d049a.htm" />
+          <HelpTOCNode Title="HostelBills Property " Url="html/60fd9d51-e9d6-b814-db23-2c5c076473fb.htm" />
+          <HelpTOCNode Title="HostelCharges Property " Url="html/7a7bc0f1-640f-7732-0354-5781ae0efe89.htm" />
+          <HelpTOCNode Title="Hostels Property " Url="html/44acfccb-c7bd-6584-8fcc-0319591533a6.htm" />
+          <HelpTOCNode Title="HostelTransactions Property " Url="html/be6cdcdf-ae2e-7ed9-7382-7d173fc3edc0.htm" />
+          <HelpTOCNode Title="MessBills Property " Url="html/e3ba8a9b-315b-f741-1eb5-604086b2e2d2.htm" />
+          <HelpTOCNode Title="MessTransactions Property " Url="html/ffa6a100-64ce-a560-d1d1-c64d875f200b.htm" />
+          <HelpTOCNode Title="PaymentTypes Property " Url="html/ca8ce74e-b680-f3cb-8cf7-84d1bfc97162.htm" />
+          <HelpTOCNode Title="Rooms Property " Url="html/385b006c-7bc5-df67-d8a6-b41db1cc38c3.htm" />
+          <HelpTOCNode Title="RoomTypes Property " Url="html/e4ead32d-5e12-34c9-352c-1e74d85755af.htm" />
+          <HelpTOCNode Title="Students Property " Url="html/9da5d357-35ac-12cc-e3ef-45a57509e1c2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="5b039daf-7073-4eb5-9465-e4e6bb79293b" Title="HostelManagementEntities1 Methods" Url="html/722b13fc-6712-86c2-e046-f1dd67badfa6.htm">
+          <HelpTOCNode Title="OnModelCreating Method " Url="html/54d40623-651a-e4c4-cd18-117cfe75e109.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f9c72953-3b38-414e-936c-e41a073edc0d" Title="HostelTransaction Class" Url="html/25f43fd8-6d3e-239b-795b-c04599d213e1.htm">
+        <HelpTOCNode Title="HostelTransaction Constructor " Url="html/cfb7442d-b2df-12a5-f98f-73d3d1781b38.htm" />
+        <HelpTOCNode Id="62e7650d-57f4-4942-92c9-889a431c3dae" Title="HostelTransaction Properties" Url="html/76080a0a-e35d-0206-63d8-e66554bd7a46.htm">
+          <HelpTOCNode Title="AcHead Property " Url="html/d2ac55cc-ec0a-a714-0eb7-51da09b117d2.htm" />
+          <HelpTOCNode Title="amount Property " Url="html/03095b07-ce27-9956-f9aa-de8beb123c0e.htm" />
+          <HelpTOCNode Title="bankName Property " Url="html/53649df6-37ed-a03e-7c69-f551ac72bbfa.htm" />
+          <HelpTOCNode Title="bid Property " Url="html/013dd094-3981-3a2f-909b-c73e2f29edd1.htm" />
+          <HelpTOCNode Title="dateOfPay Property " Url="html/bf356f51-a69a-105a-e871-4a2b3a2f0967.htm" />
+          <HelpTOCNode Title="head Property " Url="html/a7cd487b-ad49-b925-7da6-c5fa4d3c287c.htm" />
+          <HelpTOCNode Title="id Property " Url="html/645a4621-56a1-349a-75ba-6267e36354e0.htm" />
+          <HelpTOCNode Title="PaymentType Property " Url="html/20795e72-1d02-4858-c6d7-22f9ef84a415.htm" />
+          <HelpTOCNode Title="paymentTypeId Property " Url="html/486ed998-ac89-c961-4b3e-a033ce112794.htm" />
+          <HelpTOCNode Title="receipt Property " Url="html/de20489a-1f3a-8cb2-0bfa-118cc588539d.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/531a0253-7ac3-9f4a-abb9-ac9be142202e.htm" />
+          <HelpTOCNode Title="year Property " Url="html/a3f7d963-35a9-8b2c-9c36-8c3dcd26aa37.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="HostelTransaction Methods" Url="html/cc894301-6fc1-5553-fb41-cecc5ad658dc.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5df24f17-3c90-4c39-89ef-1ec33b40fea5" Title="InfrastructureHelper Class" Url="html/bd9d2666-0b07-ec70-ba8b-1f38e0d0a7c3.htm">
+        <HelpTOCNode Title="InfrastructureHelper Constructor " Url="html/75ad93fa-c318-84db-6bcb-dbabf81f0f49.htm" />
+        <HelpTOCNode Id="ad915b8b-09cc-4bd4-a02e-2da0c73d7371" Title="InfrastructureHelper Methods" Url="html/8eb3e38d-766a-8eef-726c-abe763b8e9ef.htm">
+          <HelpTOCNode Title="AddHostel Method " Url="html/a49ce36d-42b8-8cf7-9e27-87db792255ad.htm" />
+          <HelpTOCNode Title="AddRoom Method " Url="html/37c0c596-e8b7-04e3-b2d2-f2e9693dd9a4.htm" />
+          <HelpTOCNode Title="GetHostelBlocks Method " Url="html/fcd34dd8-07fe-3a96-485a-04ebfbcbac3e.htm" />
+          <HelpTOCNode Title="GetRoomTypes Method " Url="html/3e04e4d5-1ed6-746a-05e3-fcc2ea92285b.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="98911ee0-922e-4137-9938-ff6910d19e2d" Title="MessBill Class" Url="html/5609b402-74e7-be8e-00aa-32b4880bba7e.htm">
+        <HelpTOCNode Title="MessBill Constructor " Url="html/ec71b795-49dd-c633-a91b-7dbc58e7887c.htm" />
+        <HelpTOCNode Id="9c2dce78-9b4f-410e-af3a-8f4b2805d0b9" Title="MessBill Properties" Url="html/34864200-6051-62b1-6602-8d7b16231fa4.htm">
+          <HelpTOCNode Title="bid Property " Url="html/110c5d07-6e64-f44b-c114-5e020cdb2a29.htm" />
+          <HelpTOCNode Title="billNum Property " Url="html/1ae3cd5d-d847-8cf7-9228-2a1d7a997db7.htm" />
+          <HelpTOCNode Title="dateOfDeclaration Property " Url="html/8d5bf20f-95c9-bf05-5d9c-cef6e6e5f597.htm" />
+          <HelpTOCNode Title="MessTransactions Property " Url="html/7a88569f-3ced-cd6c-4bb1-d14e370a2832.htm" />
+          <HelpTOCNode Title="month Property " Url="html/2a0d8106-bba0-8da5-aafd-f052dfc7e47c.htm" />
+          <HelpTOCNode Title="numDays Property " Url="html/0112bb6c-47da-d799-6ce5-6392846f9a5b.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/ef9648a1-742e-707e-c98b-4aecbfa2a4e9.htm" />
+          <HelpTOCNode Title="year Property " Url="html/8df527a4-5cad-b83b-2cd3-18f570a97b2f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="MessBill Methods" Url="html/084f775e-dc44-60d8-9e9b-9627568a644c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9b5b9480-5d22-450b-8595-4126efba80c2" Title="MessTransaction Class" Url="html/faf64add-d412-b80b-b51f-639379dc43ea.htm">
+        <HelpTOCNode Title="MessTransaction Constructor " Url="html/198070e6-0ec4-1d10-f37d-fe3f0e5f0613.htm" />
+        <HelpTOCNode Id="667279a4-5239-44ab-8468-1b2e21784984" Title="MessTransaction Properties" Url="html/a5f4adf9-ddcc-72aa-4d87-ff2a56019ef5.htm">
+          <HelpTOCNode Title="amount Property " Url="html/e8c70926-a454-61d3-7382-aef24edc194f.htm" />
+          <HelpTOCNode Title="bankName Property " Url="html/1d6e0e0b-19e1-d9b8-39dd-ae8ddbeb4e82.htm" />
+          <HelpTOCNode Title="bid Property " Url="html/35c65fb7-7b85-61ca-5f6c-60250398ecab.htm" />
+          <HelpTOCNode Title="billNum Property " Url="html/3914c79b-f5f7-3c0c-b420-f02f74d1a64b.htm" />
+          <HelpTOCNode Title="dateOfPay Property " Url="html/0efd7780-cb52-0675-7495-fe21eac015b5.htm" />
+          <HelpTOCNode Title="id Property " Url="html/9aa64cf2-6753-645b-216c-0d894544d1c6.htm" />
+          <HelpTOCNode Title="MessBill Property " Url="html/b7cfced5-96ef-6b90-5bea-acf7661f9be4.htm" />
+          <HelpTOCNode Title="PaymentType Property " Url="html/7df2beba-490a-8433-6037-b23acfae38aa.htm" />
+          <HelpTOCNode Title="paymentTypeId Property " Url="html/70910b29-0a39-0bee-fd7c-db2f78d92077.htm" />
+          <HelpTOCNode Title="receipt Property " Url="html/858937ca-98c0-756b-e23c-299d5104c74a.htm" />
+          <HelpTOCNode Title="Student Property " Url="html/e568b407-7eb0-25ff-a068-0f91bc87ebdb.htm" />
+          <HelpTOCNode Title="year Property " Url="html/ffcca9b6-7700-4d92-eeec-cc7ead9f827c.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="MessTransaction Methods" Url="html/7fcbe2c3-d1fb-183c-5519-0eac7d0c2a1b.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9726e9bc-e6b3-4655-a719-04240fd63bd5" Title="PaymentType Class" Url="html/845c78c9-1b47-ac48-8527-9bb334420f82.htm">
+        <HelpTOCNode Title="PaymentType Constructor " Url="html/bfa70232-f81d-026c-ba2f-bc710f42cb52.htm" />
+        <HelpTOCNode Id="99796ccf-7ec7-4113-a2b6-ce9269b14e7b" Title="PaymentType Properties" Url="html/5f21e2f6-5ffc-6214-98ab-7131d0a65549.htm">
+          <HelpTOCNode Title="HostelTransactions Property " Url="html/cb667cf8-0173-9058-8243-95130c24c5d5.htm" />
+          <HelpTOCNode Title="id Property " Url="html/1eceb2a4-6ea0-43d3-41fd-7d010a907a00.htm" />
+          <HelpTOCNode Title="MessTransactions Property " Url="html/3b0559dc-12c0-4e21-9efa-c3b7cb356ca3.htm" />
+          <HelpTOCNode Title="val Property " Url="html/ecd99b20-7706-5409-cbeb-9f7bf2d310c1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="PaymentType Methods" Url="html/28066680-e499-bcf4-8709-73d09e7a8d7f.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2f8f1a50-1921-49ab-a5b1-e17b306481a3" Title="ReportHelper Class" Url="html/599f9d26-1003-01db-e94f-fbe230597d5b.htm">
+        <HelpTOCNode Title="ReportHelper Constructor " Url="html/361385b9-86c6-86e8-f358-02ca5eed7a78.htm" />
+        <HelpTOCNode Id="dca77ed6-3635-494c-9432-54bdcc37d252" Title="ReportHelper Methods" Url="html/b4a70e19-894c-6996-74d9-4d5433c6d337.htm">
+          <HelpTOCNode Title="ExtractValidRanges Method " Url="html/0af2b066-3d4a-5d9f-290e-93c2de472127.htm" />
+          <HelpTOCNode Title="GenerateExcel Method " Url="html/3617a9fe-ccf5-e0c1-6506-1d827032e073.htm" />
+          <HelpTOCNode Title="GetAllTransactions Method " Url="html/ce87e12c-7e39-2686-9d11-f9425a4152be.htm" />
+          <HelpTOCNode Title="GetTransactionsByAccountHead Method " Url="html/79eb1e06-cb70-1211-1a13-823ac395c86b.htm" />
+          <HelpTOCNode Title="GetTransactionsByAmountRange Method " Url="html/259aff9a-b929-4c18-2972-1fa7f84771cb.htm" />
+          <HelpTOCNode Title="GetTransactionsByBidList Method " Url="html/d31c0811-3466-78b1-ad73-43f4ecae22fa.htm" />
+          <HelpTOCNode Title="GetTransactionsByCourse Method " Url="html/4ed4a96f-ba4a-4154-2ad5-4f725f1c950d.htm" />
+          <HelpTOCNode Title="GetTransactionsByDateRange Method " Url="html/6174ef48-f467-daff-3190-7f60c5018db9.htm" />
+          <HelpTOCNode Title="GetTransactionsByGender Method " Url="html/ac08535d-0a48-cf33-408c-e17803659d06.htm" />
+          <HelpTOCNode Title="GetTransactionsByPaymentType Method " Url="html/61ccc37b-63e1-e7d3-3411-6f45cda885c6.htm" />
+          <HelpTOCNode Title="GetTransactionsBySem Method " Url="html/50789e96-ea72-a899-ab31-343b506b9955.htm" />
+          <HelpTOCNode Title="GetTransactionsByStudentRange Method " Url="html/5b9b583e-e6c9-352e-f308-6fa219208bf9.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e614e5cc-0ba0-4343-8d0d-a4c9f5abc89d" Title="Room Class" Url="html/862e7f2e-e49d-9448-9c19-de89f0603d08.htm">
+        <HelpTOCNode Title="Room Constructor " Url="html/cae8241c-ea94-4cd9-4241-2d6357c045b3.htm" />
+        <HelpTOCNode Id="fae082e2-1e77-48cd-894f-6f617f4546a5" Title="Room Properties" Url="html/ee6bbd45-0c14-930d-7928-65cb10a974ba.htm">
+          <HelpTOCNode Title="Allotments Property " Url="html/2f723ba1-ef6a-47bd-19ab-2335c47478a6.htm" />
+          <HelpTOCNode Title="currentOccupancy Property " Url="html/e0c867f6-2fc1-6b2f-23dc-5fbe0ce7181d.htm" />
+          <HelpTOCNode Title="Hostel Property " Url="html/2fac3e09-a82e-1891-31d5-566918ef8704.htm" />
+          <HelpTOCNode Title="hostelBlockNumber Property " Url="html/c155a147-e903-8d45-6390-f6bd0547f8a9.htm" />
+          <HelpTOCNode Title="maxOccupancy Property " Url="html/97d19e30-e27f-aa4f-06e2-b38136eedec2.htm" />
+          <HelpTOCNode Title="roomNumber Property " Url="html/a8d8fa06-0002-f33d-17b1-572a9a8a714d.htm" />
+          <HelpTOCNode Title="roomType Property " Url="html/03bab07e-95dd-019c-e3db-de14e816fddd.htm" />
+          <HelpTOCNode Title="RoomType1 Property " Url="html/df08e5ec-dd05-93a2-a435-fdb9b81b1292.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Room Methods" Url="html/b06c954a-7f74-a507-8576-c64d09e121aa.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4a60d233-eaa9-4c89-a64e-e3a6a9e60f51" Title="RoomMetaData Class" Url="html/3975c785-454c-f410-a3cb-6e8145ec802f.htm">
+        <HelpTOCNode Title="RoomMetaData Constructor " Url="html/c8b06a2f-843d-b9e8-b148-c458298e837b.htm" />
+        <HelpTOCNode Id="aaf737e3-92f9-4e0f-b436-876afa3ac154" Title="RoomMetaData Properties" Url="html/0087d12f-9ac1-1000-468c-d858a7a24269.htm">
+          <HelpTOCNode Title="hostelBlockNumber Property " Url="html/e20540f8-3181-559e-7475-431db86d855d.htm" />
+          <HelpTOCNode Title="maxOccupancy Property " Url="html/49ddb61a-de47-1f29-ed55-aa5f0ccafa13.htm" />
+          <HelpTOCNode Title="roomNumber Property " Url="html/72b0abc6-62a9-4afb-930d-3e7a56810a69.htm" />
+          <HelpTOCNode Title="roomType Property " Url="html/ee71a5f7-78d7-6331-0db6-c7921ea9b839.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="RoomMetaData Methods" Url="html/19caf976-e526-b4b7-6e1b-f9a80e6f4651.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="76c6da39-6ecb-417f-a272-8311d956f7ac" Title="RoomType Class" Url="html/c93b6586-148a-125d-16d1-e7b2f369b982.htm">
+        <HelpTOCNode Title="RoomType Constructor " Url="html/d84c2b87-2289-8903-da6f-b829ba8cf937.htm" />
+        <HelpTOCNode Id="7cdf1e4a-8489-4bc3-acc9-7c8b6276995c" Title="RoomType Properties" Url="html/da106e5b-aad4-8cad-b307-44a9c45bad57.htm">
+          <HelpTOCNode Title="id Property " Url="html/46a84dab-0dc3-56f6-9aa2-6ba2dfd9fb1a.htm" />
+          <HelpTOCNode Title="Rooms Property " Url="html/4c78e1e3-b22a-da50-5c0d-3c7a65bd0ab1.htm" />
+          <HelpTOCNode Title="val Property " Url="html/840088be-6c6f-59ed-cfd6-79dadf6008c2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="RoomType Methods" Url="html/977b2ef1-fded-1758-2234-206efedcf2e6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4b3565a4-8c9f-4ee0-ab3d-49cc6321c513" Title="Student Class" Url="html/150a3bba-7314-7265-817e-0196892c6460.htm">
+        <HelpTOCNode Title="Student Constructor " Url="html/94098fe8-ee8c-1238-18f3-23e2857e1816.htm" />
+        <HelpTOCNode Id="4a8383ed-ed83-480a-8711-81daa92a2fee" Title="Student Properties" Url="html/d73496c2-f67d-ea4c-8185-046af9664c7e.htm">
+          <HelpTOCNode Title="Allotments Property " Url="html/4c827d62-5f61-4ec4-7f17-756e237565f4.htm" />
+          <HelpTOCNode Title="bid Property " Url="html/d9455565-8afd-afac-caf1-1e4d202cb07c.htm" />
+          <HelpTOCNode Title="branch Property " Url="html/97200e75-1a32-702a-44d1-789dc4b1fe9c.htm" />
+          <HelpTOCNode Title="course Property " Url="html/14688a37-b61f-ac31-8242-c970d68933d8.htm" />
+          <HelpTOCNode Title="Course1 Property " Url="html/0a1bb1c4-6cba-0af8-04b5-da7ecf347a02.htm" />
+          <HelpTOCNode Title="Department Property " Url="html/e734fab5-6297-9212-db27-df0ebfaf6498.htm" />
+          <HelpTOCNode Title="dob Property " Url="html/da854635-29c1-4f12-427b-4f8d451b5bab.htm" />
+          <HelpTOCNode Title="gender Property " Url="html/86d66e09-fa84-e648-0da4-3767d6132120.htm" />
+          <HelpTOCNode Title="Gender1 Property " Url="html/b49339b7-902c-884e-996d-ff800c062f42.htm" />
+          <HelpTOCNode Title="HostelBills Property " Url="html/aec633c4-d505-26c5-0340-6fd1248de63a.htm" />
+          <HelpTOCNode Title="HostelTransactions Property " Url="html/2e74538e-fe27-9cd8-b438-d66e01dabe42.htm" />
+          <HelpTOCNode Title="MessBills Property " Url="html/13e0fec1-0747-12eb-0a19-2ecc0fa3607c.htm" />
+          <HelpTOCNode Title="MessTransactions Property " Url="html/7cade502-0bdb-2bff-0623-dbf730597477.htm" />
+          <HelpTOCNode Title="name Property " Url="html/3f540ace-3d9c-31fa-b25b-516491ea12ce.htm" />
+          <HelpTOCNode Title="semester Property " Url="html/b6e3a9ad-3a29-3af5-064b-2c5e44db83d6.htm" />
+          <HelpTOCNode Title="usn Property " Url="html/c6ac3e9e-8d82-8334-86d9-a3a428440816.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Student Methods" Url="html/8e052ca9-ebcf-b9b8-6138-66e3cdc253f9.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="17d9d580-34fc-4a2a-b20a-bfaffce6cf0d" Title="StudentHelper Class" Url="html/7297b2f0-2bcb-3562-bd73-e0210158cfd0.htm">
+        <HelpTOCNode Title="StudentHelper Constructor " Url="html/678d0eae-a87a-da42-f3f8-0625123d6de8.htm" />
+        <HelpTOCNode Id="3e47ffb8-9296-4e3e-8403-d10df7b59e4f" Title="StudentHelper Methods" Url="html/72bc6690-bee4-0387-7d24-9f3cc7dbbf29.htm">
+          <HelpTOCNode Title="AddAdditionalFee Method " Url="html/3c95c462-e744-a2ed-6f56-b04e7dc35033.htm" />
+          <HelpTOCNode Title="AddStudent Method " Url="html/6053f76e-58d4-dff5-b5af-1b3e9dea5225.htm" />
+          <HelpTOCNode Title="CanChangeRoom Method " Url="html/e64a6f76-ebc0-e0c5-6e1a-e636681a6064.htm" />
+          <HelpTOCNode Title="CanRemoveStudent Method " Url="html/391e827d-541c-bc8a-5537-b769e9d4ede4.htm" />
+          <HelpTOCNode Title="ConstructViewModelForAlloment Method " Url="html/80a9b7aa-b271-374c-2a03-bc61f55af80a.htm" />
+          <HelpTOCNode Title="ConstructViewModelForRemoveStudent Method " Url="html/245e7e64-c349-dde2-e068-fe1c3a471d4d.htm" />
+          <HelpTOCNode Title="GenerateBid Method " Url="html/f18e835b-0497-bcc2-3659-1a3bd3da8285.htm" />
+          <HelpTOCNode Title="GetAvailableRoomsInHostel Method " Url="html/8eb768c2-9b01-4121-7375-44ff8751fad7.htm" />
+          <HelpTOCNode Title="GetCourses Method " Url="html/9283b03d-0736-0dc0-8d69-6fba1843a634.htm" />
+          <HelpTOCNode Title="GetDepartments Method " Url="html/e4d9b2ab-66ef-3ddd-0d91-b7a0144f0c7d.htm" />
+          <HelpTOCNode Title="GetDepositRefund Method " Url="html/84e641e6-519e-b3bc-34f5-5661254d421f.htm" />
+          <HelpTOCNode Title="GetFeeBreakup Method " Url="html/19e91d20-e8d2-bfc0-6258-5c3c9ae56829.htm" />
+          <HelpTOCNode Title="GetGenders Method " Url="html/3432edd7-1826-20e8-a449-09a7e0c610e6.htm" />
+          <HelpTOCNode Title="GetHostelsForStudent Method " Url="html/7ddca826-300b-0e29-a580-fd43869bde33.htm" />
+          <HelpTOCNode Title="GetRoomsIncludingCurrent Method " Url="html/6bd07f7f-e1d1-3e8f-d46f-5a6dc65a229c.htm" />
+          <HelpTOCNode Title="GetRoomType Method " Url="html/4df56794-e631-3566-2866-949bbd1d596d.htm" />
+          <HelpTOCNode Title="GetRoomTypes Method " Url="html/67b653eb-919f-3d41-8873-57304899a83e.htm" />
+          <HelpTOCNode Title="GetStudent Method " Url="html/34d4e43a-9c6d-4693-6a00-f7fa87913e72.htm" />
+          <HelpTOCNode Title="GetStudentDetails Method " Url="html/81dbd87e-be14-c85b-5c60-105575fe0464.htm" />
+          <HelpTOCNode Title="GetStudentListForAutoComplete Method " Url="html/02c50820-2761-bf0c-50b0-ec4c8a6ebb48.htm" />
+          <HelpTOCNode Title="IsUsnRequired Method " Url="html/b02c442a-dea8-c5ae-0020-13d235fc377b.htm" />
+          <HelpTOCNode Title="PerformRemoveStudent Method " Url="html/55925f2d-3c5c-b906-99fa-c1d30ae1f2ee.htm" />
+          <HelpTOCNode Title="PerformRoomChange Method " Url="html/8e6f08ee-1b07-6d1b-d55e-1276caf7eed0.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4f2e5870-0a45-4b7b-a5ed-f9bdddeaeb82" Title="TransactionHelper Class" Url="html/00ac092a-4405-ce04-c53c-b9d7276b549e.htm">
+        <HelpTOCNode Title="TransactionHelper Constructor " Url="html/0ad1a71f-f75e-4445-e90e-9984ed01fc64.htm" />
+        <HelpTOCNode Id="65a2a263-998c-4599-b30c-1cbd09192445" Title="TransactionHelper Methods" Url="html/c4ff5bb2-3d24-67c3-5e17-8132c2182009.htm">
+          <HelpTOCNode Title="CanChangeDep Method " Url="html/b08c1867-f44e-8b0d-148a-98f27094dd57.htm" />
+          <HelpTOCNode Title="CanChangeFix Method " Url="html/cded713c-cb8d-b261-1660-8ce39ea0f3cd.htm" />
+          <HelpTOCNode Title="CanChangeMessFees Method " Url="html/fe02b58f-fd37-2552-4c63-e8083e218c91.htm" />
+          <HelpTOCNode Title="CanChangeRent Method " Url="html/805033c7-15af-e09c-39e8-ac9d409ee7a7.htm" />
+          <HelpTOCNode Title="CanGenerateMessBill Method " Url="html/de75b5e3-1a34-6026-4c81-b9cb4e35109c.htm" />
+          <HelpTOCNode Title="ChangeHostelFees Method " Url="html/f43a57aa-05be-2204-3102-3fe65b7346e0.htm" />
+          <HelpTOCNode Title="ChangeMessFees Method " Url="html/312c0ab3-10f1-49c2-dcdd-8e882e8ac7c2.htm" />
+          <HelpTOCNode Title="ConstructViewModelForHostelFeeChange Method " Url="html/70b19b58-ace5-80de-29f0-49ddc209a289.htm" />
+          <HelpTOCNode Title="ConstructViewModelForHostelFeeDiscount Method " Url="html/18a6edff-374d-2463-59d7-211004fd8cc3.htm" />
+          <HelpTOCNode Title="ConstructViewModelForHostelTransaction Method " Url="html/85c1c832-910e-8709-5486-a3b7215d3aca.htm" />
+          <HelpTOCNode Title="ConstructViewModelForMessFeeChange Method " Url="html/2ce1a098-124a-7c11-980d-a3b5e6026db0.htm" />
+          <HelpTOCNode Title="ConstructViewModelForMessTransaction Method " Url="html/14093ad5-6dbd-c087-b3ed-37dfcf4b5400.htm" />
+          <HelpTOCNode Title="GenerateMessBill Method " Url="html/60499b78-6fc4-4994-5781-418a96fd07ec.htm" />
+          <HelpTOCNode Title="GetAcademicYear Method " Url="html/6606709f-8137-06f9-76e5-fe86ef894412.htm" />
+          <HelpTOCNode Title="GetAccountHeads Method " Url="html/f0c1d85b-5e27-f990-4dd0-9a5689b7205c.htm" />
+          <HelpTOCNode Title="GetAllHostelDues Method " Url="html/973fd07f-4bd9-126c-9db4-f0330c147f21.htm" />
+          <HelpTOCNode Title="GetAllMessDues Method " Url="html/afb2e8cd-939e-716b-e404-5f9dc245667b.htm" />
+          <HelpTOCNode Title="GetAllTransactionsForStudent Method " Url="html/14ae4916-f568-6670-fe3d-957a773b70de.htm" />
+          <HelpTOCNode Title="GetDepFeeId Method " Url="html/5f7022d1-2af5-b622-5f16-865518a1ec92.htm" />
+          <HelpTOCNode Id="56ca10cf-ba3a-4147-bfa0-6e266ec16280" Title="GetFee Method " Url="html/52cfc517-e086-e5cf-bcf3-a78e7afcabc9.htm">
+            <HelpTOCNode Title="GetFee Method (Int32)" Url="html/ab9682c8-4438-799b-8fa0-8a559ba24d0f.htm" />
+            <HelpTOCNode Title="GetFee Method (Int32, Int32, String, Int32)" Url="html/bcefaa8d-1971-b815-cf3c-02120ce22af5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetFixFeeId Method " Url="html/7a642445-c7ac-9ee6-87a9-1c29532072f1.htm" />
+          <HelpTOCNode Title="GetHostelFeePayable Method " Url="html/88e017b1-8243-dddf-70c8-107fb5eb3fc0.htm" />
+          <HelpTOCNode Title="GetMessDue Method " Url="html/770e0465-1194-f6f0-3df2-577c6907cbf9.htm" />
+          <HelpTOCNode Title="GetMessFeePayable Method " Url="html/8e2d8c2e-d7db-05d1-68b2-852d46a295de.htm" />
+          <HelpTOCNode Title="GetPaymentTypes Method " Url="html/aeaced5d-9df2-29a9-3d5a-1dea6a44aa8a.htm" />
+          <HelpTOCNode Title="GetRentFeeId Method " Url="html/8605f40a-a2d5-6acf-5ac6-e0e749a5aefa.htm" />
+          <HelpTOCNode Title="GetStudentDues Method " Url="html/ce0cec61-8592-8e16-f23e-8ee64f519a36.htm" />
+          <HelpTOCNode Title="GetTransactionViewModel Method " Url="html/0b9d2d31-414e-3f00-083c-ede03868cdca.htm" />
+          <HelpTOCNode Title="GetValidAcademicYears Method " Url="html/c04526d3-da0b-72e3-6113-d0df5f2e1041.htm" />
+          <HelpTOCNode Title="PerformFeeDiscount Method " Url="html/f83fd368-f1f0-dd6a-9b5a-c0f85e27d000.htm" />
+          <HelpTOCNode Title="PerformHostelTransaction Method " Url="html/a761c14c-8d10-968c-068f-975d761e75f5.htm" />
+          <HelpTOCNode Title="PerformMessTransaction Method " Url="html/cb4ea293-d6f9-1267-84ad-cc085ea5dd50.htm" />
+          <HelpTOCNode Title="ReportAbsenceForMess Method " Url="html/c33c2fd4-b6fe-c85a-1c7a-20402eed3075.htm" />
+          <HelpTOCNode Title="UpdateFeeInDatabase Method " Url="html/eac1e9cc-582a-8633-92dc-21659ed9dc17.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="ea5a6f76-ffa0-4e7d-96f3-3dfc169d1bc2" Title="HostelManagement.Areas.Administration.Models" Url="html/bf6d804a-0881-c615-5b86-5f728c3f0669.htm">
-    <HelpTOCNode Id="66a558d0-4abf-491f-9b61-0af7eb83e749" Title="AddUserViewModel Class" Url="html/2011e59a-efb1-0e55-a0b4-5025f804c6da.htm">
-      <HelpTOCNode Title="AddUserViewModel Constructor " Url="html/28608eda-f83f-276d-afff-c4c2865c2b7c.htm" />
-      <HelpTOCNode Id="a667081e-7372-4f8b-be38-2e342de68133" Title="AddUserViewModel Properties" Url="html/26bd6b12-1e18-e2df-3ad9-65fd6f8eadb0.htm">
-        <HelpTOCNode Title="Password Property " Url="html/476291af-0816-443c-67f6-a20d34a76e12.htm" />
-        <HelpTOCNode Title="Role Property " Url="html/50a7fbd8-5721-25dc-e70d-03259b4a0963.htm" />
-        <HelpTOCNode Title="Username Property " Url="html/b0238d71-6287-446b-bb86-3d27389efe7c.htm" />
+    <HelpTOCNode Id="8091e3ba-2f46-4a5e-b4af-5ee8b13feae7" Title="HostelManagement Namespaces" Url="html/200d1f28-3905-8022-2b37-57c65c64c3ca.htm">
+      <HelpTOCNode Id="c571bac2-0f8c-4281-b807-876f63a77ae8" Title="HostelManagement" Url="html/d4335610-d919-2302-4761-769a2eda8830.htm">
+        <HelpTOCNode Id="cc03b579-b240-4626-8486-e2c651dbb99b" Title="AppDbContext Class" Url="html/d05620d1-d2c7-a222-185f-6213ddd28baf.htm">
+          <HelpTOCNode Title="AppDbContext Constructor " Url="html/ddbd0c31-45bc-b29d-9edd-ba0030d7cdfd.htm" />
+          <HelpTOCNode Title="AppDbContext Properties" Url="html/ebf78ce3-355d-be1a-dd91-ed2b15708ac3.htm" />
+          <HelpTOCNode Title="AppDbContext Methods" Url="html/57ac5816-6f97-da64-a31b-99f1a565c2ab.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="083ce1f8-51fc-4a7c-b17a-4c1e67270abf" Title="AppUser Class" Url="html/53d9a397-fe9b-5dd3-4e3e-2aaeafcbb744.htm">
+          <HelpTOCNode Title="AppUser Constructor " Url="html/08146189-b54c-22b3-c322-c3308269e7dd.htm" />
+          <HelpTOCNode Title="AppUser Properties" Url="html/eeb1a7c5-77d4-68c7-b569-78b24bce527f.htm" />
+          <HelpTOCNode Title="AppUser Methods" Url="html/5d216fa7-789f-5a87-58fe-165ae2a199c0.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="4b0417a8-0df5-4149-b783-4c3f23111750" Title="FilterConfig Class" Url="html/22b62624-4365-1e8b-00ed-8c05fa2adf03.htm">
+          <HelpTOCNode Title="FilterConfig Constructor " Url="html/244707bf-83ed-edcb-3e99-e955319b34ef.htm" />
+          <HelpTOCNode Id="b6236def-2198-4e61-aaeb-b1e3f2247593" Title="FilterConfig Methods" Url="html/f10f1813-e0eb-3c05-2993-50fd49f4acb5.htm">
+            <HelpTOCNode Title="RegisterGlobalFilters Method " Url="html/7fd2b4ac-47ea-2648-d286-0ca3259b1a77.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="362ba91c-cb56-4bc1-b827-d5c671a57ef1" Title="MvcApplication Class" Url="html/0a65f306-3842-434b-3296-602a0fa694bb.htm">
+          <HelpTOCNode Title="MvcApplication Constructor " Url="html/97c0845e-b318-fb81-a23c-eeff3f09bd45.htm" />
+          <HelpTOCNode Title="MvcApplication Properties" Url="html/1873f57e-f55b-5003-bf4a-743adde3c023.htm" />
+          <HelpTOCNode Id="130022ab-2817-4614-9750-97c55a82a415" Title="MvcApplication Methods" Url="html/8d805146-4392-9726-0c8f-d1778aac1f3a.htm">
+            <HelpTOCNode Title="Application_Start Method " Url="html/bcac6f5c-1cd6-00dc-333b-5f957fbe27c9.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MvcApplication Events" Url="html/5335deed-e78b-883e-42f8-5ea09b25e46b.htm" />
+          <HelpTOCNode Title="MvcApplication Fields" Url="html/2d25fc4d-6523-7d1c-62c7-f9e5c7267487.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b2e47b5c-e1c9-4529-a573-37a6d2ea5c9b" Title="RouteConfig Class" Url="html/ceabedf6-4be8-d2a5-15f1-371eb02ccf3c.htm">
+          <HelpTOCNode Title="RouteConfig Constructor " Url="html/622047f9-358a-d5d9-857c-444cb9a228f5.htm" />
+          <HelpTOCNode Id="0840106c-76ef-4f40-bb9d-af8846a4b9b7" Title="RouteConfig Methods" Url="html/8dc3a447-f608-fbfe-3836-647b826ae05a.htm">
+            <HelpTOCNode Title="RegisterRoutes Method " Url="html/f1a08d65-9f2b-99d3-7626-266fb493954a.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3a86ed1e-8cda-463c-a01c-f2060fa66a60" Title="Startup Class" Url="html/d10c7a7c-11e8-2c64-01c7-61adef8911b9.htm">
+          <HelpTOCNode Title="Startup Constructor " Url="html/0a324dc8-da3c-98ce-e4ca-44a89e4ec82a.htm" />
+          <HelpTOCNode Id="06100e2a-a9c1-41c1-a059-3d03bdf061b8" Title="Startup Properties" Url="html/5e25b1d5-3bcb-9113-c97d-1d280b62ada9.htm">
+            <HelpTOCNode Title="UserManagerFactory Property " Url="html/ad586bf9-f9f9-dd4c-360e-616ba35906fd.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="520e83e4-2476-4e13-9a7a-449112241fb0" Title="Startup Methods" Url="html/9eb8da27-7b93-e178-b9be-cb6aa26fbb9b.htm">
+            <HelpTOCNode Title="Configuration Method " Url="html/6c13a701-f619-c62c-934a-83089eab6eb7.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="6fbab393-2b30-4cb8-84ef-00392e610d6c" Title="StudentReportDataSet Class" Url="html/d53272cb-20f2-bda4-cff8-47ee0a56c813.htm">
+          <HelpTOCNode Id="b93bb456-da67-440e-af08-c67785df0cf7" Title="StudentReportDataSet Constructor " Url="html/bfd4a805-a457-0cb6-ecfe-0afde51af356.htm">
+            <HelpTOCNode Title="StudentReportDataSet Constructor " Url="html/ea88e1c1-cc0b-8e02-b08d-374c39503f15.htm" />
+            <HelpTOCNode Title="StudentReportDataSet Constructor (SerializationInfo, StreamingContext)" Url="html/dc55154c-cb10-59f5-02b5-98dc3a277d9a.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f3a69d5b-344e-4e45-a549-5dfb02504c0f" Title="StudentReportDataSet Properties" Url="html/cf2a7ea6-2696-8676-2654-64b98b753dd6.htm">
+            <HelpTOCNode Title="Allotment Property " Url="html/9d0aa056-9c9b-4340-c980-85c746d6ae38.htm" />
+            <HelpTOCNode Title="HostelFee Property " Url="html/0985d5de-0130-6c30-7e0d-68641193a5af.htm" />
+            <HelpTOCNode Title="MeeFee Property " Url="html/7d96659c-a727-4cb8-24df-277271a29cc8.htm" />
+            <HelpTOCNode Title="Relations Property " Url="html/b90847dd-5129-4838-a0a3-56807ea7b23b.htm" />
+            <HelpTOCNode Title="SchemaSerializationMode Property " Url="html/1c9fe474-904d-b96f-78a1-a2105607227b.htm" />
+            <HelpTOCNode Title="Student Property " Url="html/f9a3c414-781d-bf32-3802-02656ebf4dd2.htm" />
+            <HelpTOCNode Title="Tables Property " Url="html/05abfe39-a825-0688-0d52-e53788d69319.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5188f4cf-7a49-4a87-8700-09a9d05bf0fe" Title="StudentReportDataSet Methods" Url="html/32050969-afd3-d6f2-bd65-85680d0ce6db.htm">
+            <HelpTOCNode Title="Clone Method " Url="html/e9634ef4-3675-c014-faa8-50ba1a3392d3.htm" />
+            <HelpTOCNode Title="GetSchemaSerializable Method " Url="html/3d05f9c2-9846-0441-9080-024a113ce60a.htm" />
+            <HelpTOCNode Title="GetTypedDataSetSchema Method " Url="html/4fe6ef81-3623-38d0-b02a-0e2bcdddc72d.htm" />
+            <HelpTOCNode Title="InitClass Method " Url="html/900b6e05-2497-af30-26ee-305c0bdff60a.htm" />
+            <HelpTOCNode Title="InitializeDerivedDataSet Method " Url="html/bee213bb-e244-6cc2-46cf-8ee0a93a4a5b.htm" />
+            <HelpTOCNode Id="50627f67-162a-42c1-a299-72d51d62de74" Title="InitVars Method " Url="html/b66a1430-254e-0b15-7c10-652f3b7c0499.htm">
+              <HelpTOCNode Title="InitVars Method " Url="html/a84cba08-7b67-cea4-460b-8e86647a074e.htm" />
+              <HelpTOCNode Title="InitVars Method (Boolean)" Url="html/ec660ab4-011b-1598-9aa1-8131a39ed732.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="ReadXmlSerializable Method " Url="html/c54135cb-6a23-f5ea-ab33-53c6460b52de.htm" />
+            <HelpTOCNode Title="SchemaChanged Method " Url="html/335cab02-e30f-313f-fe27-7aea38c129a0.htm" />
+            <HelpTOCNode Title="ShouldSerializeAllotment Method " Url="html/8a97f1da-5145-fd22-f3a1-700d3969f4f6.htm" />
+            <HelpTOCNode Title="ShouldSerializeHostelFee Method " Url="html/2e1fab8e-7621-b597-3506-fe12f6baaccb.htm" />
+            <HelpTOCNode Title="ShouldSerializeMeeFee Method " Url="html/91487924-3fc3-2aff-0773-006164367a88.htm" />
+            <HelpTOCNode Title="ShouldSerializeRelations Method " Url="html/41854d42-dbc9-82b0-2ed3-d7b4e33babbf.htm" />
+            <HelpTOCNode Title="ShouldSerializeStudent Method " Url="html/b42f3399-3a86-759e-d555-944e724223ec.htm" />
+            <HelpTOCNode Title="ShouldSerializeTables Method " Url="html/436ecc96-6a4e-bc45-6179-73e366d8c364.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StudentReportDataSet Events" Url="html/040494a5-cf02-704e-f85f-b699bb3c3911.htm" />
+          <HelpTOCNode Title="StudentReportDataSet Fields" Url="html/48eaa6c3-2771-8ba5-f680-b1154b29508d.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="aa828924-b02b-4721-8b98-2c0c622c15e7" Title="StudentReportDataSet.AllotmentDataTable Class" Url="html/cdc39505-37a8-91f3-c676-b98dc009caa6.htm">
+          <HelpTOCNode Id="6112ca34-13e9-4c4c-8d58-3f2e176664d8" Title="AllotmentDataTable Constructor " Url="html/47271ff9-7712-388b-25a5-31769cf510a5.htm">
+            <HelpTOCNode Title="StudentReportDataSet.AllotmentDataTable Constructor " Url="html/b7dc71a6-8c8b-1f55-be7a-bd1799f239ed.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.AllotmentDataTable Constructor (DataTable)" Url="html/9a4f257d-7889-1b35-b6c7-17a98fbfcb05.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.AllotmentDataTable Constructor (SerializationInfo, StreamingContext)" Url="html/a36fe60f-0303-7a64-0547-559d175705fb.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="45f9f858-af36-474b-bc58-cdec9735ba54" Title="AllotmentDataTable Properties" Url="html/ce6aa898-8941-477e-71ff-02b8ec3c414e.htm">
+            <HelpTOCNode Title="Count Property " Url="html/5d75951c-61bc-4d14-cee1-3052a84ff3f1.htm" />
+            <HelpTOCNode Title="DateOfJoinColumn Property " Url="html/0f2a5a78-580e-05cb-85d8-00327a8d5bc5.htm" />
+            <HelpTOCNode Title="DateOfLeaveColumn Property " Url="html/348be40a-90f6-049e-4322-ed351885f923.htm" />
+            <HelpTOCNode Title="HostelBlockColumn Property " Url="html/2b14d751-775a-a461-8555-0a1d78d57cba.htm" />
+            <HelpTOCNode Title="Item Property " Url="html/c52b83d9-5403-eae0-9aea-3f22e91c6239.htm" />
+            <HelpTOCNode Title="RoomNumberColumn Property " Url="html/0101060c-72ed-9f85-e4c2-4164264a701a.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="edbbcf43-bf25-44f0-a5da-fcea8516fb3d" Title="AllotmentDataTable Methods" Url="html/77d56537-4953-8776-6009-3db1cbff2cb1.htm">
+            <HelpTOCNode Id="20e33e10-75ff-486d-bfcd-a78c63bfe007" Title="AddAllotmentRow Method " Url="html/dc35d445-d0ba-b92e-4047-d98744ea75e2.htm">
+              <HelpTOCNode Title="AddAllotmentRow Method (StudentReportDataSet.AllotmentRow)" Url="html/f3b0b23e-e8d3-d657-d6ef-50f5b30d5847.htm" />
+              <HelpTOCNode Title="AddAllotmentRow Method (String, String, String, String)" Url="html/d1f7a490-40c1-beb0-9200-23a50369b4d3.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="e4f21019-8303-4331-b5c3-5646f9f43fe0" Title="Clone Method " Url="html/b8b6e3eb-a4bc-224d-3758-c30dcb33864e.htm">
+              <HelpTOCNode Title="Clone Method " Url="html/11d27d7f-92b4-3235-8450-5b2c9c188d34.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="CreateInstance Method " Url="html/9f9e0d95-2fb6-c3fc-0da0-c0a51c5f8fe7.htm" />
+            <HelpTOCNode Title="GetRowType Method " Url="html/fe59c70e-fc21-4ded-f8ce-ed806ab38851.htm" />
+            <HelpTOCNode Title="GetTypedTableSchema Method " Url="html/b1959d0e-65f8-5a53-bd48-dc5245b97545.htm" />
+            <HelpTOCNode Title="InitClass Method " Url="html/d8f8ce3f-d071-c869-8beb-c8ddc6c965ad.htm" />
+            <HelpTOCNode Title="InitVars Method " Url="html/af7194ef-721b-2ef7-8c5b-2827f0c85759.htm" />
+            <HelpTOCNode Title="NewAllotmentRow Method " Url="html/bcb8a7f8-aa67-c9d0-d201-afc84429f87c.htm" />
+            <HelpTOCNode Title="NewRowFromBuilder Method " Url="html/58eab7e0-1c69-b688-c086-dfb4128ebf26.htm" />
+            <HelpTOCNode Title="OnRowChanged Method " Url="html/d8b0623e-a9c3-e562-0df4-3ef5209a8149.htm" />
+            <HelpTOCNode Title="OnRowChanging Method " Url="html/6ece738f-0f1f-e063-65ee-614512cc2de3.htm" />
+            <HelpTOCNode Title="OnRowDeleted Method " Url="html/54ff1dca-04c6-f218-35c4-7f745403c12a.htm" />
+            <HelpTOCNode Title="OnRowDeleting Method " Url="html/82e58e9c-de7e-f5ac-fd14-033d5ca10901.htm" />
+            <HelpTOCNode Title="RemoveAllotmentRow Method " Url="html/45b00fec-4bad-95c9-93ab-b54f160caa5b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="b938b479-af76-4b89-baea-fec30056f41a" Title="AllotmentDataTable Events" Url="html/aebab8eb-a84e-1ffb-89b1-0da6348a31f8.htm">
+            <HelpTOCNode Title="AllotmentRowChanged Event" Url="html/88e7094a-8005-2c08-da91-22d89ca0c023.htm" />
+            <HelpTOCNode Title="AllotmentRowChanging Event" Url="html/2f9c8862-dbab-c811-7f78-1163a47a1884.htm" />
+            <HelpTOCNode Title="AllotmentRowDeleted Event" Url="html/8642e53d-880b-cded-5dbb-7ed8ceb7790a.htm" />
+            <HelpTOCNode Title="AllotmentRowDeleting Event" Url="html/abc835ec-57c7-8378-f0c4-9aa70f1f3869.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AllotmentDataTable Fields" Url="html/e137be48-c970-d7fb-6b0a-44d5b516d93e.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7bb1c4ca-7365-483d-a5bd-2fe2060fd914" Title="StudentReportDataSet.AllotmentRow Class" Url="html/34e9f5a5-df8c-0060-4a26-a5692f8940ea.htm">
+          <HelpTOCNode Title="StudentReportDataSet.AllotmentRow Constructor " Url="html/e614deb1-07dd-1431-9358-d617a6b3b726.htm" />
+          <HelpTOCNode Id="81a52f3c-e90c-442c-8df8-6d1c1285c8a8" Title="AllotmentRow Properties" Url="html/513a3e11-908b-5fe6-34c7-9bcf5ddc6438.htm">
+            <HelpTOCNode Title="DateOfJoin Property " Url="html/b2461645-caad-402f-84a8-9e33e6a448b6.htm" />
+            <HelpTOCNode Title="DateOfLeave Property " Url="html/0cc0ad95-95a7-a419-4c81-8b9aead85511.htm" />
+            <HelpTOCNode Title="HostelBlock Property " Url="html/fa694dca-d9f7-f08d-3c1e-133daa812d90.htm" />
+            <HelpTOCNode Title="RoomNumber Property " Url="html/3c8cdf7f-3bc8-2be8-1b7a-e7127230ab68.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3ef83a31-5568-4d44-bebd-ea2de6360468" Title="AllotmentRow Methods" Url="html/c2256508-def4-b2b9-5f21-f7341fe70d53.htm">
+            <HelpTOCNode Title="IsDateOfJoinNull Method " Url="html/c8428a19-a0f8-3ef9-9cf9-b8bad5498b39.htm" />
+            <HelpTOCNode Title="IsDateOfLeaveNull Method " Url="html/8a0f31dd-3d04-d638-9b2d-72933936cb7d.htm" />
+            <HelpTOCNode Title="IsHostelBlockNull Method " Url="html/f0ef4cf4-a518-94cf-00b1-a80ba80a9432.htm" />
+            <HelpTOCNode Title="IsRoomNumberNull Method " Url="html/5d42d326-805d-83e9-c226-6e8132286427.htm" />
+            <HelpTOCNode Title="SetDateOfJoinNull Method " Url="html/21874ce3-9418-67a8-ec9d-1dff12745667.htm" />
+            <HelpTOCNode Title="SetDateOfLeaveNull Method " Url="html/38c2c7ae-efd3-684b-c37a-084a21e6df39.htm" />
+            <HelpTOCNode Title="SetHostelBlockNull Method " Url="html/f1b97a51-fad1-7f3e-b30b-aaf19ef747e4.htm" />
+            <HelpTOCNode Title="SetRoomNumberNull Method " Url="html/de4b5831-06fd-9cc8-91a0-dfcc05878695.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AllotmentRow Fields" Url="html/e99a5de4-d7ad-ca47-63db-0d4ea755afd0.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="eabc4baa-9334-44b8-b51d-9a4ea394fe1c" Title="StudentReportDataSet.AllotmentRowChangeEvent Class" Url="html/538a51d4-547b-5130-9db0-3795725b3da1.htm">
+          <HelpTOCNode Title="StudentReportDataSet.AllotmentRowChangeEvent Constructor " Url="html/973c0869-0df6-91ae-620d-b9dbd5b93b44.htm" />
+          <HelpTOCNode Id="57b0c351-ea35-4130-b33f-8d3a612426e3" Title="AllotmentRowChangeEvent Properties" Url="html/80fa7eb2-11e1-baca-1139-314ffa183791.htm">
+            <HelpTOCNode Title="Action Property " Url="html/64b3df49-3893-ffc3-6ceb-d5ded20d7738.htm" />
+            <HelpTOCNode Title="Row Property " Url="html/c3ef3dd3-ace7-9210-ffaa-1ade5d5bd23d.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AllotmentRowChangeEvent Methods" Url="html/18803e54-7d7f-6d6b-74ce-61ddc366ba6e.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="StudentReportDataSet.AllotmentRowChangeEventHandler Delegate" Url="html/435e405d-efac-d456-3d4d-549e9874af22.htm" />
+        <HelpTOCNode Id="028e9c6c-423f-4958-a0a6-66b3b4355863" Title="StudentReportDataSet.HostelFeeDataTable Class" Url="html/769ed473-2014-8633-b8ee-0c2dc6b2fad6.htm">
+          <HelpTOCNode Id="6beeb0d5-bccc-4e30-b34e-71a1b417db66" Title="HostelFeeDataTable Constructor " Url="html/31e6478f-ddee-3530-903a-1f470fae07d5.htm">
+            <HelpTOCNode Title="StudentReportDataSet.HostelFeeDataTable Constructor " Url="html/6deaf94e-ca1d-9e97-9357-27a56c32c6d4.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.HostelFeeDataTable Constructor (DataTable)" Url="html/2c2866dc-b0c3-a3da-a6b9-c818079773ca.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.HostelFeeDataTable Constructor (SerializationInfo, StreamingContext)" Url="html/5673e519-2285-86f1-a1b2-643a704e0572.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="7a48268c-c364-4068-80be-beb3b94fefdf" Title="HostelFeeDataTable Properties" Url="html/26cb8e7f-772a-a0e3-d534-3cb367c8438c.htm">
+            <HelpTOCNode Title="Amount_DueColumn Property " Url="html/4d36c588-7b91-9f3c-7589-cfd851323830.htm" />
+            <HelpTOCNode Title="Amount_PaidColumn Property " Url="html/97b640c5-ad4b-d949-f12a-5d973f017153.htm" />
+            <HelpTOCNode Title="Count Property " Url="html/03c2a63b-7608-e06a-2e7e-19a07fcbcdef.htm" />
+            <HelpTOCNode Title="Fee_AmountColumn Property " Url="html/f5ee25de-901d-2ded-5ca9-cc5b9d6865b3.htm" />
+            <HelpTOCNode Title="Fee_TypeColumn Property " Url="html/2b2cf675-b0a8-1fc1-3acf-f02e0a9e9be7.htm" />
+            <HelpTOCNode Title="Item Property " Url="html/5a167405-af58-bf15-a0ba-f97e705bc262.htm" />
+            <HelpTOCNode Title="YearColumn Property " Url="html/1b25fca4-0ffc-6b5c-2701-eda605958804.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="17d24971-55c2-421c-9568-40da0ed2e139" Title="HostelFeeDataTable Methods" Url="html/1c5fda60-3d02-5bbe-0c9c-4b1202668fc7.htm">
+            <HelpTOCNode Id="2f3ac94c-15b3-42fb-a7cb-1688a845830e" Title="AddHostelFeeRow Method " Url="html/b946d444-6bea-6c90-d5c3-926517dd6da3.htm">
+              <HelpTOCNode Title="AddHostelFeeRow Method (StudentReportDataSet.HostelFeeRow)" Url="html/a1c21c20-808b-fc5d-1ea8-cb7c4a0884cd.htm" />
+              <HelpTOCNode Title="AddHostelFeeRow Method (String, String, String, String, String)" Url="html/a03fa034-a49a-42b2-f565-082e56ba2565.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="61cbda1c-b1b5-47b5-b3e7-b5282ba242c4" Title="Clone Method " Url="html/36c0803f-8f26-43ae-a70e-b2af829fba88.htm">
+              <HelpTOCNode Title="Clone Method " Url="html/de1b4a17-f1ec-b3fe-cee8-3c643575c9af.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="CreateInstance Method " Url="html/a5bb4ec8-9205-1e35-fa3a-98e8d1d8340d.htm" />
+            <HelpTOCNode Title="GetRowType Method " Url="html/5b3530fe-c2e8-da4e-7881-75b448bb07a0.htm" />
+            <HelpTOCNode Title="GetTypedTableSchema Method " Url="html/fa119d9e-bb5d-6028-fce1-645b175c65a5.htm" />
+            <HelpTOCNode Title="InitClass Method " Url="html/b444c893-3bde-b009-db55-a9610abfa0f9.htm" />
+            <HelpTOCNode Title="InitVars Method " Url="html/6b363d9a-eb4d-7613-f7a1-1fbd220faceb.htm" />
+            <HelpTOCNode Title="NewHostelFeeRow Method " Url="html/4ed8f9e6-6dfb-5079-bc5f-905deb6f4124.htm" />
+            <HelpTOCNode Title="NewRowFromBuilder Method " Url="html/3e01d0fb-5c00-e4e1-2fa3-665ef7b0796f.htm" />
+            <HelpTOCNode Title="OnRowChanged Method " Url="html/ac7a35d2-b8e6-0274-d53d-cf94194b685b.htm" />
+            <HelpTOCNode Title="OnRowChanging Method " Url="html/266e9d8a-d7a3-5e14-0bcc-253797e5d201.htm" />
+            <HelpTOCNode Title="OnRowDeleted Method " Url="html/9c5bfe57-4f76-757e-543c-984cf9eb33cd.htm" />
+            <HelpTOCNode Title="OnRowDeleting Method " Url="html/1d0f3f7d-f0c1-ceae-48e5-dc4126c73481.htm" />
+            <HelpTOCNode Title="RemoveHostelFeeRow Method " Url="html/90a3d0e9-9a15-acbb-5340-622e7cccd335.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5df56afb-9169-46c7-b437-d63c9e3337c2" Title="HostelFeeDataTable Events" Url="html/9e4f6c93-ac3d-5000-c271-1fc02d98650e.htm">
+            <HelpTOCNode Title="HostelFeeRowChanged Event" Url="html/eb2f1cf8-24ea-3a38-7eca-e891b6b1e810.htm" />
+            <HelpTOCNode Title="HostelFeeRowChanging Event" Url="html/8c58701b-2530-7039-c3e7-33480277e02f.htm" />
+            <HelpTOCNode Title="HostelFeeRowDeleted Event" Url="html/3c05e74b-47f9-869c-769b-a65f2ed41ec7.htm" />
+            <HelpTOCNode Title="HostelFeeRowDeleting Event" Url="html/5c5fcc3e-1962-031d-0a35-c694c8a9cae9.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HostelFeeDataTable Fields" Url="html/d8a74601-9376-2ced-5e01-e62407e43d8a.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="16b0fbb9-5318-421d-b68c-92341d19ef5f" Title="StudentReportDataSet.HostelFeeRow Class" Url="html/f2008f92-c048-e508-f743-ade84bdb96c2.htm">
+          <HelpTOCNode Title="StudentReportDataSet.HostelFeeRow Constructor " Url="html/70324eab-f20a-5fc5-207e-f4cf648697df.htm" />
+          <HelpTOCNode Id="e5871eb0-8a05-4b35-9737-1d8e8b81a852" Title="HostelFeeRow Properties" Url="html/e874dff6-c9a8-147e-a00d-2359c19c8845.htm">
+            <HelpTOCNode Title="Amount_Due Property " Url="html/74f713ac-98e5-fc7b-6874-9a87f05cc0b1.htm" />
+            <HelpTOCNode Title="Amount_Paid Property " Url="html/f2d009e3-af07-de30-0743-412d8a1dbf01.htm" />
+            <HelpTOCNode Title="Fee_Amount Property " Url="html/2c352cef-e629-4501-f310-e78772c0ea71.htm" />
+            <HelpTOCNode Title="Fee_Type Property " Url="html/8a2b9520-3013-b591-4fd8-453f01bd2e44.htm" />
+            <HelpTOCNode Title="Year Property " Url="html/6e9ac297-4669-73e5-c9ac-300ee6418bd7.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="48bf3d94-1187-4909-af68-ec39fa01ae04" Title="HostelFeeRow Methods" Url="html/916f6433-269b-95e5-7901-801ef81acb03.htm">
+            <HelpTOCNode Title="IsAmount_DueNull Method " Url="html/ac245377-603d-7730-a2ac-cd1f8525facf.htm" />
+            <HelpTOCNode Title="IsAmount_PaidNull Method " Url="html/f45ed8ca-f436-75b0-f36b-890f9704ef88.htm" />
+            <HelpTOCNode Title="IsFee_AmountNull Method " Url="html/d01fef17-5d12-7725-1ccc-0bb814cd2b2b.htm" />
+            <HelpTOCNode Title="IsFee_TypeNull Method " Url="html/8343c03f-d701-66f5-ef08-8f27386bd491.htm" />
+            <HelpTOCNode Title="IsYearNull Method " Url="html/e3c2d8c0-bf4c-1106-7275-cead139a29b3.htm" />
+            <HelpTOCNode Title="SetAmount_DueNull Method " Url="html/0fed74e8-8a6c-b0cb-9469-d11732842309.htm" />
+            <HelpTOCNode Title="SetAmount_PaidNull Method " Url="html/0523762a-9e00-41db-6804-ee96476e54d7.htm" />
+            <HelpTOCNode Title="SetFee_AmountNull Method " Url="html/87580959-900f-2432-ad67-b52f7be3bec6.htm" />
+            <HelpTOCNode Title="SetFee_TypeNull Method " Url="html/0409bdd9-c70d-c9bf-4313-9934d5505edb.htm" />
+            <HelpTOCNode Title="SetYearNull Method " Url="html/0ec39424-1d64-9beb-fb3e-fd96730114c6.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HostelFeeRow Fields" Url="html/b9a5a18f-6f5f-22aa-78e9-ed7d4c23610f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7705f1f5-62e9-4594-a4d8-5953405f06d4" Title="StudentReportDataSet.HostelFeeRowChangeEvent Class" Url="html/93e1c25f-609a-cf25-eaf1-9bb10cb54e4e.htm">
+          <HelpTOCNode Title="StudentReportDataSet.HostelFeeRowChangeEvent Constructor " Url="html/0e9ab9ee-b86e-54c7-932c-2fb5d88e6bd6.htm" />
+          <HelpTOCNode Id="78b6240b-aa9d-4614-8df2-78dd9dd8e94d" Title="HostelFeeRowChangeEvent Properties" Url="html/62fb8dad-2a90-1a47-99a6-36386f6091c2.htm">
+            <HelpTOCNode Title="Action Property " Url="html/09bfed26-f1d3-8330-2bdf-8fcf628e0169.htm" />
+            <HelpTOCNode Title="Row Property " Url="html/cbd2f463-88cb-3a08-cb5a-15a24e64a4ac.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HostelFeeRowChangeEvent Methods" Url="html/185c09a6-b05d-c06b-8df8-ebc63de7268f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="StudentReportDataSet.HostelFeeRowChangeEventHandler Delegate" Url="html/96cbfd5d-aa01-ff37-af7b-e1a12768b9ad.htm" />
+        <HelpTOCNode Id="5b2af026-0dcd-4c35-95d2-b90299216d5b" Title="StudentReportDataSet.MeeFeeDataTable Class" Url="html/e07ad0cf-2a2a-e4f4-5d1f-a35e7d85c070.htm">
+          <HelpTOCNode Id="a46ff920-f007-4e9d-907f-cf6d2be51f9e" Title="MeeFeeDataTable Constructor " Url="html/0e5a73f3-b904-284c-544c-52048b0ea827.htm">
+            <HelpTOCNode Title="StudentReportDataSet.MeeFeeDataTable Constructor " Url="html/52e57d86-fc75-c5d0-da45-0bbb4cbf5174.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.MeeFeeDataTable Constructor (DataTable)" Url="html/48628e65-bf2f-5437-3b60-9be5e3a7ef55.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.MeeFeeDataTable Constructor (SerializationInfo, StreamingContext)" Url="html/0fe15403-786b-2547-9a75-c976a3376ed9.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="18ea2bda-71bd-4585-9325-ffc902a2ce31" Title="MeeFeeDataTable Properties" Url="html/5f2f9900-2404-fdf5-0971-6695f939c245.htm">
+            <HelpTOCNode Title="Amount_DueColumn Property " Url="html/3b691d48-b074-2630-ca4f-bc3365c17f98.htm" />
+            <HelpTOCNode Title="Amount_PaidColumn Property " Url="html/a355a47c-5529-849e-45c7-bf5a3fa365b8.htm" />
+            <HelpTOCNode Title="AmountColumn Property " Url="html/94123e46-3470-831f-df48-63f0e63b2fbb.htm" />
+            <HelpTOCNode Title="Count Property " Url="html/41f59b45-1784-1095-bd48-17e50cd84df9.htm" />
+            <HelpTOCNode Title="Item Property " Url="html/40c01092-f740-a126-7d07-8902acd0beba.htm" />
+            <HelpTOCNode Title="MonthColumn Property " Url="html/197df06e-07c8-b253-8851-65147512be88.htm" />
+            <HelpTOCNode Title="YearColumn Property " Url="html/59c692c0-8764-404b-b308-4293328e1ffe.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="6f56a098-ecb5-4e2b-8b47-0b03e2e7ddf4" Title="MeeFeeDataTable Methods" Url="html/11ef7f26-fea9-1a58-cb35-dff89e674ef7.htm">
+            <HelpTOCNode Id="1a741eec-f1b1-4408-b991-822316412305" Title="AddMeeFeeRow Method " Url="html/38639c81-0fcc-4506-dcfc-3d1bc478c5a0.htm">
+              <HelpTOCNode Title="AddMeeFeeRow Method (StudentReportDataSet.MeeFeeRow)" Url="html/960d66f5-8319-7f3d-2c49-b642f3c16bb0.htm" />
+              <HelpTOCNode Title="AddMeeFeeRow Method (String, String, String, String, String)" Url="html/8e7a6f1b-36ba-23a6-063e-879702e8fd0f.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="70c7937b-76ed-435a-9299-a626968e70d5" Title="Clone Method " Url="html/38fe44b2-a1f5-0168-202a-7ba264c93ac7.htm">
+              <HelpTOCNode Title="Clone Method " Url="html/1d1fca9e-b9f2-ff1b-7b1f-5b99a3c5424d.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="CreateInstance Method " Url="html/e27046a1-fa7e-3f7f-0fc4-d244e468431a.htm" />
+            <HelpTOCNode Title="GetRowType Method " Url="html/cd0fe99e-5566-376d-5567-d0fbc77c5791.htm" />
+            <HelpTOCNode Title="GetTypedTableSchema Method " Url="html/c9a183ce-704d-1c01-0c73-f40999392491.htm" />
+            <HelpTOCNode Title="InitClass Method " Url="html/3c333f63-e9ed-1647-59d1-4d2b9021d350.htm" />
+            <HelpTOCNode Title="InitVars Method " Url="html/f2c98736-ff41-13bb-d571-d536e067c3de.htm" />
+            <HelpTOCNode Title="NewMeeFeeRow Method " Url="html/5e08a63c-5b5a-8595-e4ca-b3290fe7d754.htm" />
+            <HelpTOCNode Title="NewRowFromBuilder Method " Url="html/e8f825e6-7eb2-e6af-acdc-3d3742f29fe3.htm" />
+            <HelpTOCNode Title="OnRowChanged Method " Url="html/ad86f6bb-51a5-a943-1c2c-43bc7cd28fc0.htm" />
+            <HelpTOCNode Title="OnRowChanging Method " Url="html/d4a7ee93-d6f2-a3e2-b0cc-94a4cdba4892.htm" />
+            <HelpTOCNode Title="OnRowDeleted Method " Url="html/342a6407-4497-d485-7370-29eaf26adae7.htm" />
+            <HelpTOCNode Title="OnRowDeleting Method " Url="html/2f14a4f3-fbad-7cf2-614f-7ef3b12c0717.htm" />
+            <HelpTOCNode Title="RemoveMeeFeeRow Method " Url="html/c6e1bb4b-9fe5-1626-66cd-9906a84ba769.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3528a64d-2d25-4f3f-a231-b6dacf013e22" Title="MeeFeeDataTable Events" Url="html/d6c6d232-db4f-01d8-4e04-068d9942d0d7.htm">
+            <HelpTOCNode Title="MeeFeeRowChanged Event" Url="html/e81f3508-7e6c-93ea-0a71-a0ab951a49bf.htm" />
+            <HelpTOCNode Title="MeeFeeRowChanging Event" Url="html/99112059-d1ea-b493-f32a-b8a7c7f3f77c.htm" />
+            <HelpTOCNode Title="MeeFeeRowDeleted Event" Url="html/cfad2b37-6b34-570b-56d6-7d77592ddf54.htm" />
+            <HelpTOCNode Title="MeeFeeRowDeleting Event" Url="html/4fb758cb-1799-b7ed-d108-c8e29ad4973f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MeeFeeDataTable Fields" Url="html/fbcec774-6b0e-3b68-abc1-2a694cc7a288.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e054121b-5853-4623-8f85-23ac0086bb03" Title="StudentReportDataSet.MeeFeeRow Class" Url="html/188684c9-b5af-732d-cd2e-8f4e6af80784.htm">
+          <HelpTOCNode Title="StudentReportDataSet.MeeFeeRow Constructor " Url="html/7006dfdb-22b4-fb47-b1ff-b7d685122692.htm" />
+          <HelpTOCNode Id="92ec4eca-0a50-492c-bfce-f1a328e05b6a" Title="MeeFeeRow Properties" Url="html/9c0b6984-cb03-3197-869d-6c238151fdd4.htm">
+            <HelpTOCNode Title="Amount Property " Url="html/ee93910e-77b9-f4c6-74ac-5b4633902071.htm" />
+            <HelpTOCNode Title="Amount_Due Property " Url="html/0f21381a-1be8-9087-a0dc-1982a126c7fe.htm" />
+            <HelpTOCNode Title="Amount_Paid Property " Url="html/3e52a10e-f8be-1897-4b9d-b15ddeec331e.htm" />
+            <HelpTOCNode Title="Month Property " Url="html/13125188-35e8-39bf-cba8-d29509f3db18.htm" />
+            <HelpTOCNode Title="Year Property " Url="html/71e25c89-9fbe-f5bf-2c8c-03c282c1bd69.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="62284b1b-a117-4384-90cf-a17b5ce6a3df" Title="MeeFeeRow Methods" Url="html/a676abc2-fa73-ef44-7794-60ffc693cdd8.htm">
+            <HelpTOCNode Title="IsAmount_DueNull Method " Url="html/dc68b96e-22d4-b7c2-ed78-8082b58a35df.htm" />
+            <HelpTOCNode Title="IsAmount_PaidNull Method " Url="html/7f9e3d8f-7430-ef79-f45a-d6eaef59b502.htm" />
+            <HelpTOCNode Title="IsAmountNull Method " Url="html/8f3b5ae3-3bfb-4c5f-4f87-d3b9186bb80f.htm" />
+            <HelpTOCNode Title="IsMonthNull Method " Url="html/53a65b78-0b70-e495-8ff9-466b509ac029.htm" />
+            <HelpTOCNode Title="IsYearNull Method " Url="html/07aed96d-e1ae-3ebc-993d-5b23935ccbcb.htm" />
+            <HelpTOCNode Title="SetAmount_DueNull Method " Url="html/a69abb3f-350c-cfc6-9528-dc8f53debce1.htm" />
+            <HelpTOCNode Title="SetAmount_PaidNull Method " Url="html/a714f60f-8feb-e368-cd5b-19654de433c2.htm" />
+            <HelpTOCNode Title="SetAmountNull Method " Url="html/1e5f5401-cfd3-8724-103a-32ab16a0454d.htm" />
+            <HelpTOCNode Title="SetMonthNull Method " Url="html/1cd5eb38-9f4f-beec-958d-ff06ea329620.htm" />
+            <HelpTOCNode Title="SetYearNull Method " Url="html/80ddec8a-181d-a528-7f73-d1775dd64531.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MeeFeeRow Fields" Url="html/d5f259da-f7cc-7ff0-b433-9b4244c8f2fb.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="209525f0-3e0a-4717-b3d0-4c596e88b82e" Title="StudentReportDataSet.MeeFeeRowChangeEvent Class" Url="html/f7750b0e-fd7b-a001-b775-d346a68a8435.htm">
+          <HelpTOCNode Title="StudentReportDataSet.MeeFeeRowChangeEvent Constructor " Url="html/6ae6c726-6bcd-576a-888c-1dcecd833c9d.htm" />
+          <HelpTOCNode Id="036a66bd-fb83-4551-8bea-79ac5c08a8ef" Title="MeeFeeRowChangeEvent Properties" Url="html/229bcf13-63a7-9d96-2595-ed303dab2f76.htm">
+            <HelpTOCNode Title="Action Property " Url="html/ddca8a3d-85b2-e803-ebb0-3a22793fe2ea.htm" />
+            <HelpTOCNode Title="Row Property " Url="html/dab86481-c82e-3440-c220-2a58648549d3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MeeFeeRowChangeEvent Methods" Url="html/24423688-d5ad-5825-5060-74ed99154472.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="StudentReportDataSet.MeeFeeRowChangeEventHandler Delegate" Url="html/53586e7a-36ce-3bc7-6b16-92eb7ed3167a.htm" />
+        <HelpTOCNode Id="323552be-f4cc-47c4-9abe-e381d2e1c410" Title="StudentReportDataSet.StudentDataTable Class" Url="html/399d10c3-3601-6de4-7d19-fc4d72a0e679.htm">
+          <HelpTOCNode Id="5e3e2734-b593-4f7a-93fd-eb30d87fb6a9" Title="StudentDataTable Constructor " Url="html/ea44dc30-760b-313a-ca39-3cba23f7b99c.htm">
+            <HelpTOCNode Title="StudentReportDataSet.StudentDataTable Constructor " Url="html/549b479c-d538-c45d-4d83-7ba19d7dd6da.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.StudentDataTable Constructor (DataTable)" Url="html/cb1995fc-4fa9-279a-b42d-cc091031131e.htm" />
+            <HelpTOCNode Title="StudentReportDataSet.StudentDataTable Constructor (SerializationInfo, StreamingContext)" Url="html/8835b287-fb01-9bd7-f39d-00cbe17fbe5e.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="2afb80d9-86c2-4fff-b033-11e5146bc452" Title="StudentDataTable Properties" Url="html/2de040ca-c086-ce13-0c86-a507740971af.htm">
+            <HelpTOCNode Title="BranchColumn Property " Url="html/4be693f6-4e4e-a9a0-9d0d-7334fad99ca9.htm" />
+            <HelpTOCNode Title="Count Property " Url="html/df23c1e3-163b-4cf8-0747-10b5933e4114.htm" />
+            <HelpTOCNode Title="CourseColumn Property " Url="html/d6cb1703-4544-eb28-5c76-c2af7c70107a.htm" />
+            <HelpTOCNode Title="DateOfBirthColumn Property " Url="html/d8cf3da2-259e-6851-7815-b85f2ed20de8.htm" />
+            <HelpTOCNode Title="GenderColumn Property " Url="html/c348bf02-32b0-ec44-e0d9-8dbd25b38839.htm" />
+            <HelpTOCNode Title="Item Property " Url="html/622ea405-1e45-44c9-fea2-5623764cc13d.htm" />
+            <HelpTOCNode Title="NameColumn Property " Url="html/3cbcd89a-c9a5-1e76-ec09-23b0a9598ef4.htm" />
+            <HelpTOCNode Title="SemColumn Property " Url="html/673f8c1c-4804-4efd-5185-a975f1280c0f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="2e96d897-48aa-4094-a124-61e2a6f7647f" Title="StudentDataTable Methods" Url="html/74763bcf-c7ad-f858-a8a5-e3416bfa1eb5.htm">
+            <HelpTOCNode Id="bc39cabc-957a-4fb3-8d93-521803990f25" Title="AddStudentRow Method " Url="html/59aafce5-281f-5936-19b7-68da1999f4e2.htm">
+              <HelpTOCNode Title="AddStudentRow Method (StudentReportDataSet.StudentRow)" Url="html/27f2d46a-4feb-fb18-3a9c-eaf4a6f43db4.htm" />
+              <HelpTOCNode Title="AddStudentRow Method (String, String, String, String, String, String)" Url="html/e8db9410-7d7c-ab0b-6d91-0e59af72e639.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="21ddceee-e6da-43d8-8934-5b78417b57b9" Title="Clone Method " Url="html/9fd3ac89-9231-5dbd-eaf5-8b4242cb5c60.htm">
+              <HelpTOCNode Title="Clone Method " Url="html/81a0f331-e361-a403-b265-04873a079f72.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="CreateInstance Method " Url="html/2d9b5aec-8bf5-81b0-1a20-612565fd7044.htm" />
+            <HelpTOCNode Title="GetRowType Method " Url="html/9725b1e8-efe3-ec61-6c28-2f30d24a3af0.htm" />
+            <HelpTOCNode Title="GetTypedTableSchema Method " Url="html/7fc34485-ad10-4a8c-99bc-b46a5d129de8.htm" />
+            <HelpTOCNode Title="InitClass Method " Url="html/06e5ed4b-9c77-a756-54fe-68fb68277891.htm" />
+            <HelpTOCNode Title="InitVars Method " Url="html/e665a817-687b-76a4-8d67-14a6310db22c.htm" />
+            <HelpTOCNode Title="NewRowFromBuilder Method " Url="html/7b926cfb-a4f2-9a4a-e12f-8c4bc49f21d0.htm" />
+            <HelpTOCNode Title="NewStudentRow Method " Url="html/3005ef37-feca-e49e-f7fd-e8eaa00d91da.htm" />
+            <HelpTOCNode Title="OnRowChanged Method " Url="html/a3ead54e-621c-3965-c1b0-176a4135e263.htm" />
+            <HelpTOCNode Title="OnRowChanging Method " Url="html/3a3588c8-949d-1fd5-cd62-b19bfac52cf0.htm" />
+            <HelpTOCNode Title="OnRowDeleted Method " Url="html/198f5f6b-9aca-fada-7e54-24c65d63693e.htm" />
+            <HelpTOCNode Title="OnRowDeleting Method " Url="html/b736b297-9cd6-5f13-9b98-ac9fdf7b50d0.htm" />
+            <HelpTOCNode Title="RemoveStudentRow Method " Url="html/68545e1e-8254-f423-10cd-7de7d1d1dd4e.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="134bb220-ba4e-43c1-91bb-47e828e39dd7" Title="StudentDataTable Events" Url="html/786b8f7f-e8ee-97fe-8b6d-222a4d6d40ec.htm">
+            <HelpTOCNode Title="StudentRowChanged Event" Url="html/953489d5-608f-cbef-e045-f64bb596fe10.htm" />
+            <HelpTOCNode Title="StudentRowChanging Event" Url="html/c2c2b580-7108-9748-e2ac-2968b9e70283.htm" />
+            <HelpTOCNode Title="StudentRowDeleted Event" Url="html/633af255-8b60-088d-8dc0-3adfdfec43d6.htm" />
+            <HelpTOCNode Title="StudentRowDeleting Event" Url="html/0d9c381c-d8d0-5502-7dff-7e81b8a1d3c6.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StudentDataTable Fields" Url="html/b0afa8a3-591b-595d-d59f-a8668398c70a.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d648398b-194e-4611-9256-87133883e11d" Title="StudentReportDataSet.StudentRow Class" Url="html/d4062262-47ca-bfbf-e1b8-1be7cfd3e10f.htm">
+          <HelpTOCNode Title="StudentReportDataSet.StudentRow Constructor " Url="html/eb3c7dcf-410c-7ab4-cdb1-52ccd7396fbc.htm" />
+          <HelpTOCNode Id="afc43616-426a-44fc-8ed2-55ffb47dbbd5" Title="StudentRow Properties" Url="html/e0de620a-3c42-83dd-1858-0e36895b9e01.htm">
+            <HelpTOCNode Title="Branch Property " Url="html/2c1e1546-7a4c-ce04-f304-e10fca975a4d.htm" />
+            <HelpTOCNode Title="Course Property " Url="html/5a741456-aa05-7767-0ddf-f2dccf1d5410.htm" />
+            <HelpTOCNode Title="DateOfBirth Property " Url="html/c55f1521-09ba-9eea-38a0-23c7f2ebe3db.htm" />
+            <HelpTOCNode Title="Gender Property " Url="html/c26247f5-9be0-e35e-acc3-f57c2d0f5def.htm" />
+            <HelpTOCNode Title="Name Property " Url="html/a6ab44c6-c17a-03bd-c47a-d2463190ffc8.htm" />
+            <HelpTOCNode Title="Sem Property " Url="html/301b4c03-cb38-0b22-564d-ef6b53bc9d40.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="86c4fe8b-9637-410a-ab1d-fe7e05400e9b" Title="StudentRow Methods" Url="html/ed51ebdb-f93d-742b-55c6-ac8d7cfd9db2.htm">
+            <HelpTOCNode Title="IsBranchNull Method " Url="html/1777e203-87e0-447b-04cd-a2353b1d9226.htm" />
+            <HelpTOCNode Title="IsCourseNull Method " Url="html/7f818cde-a388-a4c9-eef5-5e6aaa312c3c.htm" />
+            <HelpTOCNode Title="IsDateOfBirthNull Method " Url="html/2f1d70c2-e417-d742-029e-58166183c3b0.htm" />
+            <HelpTOCNode Title="IsGenderNull Method " Url="html/a8dc15e5-7d71-cac5-f1b9-e44e0b7495c9.htm" />
+            <HelpTOCNode Title="IsNameNull Method " Url="html/7e84282a-9e1b-a8d6-a526-b8ac67fd3395.htm" />
+            <HelpTOCNode Title="IsSemNull Method " Url="html/543becb2-9575-c4ab-b77c-e85be1e3d2d7.htm" />
+            <HelpTOCNode Title="SetBranchNull Method " Url="html/659961da-b217-4a9c-29a7-ed8c7f3452c9.htm" />
+            <HelpTOCNode Title="SetCourseNull Method " Url="html/62ae54d3-d32e-88bd-d841-072976ce87cf.htm" />
+            <HelpTOCNode Title="SetDateOfBirthNull Method " Url="html/643ccf02-0883-3ac0-300f-48ca5195a59d.htm" />
+            <HelpTOCNode Title="SetGenderNull Method " Url="html/6341e16e-b0ac-cbe2-bdc1-51daed4488c3.htm" />
+            <HelpTOCNode Title="SetNameNull Method " Url="html/e23ff7f8-f30d-e83a-36ec-620914baeef5.htm" />
+            <HelpTOCNode Title="SetSemNull Method " Url="html/63b7ed84-9797-fc2f-9f6a-62fc385c4868.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StudentRow Fields" Url="html/f5585b70-9c31-c74f-32e6-2f46523ba211.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f53eccc3-4a67-4b2a-87f4-e7f834231587" Title="StudentReportDataSet.StudentRowChangeEvent Class" Url="html/cc16ca9c-db0f-88a7-fcb9-5adaf65f70bb.htm">
+          <HelpTOCNode Title="StudentReportDataSet.StudentRowChangeEvent Constructor " Url="html/b6454ef1-11d0-8146-a01f-8247c7e33c51.htm" />
+          <HelpTOCNode Id="eb0399e9-246a-4460-a611-a0fa45a03730" Title="StudentRowChangeEvent Properties" Url="html/e5843bbe-e325-27c8-fad8-1498cf4a19f1.htm">
+            <HelpTOCNode Title="Action Property " Url="html/4667bda9-0a2d-6df6-cec0-9aa4558ac77c.htm" />
+            <HelpTOCNode Title="Row Property " Url="html/c5264080-0ca3-7b9a-1405-009e3d71979d.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StudentRowChangeEvent Methods" Url="html/e336ec8c-d4be-7dd1-593c-a769327269f1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="StudentReportDataSet.StudentRowChangeEventHandler Delegate" Url="html/c939aba6-3314-e4dd-ebd1-1929dece5203.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="AddUserViewModel Methods" Url="html/bb0aff09-92c9-b398-2971-00d9c58bcbea.htm" />
+      <HelpTOCNode Id="04ce0200-65ae-4d25-9a9f-b56f98a3210d" Title="HostelManagement.Areas Namespaces" Url="html/678b6bee-a184-2625-e639-6094df6cfaab.htm">
+        <HelpTOCNode Id="435ebe62-562d-4f6b-aa38-e1d576ba55bb" Title="HostelManagement.Areas.Administration" Url="html/0eb7cd69-ee3a-c857-a6c2-d631ac134c43.htm">
+          <HelpTOCNode Id="3debaa4b-e747-4359-8798-d5893d3829ab" Title="AdministrationAreaRegistration Class" Url="html/cac815d7-a0be-0dfe-b196-930baf0619c3.htm">
+            <HelpTOCNode Title="AdministrationAreaRegistration Constructor " Url="html/6f8a3d2e-99f2-6e9b-32ad-619da368a9a7.htm" />
+            <HelpTOCNode Id="bfc393b4-d2ae-482c-8c56-d2eb27da8a52" Title="AdministrationAreaRegistration Properties" Url="html/18f51977-929e-8275-4b35-17e1dd70fba5.htm">
+              <HelpTOCNode Title="AreaName Property " Url="html/9f8dcfa2-60d2-8146-e32d-d8f07e30877e.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="5b67d1e2-9f5b-495d-b6b2-7703d4c72ddf" Title="AdministrationAreaRegistration Methods" Url="html/6f4d7b2a-17b2-2d98-ff9c-c07ba6282316.htm">
+              <HelpTOCNode Title="RegisterArea Method " Url="html/ab1c714b-c68c-f70d-2616-2cdf85f64928.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="f3825ed8-bf5f-4f82-8163-5f4938fc91cf" Title="HostelManagement.Areas.Administration.Controllers" Url="html/2be1f517-8cb7-cf37-261f-94cee183747b.htm">
+          <HelpTOCNode Id="b5e8483d-310b-4cdf-a34c-6dcb7b8891c9" Title="HomeController Class" Url="html/a38f5eb4-b2fb-ddf5-3825-640ad5038e4d.htm">
+            <HelpTOCNode Id="69bcd5bf-6d95-4e04-acf8-5d27e370eb52" Title="HomeController Constructor " Url="html/e7a35948-7e37-4ad2-085a-4006ec316835.htm">
+              <HelpTOCNode Title="HomeController Constructor " Url="html/615c3359-626a-0952-c36c-c473037a51a3.htm" />
+              <HelpTOCNode Title="HomeController Constructor (UserManager`1(AppUser))" Url="html/79179c8b-8f29-bfde-f786-5451e136f873.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="HomeController Properties" Url="html/73cb51d8-e435-f8d8-3c72-f9b49a6b57ff.htm" />
+            <HelpTOCNode Id="fa7c3c03-196d-4564-bb6a-ebb0ed45508e" Title="HomeController Methods" Url="html/717e4712-1ac4-ecb9-e4e6-9395c132cdfb.htm">
+              <HelpTOCNode Id="323e5956-1181-4534-ada9-d20485eb8bf6" Title="AddHostel Method " Url="html/c36bdbb6-42cd-698e-1569-55a787484235.htm">
+                <HelpTOCNode Title="AddHostel Method " Url="html/98a1e2ab-a8c5-cd65-a6ff-0ee500f32a76.htm" />
+                <HelpTOCNode Title="AddHostel Method (AddHostelViewModel)" Url="html/a740360c-97b5-d17a-54af-f310ce783a1d.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="2558dad2-9f05-4c83-b0dd-348ac533c3c9" Title="AddRooms Method " Url="html/75e9863d-0859-f0b5-b062-c6db9c5b3ef5.htm">
+                <HelpTOCNode Title="AddRooms Method " Url="html/251f5516-66fe-29e2-01c2-f6dacabc438f.htm" />
+                <HelpTOCNode Title="AddRooms Method (Room)" Url="html/eb8c7f6f-14cb-173b-c5b5-10cb1b509159.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="62797f74-08fa-497a-8f19-8eeb0ce47978" Title="AddUser Method " Url="html/6cc2486a-647b-c31f-8614-7ad3235c9860.htm">
+                <HelpTOCNode Title="AddUser Method " Url="html/39b08e7c-0857-9abc-1818-07e41ed21868.htm" />
+                <HelpTOCNode Title="AddUser Method (AddUserViewModel)" Url="html/38c19e5a-3e3c-cbe0-fa56-9ea93111880f.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="f200d305-8e21-4d45-b11c-5d679e3c458b" Title="Dispose Method " Url="html/7833c7f6-d53a-dda1-dd55-3bdbfee77e4c.htm">
+                <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/e918b723-6b91-b32c-648a-5fca606e846c.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="Index Method " Url="html/c7bdd0b4-be88-ee02-6ae9-485b483a6157.htm" />
+              <HelpTOCNode Title="Logout Method " Url="html/cc058d8e-c7e4-a7ce-145f-236a298acd63.htm" />
+              <HelpTOCNode Title="MeetDevelopers Method " Url="html/80177972-cf84-ae53-8dc7-3d38690f32a2.htm" />
+              <HelpTOCNode Id="2f66e841-64bb-4bbe-aa18-76546705c5b5" Title="RemoveUser Method " Url="html/146bc0e5-6890-5974-c382-ffa31b636fbc.htm">
+                <HelpTOCNode Title="RemoveUser Method " Url="html/e7351629-997b-4b3e-151d-c6610dccb932.htm" />
+                <HelpTOCNode Title="RemoveUser Method (String)" Url="html/224a74cd-1a59-d5b9-86d2-f758c8f0be2f.htm" />
+              </HelpTOCNode>
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="64f826a6-d47f-48f8-9a54-918c28b1c6f4" Title="HostelManagement.Areas.Administration.Models" Url="html/bf6d804a-0881-c615-5b86-5f728c3f0669.htm">
+          <HelpTOCNode Id="82bd706c-4ae5-4a60-be5a-dd8c35523c22" Title="AddHostelViewModel Class" Url="html/7aebafc5-d662-6d95-5db6-d1251066bf14.htm">
+            <HelpTOCNode Title="AddHostelViewModel Constructor " Url="html/1c35675c-d211-eca5-ecb3-0852f3198260.htm" />
+            <HelpTOCNode Id="bbfed9ef-8e43-4267-8df7-d793ddb05bf8" Title="AddHostelViewModel Properties" Url="html/6b880c1f-530b-0d9e-4b3b-04d81e6e3210.htm">
+              <HelpTOCNode Title="blockNumber Property " Url="html/128c3f8e-86f9-a054-a934-b5e153d599f1.htm" />
+              <HelpTOCNode Title="occupantType Property " Url="html/c5d09c57-b126-71fe-8516-ad5f48cd2098.htm" />
+              <HelpTOCNode Title="type Property " Url="html/36921727-508e-09f2-06b1-27ccc034e8ac.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="AddHostelViewModel Methods" Url="html/89d9cacc-8576-bf1c-a86c-c00ba07736e9.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1f80881f-edcd-4065-995e-b15f98c1d21b" Title="AddUserViewModel Class" Url="html/2011e59a-efb1-0e55-a0b4-5025f804c6da.htm">
+            <HelpTOCNode Title="AddUserViewModel Constructor " Url="html/28608eda-f83f-276d-afff-c4c2865c2b7c.htm" />
+            <HelpTOCNode Id="812344ab-082c-4ca2-8476-50366ed4b9e0" Title="AddUserViewModel Properties" Url="html/26bd6b12-1e18-e2df-3ad9-65fd6f8eadb0.htm">
+              <HelpTOCNode Title="Password Property " Url="html/476291af-0816-443c-67f6-a20d34a76e12.htm" />
+              <HelpTOCNode Title="Role Property " Url="html/50a7fbd8-5721-25dc-e70d-03259b4a0963.htm" />
+              <HelpTOCNode Title="Username Property " Url="html/b0238d71-6287-446b-bb86-3d27389efe7c.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="AddUserViewModel Methods" Url="html/bb0aff09-92c9-b398-2971-00d9c58bcbea.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="e42706cc-5c29-4fc9-8fdc-d731fb93aa88" Title="HostelManagement.Areas.Archive" Url="html/0c9f8d6b-4e40-e50d-2070-cb3e9e01918f.htm">
+          <HelpTOCNode Id="70e92036-9810-41f3-9f73-de6ca1a0275e" Title="ArchiveAreaRegistration Class" Url="html/53a51a9c-fe49-9b42-d5a5-c38e5c917893.htm">
+            <HelpTOCNode Title="ArchiveAreaRegistration Constructor " Url="html/c0f64f58-f648-ebd3-0d80-ca3ebbc4adc4.htm" />
+            <HelpTOCNode Id="0d6fa08a-914e-40c3-ab6f-1442c0c03934" Title="ArchiveAreaRegistration Properties" Url="html/10c2f3e5-810b-62de-e793-6b39586c2e41.htm">
+              <HelpTOCNode Title="AreaName Property " Url="html/ecf13c41-e7c2-a501-72b3-5f7625ede899.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="d8f162d1-aa62-4e38-b65e-a046ac497f0f" Title="ArchiveAreaRegistration Methods" Url="html/332a7152-91e6-61e2-fb54-c7fc2ba56c47.htm">
+              <HelpTOCNode Title="RegisterArea Method " Url="html/195008df-25d9-f394-ebef-cab39e4d653b.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="7d124fa3-2ecf-4042-a63c-90d941af777a" Title="HostelManagement.Areas.Archive.Controllers" Url="html/b943766f-d368-80f1-95c8-9bab699d9f6b.htm">
+          <HelpTOCNode Id="edc17182-f51c-46ae-9f76-5be3d8e9fca0" Title="HomeController Class" Url="html/6a442ec2-758d-31ff-3691-1cb1c4cabb41.htm">
+            <HelpTOCNode Title="HomeController Constructor " Url="html/ace97fc6-5995-59ea-9145-74d32b8d485d.htm" />
+            <HelpTOCNode Title="HomeController Properties" Url="html/ee36dacf-8ce5-3d44-494c-bb54e1d5cfe8.htm" />
+            <HelpTOCNode Id="9e76f04d-0d0e-491b-a6ff-2dff34cc18d2" Title="HomeController Methods" Url="html/ce2d0abc-f5ba-c741-ccf3-fc04d35c0402.htm">
+              <HelpTOCNode Title="GetStudentList Method " Url="html/378b6444-0283-bb3b-6162-d41e8d2fe540.htm" />
+              <HelpTOCNode Title="Index Method " Url="html/f69cd44f-6fd0-b866-19a0-fe6e54a29064.htm" />
+              <HelpTOCNode Title="Logout Method " Url="html/bd410ddb-aba8-310c-5de0-72412f99ecc9.htm" />
+              <HelpTOCNode Title="MeetDevelopers Method " Url="html/4a7f4d69-9f49-9b97-593c-0826268e4c61.htm" />
+              <HelpTOCNode Id="c0b353e5-6a3b-4522-a51c-a005b2ac60ab" Title="ViewStudent Method " Url="html/10dd0a84-f0ae-34f9-9341-2ce12af6038f.htm">
+                <HelpTOCNode Title="ViewStudent Method " Url="html/d8f49712-2fdc-70db-a01e-33442249fee4.htm" />
+                <HelpTOCNode Title="ViewStudent Method (StudentSearchViewModel)" Url="html/75c413ff-4921-155a-5a69-5008e7616346.htm" />
+              </HelpTOCNode>
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="fea3617d-bf23-4958-b8c4-dd7f3517db1a" Title="HostelManagement.Areas.HostelMessManagement" Url="html/5bf0a31e-4b57-41fa-9b19-1d7e921db717.htm">
+          <HelpTOCNode Id="c6971237-803c-4e89-9042-595153bcdd7f" Title="HostelMessManagementAreaRegistration Class" Url="html/72f0faf4-d40a-9330-ee14-006e4eb4bcc1.htm">
+            <HelpTOCNode Title="HostelMessManagementAreaRegistration Constructor " Url="html/d932e4d8-a049-698a-ddfe-fc39781af757.htm" />
+            <HelpTOCNode Id="de7fcdcc-3b4f-4c04-9832-30ff9e938f2b" Title="HostelMessManagementAreaRegistration Properties" Url="html/a7b476e3-c16f-d42c-c411-c01459e62632.htm">
+              <HelpTOCNode Title="AreaName Property " Url="html/0971632c-8542-3421-01dd-6fb10cd85486.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="2b72bfc4-e142-4d65-9bb5-1c79628a1ae7" Title="HostelMessManagementAreaRegistration Methods" Url="html/e38ebe15-54b9-9f49-faf9-541e0a4275fc.htm">
+              <HelpTOCNode Title="RegisterArea Method " Url="html/f0308e08-3f41-3126-b244-daa9bfabb4bf.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="8680ca9b-a6a8-4e76-bd0f-1b80aaf60022" Title="HostelManagement.Areas.HostelMessManagement.Controllers" Url="html/bc178c06-3b57-5bb2-fdbe-ba740c2387c5.htm">
+          <HelpTOCNode Id="ba839742-5f6c-45b6-acec-64dca54a403f" Title="ManagerController Class" Url="html/e1b1736c-0333-951e-32d0-6514b9d69d6f.htm">
+            <HelpTOCNode Title="ManagerController Constructor " Url="html/f1bda345-d43d-57a3-2cc6-44172125b6bc.htm" />
+            <HelpTOCNode Title="ManagerController Properties" Url="html/7466f06a-9683-622a-28d5-a6a1b103b2c1.htm" />
+            <HelpTOCNode Id="62c0a32f-fecc-47e0-9aa3-dad6b44bf1e6" Title="ManagerController Methods" Url="html/44ee9733-4db0-8c10-63d9-5f6ec116dfd8.htm">
+              <HelpTOCNode Id="da0d2e18-c3a7-49fb-9836-2fcf284ba7af" Title="ChangeFees Method " Url="html/10483c2f-7fcd-3857-4d39-9f25efa2e8a9.htm">
+                <HelpTOCNode Title="ChangeFees Method (SearchViewModel)" Url="html/36247dbc-a787-94af-988b-bd5ebbc921b6.htm" />
+                <HelpTOCNode Title="ChangeFees Method (String, String)" Url="html/bef40f18-afff-7376-d9ac-478f2c662598.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="ChangeMessFees Method " Url="html/a6701f41-576f-4940-b6f3-0938bfedce51.htm" />
+              <HelpTOCNode Title="Index Method " Url="html/af4861a0-2862-0388-e1c1-5c25affa44cb.htm" />
+              <HelpTOCNode Title="Logout Method " Url="html/237a94ad-cd14-bb3e-2f8e-de628d8ddf31.htm" />
+              <HelpTOCNode Title="UpdateFees Method " Url="html/9f05c9f8-f432-53b5-374b-7151f8028ee8.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+          <HelpTOCNode Id="0a754e69-515b-427b-9dbe-4361aa5158f2" Title="UserController Class" Url="html/1894ba29-8c61-93a5-8ca6-83ef33d5e8ec.htm">
+            <HelpTOCNode Title="UserController Constructor " Url="html/2bc07782-08ce-43a4-ffb6-696390e9ee93.htm" />
+            <HelpTOCNode Title="UserController Properties" Url="html/04bce2a8-b84a-2e6b-90ce-753aacca33d7.htm" />
+            <HelpTOCNode Id="4feefd76-fb74-41dc-a34f-c9e4d188b0f8" Title="UserController Methods" Url="html/39975a80-92aa-86c5-b65c-c1f3e6b7c8ff.htm">
+              <HelpTOCNode Id="28f541a2-fa34-418c-a3ea-601fce109d07" Title="AddAdditionalFee Method " Url="html/8f1e3973-f454-85eb-3edb-e9a1c6323f49.htm">
+                <HelpTOCNode Title="AddAdditionalFee Method " Url="html/0898d52a-4813-6263-b0d9-9b2be950e61d.htm" />
+                <HelpTOCNode Title="AddAdditionalFee Method (AddAdditionalFeeViewModel)" Url="html/7338c3a6-00d8-b19a-697b-166d0fd4e520.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="3b6d2485-65d1-4028-8b1f-38063b85adf5" Title="AddStudent Method " Url="html/d69d23f8-ea26-cc4f-b1c6-68d17e090212.htm">
+                <HelpTOCNode Title="AddStudent Method " Url="html/734ff942-50bc-3b5a-0ee5-6d4532e1931f.htm" />
+                <HelpTOCNode Title="AddStudent Method (StudentViewModel)" Url="html/43e4897a-02b6-f372-f78b-361ee73b2249.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="f16e9f55-13cd-4564-a16c-94b7276329df" Title="ChangeRoom Method " Url="html/938d2385-c29c-6a37-85b7-47700dc3f3b6.htm">
+                <HelpTOCNode Title="ChangeRoom Method " Url="html/d890a396-64af-ac6c-0a19-fb11d525227f.htm" />
+                <HelpTOCNode Title="ChangeRoom Method (StudentSearchViewModel)" Url="html/99bce5a6-a138-c3ad-284e-11ee209351f6.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="ChangeRoomAllotment Method " Url="html/9261ed1d-56df-4779-6586-75cacbfefa22.htm" />
+              <HelpTOCNode Id="ad826cfe-7d39-492a-80b6-2257793159fe" Title="DiscountFees Method " Url="html/758a53ee-90f5-2e8c-1702-13f2fa1c59b9.htm">
+                <HelpTOCNode Title="DiscountFees Method " Url="html/6a98fce7-788f-8ad9-b0a2-3265841d8bd7.htm" />
+                <HelpTOCNode Title="DiscountFees Method (StudentSearchViewModel)" Url="html/ec8a0f2f-4fcd-f95c-8f02-d84d15277bd1.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="cbf24dc3-3d30-48fa-94f0-904e7373d49e" Title="GenerateMessBill Method " Url="html/5325b00b-6356-1425-b655-9174ed0ffd6a.htm">
+                <HelpTOCNode Title="GenerateMessBill Method " Url="html/4f339528-f3b6-8be2-089e-68c6b4ce4d07.htm" />
+                <HelpTOCNode Title="GenerateMessBill Method (Int32)" Url="html/a41ee1fd-9b50-dd21-4ff6-d71ac24a0fcf.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="3056bb0c-3ea0-4f40-96a7-1615f2f60c1d" Title="GenerateReport Method " Url="html/a92b3fd5-11bb-4cb0-4fd5-8fb6678c7889.htm">
+                <HelpTOCNode Title="GenerateReport Method " Url="html/81ac1ee5-15cc-94d5-8a67-359ba9be0ee7.htm" />
+                <HelpTOCNode Title="GenerateReport Method (String)" Url="html/064a2a2a-8719-e634-5d66-e699af282220.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="GenerateReportByAmount Method " Url="html/b3fe8e1a-bad2-ac16-79bb-26d1154a4733.htm" />
+              <HelpTOCNode Title="GenerateReportByBID Method " Url="html/b118d791-74c8-4a4d-1ad9-fe9fc39dd718.htm" />
+              <HelpTOCNode Title="GenerateReportByDate Method " Url="html/058c5d4d-8e1b-4d5c-c886-6e81931a30b1.htm" />
+              <HelpTOCNode Title="GenerateReportByDropDown Method " Url="html/c3986d59-5bf0-e924-83dc-be4737c8a1ff.htm" />
+              <HelpTOCNode Id="501b6725-9ece-4d68-9460-8b80b8e340f3" Title="GenerateStudentReport Method " Url="html/3fcff9d3-61fe-8cda-66f4-1e9a38653018.htm">
+                <HelpTOCNode Title="GenerateStudentReport Method " Url="html/327d2179-ff89-01bf-ab57-8e85bb9bfd0a.htm" />
+                <HelpTOCNode Title="GenerateStudentReport Method (StudentSearchViewModel)" Url="html/758929bb-3286-f8d9-3319-dd8c45e3bdbf.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="GetAmount Method " Url="html/963c7574-6c58-b942-4122-79f5fbfc17db.htm" />
+              <HelpTOCNode Title="GetBlocks Method " Url="html/31fd11a5-c4f2-131e-03a4-b09eef6d0f17.htm" />
+              <HelpTOCNode Title="GetFeeBreakUp Method " Url="html/78874eb9-1858-946e-eb72-317ad130939d.htm" />
+              <HelpTOCNode Title="GetMessAmount Method " Url="html/823e1199-4d1c-6880-c545-64b297bce542.htm" />
+              <HelpTOCNode Title="GetRooms Method " Url="html/9ae56b75-ceb7-6071-875c-5458c5c32c3a.htm" />
+              <HelpTOCNode Title="GetStudentList Method " Url="html/1ff33a66-ab8b-da86-b910-a9da489b2faa.htm" />
+              <HelpTOCNode Id="eac0317f-57ed-4293-b9f7-f3624e7a9889" Title="GetType Method " Url="html/b2e0696c-974d-649e-c774-41677f0560d2.htm">
+                <HelpTOCNode Title="GetType Method (String, String)" Url="html/eb9a8b35-7927-f7a3-0339-50682e879db0.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="e373aeea-6289-467a-b28e-119af26b35d3" Title="HostelTransaction Method " Url="html/007a4ba9-2a72-ae45-c313-a6b471f3a4e0.htm">
+                <HelpTOCNode Title="HostelTransaction Method " Url="html/3d63584b-861f-d95a-79bd-0f40310d21e2.htm" />
+                <HelpTOCNode Title="HostelTransaction Method (StudentSearchViewModel)" Url="html/cbb35c9d-7ec0-eba3-9090-362e75f19f93.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="Index Method " Url="html/483c530a-b000-986e-39cb-1201c9cf0f2e.htm" />
+              <HelpTOCNode Title="Logout Method " Url="html/d9043758-814c-49e9-10cb-9701d857d774.htm" />
+              <HelpTOCNode Title="MeetDevelopers Method " Url="html/ee1bb75b-44db-1bc4-2ee3-008dac033686.htm" />
+              <HelpTOCNode Id="ae60fab5-4632-46d7-8ce5-be7d8cd05cbc" Title="MessTransaction Method " Url="html/7a9ab29a-8caf-36d8-fb8a-a199fe4c3361.htm">
+                <HelpTOCNode Title="MessTransaction Method " Url="html/7dc13a3e-19e0-7bc3-9162-910a750cd7df.htm" />
+                <HelpTOCNode Title="MessTransaction Method (StudentSearchViewModel)" Url="html/d14e2369-dd64-99cf-9c83-fd1ae4096012.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="PerformHostelFeeDiscount Method " Url="html/24f2c3b1-ccc0-bde7-ed99-e33f57999c4f.htm" />
+              <HelpTOCNode Title="PerformHostelTransaction Method " Url="html/e3e0ad05-4971-1550-6954-0bb204803c16.htm" />
+              <HelpTOCNode Title="PerformMessTransaction Method " Url="html/a371e58a-2ea7-fa13-a6bb-37a5b11b82b7.htm" />
+              <HelpTOCNode Title="PerformRemoveStudent Method " Url="html/e4da8134-dcee-4093-2fec-9c3ee84635b2.htm" />
+              <HelpTOCNode Id="bdcee140-d25a-4ff5-a4fb-4b89ae1571f3" Title="RemoveStudent Method " Url="html/b3327146-d2f2-0d7e-f7d5-396278507a5b.htm">
+                <HelpTOCNode Title="RemoveStudent Method " Url="html/3c388336-0cc8-adc8-b149-09101486e8e4.htm" />
+                <HelpTOCNode Title="RemoveStudent Method (StudentSearchViewModel)" Url="html/590d3e34-83b2-7ccc-3dfa-112d0c789323.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Id="f9981511-43cf-40fc-a1b8-e498caaa6f18" Title="ReportAbsenceForMess Method " Url="html/3e98d5c3-6aaf-24d2-e06a-46ab1b1e36ac.htm">
+                <HelpTOCNode Title="ReportAbsenceForMess Method " Url="html/550aecc0-8983-858b-154e-c293da4ac9e7.htm" />
+                <HelpTOCNode Title="ReportAbsenceForMess Method (MessAbsenceViewModel)" Url="html/35fbb289-865b-8853-4012-e5cb97cf50b9.htm" />
+              </HelpTOCNode>
+              <HelpTOCNode Title="SetUpDropDown Method " Url="html/32ac5dc6-9a99-6fa2-4ccd-8fc6e18014c7.htm" />
+              <HelpTOCNode Title="SetUpDropDownViewData Method " Url="html/d28f570b-0473-da6e-ab3a-0a01cded9cf8.htm" />
+              <HelpTOCNode Title="ShowAllDues Method " Url="html/9c7ff16d-ebcc-0cf3-8837-1df0233ecb3b.htm" />
+              <HelpTOCNode Title="ShowAllMessDues Method " Url="html/aa1c939c-73d2-5be0-c4b7-19f400b19a9a.htm" />
+              <HelpTOCNode Title="ShowAllTransactions Method " Url="html/031fb6c6-6d09-d741-a088-4396b78a8339.htm" />
+              <HelpTOCNode Title="ShowDueByStudent Method " Url="html/599468a6-7cca-5063-1441-b9e6b5d4b782.htm" />
+              <HelpTOCNode Title="ShowDues Method " Url="html/3bbda25d-c696-5787-5c67-8958332a3328.htm" />
+              <HelpTOCNode Title="ShowMessDues Method " Url="html/fbd2db2a-b9a8-8a46-4da2-e0a81bdd9698.htm" />
+              <HelpTOCNode Id="4898f019-c930-46ad-a9fc-e0c25c9e3bea" Title="ViewStudent Method " Url="html/29343c57-5a2c-72ae-846b-a63056898673.htm">
+                <HelpTOCNode Title="ViewStudent Method " Url="html/ac7dae63-2834-0816-ba21-1a54fafc052b.htm" />
+                <HelpTOCNode Title="ViewStudent Method (StudentSearchViewModel)" Url="html/9f855d00-b98b-b320-bdf1-01f4e78a4195.htm" />
+              </HelpTOCNode>
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="7bca8815-d014-44ae-8c6d-7d96ddbaa80e" Title="HostelManagement.Areas.HostelMessManagement.Models" Url="html/731381cf-c5e0-e99e-d20b-707a90a70bcc.htm">
+          <HelpTOCNode Id="c409b479-a869-4948-8f75-aa390a3cf937" Title="AddAdditionalFeeViewModel Class" Url="html/8b357d48-870d-fd34-eeb2-bc1c139c051a.htm">
+            <HelpTOCNode Title="AddAdditionalFeeViewModel Constructor " Url="html/fa31c422-0b21-8a2e-219c-cac528943390.htm" />
+            <HelpTOCNode Id="c3239d6a-26ea-43ea-a556-1664b4b0981e" Title="AddAdditionalFeeViewModel Properties" Url="html/881cb0a6-76ad-dc67-a88a-eb8e1617d7a2.htm">
+              <HelpTOCNode Title="amount Property " Url="html/24d2f788-5ca5-c320-0ec7-66fa8aac8001.htm" />
+              <HelpTOCNode Title="bid Property " Url="html/ede21261-2ba8-c133-b9a3-696bcb6a1ccb.htm" />
+              <HelpTOCNode Title="description Property " Url="html/fe722535-e50f-0176-d26c-016011606359.htm" />
+              <HelpTOCNode Title="year Property " Url="html/bb8228b3-b16c-1f57-4eda-a1f673fefd8e.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="AddAdditionalFeeViewModel Methods" Url="html/c1f96503-c8ce-c117-6df0-a0dad65f7176.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="984acf50-99b3-4104-8df0-c034c47c3616" Title="AllotmentDisplayViewModel Class" Url="html/67dc054f-79b3-7030-7da1-6659b6087f25.htm">
+            <HelpTOCNode Title="AllotmentDisplayViewModel Constructor " Url="html/5d741c28-a516-cfb2-40ed-032551dee142.htm" />
+            <HelpTOCNode Id="815d8461-7a76-4ca2-8b0b-e07f4baf8225" Title="AllotmentDisplayViewModel Properties" Url="html/d6519b45-2187-1088-0e74-306441b69234.htm">
+              <HelpTOCNode Title="blockNumber Property " Url="html/b752295f-c9f4-9d27-c516-89027ff9d884.htm" />
+              <HelpTOCNode Title="doj Property " Url="html/8781309c-cb23-dac1-4793-e49f07eb9dcf.htm" />
+              <HelpTOCNode Title="dol Property " Url="html/5f874fd0-6fa7-8460-c253-c82769f5d7fc.htm" />
+              <HelpTOCNode Title="floorNumber Property " Url="html/83f498fc-0f43-f725-8fdf-2df2170dbf55.htm" />
+              <HelpTOCNode Title="roomNumber Property " Url="html/7fe46545-ff77-b62a-6e49-0fa0bf884557.htm" />
+              <HelpTOCNode Title="roomType Property " Url="html/eb48d904-a4e5-a020-efd5-893c698a29f1.htm" />
+              <HelpTOCNode Title="year Property " Url="html/9e20b420-5b6e-9706-2076-efda5a084d12.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="AllotmentDisplayViewModel Methods" Url="html/a1f9df9f-bc4d-a8ac-6503-717ab9f5fe22.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="986e0493-c544-4506-b2f5-c36812eadb3c" Title="ChangeRoomViewModel Class" Url="html/ea194580-63da-1010-5702-ee757d92ddeb.htm">
+            <HelpTOCNode Title="ChangeRoomViewModel Constructor " Url="html/5b2a8f33-dc8b-0fd2-5a4d-a7ca84ddad33.htm" />
+            <HelpTOCNode Id="e34bbb17-d769-46f6-80e7-946fd692d3e3" Title="ChangeRoomViewModel Properties" Url="html/d6d072e0-51dc-eccf-50ea-66448dc21f26.htm">
+              <HelpTOCNode Title="floor Property " Url="html/71f52012-d808-fa11-7260-63a1ecfb0d8e.htm" />
+              <HelpTOCNode Title="hostelBlock Property " Url="html/024f2055-2ac0-07a8-e2e5-166da4489631.htm" />
+              <HelpTOCNode Title="roomNumber Property " Url="html/3990194b-5986-864e-cf1b-ec2a7ac52d76.htm" />
+              <HelpTOCNode Title="roomType Property " Url="html/f789f413-0593-d7a7-156a-87ac47737e91.htm" />
+              <HelpTOCNode Title="year Property " Url="html/c7aeba40-74dd-f5dd-016d-67f9817e4e40.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="ChangeRoomViewModel Methods" Url="html/eba0046b-5751-7c81-bcb0-318909d36f0a.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e5fbf91e-d6b1-45cf-84d7-000a0a5e55db" Title="DisplayStudentViewModel Class" Url="html/19b271e4-5ffd-8414-159a-eeb8bf720ed7.htm">
+            <HelpTOCNode Title="DisplayStudentViewModel Constructor " Url="html/26a01ee3-2a7b-ba11-73b3-51828f0f4d54.htm" />
+            <HelpTOCNode Id="b4c10069-42ed-4afe-ae4f-5242a79c2f72" Title="DisplayStudentViewModel Properties" Url="html/3d0d7742-b581-9d6a-a78f-7d86b701e9df.htm">
+              <HelpTOCNode Title="allotments Property " Url="html/9df91fa3-46f6-bf51-9e67-f3f5d388c774.htm" />
+              <HelpTOCNode Title="branch Property " Url="html/08f54b48-9c93-1181-26e1-4e3d86053cea.htm" />
+              <HelpTOCNode Title="course Property " Url="html/f63b2be8-5a7b-c0b3-2d42-6c11ce3d3944.htm" />
+              <HelpTOCNode Title="dob Property " Url="html/433bfb6f-6a60-1c7d-41f3-8063579bfe2e.htm" />
+              <HelpTOCNode Title="gender Property " Url="html/33bae2eb-130f-e7b7-cedb-a92ea7fce2d0.htm" />
+              <HelpTOCNode Title="name Property " Url="html/5a240277-3939-9a1a-00c4-dc2e885f153f.htm" />
+              <HelpTOCNode Title="semester Property " Url="html/830af07a-30e8-7fc2-1f1c-4891c7606934.htm" />
+              <HelpTOCNode Title="usn Property " Url="html/cb785f24-c07a-26e1-18de-e6722a7271b3.htm" />
+              <HelpTOCNode Title="year Property " Url="html/e52c919b-5068-6f60-fc0f-657c6af1a9df.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="DisplayStudentViewModel Methods" Url="html/1d66ed0f-7b15-fdff-0ad3-8a355807528f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="57758137-8d1d-44f6-b43b-8c5e7d3a3adb" Title="HostelChargesViewModel Class" Url="html/78fbbb0e-b401-97be-417c-64ced2f3832c.htm">
+            <HelpTOCNode Title="HostelChargesViewModel Constructor " Url="html/076dac4c-606d-e0cc-a281-68a376b54630.htm" />
+            <HelpTOCNode Id="b0b92945-78fd-4ae5-9e19-8c9a15ca9474" Title="HostelChargesViewModel Properties" Url="html/afedd2da-6131-2f83-89f2-928e55e3dece.htm">
+              <HelpTOCNode Title="deposit Property " Url="html/05c9ccfb-5ca7-d1f9-5097-f0a10a1518b0.htm" />
+              <HelpTOCNode Title="fix Property " Url="html/eef2a54e-dbc1-679d-8c69-d9b455b9a8ee.htm" />
+              <HelpTOCNode Title="rent Property " Url="html/e6b1a3f7-f2f9-a943-5a61-9f008b01a666.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="HostelChargesViewModel Methods" Url="html/ff18b8d9-aa86-cf23-4128-94ff929b183b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c6357fc7-1a0b-4d3b-957d-2f975764243d" Title="HostelFeeDueViewModel Class" Url="html/363916eb-ae29-e8cf-f7b2-5ff8799fba91.htm">
+            <HelpTOCNode Title="HostelFeeDueViewModel Constructor " Url="html/42431583-41f9-fde9-11ba-c49785e3a9d7.htm" />
+            <HelpTOCNode Id="ef42f29f-0bab-447d-bd74-ac3c14f6ba26" Title="HostelFeeDueViewModel Properties" Url="html/00a37e55-bd3e-016e-11aa-01ede7e1e198.htm">
+              <HelpTOCNode Title="academicYear Property " Url="html/b0bdfe8e-e33e-9fca-d1c2-0d1d876de18e.htm" />
+              <HelpTOCNode Title="accountHead Property " Url="html/1b436c0b-89fe-e9a9-ea3a-168b7e826abe.htm" />
+              <HelpTOCNode Title="amount Property " Url="html/ccde9b5b-29be-4148-5e30-57444058bec9.htm" />
+              <HelpTOCNode Title="amountDue Property " Url="html/b576279a-e658-5410-1714-03e7635924af.htm" />
+              <HelpTOCNode Title="amountPaid Property " Url="html/11ad58b5-0c74-d3b9-aa26-33bd9ba6ab5a.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="HostelFeeDueViewModel Methods" Url="html/d3eea66d-39c0-ab71-c36a-9abadf599e9d.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="94126e50-c45e-457c-9427-f5d3c6c4a333" Title="HostelTransactionViewModel Class" Url="html/cca42a22-2220-a493-36ff-153ad5254b2b.htm">
+            <HelpTOCNode Title="HostelTransactionViewModel Constructor " Url="html/34228be8-651e-958d-6103-ef8515a798ed.htm" />
+            <HelpTOCNode Id="9ff7f983-e484-4eb3-9a12-c56f66b9f77e" Title="HostelTransactionViewModel Properties" Url="html/e99bceb4-29ad-5176-8cc8-9b371ca7a104.htm">
+              <HelpTOCNode Title="academicYear Property " Url="html/b5a77675-098e-6042-25e5-da7409554809.htm" />
+              <HelpTOCNode Title="acHead Property " Url="html/143d6c3c-c5e6-e368-6b3b-9f96db0f5cbb.htm" />
+              <HelpTOCNode Title="amount Property " Url="html/89a64947-a460-dfd3-5e54-96e85913e4c6.htm" />
+              <HelpTOCNode Title="bankName Property " Url="html/ba6dff38-94ae-b92d-345f-a8a021996cdf.htm" />
+              <HelpTOCNode Title="bid Property " Url="html/e1979658-3bee-856c-d9fc-7f91f2049f2d.htm" />
+              <HelpTOCNode Title="dateOfPayment Property " Url="html/740fea3b-cd23-0b3b-e9f2-29ab1518db25.htm" />
+              <HelpTOCNode Title="paymentType Property " Url="html/bfe09721-5b40-2eed-40a1-0d8d4c438e5a.htm" />
+              <HelpTOCNode Title="referenceNumber Property " Url="html/b2a35819-8cb1-d29a-3879-23d9b7f83ea3.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="HostelTransactionViewModel Methods" Url="html/a0a5fa74-fe1f-dcdc-a354-7016000147c6.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="cc74edf5-1c6d-45f2-a201-4a231b247f8f" Title="MessAbsenceViewModel Class" Url="html/d13d56a3-7398-8d4c-aca6-6a9669768bea.htm">
+            <HelpTOCNode Title="MessAbsenceViewModel Constructor " Url="html/2e1de88a-913b-0259-c22a-a5ac0405ec92.htm" />
+            <HelpTOCNode Id="365a8e61-ec6a-4b32-a8d6-a80855abe47a" Title="MessAbsenceViewModel Properties" Url="html/d5329938-5ff4-481f-a1e7-2810310c1803.htm">
+              <HelpTOCNode Title="bid Property " Url="html/44a438f0-cdab-eb24-2748-5df609d74a1d.htm" />
+              <HelpTOCNode Title="numDaysAbsent Property " Url="html/a91f1361-c49d-6ffa-92a4-1a81bd4b88c8.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="MessAbsenceViewModel Methods" Url="html/f843c087-c585-992a-d545-0cca48381a90.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c08ad77b-4267-4d12-b1d8-5f461fed284c" Title="MessChargesViewModel Class" Url="html/a1e9e9f8-56c1-2167-846d-c026293a5f2a.htm">
+            <HelpTOCNode Title="MessChargesViewModel Constructor " Url="html/ba3ecf93-ea8f-594b-0357-fd7ed04a5fd1.htm" />
+            <HelpTOCNode Id="6919c8a8-6857-4c92-b1d9-4ac7dea79bd7" Title="MessChargesViewModel Properties" Url="html/d40fdbf2-256b-9261-0ed3-64ebd4251f47.htm">
+              <HelpTOCNode Title="dailymess Property " Url="html/9552f1b4-e40b-7119-bc0f-2703394e9b7f.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="MessChargesViewModel Methods" Url="html/d31a1a45-ae67-37d2-b11e-e6c8562a095e.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e62ca6e9-1e0b-495f-b181-e618c4c513ed" Title="MessFeeDueViewModel Class" Url="html/cf6b6bd0-a082-7b78-2bff-1d3d87031269.htm">
+            <HelpTOCNode Title="MessFeeDueViewModel Constructor " Url="html/16fb6453-9b9d-7821-78ac-a93b0fd3a2ad.htm" />
+            <HelpTOCNode Id="5eb64870-bfcc-45c4-b065-2dc6d32b9535" Title="MessFeeDueViewModel Properties" Url="html/71363ded-2e9c-e550-3b29-388b06fbc408.htm">
+              <HelpTOCNode Title="academicYear Property " Url="html/157d0d6b-99c9-8e52-e4b1-0dfbf1eeebff.htm" />
+              <HelpTOCNode Title="amount Property " Url="html/74089c99-3a7b-8072-a64d-122c042d8931.htm" />
+              <HelpTOCNode Title="amountDue Property " Url="html/74718027-7001-b6ce-d001-9bab79ea3b03.htm" />
+              <HelpTOCNode Title="amountPaid Property " Url="html/84cbe779-08ac-a204-d81d-9c4fd4eadcbb.htm" />
+              <HelpTOCNode Title="month Property " Url="html/d3031b13-c734-8803-8cf5-6afbc9ad9be0.htm" />
+              <HelpTOCNode Title="numberOfDays Property " Url="html/417a7163-bb9d-969c-ef14-6d52f0851612.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="MessFeeDueViewModel Methods" Url="html/fdad9f07-b068-9778-e831-fc8671466dc1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9d2f98cd-a8d1-4d1d-a332-ff32fafce5c0" Title="MessTransactionViewModel Class" Url="html/13d85559-136c-95e9-4e19-da019645e4ac.htm">
+            <HelpTOCNode Title="MessTransactionViewModel Constructor " Url="html/e45908a3-86db-fa95-d56b-3ccc70e8226c.htm" />
+            <HelpTOCNode Id="311901c2-f7cd-44f7-b5fc-a04068cab56f" Title="MessTransactionViewModel Properties" Url="html/c9a193fd-856c-22dd-e7af-5dc7a2f6d4f6.htm">
+              <HelpTOCNode Title="academicYear Property " Url="html/3aa3e157-00c5-e35b-b76a-87784a79a13b.htm" />
+              <HelpTOCNode Title="amount Property " Url="html/b94eb7f5-1a48-960b-c07a-9b4159468395.htm" />
+              <HelpTOCNode Title="bankName Property " Url="html/c636e3b1-5486-4c4e-f450-757614d32dc6.htm" />
+              <HelpTOCNode Title="bid Property " Url="html/981d85c0-7476-1f3a-fe90-908d09563dbe.htm" />
+              <HelpTOCNode Title="dateOfPayment Property " Url="html/18f1ff17-03d3-4ac4-c1c9-8f71f72fa388.htm" />
+              <HelpTOCNode Title="month Property " Url="html/ecc9d0d8-e37a-f7b7-762b-5c30dac0e32c.htm" />
+              <HelpTOCNode Title="paymentType Property " Url="html/5d4868a0-f3f0-352c-b79e-9f0ba48888b6.htm" />
+              <HelpTOCNode Title="referenceNumber Property " Url="html/c9c2b185-a241-42a2-8056-bc5f287bed36.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="MessTransactionViewModel Methods" Url="html/8fff1439-70f9-2ade-d168-337fb5f9f36c.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0e915108-4de5-4b78-85d5-1d51dc4a3a98" Title="RemoveStudentViewModel Class" Url="html/543bc452-cff0-cfd1-658c-f3b1559a834b.htm">
+            <HelpTOCNode Title="RemoveStudentViewModel Constructor " Url="html/256e22a2-fb71-6a23-51ed-a191661588bc.htm" />
+            <HelpTOCNode Id="b25af33a-a92c-4b37-83f1-7cd2c4b88c93" Title="RemoveStudentViewModel Properties" Url="html/7fdb73ae-ced8-b0a4-49c0-b5ed16af8cfc.htm">
+              <HelpTOCNode Title="bid Property " Url="html/7c860c1b-5bf9-2fb8-90d4-9314d0dd4dfb.htm" />
+              <HelpTOCNode Title="depRefund Property " Url="html/49e4ee03-98ef-e3fd-006a-d79a6e3cd387.htm" />
+              <HelpTOCNode Title="depRefundRef Property " Url="html/f7ee30e1-881f-dc4e-3d33-3093f760948f.htm" />
+              <HelpTOCNode Title="fixRefund Property " Url="html/289321b7-8f16-af39-cb60-ce31519d03bc.htm" />
+              <HelpTOCNode Title="fixRefundRef Property " Url="html/0e4deb9b-66c1-6393-5103-0800bb874a98.htm" />
+              <HelpTOCNode Title="rentRefund Property " Url="html/d0475650-e26c-b8cb-8a64-b0e4e13ce2a2.htm" />
+              <HelpTOCNode Title="rentRefundRef Property " Url="html/66151d4a-dffa-df6b-9215-1df3d070d523.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="RemoveStudentViewModel Methods" Url="html/f583cfc8-54f3-25bc-51de-4aa001080752.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="8f352fe2-dbe2-4933-ab86-cfe0258827f7" Title="SearchViewModel Class" Url="html/85b4499d-2078-2534-67ea-0e0a6bf40fa9.htm">
+            <HelpTOCNode Title="SearchViewModel Constructor " Url="html/9dc4af44-ef5f-b108-04e9-85887e016edb.htm" />
+            <HelpTOCNode Id="98ac0b0f-4ce7-4473-bff3-f95f52917bf9" Title="SearchViewModel Properties" Url="html/e94994b2-f775-2edf-bc6e-659aa4353d39.htm">
+              <HelpTOCNode Title="hostelType Property " Url="html/fa02a609-f57a-edbc-d9f7-9d5191dc532a.htm" />
+              <HelpTOCNode Title="roomType Property " Url="html/7c90dddd-ba6c-8a78-14cd-8124a61f14e2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="SearchViewModel Methods" Url="html/fae8aaf4-d7c9-877b-bc99-ab5fb60877f2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e65354d2-7d02-450f-8403-749537ff3bb4" Title="StudentDueSummaryViewModel Class" Url="html/d85cb39b-69dd-d1f2-e72e-cf08d365de29.htm">
+            <HelpTOCNode Title="StudentDueSummaryViewModel Constructor " Url="html/d1e7f485-4217-44cb-9911-34b220b09dac.htm" />
+            <HelpTOCNode Id="dc1c741b-a13c-4a23-a8db-71abad9e0ed4" Title="StudentDueSummaryViewModel Properties" Url="html/c1cd7108-68ff-df81-1b7a-3c349bd6fb96.htm">
+              <HelpTOCNode Title="bid Property " Url="html/9a7c029b-48a2-2b70-2754-1b6f3c9fea66.htm" />
+              <HelpTOCNode Title="deposit Property " Url="html/34e52e01-819c-4040-c66c-6ea41d3cc66c.htm" />
+              <HelpTOCNode Title="fix Property " Url="html/74a26145-4752-0ae1-2b97-098eb6d8870f.htm" />
+              <HelpTOCNode Title="other Property " Url="html/9cff8c01-54a2-1ccb-b218-789204f2982d.htm" />
+              <HelpTOCNode Title="rent Property " Url="html/6a3e6c48-d6b4-3a0a-6f4f-621789a34fbf.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="StudentDueSummaryViewModel Methods" Url="html/8a198072-e7f6-167b-718b-84c23384905b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="67b3ba52-05aa-4498-86ca-aa56224ddf3f" Title="StudentMessDueSummaryViewModel Class" Url="html/c29eadc3-01c4-503d-8190-7d8d47285165.htm">
+            <HelpTOCNode Title="StudentMessDueSummaryViewModel Constructor " Url="html/7a36ac4c-bd88-2ca7-55a8-be1b6aec55e0.htm" />
+            <HelpTOCNode Id="71b70277-82c8-455c-94d8-da32541cfe76" Title="StudentMessDueSummaryViewModel Properties" Url="html/9df4cf18-7a90-f4ad-ff8c-94ab4b03a329.htm">
+              <HelpTOCNode Title="bid Property " Url="html/06abb75e-ee25-f915-feac-a9b06764dcbe.htm" />
+              <HelpTOCNode Title="dues Property " Url="html/7f0a8027-8691-8199-2aab-3a8a2391401b.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="StudentMessDueSummaryViewModel Methods" Url="html/cd18237b-5928-8c0d-b9a1-b1524b33696b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="53017592-ba52-46e6-98ac-17ddf6439a15" Title="StudentSearchViewModel Class" Url="html/de6324f4-7f51-1e4a-f841-96244a4abb05.htm">
+            <HelpTOCNode Title="StudentSearchViewModel Constructor " Url="html/85f8cffe-24f6-f4e6-a74c-11320939e09e.htm" />
+            <HelpTOCNode Id="52329f0b-7945-4cb7-9209-5f33378bc6d3" Title="StudentSearchViewModel Properties" Url="html/c4792f46-ad00-7971-236c-288fdc1053ca.htm">
+              <HelpTOCNode Title="bid Property " Url="html/a7b31a70-c3af-1867-1946-13cddb178a2a.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="StudentSearchViewModel Methods" Url="html/1d30a0a4-7265-1144-df33-76d3830cfb01.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="709bcd75-a3b9-48a4-8c2e-6c4be31dc99b" Title="StudentViewModel Class" Url="html/af975f9d-818a-25cd-1e46-511ca835b9a1.htm">
+            <HelpTOCNode Title="StudentViewModel Constructor " Url="html/7280378e-6b8a-b725-164a-f6063eb76980.htm" />
+            <HelpTOCNode Id="bc4c41c7-d9fa-4835-a47f-54e5200f056c" Title="StudentViewModel Properties" Url="html/10ee6dac-058c-c198-905a-30c3063683cc.htm">
+              <HelpTOCNode Title="blockNumber Property " Url="html/3a164e2a-0726-32d9-84ad-d20f8fb40605.htm" />
+              <HelpTOCNode Title="branch Property " Url="html/d575f2c0-58b0-db0e-d268-42be8c97a243.htm" />
+              <HelpTOCNode Title="course Property " Url="html/488fdc1e-a737-cbfc-78af-e7a3dbc4cb39.htm" />
+              <HelpTOCNode Title="dob Property " Url="html/c9605c1d-c117-4ae7-f67f-baa4691ce22d.htm" />
+              <HelpTOCNode Title="doj Property " Url="html/94770eee-5c53-32ec-0c47-1a8160c030d8.htm" />
+              <HelpTOCNode Title="floorNumber Property " Url="html/2216c601-cc17-e2c5-7e1e-e73660ce7274.htm" />
+              <HelpTOCNode Title="gender Property " Url="html/70ba8c83-3ab5-9f06-dd8d-73a6e282ded7.htm" />
+              <HelpTOCNode Title="name Property " Url="html/d0d21677-42ba-cdc9-d80c-e1002bab6813.htm" />
+              <HelpTOCNode Title="roomNumber Property " Url="html/0a2391ff-c331-cd54-07b0-d7bc4ba739eb.htm" />
+              <HelpTOCNode Title="roomType Property " Url="html/a62bb680-18d1-a555-25e5-c20fdc1093f9.htm" />
+              <HelpTOCNode Title="semester Property " Url="html/5ee5ae22-83f3-10d5-510a-38b0dcfcda51.htm" />
+              <HelpTOCNode Title="usn Property " Url="html/ae693845-0b62-0aec-9e4d-a9ac8486601d.htm" />
+              <HelpTOCNode Title="year Property " Url="html/9c6ca446-8d61-1796-01ac-7c70605a6161.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="StudentViewModel Methods" Url="html/e4b45111-5da1-ad83-962e-81c68aefc4e8.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="b78e07d4-5111-4b2f-8dc8-ccf9287631be" Title="TransactionsViewModel Class" Url="html/d61b90fc-8fac-f513-8eb9-286a0214ac95.htm">
+            <HelpTOCNode Title="TransactionsViewModel Constructor " Url="html/d2ba8bff-e777-9972-e864-0a6f66de1418.htm" />
+            <HelpTOCNode Id="4de74300-aa00-4ff5-ad86-1808dc8ee743" Title="TransactionsViewModel Properties" Url="html/565ba836-d7ba-a85c-b037-3ad58fab806f.htm">
+              <HelpTOCNode Title="academicYear Property " Url="html/020097fb-bc93-ad0d-21bb-c6b33d887663.htm" />
+              <HelpTOCNode Title="accountHead Property " Url="html/74dd0a69-656d-fc46-0fea-302ca9eddc69.htm" />
+              <HelpTOCNode Title="amount Property " Url="html/f1f8166c-b2a3-abd7-b975-3d9b0f121a03.htm" />
+              <HelpTOCNode Title="bankName Property " Url="html/94332f90-f1bd-3562-10c5-a3e964d7133e.htm" />
+              <HelpTOCNode Title="bid Property " Url="html/bb485647-ceb7-a878-daa4-34f5d73d539e.htm" />
+              <HelpTOCNode Title="dateOfPay Property " Url="html/f9d0ed13-e05e-68fe-82da-178cb2de7b17.htm" />
+              <HelpTOCNode Title="id Property " Url="html/42234611-8aa6-b2b0-a20a-5cd8086c0baa.htm" />
+              <HelpTOCNode Title="paymentType Property " Url="html/48d0ffe5-a7e7-bb10-4e0b-00fda7386349.htm" />
+              <HelpTOCNode Title="transaction Property " Url="html/4971cb54-2222-f98f-c40a-b21c374316bd.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="TransactionsViewModel Methods" Url="html/da42e794-9f75-77b4-46d5-2c7799c5dcad.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a8397664-ca10-4432-af1d-c8ddf870d19a" Title="HostelManagement.Controllers" Url="html/f4f5143c-ded9-8cd8-b72e-4c4eb997423e.htm">
+        <HelpTOCNode Id="78116c28-bf3a-40ae-9602-5cd77227f3db" Title="HomeController Class" Url="html/681be5f1-9923-2966-fac7-75e91db126a7.htm">
+          <HelpTOCNode Id="b753dbe6-f6da-4165-bddf-78dc7f2b5e87" Title="HomeController Constructor " Url="html/cb2bcea8-ed6e-f547-62d9-bc5e82a17b36.htm">
+            <HelpTOCNode Title="HomeController Constructor " Url="html/e12a50ac-7814-29f3-68ad-4bc16caeed9e.htm" />
+            <HelpTOCNode Title="HomeController Constructor (UserManager`1(AppUser))" Url="html/1baffa8b-4e46-89ba-c8ea-c32dab4f780d.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HomeController Properties" Url="html/5518c814-72f1-8007-2e58-5ba9d9394844.htm" />
+          <HelpTOCNode Id="48d4407f-328f-41b4-94d2-ebbe6016f7b1" Title="HomeController Methods" Url="html/c0cdc86e-7bd7-61b0-10a7-ad202d78c437.htm">
+            <HelpTOCNode Id="b0bc65ee-c8de-4d84-b860-6ae67607c22f" Title="Dispose Method " Url="html/22d19f4c-fce5-2473-901c-d29058518f96.htm">
+              <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/2db2f47f-2ee5-4f4f-ec27-d8ea12c8e051.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="GetAuthenticationManager Method " Url="html/2e74c379-8a02-c775-e43d-bf63dff0045c.htm" />
+            <HelpTOCNode Id="0dc74685-7776-4555-b138-5b4fff048209" Title="Index Method " Url="html/77934b85-55d0-e82e-62b2-b4a0e482c841.htm">
+              <HelpTOCNode Title="Index Method (String)" Url="html/ce3ff165-68eb-1d6e-2e19-4389232c95af.htm" />
+              <HelpTOCNode Title="Index Method (LoginViewModel)" Url="html/940f1a17-3760-1338-9811-d93926ffd86f.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="MeetDevelopers Method " Url="html/047cbaf6-9105-1beb-8245-caf2286bdd4b.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9750811a-ca0d-4159-b826-4adfeb8d7c18" Title="HostelManagement.Models" Url="html/50dbb674-4cca-0a93-bc92-6a6fa05aff74.htm">
+        <HelpTOCNode Id="27ee8a18-ca43-449b-8dc8-32f1933992fa" Title="LoginViewModel Class" Url="html/015cafe2-5fed-251b-4350-9a3969d9879f.htm">
+          <HelpTOCNode Title="LoginViewModel Constructor " Url="html/f38710d5-72ac-147d-5aeb-f667e14779c8.htm" />
+          <HelpTOCNode Id="2b938b81-edb9-482d-9b47-207fe85c8e95" Title="LoginViewModel Properties" Url="html/3ef6326b-6187-ad69-5ac7-7bc108ef881f.htm">
+            <HelpTOCNode Title="Password Property " Url="html/84cea04e-5d86-af19-a9b6-6cb73de628b3.htm" />
+            <HelpTOCNode Title="ReturnUrl Property " Url="html/6e150d87-740c-d874-da1f-93942988dd5a.htm" />
+            <HelpTOCNode Title="UserId Property " Url="html/c4d902d0-cced-89e8-fed9-77048b4f255d.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="LoginViewModel Methods" Url="html/cc4faf2c-cb68-4089-617d-b5a31dab98dc.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="cfbbfafe-0130-428b-a8b4-cf925769c675" Title="RegisterModel Class" Url="html/4aa8e4f6-a7c0-c1bb-8d29-90fe9e092ea6.htm">
+          <HelpTOCNode Title="RegisterModel Constructor " Url="html/f3c1b6f5-836d-7a60-6bcb-7c3b99be8e53.htm" />
+          <HelpTOCNode Id="f517958c-71f9-463c-8a2a-827dd983a97e" Title="RegisterModel Properties" Url="html/174af157-e76e-5584-eb35-0672acfa8fda.htm">
+            <HelpTOCNode Title="Password Property " Url="html/5e1d8d0a-ec8e-7bdb-b2ae-7c169928baf9.htm" />
+            <HelpTOCNode Title="Role Property " Url="html/f4fcacdc-e180-fc89-2756-a7a1cb4801c5.htm" />
+            <HelpTOCNode Title="UserId Property " Url="html/a1773745-9f7a-673a-c1f0-a8cee092bc35.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="RegisterModel Methods" Url="html/7f6abaee-0e8b-43f5-6896-da450f68e182.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
     </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="f10fe5e9-ec74-46d4-9ab4-ab2b6697c7df" Title="HostelManagement.Areas.Archive" Url="html/0c9f8d6b-4e40-e50d-2070-cb3e9e01918f.htm">
-    <HelpTOCNode Id="5ed59597-5699-4905-a116-919815f63b82" Title="ArchiveAreaRegistration Class" Url="html/53a51a9c-fe49-9b42-d5a5-c38e5c917893.htm">
-      <HelpTOCNode Title="ArchiveAreaRegistration Constructor " Url="html/c0f64f58-f648-ebd3-0d80-ca3ebbc4adc4.htm" />
-      <HelpTOCNode Id="52999353-5ae0-4240-b076-9a8e3f869f63" Title="ArchiveAreaRegistration Properties" Url="html/10c2f3e5-810b-62de-e793-6b39586c2e41.htm">
-        <HelpTOCNode Title="AreaName Property " Url="html/ecf13c41-e7c2-a501-72b3-5f7625ede899.htm" />
+    <HelpTOCNode Id="165c9574-a6bd-4806-92ae-07bcba2c3b69" Title="Shared" Url="html/6a2004c4-4cea-b7f1-6390-16598c5aebc0.htm">
+      <HelpTOCNode Id="3511c12c-6828-412e-8a56-53ed0227a624" Title="AutoCompleteViewModel Class" Url="html/8acdeaee-9ece-6617-7e7d-caefcd3ff7ff.htm">
+        <HelpTOCNode Title="AutoCompleteViewModel Constructor " Url="html/4ec2a00a-bbb0-871e-38cb-a1a23cf11586.htm" />
+        <HelpTOCNode Id="2d8e2f06-d93a-49e1-9e9c-177bb8ba2764" Title="AutoCompleteViewModel Properties" Url="html/28c47eb0-0a09-c4af-11be-981c8aa41254.htm">
+          <HelpTOCNode Title="dept Property " Url="html/7108b75e-e1d3-4916-fbaf-4ceee10f316b.htm" />
+          <HelpTOCNode Title="label Property " Url="html/86d43c21-3a40-ccdb-f2c7-96c866080255.htm" />
+          <HelpTOCNode Title="room Property " Url="html/b668d4a6-0017-6014-a367-228bd2e5dacd.htm" />
+          <HelpTOCNode Title="usn Property " Url="html/853e2933-a483-4898-dc0f-2efae99eac52.htm" />
+          <HelpTOCNode Title="value Property " Url="html/6b7ec743-e48f-cff7-f9a7-efe3f958003f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="AutoCompleteViewModel Methods" Url="html/a0969fa4-53eb-7e39-d066-bbc026e12929.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a9e778e4-2d89-4d6e-8b94-86266e7a7bae" Title="ArchiveAreaRegistration Methods" Url="html/332a7152-91e6-61e2-fb54-c7fc2ba56c47.htm">
-        <HelpTOCNode Title="RegisterArea Method " Url="html/195008df-25d9-f394-ebef-cab39e4d653b.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="76dfa3ad-54b6-4e10-bf1b-b2c7de0fea61" Title="HostelManagement.Areas.Archive.Controllers" Url="html/b943766f-d368-80f1-95c8-9bab699d9f6b.htm">
-    <HelpTOCNode Id="4104d493-5386-43a5-bc15-ad7e83646c7a" Title="HomeController Class" Url="html/6a442ec2-758d-31ff-3691-1cb1c4cabb41.htm">
-      <HelpTOCNode Title="HomeController Constructor " Url="html/ace97fc6-5995-59ea-9145-74d32b8d485d.htm" />
-      <HelpTOCNode Title="HomeController Properties" Url="html/ee36dacf-8ce5-3d44-494c-bb54e1d5cfe8.htm" />
-      <HelpTOCNode Id="3a6037bc-d991-40b0-8885-53f111066a86" Title="HomeController Methods" Url="html/ce2d0abc-f5ba-c741-ccf3-fc04d35c0402.htm">
-        <HelpTOCNode Title="Index Method " Url="html/f69cd44f-6fd0-b866-19a0-fe6e54a29064.htm" />
-        <HelpTOCNode Title="Logout Method " Url="html/bd410ddb-aba8-310c-5de0-72412f99ecc9.htm" />
-        <HelpTOCNode Title="MeetDevelopers Method " Url="html/4a7f4d69-9f49-9b97-593c-0826268e4c61.htm" />
-        <HelpTOCNode Id="9a08e113-424f-4482-a840-5dd3d7b7e906" Title="ViewStudent Method " Url="html/10dd0a84-f0ae-34f9-9341-2ce12af6038f.htm">
-          <HelpTOCNode Title="ViewStudent Method " Url="html/d8f49712-2fdc-70db-a01e-33442249fee4.htm" />
-          <HelpTOCNode Title="ViewStudent Method (StudentSearchViewModel)" Url="html/75c413ff-4921-155a-5a69-5008e7616346.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="2666f138-b1e9-4cae-a763-6ec3232b666c" Title="HostelManagement.Areas.HostelMessManagement" Url="html/5bf0a31e-4b57-41fa-9b19-1d7e921db717.htm">
-    <HelpTOCNode Id="ddf210a6-0d1a-45bf-a81f-0c970dad12c6" Title="HostelMessManagementAreaRegistration Class" Url="html/72f0faf4-d40a-9330-ee14-006e4eb4bcc1.htm">
-      <HelpTOCNode Title="HostelMessManagementAreaRegistration Constructor " Url="html/d932e4d8-a049-698a-ddfe-fc39781af757.htm" />
-      <HelpTOCNode Id="69e70756-018c-4220-a202-2b6ce7918bb8" Title="HostelMessManagementAreaRegistration Properties" Url="html/a7b476e3-c16f-d42c-c411-c01459e62632.htm">
-        <HelpTOCNode Title="AreaName Property " Url="html/0971632c-8542-3421-01dd-6fb10cd85486.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="6d917974-2df7-4b35-8e5c-10173e9d6b0d" Title="HostelMessManagementAreaRegistration Methods" Url="html/e38ebe15-54b9-9f49-faf9-541e0a4275fc.htm">
-        <HelpTOCNode Title="RegisterArea Method " Url="html/f0308e08-3f41-3126-b244-daa9bfabb4bf.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="7ca206bc-d234-4f99-b300-93282f65c019" Title="HostelManagement.Areas.HostelMessManagement.Controllers" Url="html/bc178c06-3b57-5bb2-fdbe-ba740c2387c5.htm">
-    <HelpTOCNode Id="489ecf5c-bbc0-4b64-9cc5-97b36089ed3d" Title="ManagerController Class" Url="html/e1b1736c-0333-951e-32d0-6514b9d69d6f.htm">
-      <HelpTOCNode Title="ManagerController Constructor " Url="html/f1bda345-d43d-57a3-2cc6-44172125b6bc.htm" />
-      <HelpTOCNode Title="ManagerController Properties" Url="html/7466f06a-9683-622a-28d5-a6a1b103b2c1.htm" />
-      <HelpTOCNode Id="db0bc599-4b7e-424d-9945-97cb1e8a89bb" Title="ManagerController Methods" Url="html/44ee9733-4db0-8c10-63d9-5f6ec116dfd8.htm">
-        <HelpTOCNode Id="f14c67ae-9ff1-4f27-bb39-053e0a2d5c95" Title="ChangeFees Method " Url="html/10483c2f-7fcd-3857-4d39-9f25efa2e8a9.htm">
-          <HelpTOCNode Title="ChangeFees Method (SearchViewModel)" Url="html/36247dbc-a787-94af-988b-bd5ebbc921b6.htm" />
-          <HelpTOCNode Title="ChangeFees Method (String, String)" Url="html/bef40f18-afff-7376-d9ac-478f2c662598.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="ChangeMessFees Method " Url="html/a6701f41-576f-4940-b6f3-0938bfedce51.htm" />
-        <HelpTOCNode Id="b80381db-5dc9-459b-a4d1-76e7f201b550" Title="GenerateReport Method " Url="html/7945bdca-c8b0-fdbe-c1b1-c6d5bacfe3d7.htm">
-          <HelpTOCNode Title="GenerateReport Method " Url="html/9da8183c-31b4-da2f-ca59-688be123d6c9.htm" />
-          <HelpTOCNode Title="GenerateReport Method (String)" Url="html/44ed634d-1eb4-edc1-b840-14db7007b9ee.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="GenerateReportByAmount Method " Url="html/c1224aec-ad7c-fc2c-712d-789d9015b2dd.htm" />
-        <HelpTOCNode Title="GenerateReportByBID Method " Url="html/b62ca713-cae2-0a24-0768-f9e699ff1f1a.htm" />
-        <HelpTOCNode Title="GenerateReportByDate Method " Url="html/a5c3ccdf-2f8f-1613-45fe-c3c6c14637a7.htm" />
-        <HelpTOCNode Title="GenerateReportByDropDown Method " Url="html/c4aa03c8-5738-6364-78a1-6360d7346f9e.htm" />
-        <HelpTOCNode Title="Index Method " Url="html/af4861a0-2862-0388-e1c1-5c25affa44cb.htm" />
-        <HelpTOCNode Title="Logout Method " Url="html/237a94ad-cd14-bb3e-2f8e-de628d8ddf31.htm" />
-        <HelpTOCNode Title="UpdateFees Method " Url="html/9f05c9f8-f432-53b5-374b-7151f8028ee8.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="a8eb9146-cb22-4d72-b766-ca213ac70ade" Title="UserController Class" Url="html/1894ba29-8c61-93a5-8ca6-83ef33d5e8ec.htm">
-      <HelpTOCNode Title="UserController Constructor " Url="html/2bc07782-08ce-43a4-ffb6-696390e9ee93.htm" />
-      <HelpTOCNode Title="UserController Properties" Url="html/04bce2a8-b84a-2e6b-90ce-753aacca33d7.htm" />
-      <HelpTOCNode Id="d30b8000-5ccb-492e-9a61-5f55d47507da" Title="UserController Methods" Url="html/39975a80-92aa-86c5-b65c-c1f3e6b7c8ff.htm">
-        <HelpTOCNode Id="4fdb2d5c-7d61-4484-b799-7ade060911d5" Title="AddAdditionalFee Method " Url="html/8f1e3973-f454-85eb-3edb-e9a1c6323f49.htm">
-          <HelpTOCNode Title="AddAdditionalFee Method " Url="html/0898d52a-4813-6263-b0d9-9b2be950e61d.htm" />
-          <HelpTOCNode Title="AddAdditionalFee Method (AddAdditionalFeeViewModel)" Url="html/7338c3a6-00d8-b19a-697b-166d0fd4e520.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="7de816b0-6f54-44d9-82ac-9a47038f6882" Title="AddStudent Method " Url="html/d69d23f8-ea26-cc4f-b1c6-68d17e090212.htm">
-          <HelpTOCNode Title="AddStudent Method " Url="html/734ff942-50bc-3b5a-0ee5-6d4532e1931f.htm" />
-          <HelpTOCNode Title="AddStudent Method (StudentViewModel)" Url="html/43e4897a-02b6-f372-f78b-361ee73b2249.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="4de2c317-a997-4d3d-b087-f98b4bacfe84" Title="ChangeRoom Method " Url="html/938d2385-c29c-6a37-85b7-47700dc3f3b6.htm">
-          <HelpTOCNode Title="ChangeRoom Method " Url="html/d890a396-64af-ac6c-0a19-fb11d525227f.htm" />
-          <HelpTOCNode Title="ChangeRoom Method (StudentSearchViewModel)" Url="html/99bce5a6-a138-c3ad-284e-11ee209351f6.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="ChangeRoomAllotment Method " Url="html/9261ed1d-56df-4779-6586-75cacbfefa22.htm" />
-        <HelpTOCNode Id="725c4096-0837-47dc-95a3-15067f88a6f5" Title="DiscountFees Method " Url="html/758a53ee-90f5-2e8c-1702-13f2fa1c59b9.htm">
-          <HelpTOCNode Title="DiscountFees Method " Url="html/6a98fce7-788f-8ad9-b0a2-3265841d8bd7.htm" />
-          <HelpTOCNode Title="DiscountFees Method (StudentSearchViewModel)" Url="html/ec8a0f2f-4fcd-f95c-8f02-d84d15277bd1.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="1f02fa38-d84c-4d52-a6ec-acb87505fae0" Title="GenerateMessBill Method " Url="html/5325b00b-6356-1425-b655-9174ed0ffd6a.htm">
-          <HelpTOCNode Title="GenerateMessBill Method " Url="html/4f339528-f3b6-8be2-089e-68c6b4ce4d07.htm" />
-          <HelpTOCNode Title="GenerateMessBill Method (Int32)" Url="html/a41ee1fd-9b50-dd21-4ff6-d71ac24a0fcf.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="GetAmount Method " Url="html/963c7574-6c58-b942-4122-79f5fbfc17db.htm" />
-        <HelpTOCNode Title="GetBlocks Method " Url="html/31fd11a5-c4f2-131e-03a4-b09eef6d0f17.htm" />
-        <HelpTOCNode Title="GetFeeBreakUp Method " Url="html/78874eb9-1858-946e-eb72-317ad130939d.htm" />
-        <HelpTOCNode Title="GetMessAmount Method " Url="html/823e1199-4d1c-6880-c545-64b297bce542.htm" />
-        <HelpTOCNode Title="GetRooms Method " Url="html/9ae56b75-ceb7-6071-875c-5458c5c32c3a.htm" />
-        <HelpTOCNode Title="GetStudentList Method " Url="html/1ff33a66-ab8b-da86-b910-a9da489b2faa.htm" />
-        <HelpTOCNode Id="1c668e68-5e94-4157-94bc-c9f8870ebaae" Title="GetType Method " Url="html/b2e0696c-974d-649e-c774-41677f0560d2.htm">
-          <HelpTOCNode Title="GetType Method (String, String)" Url="html/eb9a8b35-7927-f7a3-0339-50682e879db0.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="b2314e41-c585-4d39-8ed5-c1c950199a17" Title="HostelTransaction Method " Url="html/007a4ba9-2a72-ae45-c313-a6b471f3a4e0.htm">
-          <HelpTOCNode Title="HostelTransaction Method " Url="html/3d63584b-861f-d95a-79bd-0f40310d21e2.htm" />
-          <HelpTOCNode Title="HostelTransaction Method (StudentSearchViewModel)" Url="html/cbb35c9d-7ec0-eba3-9090-362e75f19f93.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="Index Method " Url="html/483c530a-b000-986e-39cb-1201c9cf0f2e.htm" />
-        <HelpTOCNode Title="Logout Method " Url="html/d9043758-814c-49e9-10cb-9701d857d774.htm" />
-        <HelpTOCNode Title="MeetDevelopers Method " Url="html/ee1bb75b-44db-1bc4-2ee3-008dac033686.htm" />
-        <HelpTOCNode Id="f6b0ded0-a9d5-4354-ae55-c2d40cd0b5aa" Title="MessTransaction Method " Url="html/7a9ab29a-8caf-36d8-fb8a-a199fe4c3361.htm">
-          <HelpTOCNode Title="MessTransaction Method " Url="html/7dc13a3e-19e0-7bc3-9162-910a750cd7df.htm" />
-          <HelpTOCNode Title="MessTransaction Method (StudentSearchViewModel)" Url="html/d14e2369-dd64-99cf-9c83-fd1ae4096012.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="PerformHostelFeeDiscount Method " Url="html/24f2c3b1-ccc0-bde7-ed99-e33f57999c4f.htm" />
-        <HelpTOCNode Title="PerformHostelTransaction Method " Url="html/e3e0ad05-4971-1550-6954-0bb204803c16.htm" />
-        <HelpTOCNode Title="PerformMessTransaction Method " Url="html/a371e58a-2ea7-fa13-a6bb-37a5b11b82b7.htm" />
-        <HelpTOCNode Title="PerformRemoveStudent Method " Url="html/e4da8134-dcee-4093-2fec-9c3ee84635b2.htm" />
-        <HelpTOCNode Id="d0fcfcbb-d7c4-45a6-86e7-391d73037bc0" Title="RemoveStudent Method " Url="html/b3327146-d2f2-0d7e-f7d5-396278507a5b.htm">
-          <HelpTOCNode Title="RemoveStudent Method " Url="html/3c388336-0cc8-adc8-b149-09101486e8e4.htm" />
-          <HelpTOCNode Title="RemoveStudent Method (StudentSearchViewModel)" Url="html/590d3e34-83b2-7ccc-3dfa-112d0c789323.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="e4e54975-26df-4732-b69b-2a4a7d4f4237" Title="ReportAbsenceForMess Method " Url="html/3e98d5c3-6aaf-24d2-e06a-46ab1b1e36ac.htm">
-          <HelpTOCNode Title="ReportAbsenceForMess Method " Url="html/550aecc0-8983-858b-154e-c293da4ac9e7.htm" />
-          <HelpTOCNode Title="ReportAbsenceForMess Method (MessAbsenceViewModel)" Url="html/35fbb289-865b-8853-4012-e5cb97cf50b9.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="ShowAllDues Method " Url="html/9c7ff16d-ebcc-0cf3-8837-1df0233ecb3b.htm" />
-        <HelpTOCNode Title="ShowAllMessDues Method " Url="html/aa1c939c-73d2-5be0-c4b7-19f400b19a9a.htm" />
-        <HelpTOCNode Title="ShowAllTransactions Method " Url="html/031fb6c6-6d09-d741-a088-4396b78a8339.htm" />
-        <HelpTOCNode Title="ShowDueByStudent Method " Url="html/599468a6-7cca-5063-1441-b9e6b5d4b782.htm" />
-        <HelpTOCNode Title="ShowDues Method " Url="html/3bbda25d-c696-5787-5c67-8958332a3328.htm" />
-        <HelpTOCNode Title="ShowMessDues Method " Url="html/fbd2db2a-b9a8-8a46-4da2-e0a81bdd9698.htm" />
-        <HelpTOCNode Id="e9ee6954-00ef-4551-bf96-c1ecb8b6c76e" Title="ViewStudent Method " Url="html/29343c57-5a2c-72ae-846b-a63056898673.htm">
-          <HelpTOCNode Title="ViewStudent Method " Url="html/ac7dae63-2834-0816-ba21-1a54fafc052b.htm" />
-          <HelpTOCNode Title="ViewStudent Method (StudentSearchViewModel)" Url="html/9f855d00-b98b-b320-bdf1-01f4e78a4195.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="4aed6003-b748-46e4-9574-7da99138b880" Title="HostelManagement.Controllers" Url="html/f4f5143c-ded9-8cd8-b72e-4c4eb997423e.htm">
-    <HelpTOCNode Id="fd6f321c-2c10-45d0-9bd3-b519213a0c8c" Title="HomeController Class" Url="html/681be5f1-9923-2966-fac7-75e91db126a7.htm">
-      <HelpTOCNode Id="a478359f-ff4d-4df4-bb15-ab4d4a89a66a" Title="HomeController Constructor " Url="html/cb2bcea8-ed6e-f547-62d9-bc5e82a17b36.htm">
-        <HelpTOCNode Title="HomeController Constructor " Url="html/e12a50ac-7814-29f3-68ad-4bc16caeed9e.htm" />
-        <HelpTOCNode Title="HomeController Constructor (UserManager`1(AppUser))" Url="html/1baffa8b-4e46-89ba-c8ea-c32dab4f780d.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="HomeController Properties" Url="html/5518c814-72f1-8007-2e58-5ba9d9394844.htm" />
-      <HelpTOCNode Id="abf2b10a-31d9-4c2e-be05-937c5b48d22b" Title="HomeController Methods" Url="html/c0cdc86e-7bd7-61b0-10a7-ad202d78c437.htm">
-        <HelpTOCNode Id="1eb0efa7-fa53-4a74-bbfb-4e429a46b711" Title="Dispose Method " Url="html/22d19f4c-fce5-2473-901c-d29058518f96.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/2db2f47f-2ee5-4f4f-ec27-d8ea12c8e051.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Id="a9590fc7-e9b2-4831-9523-578fd0373f85" Title="Index Method " Url="html/77934b85-55d0-e82e-62b2-b4a0e482c841.htm">
-          <HelpTOCNode Title="Index Method (String)" Url="html/ce3ff165-68eb-1d6e-2e19-4389232c95af.htm" />
-          <HelpTOCNode Title="Index Method (LoginViewModel)" Url="html/940f1a17-3760-1338-9811-d93926ffd86f.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="MeetDevelopers Method " Url="html/047cbaf6-9105-1beb-8245-caf2286bdd4b.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="bd3534ab-7578-43d5-aba3-2e38f7cf9758" Title="HostelManagement.Models" Url="html/50dbb674-4cca-0a93-bc92-6a6fa05aff74.htm">
-    <HelpTOCNode Id="e21725d8-41b8-458b-b64c-c050b9f0b772" Title="LoginViewModel Class" Url="html/015cafe2-5fed-251b-4350-9a3969d9879f.htm">
-      <HelpTOCNode Title="LoginViewModel Constructor " Url="html/f38710d5-72ac-147d-5aeb-f667e14779c8.htm" />
-      <HelpTOCNode Id="9f10f350-7333-424e-b787-66883f35c310" Title="LoginViewModel Properties" Url="html/3ef6326b-6187-ad69-5ac7-7bc108ef881f.htm">
-        <HelpTOCNode Title="Password Property " Url="html/84cea04e-5d86-af19-a9b6-6cb73de628b3.htm" />
-        <HelpTOCNode Title="ReturnUrl Property " Url="html/6e150d87-740c-d874-da1f-93942988dd5a.htm" />
-        <HelpTOCNode Title="UserId Property " Url="html/c4d902d0-cced-89e8-fed9-77048b4f255d.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="LoginViewModel Methods" Url="html/cc4faf2c-cb68-4089-617d-b5a31dab98dc.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="370551c6-ef6a-43e7-9f35-a167ec0ac9e2" Title="RegisterModel Class" Url="html/4aa8e4f6-a7c0-c1bb-8d29-90fe9e092ea6.htm">
-      <HelpTOCNode Title="RegisterModel Constructor " Url="html/f3c1b6f5-836d-7a60-6bcb-7c3b99be8e53.htm" />
-      <HelpTOCNode Id="e7288734-87eb-4cc2-b410-adef2a61fd9d" Title="RegisterModel Properties" Url="html/174af157-e76e-5584-eb35-0672acfa8fda.htm">
-        <HelpTOCNode Title="Password Property " Url="html/5e1d8d0a-ec8e-7bdb-b2ae-7c169928baf9.htm" />
-        <HelpTOCNode Title="Role Property " Url="html/f4fcacdc-e180-fc89-2756-a7a1cb4801c5.htm" />
-        <HelpTOCNode Title="UserId Property " Url="html/a1773745-9f7a-673a-c1f0-a8cee092bc35.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Title="RegisterModel Methods" Url="html/7f6abaee-0e8b-43f5-6896-da450f68e182.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
 </HelpTOC>

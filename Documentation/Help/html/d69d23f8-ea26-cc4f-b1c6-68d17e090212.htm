@@ -2,7 +2,6 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="../icons/favicon.ico" />
-    <style type="text/css">.OH_CodeSnippetContainerTabLeftActive, .OH_CodeSnippetContainerTabLeft,.OH_CodeSnippetContainerTabLeftDisabled { }.OH_CodeSnippetContainerTabRightActive, .OH_CodeSnippetContainerTabRight,.OH_CodeSnippetContainerTabRightDisabled { }.OH_footer { }</style>
     <link rel="stylesheet" type="text/css" href="../styles/branding.css" />
     <link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" />
     <script type="text/javascript" src="../scripts/branding.js"> </script>
@@ -20,36 +19,34 @@
     <meta name="file" content="d69d23f8-ea26-cc4f-b1c6-68d17e090212" />
     <meta name="guid" content="d69d23f8-ea26-cc4f-b1c6-68d17e090212" />
     
+    <link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/branding-Website.js"></script>
     <script type="text/javascript" src="../scripts/clipboard.min.js"></script>
   </head>
   <body onload="OnLoad('cs')">
     <input type="hidden" id="userDataCache" class="userDataStyle" />
-    <div class="OH_outerDiv">
-      <div class="OH_outerContent">
-        <table class="TitleTable">
+    <div class="pageHeader" id="PageHeader">Hostel and Mess Management System Documentation<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div>
+    <div class="pageBody">
+      <div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="51a93020-79cb-4bbf-8949-c4b5f43fd54e.htm" title="Hostel and Mess Management System Documentation" tocid="roottoc">Hostel and Mess Management System Documentation</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="d75eb659-6335-53f6-af7a-81814a21ab7f.htm" title="Namespaces" tocid="d75eb659-6335-53f6-af7a-81814a21ab7f">Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="200d1f28-3905-8022-2b37-57c65c64c3ca.htm" title="HostelManagement Namespaces" tocid="200d1f28-3905-8022-2b37-57c65c64c3ca">HostelManagement Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="678b6bee-a184-2625-e639-6094df6cfaab.htm" title="HostelManagement.Areas Namespaces" tocid="678b6bee-a184-2625-e639-6094df6cfaab">HostelManagement.Areas Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="bc178c06-3b57-5bb2-fdbe-ba740c2387c5.htm" title="HostelManagement.Areas.HostelMessManagement.Controllers" tocid="bc178c06-3b57-5bb2-fdbe-ba740c2387c5">HostelManagement.Areas.HostelMessManagement.Controllers</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="1894ba29-8c61-93a5-8ca6-83ef33d5e8ec.htm" title="UserController Class" tocid="1894ba29-8c61-93a5-8ca6-83ef33d5e8ec">UserController Class</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="39975a80-92aa-86c5-b65c-c1f3e6b7c8ff.htm" title="UserController Methods" tocid="39975a80-92aa-86c5-b65c-c1f3e6b7c8ff">UserController Methods</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="d69d23f8-ea26-cc4f-b1c6-68d17e090212.htm" title="AddStudent Method " tocid="d69d23f8-ea26-cc4f-b1c6-68d17e090212">AddStudent Method </a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="734ff942-50bc-3b5a-0ee5-6d4532e1931f.htm" title="AddStudent Method " tocid="734ff942-50bc-3b5a-0ee5-6d4532e1931f">AddStudent Method </a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="43e4897a-02b6-f372-f78b-361ee73b2249.htm" title="AddStudent Method (StudentViewModel)" tocid="43e4897a-02b6-f372-f78b-361ee73b2249">AddStudent Method (StudentViewModel)</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent">
+        <table class="titleTable">
           <tr>
-            <td class="OH_tdLogoColumn">
+            <td class="logoColumn">
               <img src="../icons/Help.png" />
             </td>
-            <td class="OH_tdTitleColumn">UserController<span id="LSTD7E590E1_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTD7E590E1_0?cpp=::|nu=.");</script>AddStudent Method </td>
-            <td class="OH_tdRunningTitleColumn">Business Layer Documentation</td>
+            <td class="titleColumn">UserController<span id="LSTD7E590E1_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTD7E590E1_0?cpp=::|nu=.");</script>AddStudent Method </td>
           </tr>
         </table>
-        <div id="mainSection">
-          <div id="mainBody">
-            <span class="introStyle"></span> <div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Overload List</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><table class="members" id="overloadMembersList"><tr><th class="ps_iconColumn">
+        <span class="introStyle"></span> <div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0"><img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Overload List</span></div><div id="ID0RBSection" class="collapsibleSection"><table class="members" id="overloadMembersList"><tr><th class="iconColumn">
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="734ff942-50bc-3b5a-0ee5-6d4532e1931f.htm">AddStudent<span id="LSTD7E590E1_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTD7E590E1_1?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
             Action Method to diplay a page to add a student
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="43e4897a-02b6-f372-f78b-361ee73b2249.htm">AddStudent(StudentViewModel)</a></td><td><div class="summary">
             Action Method to add a student to the database
-            </div></td></tr></table><a href="#mainBody">Top</a><div class="OH_CollapsibleAreaRegion" id="seeAlsoSection"><div class="OH_regiontitle">See Also</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="1894ba29-8c61-93a5-8ca6-83ef33d5e8ec.htm">UserController Class</a></div><div class="seeAlsoStyle"><a href="bc178c06-3b57-5bb2-fdbe-ba740c2387c5.htm">HostelManagement.Areas.HostelMessManagement.Controllers Namespace</a></div></div>
-        </div>
-      </div>
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID1RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="1894ba29-8c61-93a5-8ca6-83ef33d5e8ec.htm">UserController Class</a></div><div class="seeAlsoStyle"><a href="bc178c06-3b57-5bb2-fdbe-ba740c2387c5.htm">HostelManagement.Areas.HostelMessManagement.Controllers Namespace</a></div></div></div>
     </div>
-    <div id="OH_footer" class="OH_footer">
-      <div class="OH_feedbacklink">Send comments on this topic to
-        <a id="HT_MailLink" href="mailto:lalitadithya5071%40gmail.com?Subject=Business Layer Documentation">Feedback</a></div>
+    <div id="pageFooter" class="pageFooter">Guide - Dr. GT Raju; Developers - Lalit Adithya, Krupa Hebbar<p>Property of RN Shetty Institute of Technology</p><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:lalitadithya5071%40gmail.com?Subject=Hostel and Mess Management System Documentation">Lalit Adithya</a></div>
         <script type="text/javascript">
         var HT_mailLink = document.getElementById("HT_MailLink");
         var HT_mailLinkText = HT_mailLink.innerHTML;
