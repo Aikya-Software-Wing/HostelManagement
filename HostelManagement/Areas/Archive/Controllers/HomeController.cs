@@ -71,5 +71,16 @@ namespace HostelManagement.Areas.Archive.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Action method to get the list of studented for auto complete
+        /// </summary>
+        /// <param name="term">the input given by the user</param>
+        /// <returns>a list of the candidates in JSON format</returns>
+        public ActionResult GetStudentList(string term)
+        {
+            StudentHelper helper = new StudentHelper();
+            return Json(helper.GetStudentListForAutoComplete(term), JsonRequestBehavior.AllowGet);
+        }
     }
 }
