@@ -32,6 +32,10 @@ namespace BusinessLayer
         public int course { get; set; }
         public int branch { get; set; }
         public System.DateTime dob { get; set; }
+        public string aadhar { get; set; }
+        public Nullable<decimal> phone { get; set; }
+        public string pan { get; set; }
+        public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Allotment> Allotments { get; set; }

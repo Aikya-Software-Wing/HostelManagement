@@ -43,7 +43,11 @@ namespace BusinessLayer
                 gender = studentDetails.gender,
                 course = studentDetails.course,
                 branch = studentDetails.branch,
-                dob = studentDetails.dob
+                dob = studentDetails.dob,
+                aadhar = studentDetails.aadharNumber,
+                pan = studentDetails.pan,
+                email = studentDetails.email,
+                phone = studentDetails.phoneNumber
             };
 
             // allot a room to the student
@@ -387,7 +391,11 @@ namespace BusinessLayer
                         dob = student.dob,
                         semester = student.semester,
                         usn = student.usn,
-                        allotments = allotmentViewModel
+                        allotments = allotmentViewModel,
+                        aadharNumber = student.aadhar,
+                        pan = student.pan,
+                        email = student.email,
+                        phoneNumber = student.phone.HasValue ? student.phone.Value : 0,
                     };
 
                     return viewmodel1;
@@ -402,7 +410,11 @@ namespace BusinessLayer
                     semester = student.semester,
                     usn = student.usn,
                     allotments = allotmentViewModel,
-                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year
+                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year,
+                    aadharNumber = student.aadhar,
+                    pan = student.pan,
+                    email = student.email,
+                    phoneNumber = student.phone.HasValue ? student.phone.Value : 0,
                 };
 
                 return viewmodel;

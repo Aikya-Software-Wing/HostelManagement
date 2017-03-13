@@ -12,7 +12,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// The student full name
         /// </summary>
         [Required]
-        [Display(Name ="Student Full Name")]
+        [Display(Name = "Student Full Name")]
         public string name { get; set; }
 
         /// <summary>
@@ -25,28 +25,28 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// The semester of the student
         /// </summary>
         [Required]
-        [Display(Name ="Semester")]
+        [Display(Name = "Semester")]
         public int semester { get; set; }
 
         /// <summary>
         /// The gender of the student
         /// </summary>
         [Required]
-        [Display(Name ="Gender")]
+        [Display(Name = "Gender")]
         public int gender { get; set; }
 
         /// <summary>
         /// The course that the student is taking
         /// </summary>
         [Required]
-        [Display(Name ="Course")]
+        [Display(Name = "Course")]
         public int course { get; set; }
 
         /// <summary>
         /// The department that the student belongs to
         /// </summary>
         [Required]
-        [Display(Name ="Department")]
+        [Display(Name = "Department")]
         public int branch { get; set; }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// </summary>
         [Required]
         [Range(2000, 9999)]
-        [Display(Name ="Year of Joining")]
+        [Display(Name = "Year of Joining")]
         public int year { get; set; }
 
         /// <summary>
@@ -62,35 +62,35 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name ="Date of Birth")]
+        [Display(Name = "Date of Birth")]
         public DateTime dob { get; set; }
 
         /// <summary>
         /// The hostel block number
         /// </summary>
         [Required]
-        [Display(Name ="Hostel Block Number")]
+        [Display(Name = "Hostel Block Number")]
         public int blockNumber { get; set; }
 
         /// <summary>
         /// The room number
         /// </summary>
         [Required]
-        [Display(Name ="Room Number")]
+        [Display(Name = "Room Number")]
         public int roomNumber { get; set; }
 
         /// <summary>
         /// The floor number
         /// </summary>
         [Required]
-        [Display(Name ="Floor Number")]
+        [Display(Name = "Floor Number")]
         public int floorNumber { get; set; }
 
         /// <summary>
         /// The type of room
         /// </summary>
         [Required]
-        [Display(Name ="Room Type")]
+        [Display(Name = "Room Type")]
         public int roomType { get; set; }
 
         /// <summary>
@@ -98,7 +98,24 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name ="Date of Joining")]
+        [Display(Name = "Date of Joining")]
         public DateTime doj { get; set; }
+
+        [Display(Name = "Aadhar Number")]
+        public string aadharNumber { get; set; }
+
+        [Required]
+        [Range(1000000000, 9999999999, ErrorMessage = "Enter a valid email address")]
+        [Display(Name = "Mobile Number")]
+        public decimal phoneNumber { get; set; }
+
+        [Display(Name = "PAN")]
+        public string pan { get; set; }
+
+        [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
+        [Required]
+        public string email { get; set; }
     }
 }

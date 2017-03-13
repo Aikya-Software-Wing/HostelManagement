@@ -36,6 +36,14 @@
         <AssociationConnector Association="DatabaseModel.fk_PaymentMess" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.fk_StudentMess" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.fk_RoomType_Room" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DatabaseModel.C__MigrationHistory" Width="1.5" PointX="10.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DatabaseModel.AspNetRole" Width="1.5" PointX="10.375" PointY="2.5" />
+        <EntityTypeShape EntityType="DatabaseModel.AspNetUserClaim" Width="1.5" PointX="14.875" PointY="1" />
+        <EntityTypeShape EntityType="DatabaseModel.AspNetUserLogin" Width="1.5" PointX="14.875" PointY="3.75" />
+        <EntityTypeShape EntityType="DatabaseModel.AspNetUser" Width="1.5" PointX="12.625" PointY="1.375" />
+        <AssociationConnector Association="DatabaseModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="DatabaseModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="DatabaseModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

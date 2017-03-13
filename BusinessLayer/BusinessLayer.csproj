@@ -62,7 +62,22 @@
     <Compile Include="Allotment.cs">
       <DependentUpon>DataLayer.tt</DependentUpon>
     </Compile>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>DataLayer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>DataLayer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>DataLayer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>DataLayer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Course.cs">
+      <DependentUpon>DataLayer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>DataLayer.tt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer.Context.cs">

@@ -52,6 +52,34 @@
                             @Html.ValidationMessageFor(m => m.dob)
                         </div>
                     </div>
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(m => m.email)
+                        @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+                        <div class="text-danger">
+                            @Html.ValidationMessageFor(m => m.email)
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(m => m.aadharNumber)
+                        @Html.TextBoxFor(m => m.aadharNumber, new { @class = "form-control" })
+                        <div class="text-danger">
+                            @Html.ValidationMessageFor(m => m.aadharNumber)
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(m => m.pan)
+                        @Html.TextBoxFor(m => m.pan, new { @class = "form-control" })
+                        <div class="text-danger">
+                            @Html.ValidationMessageFor(m => m.pan)
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(m => m.phoneNumber)
+                        @Html.TextBoxFor(m => m.phoneNumber, new { @class = "form-control", type="number" })
+                        <div class="text-danger">
+                            @Html.ValidationMessageFor(m => m.phoneNumber)
+                        </div>
+                    </div>
                 </fieldset>
             </div>
             <div class="row">

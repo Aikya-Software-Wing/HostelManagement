@@ -73,7 +73,6 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             {
                 TempData["bid"] = student.bid;
                 return JavaScript("window.location='"+Url.Action("HostelTransaction")+"'");
-                //return Content("Student added successfully, bid = " + student.bid);
             }
 
             return Content(error);

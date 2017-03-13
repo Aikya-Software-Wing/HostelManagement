@@ -85,7 +85,11 @@ namespace BusinessLayer
                     allotments = allotmentViewModel,
                     academicYear = DateTime.Now.Year,
                     dateOfPayment = DateTime.Now.Date,
-                    year = student.Allotments.OrderBy(x => x.year).First().year
+                    year = student.Allotments.OrderBy(x => x.year).First().year,
+                    aadharNumber = student.aadhar,
+                    pan = student.pan,
+                    email = student.email,
+                    phoneNumber = student.phone.HasValue ? student.phone.Value : 0
                 };
 
                 return viewModel;
@@ -132,7 +136,11 @@ namespace BusinessLayer
                     referenceNumber = "DS",
                     bankName = "RNSIT",
                     paymentType = 4,
-                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year
+                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year,
+                    aadharNumber = student.aadhar,
+                    pan = student.pan,
+                    email = student.email,
+                    phoneNumber = student.phone.HasValue ? student.phone.Value : 0
                 };
 
                 return viewModel;
@@ -313,7 +321,11 @@ namespace BusinessLayer
                     academicYear = DateTime.Now.Year,
                     dateOfPayment = DateTime.Now.Date,
                     month = DateTime.Now.AddMonths(-1).Month,
-                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year
+                    year = student.Allotments.Where(x => x.dateOfLeave == null).First().year,
+                    aadharNumber = student.aadhar,
+                    pan = student.pan,
+                    email = student.email,
+                    phoneNumber = student.phone.HasValue ? student.phone.Value : 0
                 };
 
                 return viewModel;

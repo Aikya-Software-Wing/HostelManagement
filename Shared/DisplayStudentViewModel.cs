@@ -64,6 +64,23 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// </summary>
         public int year { get; set; }
 
+        [Display(Name = "Aadhar Number")]
+        public string aadharNumber { get; set; }
+
+        [Required]
+        [Range(1000000000, 9999999999, ErrorMessage = "Enter a valid email address")]
+        [Display(Name = "Mobile Number")]
+        public decimal phoneNumber { get; set; }
+
+        [Display(Name = "PAN")]
+        public string pan { get; set; }
+
+        [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
+        [Required]
+        public string email { get; set; }
+
         /// <summary>
         /// The rooms that have been alloted to the student so far
         /// </summary>
