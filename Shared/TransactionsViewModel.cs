@@ -51,5 +51,9 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
         /// The transaction refrence
         /// </summary>
         public string transaction { get; set; }
+
+        public bool isEditable { get; set; }
+
+        public decimal internalId { get; set; }
     }
 }

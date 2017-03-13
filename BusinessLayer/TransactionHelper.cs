@@ -1004,7 +1004,9 @@ namespace BusinessLayer
                         bankName = transcation.bankName,
                         dateOfPay = transcation.dateOfPay.Date,
                         paymentType = transcation.PaymentType.val,
-                        transaction = "Refund"
+                        transaction = "Refund",
+                        isEditable = false,
+                        internalId = transcation.id
                     });
                 }
                 else
@@ -1019,7 +1021,9 @@ namespace BusinessLayer
                         bankName = transcation.bankName,
                         dateOfPay = transcation.dateOfPay.Date,
                         paymentType = transcation.PaymentType.val,
-                        transaction = "Debit"
+                        transaction = "Debit",
+                        isEditable = true,
+                        internalId = transcation.id
                     });
                 }
             }
@@ -1050,7 +1054,8 @@ namespace BusinessLayer
                         bankName = "Canara Bank",
                         dateOfPay = dateOfBill,
                         paymentType = "NA",
-                        transaction = "Credit"
+                        transaction = "Credit",
+                        isEditable = false
                     });
                 }
             }
@@ -1072,7 +1077,8 @@ namespace BusinessLayer
                     bankName = "Canara Bank",
                     dateOfPay = bill.dateOfDeclaration,
                     paymentType = "NA",
-                    transaction = "Credit"
+                    transaction = "Credit",
+                    isEditable = false
                 });
             }
 
@@ -1089,7 +1095,9 @@ namespace BusinessLayer
                     paymentType = transaction.PaymentType.val,
                     dateOfPay = transaction.dateOfPay.Date,
                     transaction = "Debit",
-                    id = transaction.receipt + ""
+                    id = transaction.receipt + "",
+                    isEditable = true,
+                    internalId = transaction.id
                 });
             }
 
@@ -1107,7 +1115,71 @@ namespace BusinessLayer
             {
                 return date.Year - 1;
             }
+
             return date.Year;
+        }
+
+        public HostelTransactionViewModel GetHotelTransactionViewModel(int id)
+        {
+            HostelTransaction transaction = db.HostelTransactions.Where(x => x.id == id).First();
+            HostelTransactionViewModel viewModel = ConstructViewModelForHostelTransaction(transaction.bid);
+            viewModel.acHead = transaction.AcHead.id;
+            viewModel.referenceNumber = transaction.receipt;
+            viewModel.dateOfPayment = transaction.dateOfPay;
+            viewModel.paymentType = transaction.paymentTypeId;
+            viewModel.bankName = transaction.bankName;
+            viewModel.academicYear = transaction.year.Value;
+            viewModel.amount = transaction.amount.Value;
+            viewModel.id = transaction.id;
+
+            return viewModel;
+        }
+
+        public MessTransactionViewModel GetMessTransactionViewModel(int id)
+        {
+            MessTransaction transaction = db.MessTransactions.Where(x => x.id == id).First();
+            string error = "";
+            MessTransactionViewModel viewModel = ConstructViewModelForMessTransaction(transaction.bid, out error);
+            viewModel.referenceNumber = transaction.receipt;
+            viewModel.dateOfPayment = transaction.dateOfPay;
+            viewModel.paymentType = transaction.paymentTypeId;
+            viewModel.bankName = transaction.bankName;
+            viewModel.academicYear = transaction.year;
+            viewModel.amount = transaction.amount.Value;
+            viewModel.id = transaction.id;
+
+            return viewModel;
+        }
+
+        public void EditHotelTransaction(HostelTransactionViewModel userInput)
+        {
+            HostelTransaction transaction = db.HostelTransactions.Where(x => x.id == userInput.id).First();
+
+            transaction.AcHead.id = userInput.acHead;
+            transaction.receipt = userInput.referenceNumber;
+            transaction.dateOfPay = userInput.dateOfPayment;
+            transaction.paymentTypeId = userInput.paymentType;
+            transaction.year = userInput.academicYear;
+            transaction.amount = userInput.amount;
+
+            db.HostelTransactions.Attach(transaction);
+            db.Entry(transaction).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+
+        public void EditMessTransaction(MessTransactionViewModel userInput)
+        {
+            MessTransaction transaction = db.MessTransactions.Where(x => x.id == userInput.id).First();
+
+            transaction.receipt = userInput.referenceNumber;
+            transaction.dateOfPay = userInput.dateOfPayment;
+            transaction.paymentTypeId = userInput.paymentType;
+            transaction.year = userInput.academicYear;
+            transaction.amount = userInput.amount;
+
+            db.MessTransactions.Attach(transaction);
+            db.Entry(transaction).State = EntityState.Modified;
+            db.SaveChanges();
         }
 
         /// <summary>

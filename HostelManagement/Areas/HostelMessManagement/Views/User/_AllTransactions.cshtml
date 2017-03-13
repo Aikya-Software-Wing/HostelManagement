@@ -13,6 +13,7 @@
             <th>Academic Year</th>
             <th>Transaction</th>
             <th>Amount</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +29,28 @@
                 <td>@item.academicYear</td>
                 <td>@item.transaction</td>
                 <td>@item.amount</td>
+                @if (item.accountHead.Equals("Mess Bill"))
+                {
+                    if (item.isEditable)
+                    {
+                        <td>@Html.ActionLink("Edit", "EditMessTransaction", new { id = item.internalId })</td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                }
+                else
+                {
+                    if (item.isEditable)
+                    {
+                        <td>@Html.ActionLink("Edit", "EditHostelTransaction", new { id = item.internalId })</td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                }
             </tr>
         }
     </tbody>

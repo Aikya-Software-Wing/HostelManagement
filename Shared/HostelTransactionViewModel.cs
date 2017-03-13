@@ -8,6 +8,9 @@ namespace HostelManagement.Areas.HostelMessManagement.Models
     /// </summary>
     public class HostelTransactionViewModel : DisplayStudentViewModel
     {
+
+        public int id { get; set; }
+
         /// <summary>
         /// The border ID of the student
         /// </summary>

@@ -201,6 +201,71 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult EditHostelTransaction(int id)
+        {
+            TransactionHelper helper = new TransactionHelper();
+            HostelTransactionViewModel viewModel = helper.GetHotelTransactionViewModel(id);
+
+            // generate the list of account heads to be displayed and add it to the view bag
+            ViewBag.acHeadList = new SelectList(helper.GetAccountHeads(), "id", "val");
+
+            // generate the list of payment types to be displayed and add it to the view bag
+            ViewBag.paymentTypeList = new SelectList(helper.GetPaymentTypes(false), "id", "val");
+
+            //generate the list of academic years to be displayed and add it to the view bag
+            ViewBag.academicYearList = new SelectList(helper.GetValidAcademicYears(viewModel.year), DateTime.Now.Year + "");
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult EditHostelTransaction(HostelTransactionViewModel userInput)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(userInput);
+            }
+
+            TransactionHelper helper = new TransactionHelper();
+            helper.EditHotelTransaction(userInput);
+            TempData["bid"] = userInput.bid;
+
+            return RedirectToAction("HostelTransaction");
+        }
+
+        public ActionResult EditMessTransaction(int id)
+        {
+            TransactionHelper helper = new TransactionHelper();
+            MessTransactionViewModel viewModel = helper.GetMessTransactionViewModel(id);
+
+            // generate the list of account heads to be displayed and add it to the view bag
+            ViewBag.acHeadList = new SelectList(helper.GetAccountHeads(), "id", "val");
+
+            // generate the list of payment types to be displayed and add it to the view bag
+            ViewBag.paymentTypeList = new SelectList(helper.GetPaymentTypes(false), "id", "val");
+
+            //generate the list of academic years to be displayed and add it to the view bag
+            ViewBag.academicYearList = new SelectList(helper.GetValidAcademicYears(viewModel.year));
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult EditMessTransaction(MessTransactionViewModel userInput)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(userInput);
+            }
+
+            TransactionHelper helper = new TransactionHelper();
+            helper.EditMessTransaction(userInput);
+            TempData["bid"] = userInput.bid;
+
+            return RedirectToAction("MessTransaction");
+        }
+
         /// <summary>
         /// Action Method to get the amount payable
         /// </summary>

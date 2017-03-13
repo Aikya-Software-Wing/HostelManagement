@@ -1,0 +1,255 @@
+﻿@model HostelManagement.Areas.HostelMessManagement.Models.HostelTransactionViewModel
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h2 class="text-center">Hostel Transaction</h2>
+    </div>
+</div>
+<hr />
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="row">
+            <h4>Personal Information</h4>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.name)
+                <br />
+                @Html.DisplayFor(m => m.name)
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.usn)
+                <br />
+                @Html.DisplayTextFor(m => m.usn)
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.gender)
+                <br />
+                @Html.DisplayTextFor(m => m.gender)
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.dob)
+                <br />
+                @Html.DisplayTextFor(m => m.dob)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <h4>Education Information</h4>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.course)
+                <br />
+                @Html.DisplayTextFor(m => m.course)
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.semester)
+                <br />
+                @Html.DisplayTextFor(m => m.semester)
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(m => m.branch)
+                <br />
+                @Html.DisplayTextFor(m => m.branch)
+            </div>
+        </div>
+        <hr />
+        @for (int i = 0; i < Model.allotments.Count; i++)
+        {
+            <div class="row">
+                <h4>Hostel Information</h4>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].blockNumber)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].blockNumber)
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].roomNumber)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].roomNumber)
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].floorNumber)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].floorNumber)
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].roomType)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].roomType)
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].doj)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].doj)
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].dol)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].dol)
+                </div>
+                <div class="col-md-3">
+                    @Html.LabelFor(m => m.allotments[i].year)
+                    <br />
+                    @Html.DisplayTextFor(m => m.allotments[i].year)
+                </div>
+            </div>
+            <hr />
+        }
+        <div class="row" style="margin-bottom:200px;" id="myDiv">
+            <div class="col-sm-6">
+                @using (Html.BeginForm("EditHostelTransaction", "User", null, FormMethod.Post, new { }))
+            {
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.referenceNumber)
+                            @Html.TextBoxFor(m => m.referenceNumber, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.referenceNumber)
+                        </div>
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.dateOfPayment)
+                            @Html.TextBoxFor(m => m.dateOfPayment, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", id = "dateId" })
+                            @Html.ValidationMessageFor(m => m.dateOfPayment)
+                        </div>
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.acHead)
+                            @Html.DropDownListFor(m => m.acHead, new SelectList(ViewBag.acHeadList, "Value", "Text"), "Select", new { @class = "form-control", id = "acHeadDropDownId" })
+                            @Html.ValidationMessageFor(m => m.acHead)
+                        </div>
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.paymentType)
+                            @Html.DropDownListFor(m => m.paymentType, new SelectList(ViewBag.paymentTypeList, "Value", "Text"), "Select", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.paymentType)
+                        </div>
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.bankName)
+                            @Html.TextBoxFor(m => m.bankName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.bankName)
+                        </div>
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.academicYear)
+                            @Html.DropDownListFor(m => m.academicYear, (SelectList)ViewBag.academicYearList, "Select", new { @class = "form-control", id = "academicYearId" })
+                            @Html.ValidationMessageFor(m => m.academicYear)
+                        </div>
+                        <div class="form-group col-sm-4">
+                            @Html.LabelFor(m => m.amount)
+                            @Html.TextBoxFor(m => m.amount, new { @class = "form-control", id = "amountTextBoxId" })
+                            @Html.ValidationMessageFor(m => m.amount)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="submit" class="col-sm-offset-2 col-sm-3 btn btn-primary" id="submitButtonId" value="Save Transaction">
+                        </div>
+                    </div>
+                    @Html.HiddenFor(m => m.name)
+                    @Html.HiddenFor(m => m.bid)
+                    @Html.HiddenFor(m => m.usn)
+                    @Html.HiddenFor(m => m.gender)
+                    @Html.HiddenFor(m => m.course)
+                    @Html.HiddenFor(m => m.semester)
+                    @Html.HiddenFor(m => m.branch)
+                    @Html.HiddenFor(m => m.dob)
+                    @Html.HiddenFor(m => m.id)
+                }
+            </div>
+            <div class="col-sm-6">
+                <div id="dueTableDivId">
+                    @Html.Action("ShowDues", new { bid = Model.bid })
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" id="footerID">
+            @Html.Action("ShowAllTransactions", new { bid = Model.bid })
+        </div>
+
+
+
+        <style>
+            .footer {
+                background-color: white;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 250px;
+                overflow-y: scroll;
+            }
+        </style>
+
+        <div id="resultModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="transactionOutputDivId">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" language=javascript>
+    $.validator.unobtrusive.parse(document);
+
+    $(document).ready(function () {
+        if (!Modernizr.inputtypes.date) {
+            $("#dateId").datepicker();
+        }
+    });
+
+    function LoadDues() {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ShowDues", "User")',
+            data: { bid: '@Model.bid' },
+            success: function (res) {
+                $("#dueTableDivId").html(res);
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("ShowAllTransactions", "User")',
+            data: { bid: '@Model.bid' },
+            success: function (res) {
+                $("#footerID").html(res);
+            }
+        });
+
+        $('#resultModal').modal('show');
+    }
+
+    function GetAmount() {
+        var head = $("#acHeadDropDownId :selected").text();
+        var academicYear = $("#academicYearId :selected").text();
+        var bid = '@Model.bid'
+        if (head != "Select" && academicYear != "Select") {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetAmount", "User")',
+                data: { bid: bid, head: head, year: academicYear },
+                success: function (res) {
+                    $("#amountTextBoxId").val(res);
+                }
+            });
+        }
+    }
+
+    $("#acHeadDropDownId").change(function () {
+        GetAmount();
+    });
+
+    $("#academicYearId").change(function () {
+        GetAmount();
+    });
+</script>
