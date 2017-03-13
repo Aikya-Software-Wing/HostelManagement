@@ -101,7 +101,7 @@
                 </div>
                 <div class="form-group col-sm-4">
                     @Html.LabelFor(m => m.dateOfPayment)
-                    @Html.TextBoxFor(m => m.dateOfPayment, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    @Html.TextBoxFor(m => m.dateOfPayment, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", id = "dateId" })
                     @Html.ValidationMessageFor(m => m.dateOfPayment)
                 </div>
                 <div class="form-group col-sm-4">
@@ -196,6 +196,9 @@
 <script type="text/javascript" language=javascript>
     $.validator.unobtrusive.parse(document);
     $(document).ready(function () {
+        if (!Modernizr.inputtypes.date) {
+            $("#dateId").datepicker();
+        }
         GetAmount();
     });
     function LoadDues() {
