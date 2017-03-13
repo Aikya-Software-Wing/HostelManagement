@@ -370,7 +370,7 @@ namespace BusinessLayer
                         dol = allotment.dateOfLeave.HasValue ? allotment.dateOfLeave.Value.Date + "" : "",
                         roomNumber = allotment.roomNum,
                         roomType = allotment.Room.RoomType1.val,
-                        floorNumber = allotment.roomNum.ToString().ToCharArray()[0],
+                        floorNumber = allotment.roomNum < 100 ? 'G' : allotment.roomNum.ToString().ToCharArray()[0],
                         year = allotment.year + " - " + (allotment.year + 1)
                     });
                 }

@@ -71,7 +71,9 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
             Student student = helper.AddStudent(userInput, out error);
             if (student != null)
             {
-                return Content("Student Add Success BID = " + student.bid);
+                TempData["bid"] = student.bid;
+                return JavaScript("window.location='"+Url.Action("HostelTransaction")+"'");
+                //return Content("Student added successfully, bid = " + student.bid);
             }
 
             return Content(error);
@@ -159,7 +161,12 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         [HttpGet]
         public ActionResult HostelTransaction()
         {
-            return View();
+            StudentSearchViewModel model = new StudentSearchViewModel
+            {
+                bid = TempData.Peek("bid") == null ? "" : (string)TempData.Peek("bid")
+            };
+
+            return View(model);
         }
 
         /// <summary>
@@ -428,7 +435,12 @@ namespace HostelManagement.Areas.HostelMessManagement.Controllers
         /// <returns>view</returns>
         public ActionResult MessTransaction()
         {
-            return View();
+            StudentSearchViewModel model = new StudentSearchViewModel
+            {
+                bid = TempData.Peek("bid") == null ? "" : (string)TempData.Peek("bid")
+            };
+
+            return View(model);
         }
 
         /// <summary>

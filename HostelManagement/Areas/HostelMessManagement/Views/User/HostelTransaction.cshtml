@@ -19,7 +19,7 @@
                 <span class="input-group-addon" id="basic-addon3">BID</span>
                 @Html.TextBoxFor(m => m.bid, new { @class = "form-control", id = "bidID" })
                 <span class="input-group-btn">
-                    <input class="btn btn-primary" type="submit" value="View!" />
+                    <input class="btn btn-primary" type="submit" value="View!" id="submitBtnId" />
                 </span>
             </div>
         }
@@ -42,6 +42,8 @@
             return $("<li>")
             .append("<a>" + item.label + " (" + item.usn + ")" + "<br>Dept:" + item.dept + ",room:" + item.room + "</a>")
             .appendTo(ul);
-        };;
+        };
+
+        document.getElementById("submitBtnId").click();
     })
 </script>

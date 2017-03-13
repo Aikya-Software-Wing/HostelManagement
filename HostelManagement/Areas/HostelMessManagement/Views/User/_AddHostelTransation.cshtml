@@ -128,8 +128,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-sm-6 col-sm-offset-3">
-                    <input type="submit" class="btn btn-primary btn-block" id="submitButtonId" />
+                <div class="form-group">
+                    <input type="submit" class="col-sm-offset-2 col-sm-3 btn btn-primary" id="submitButtonId" value="Save Transaction">
+                    <input type="button" class="col-sm-3 col-sm-offset-1 btn btn-primary" id="nextButtonId" value="Proceed" />
                 </div>
             </div>
             @Html.HiddenFor(m => m.name)
@@ -188,6 +189,13 @@
 </div>
 <script type="text/javascript" language=javascript>
     $.validator.unobtrusive.parse(document);
+
+    $(document).ready(function () {
+        $("#nextButtonId").click(function () {
+            window.location = '@Url.Action("MessTransaction")';
+        });
+    });
+
     function LoadDues() {
         $.ajax({
             type: 'POST',
